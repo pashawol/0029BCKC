@@ -1,0 +1,64 @@
+mixin sEvents(data)
+	// start sEvents
+	+b.SECTION.sEvents.section#sEvents&attributes(attributes)
+		.container
+			+e.title-row.row.gy-3
+				.col
+					+b.section-title
+						h2 Мероприятия корпуса
+				.col-auto
+					+e.btn(href="#") Все мероприятия
+			+e.nav-row.row
+				.col-sm-6.col-md-4.col-xl-auto
+					+input('Все', 'select')
+				.col-sm-6.col-md-4.col-xl-auto
+					+input('Выберите город', 'select')(class="disabled")
+				.col-sm-6.col-md-4.col-xl-auto
+					+input('Даты проведения', 'select')
+				//-.col-12.d-xl-none.m-0
+				.col-auto.col-sm-6.col-md-auto.ms-xl-auto
+					+sEventsChb('ЧС', 'red')
+				.col-auto.col-sm-6.col-md-auto
+					+sEventsChb('Регистрация открыта', 'blue')
+			+e.slide-wrap
+				.swiper.sEvents-slider-js
+					.swiper-wrapper
+						-for(let i =0; i < 2; i++)
+							+sEventsSlide({
+								tagBlue: true,
+								imgNum: 1,
+								title: 'Добровольцы ресурсного центра ЧС организовали демонстрационную точку',
+							})
+							+sEventsSlide({
+								tagRed: true,
+								imgNum: 1,
+								title: 'Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"',
+							})
+							+sEventsSlide({
+								tagBlue: true,
+								imgNum: 1,
+								title: 'Тренировка поисково-спасательных собак',
+							})
+	// end sEvents
+
+mixin sEventsSlide(data)
+	.swiper-slide
+		+e.card
+			if data.tagBlue
+				+e.tag--blue Регистрация открыта
+			if data.tagRed
+				+e.tag--blue Регистрация закрыта
+			+e.c-img(href="#")
+				img(loading="lazy" src=`img/@2x/sEventsSlide-${data.imgNum}.png` alt="")
+			+e.txt-box
+				+e.c-title(href="#")=data.title
+				+e.c-date 19 августа, с 18:00 до 20:00
+				+e.c-location Республика Удмуртия
+
+
+
+mixin sEventsChb(txt, addClasses='')
+	+b.LABEL.btn-chb(class=addClasses)
+		input(type="checkbox" class='invisible' name=txt)&attributes(attributes)
+		span.bar
+		span.txt=txt

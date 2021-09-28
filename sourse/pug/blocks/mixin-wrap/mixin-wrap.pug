@@ -17,6 +17,17 @@ mixin arrow()
 		+icon('chevron-right')
 //- /arrow for swiper-slider
 
+mixin arrow2()
+	+b.sw-arrows
+		+e.row.row.justify-content-center
+			.col-auto
+				.swiper-prev
+					+icon('chevron-left')
+			+e.fract.fract-js.col-auto 3 / 5
+			.col-auto
+				.swiper-next
+					+icon('chevron-right')
+
 mixin ie11()
 	//- modernizer and for ie11
 	 

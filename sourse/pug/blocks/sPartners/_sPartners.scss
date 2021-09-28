@@ -1,0 +1,65 @@
+// start .sPartners
+.sPartners {
+  --sPT: #{rem(30)};
+  --sPB: #{rem(50)};
+  --sTPB: #{rem(30)};
+  @include media-breakpoint-up(lg){
+    --sPT: #{rem(59)};
+    --sPB: #{rem(94px)};
+    --sTPB: #{rem(109px)};
+  }
+
+  .section-title{
+    h2{
+
+    }
+  }
+  &__row{
+    --bs-gutter-y: #{rem(15)};
+    @include media-breakpoint-up(sm){
+      --bs-gutter-y: #{rem(35)};
+    }
+  }
+  &__col{
+
+    &.bigger-col{
+      @include media-breakpoint-up(xl){
+        padding-bottom: rem(20);
+        --img-mb: #{rem(30)};
+      }
+    }
+  }
+  &__item{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__img{
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+    margin-bottom: var(--img-mb, #{rem(7)});
+  }
+  &__name{
+    margin-top: auto;
+    min-height: rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: rem(13);
+    color: $black;
+  }
+
+  //
+  &__{}
+  &__{}
+} // end.sPartners

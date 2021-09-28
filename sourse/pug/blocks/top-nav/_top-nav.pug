@@ -1,28 +1,44 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
+			+e.logo(href="/")
+				img(loading="lazy" src="img/@2x/logo.png" alt="")
 			+mnu()
+			+b.login-bl.mb-4(href="#")
+				+e.img
+					img(loading="lazy" src="img/svg/user.svg" alt="")
+				+e.txt Войти
+			+b.reg-btn(href="#") Регистрация
+
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy&attributes(attributes)
 		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col.d-none.d-lg-block
-					+mnu()
-					
+			+e.main-row.row.align-items-center
+				.col-lg-auto.col-xl-2.d-none.d-lg-block
+					+e.logo(href="/")
+						img(loading="lazy" src="img/@2x/logo.png" alt="")
+				+e.col--content.col
+					+e.sub-row.row.align-items-center
+						.col.col-sm-auto.d-lg-none
+							+e.logo(href="/")
+								img(loading="lazy" src="img/@2x/logo.png" alt="")
+						.col-auto.d-none.d-lg-block
+							+mnu()
+						.col-auto.ms-auto.d-none.d-sm-block
+							+b.login-bl(href="#")
+								+e.img
+									img(loading="lazy" src="img/svg/user.svg" alt="")
+								+e.txt Войти
+						.col-auto.d-none.d-sm-block
+							+b.reg-btn(href="#") Регистрация
+						.col-auto.d-lg-none
+							+b.toggle-menu-mobile--js
+								span
+					+e.title
+						h1 Всероссийский студенческий корпус спасателей
 	// end top-nav

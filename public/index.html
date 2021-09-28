@@ -11,112 +11,998 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="index-1.png">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
+					<a class="menu-mobile__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
+					</a>
 					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О нас</a>
+						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О ВСКС</a>
 							<ul class="sub-menu">
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Об организации</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Документы</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-кит</a></li>
 							</ul>
 						</li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Набор на ЧС</a></li>
 					</ul>
+					<a class="login-bl mb-4" href="#">
+						<div class="login-bl__img"><img loading="lazy" src="img/svg/user.svg" alt=""/>
+						</div>
+						<div class="login-bl__txt">Войти
+						</div>
+					</a>
+					<a class="reg-btn" href="#">Регистрация
+					</a>
 				</div>
 			</div>
 			<!--  мобильное меню-->
 			<!-- start header-->
-			<header class="header" id="header">
-			</header>
-			<!-- end header-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+			<header class="header header--js" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="top-nav__main-row row align-items-center">
+							<div class="col-lg-auto col-xl-2 d-none d-lg-block">
+								<a class="top-nav__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
+								</a>
+							</div>
+							<div class="top-nav__col top-nav__col--content col">
+								<div class="top-nav__sub-row row align-items-center">
+									<div class="col col-sm-auto d-lg-none">
+										<a class="top-nav__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
+										</a>
+									</div>
+									<div class="col-auto d-none d-lg-block">
+										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О ВСКС</a>
+												<ul class="sub-menu">
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Об организации</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Документы</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-кит</a></li>
+												</ul>
+											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Набор на ЧС</a></li>
+										</ul>
+									</div>
+									<div class="col-auto ms-auto d-none d-sm-block">
+										<a class="login-bl" href="#">
+											<div class="login-bl__img"><img loading="lazy" src="img/svg/user.svg" alt=""/>
+											</div>
+											<div class="login-bl__txt">Войти
+											</div>
+										</a>
+									</div>
+									<div class="col-auto d-none d-sm-block">
+										<a class="reg-btn" href="#">Регистрация
+										</a>
+									</div>
+									<div class="col-auto d-lg-none">
+										<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+										</div>
+									</div>
+								</div>
+								<div class="top-nav__title">
+									<h1>Всероссийский студенческий корпус спасателей</h1>
+								</div>
 							</div>
 						</div>
-						<div class="col d-none d-lg-block">
-							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О нас</a>
-									<ul class="sub-menu">
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-									</ul>
-								</li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-							</ul>
-						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end top-nav-->
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end topLine-->
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+					<div class="headerBlock__slider-wrap">
+						<div class="swiper headerBlock-slider-js fract-siwper-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="headerBlock__row row">
+										<div class="headerBlock__col headerBlock__col--img col-11 col-lg-8 col-xl-9">
+											<div class="headerBlock__img-box"><img loading="lazy" src="img/@2x/headerBlock-slide-1.png" alt=""/>
+												<div class="headerBlock__title">Встреча молодых спасателей с руководителями корпуса в г. Оренбург
+												</div>
+												<a class="headerBlock__btn" href="#">Подробнее
+												</a>
+											</div>
+										</div>
+										<div class="headerBlock__col headerBlock__col--orange col-11 col-lg">
+											<div class="headerBlock__orange-box">
+												<div class="headerBlock__txt">
+													<p>Встреча молодых спасателей с руководителями корпуса в г. Оренбург</p>
+												</div>
+												<div class="headerBlock__bot-row row align-items-center">
+													<div class="col">
+														<div class="headerBlock__date">19.06.2022
+														</div>
+													</div>
+													<div class="col-auto">
+														<a class="headerBlock__btn me-xl-1" href="#">Подробнее
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="headerBlock__row row">
+										<div class="headerBlock__col headerBlock__col--img col-11 col-lg-8 col-xl-9">
+											<div class="headerBlock__img-box"><img loading="lazy" src="img/@2x/headerBlock-slide-1.png" alt=""/>
+												<div class="headerBlock__title">Встреча молодых спасателей с руководителями корпуса в г. Оренбург0
+												</div>
+												<a class="headerBlock__btn" href="#">Подробнее
+												</a>
+											</div>
+										</div>
+										<div class="headerBlock__col headerBlock__col--orange col-11 col-lg">
+											<div class="headerBlock__orange-box">
+												<div class="headerBlock__txt">
+													<p>Встреча молодых спасателей с руководителями корпуса в г. Оренбург</p>
+												</div>
+												<div class="headerBlock__bot-row row align-items-center">
+													<div class="col">
+														<div class="headerBlock__date">19.06.2022
+														</div>
+													</div>
+													<div class="col-auto">
+														<a class="headerBlock__btn me-xl-1" href="#">Подробнее
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="headerBlock__row row">
+										<div class="headerBlock__col headerBlock__col--img col-11 col-lg-8 col-xl-9">
+											<div class="headerBlock__img-box"><img loading="lazy" src="img/@2x/headerBlock-slide-1.png" alt=""/>
+												<div class="headerBlock__title">Встреча молодых спасателей с руководителями корпуса в г. Оренбург1
+												</div>
+												<a class="headerBlock__btn" href="#">Подробнее
+												</a>
+											</div>
+										</div>
+										<div class="headerBlock__col headerBlock__col--orange col-11 col-lg">
+											<div class="headerBlock__orange-box">
+												<div class="headerBlock__txt">
+													<p>Встреча молодых спасателей с руководителями корпуса в г. Оренбург</p>
+												</div>
+												<div class="headerBlock__bot-row row align-items-center">
+													<div class="col">
+														<div class="headerBlock__date">19.06.2022
+														</div>
+													</div>
+													<div class="col-auto">
+														<a class="headerBlock__btn me-xl-1" href="#">Подробнее
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="headerBlock__row row">
+										<div class="headerBlock__col headerBlock__col--img col-11 col-lg-8 col-xl-9">
+											<div class="headerBlock__img-box"><img loading="lazy" src="img/@2x/headerBlock-slide-1.png" alt=""/>
+												<div class="headerBlock__title">Встреча молодых спасателей с руководителями корпуса в г. Оренбург2
+												</div>
+												<a class="headerBlock__btn" href="#">Подробнее
+												</a>
+											</div>
+										</div>
+										<div class="headerBlock__col headerBlock__col--orange col-11 col-lg">
+											<div class="headerBlock__orange-box">
+												<div class="headerBlock__txt">
+													<p>Встреча молодых спасателей с руководителями корпуса в г. Оренбург</p>
+												</div>
+												<div class="headerBlock__bot-row row align-items-center">
+													<div class="col">
+														<div class="headerBlock__date">19.06.2022
+														</div>
+													</div>
+													<div class="col-auto">
+														<a class="headerBlock__btn me-xl-1" href="#">Подробнее
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="headerBlock__row row">
+										<div class="headerBlock__col headerBlock__col--img col-11 col-lg-8 col-xl-9">
+											<div class="headerBlock__img-box"><img loading="lazy" src="img/@2x/headerBlock-slide-1.png" alt=""/>
+												<div class="headerBlock__title">Встреча молодых спасателей с руководителями корпуса в г. Оренбург3
+												</div>
+												<a class="headerBlock__btn" href="#">Подробнее
+												</a>
+											</div>
+										</div>
+										<div class="headerBlock__col headerBlock__col--orange col-11 col-lg">
+											<div class="headerBlock__orange-box">
+												<div class="headerBlock__txt">
+													<p>Встреча молодых спасателей с руководителями корпуса в г. Оренбург</p>
+												</div>
+												<div class="headerBlock__bot-row row align-items-center">
+													<div class="col">
+														<div class="headerBlock__date">19.06.2022
+														</div>
+													</div>
+													<div class="col-auto">
+														<a class="headerBlock__btn me-xl-1" href="#">Подробнее
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-none d-lg-block">
+								<div class="sw-arrows">
+									<div class="sw-arrows__row row justify-content-center">
+										<div class="col-auto">
+											<div class="swiper-prev">
+												<svg class="icon icon-chevron-left ">
+													<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="sw-arrows__fract fract-js col-auto">3 / 5
+										</div>
+										<div class="col-auto">
+											<div class="swiper-next">
+												<svg class="icon icon-chevron-right ">
+													<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</div>
 			<!-- end headerBlock-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<!-- start sNews-->
+			<section class="sNews section" id="sNews">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
+					<div class="sNews__title-row row">
+						<div class="col">
+							<div class="section-title">
+								<h2>Новости</h2>
+							</div>
+						</div>
+						<div class="col-auto">
+							<a class="sNews__all-btn" href="#">Все новости
+							</a>
+						</div>
 					</div>
-					<div class="row"></div>
+					<div class="sNews__nav-row row">
+						<div class="col-md-auto">
+							<div class="sNews__btns-box">
+								<div class="sNews__b-row row">
+									<div class="col-auto">
+										<label class="sNews__radio">
+											<input class="invisible" type="radio" name="sNews" value="Все" checked="checked"/><span class="radio-btn">Все</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="sNews__radio">
+											<input class="invisible" type="radio" name="sNews" value="Главные"/><span class="radio-btn">Главные</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="sNews__radio">
+											<input class="invisible" type="radio" name="sNews" value="Региональные"/><span class="radio-btn">Региональные</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="sNews__radio">
+											<input class="invisible" type="radio" name="sNews" value="Город"/><span class="radio-btn">Город</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-auto">
+							<div class="sNews__input-wrap form-group">
+								<select class="sNews__input form-select disabled" name="select">
+									<option value="Выберите город">Выберите город</option>
+									<option value=" placeholder 1">placeholder 1</option>
+									<option value=" placeholder 2">placeholder 2</option>
+									<option value=" placeholder 3">placeholder 3</option>
+									<option value=" placeholder 4">placeholder 4</option>
+								</select>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+					</div>
+					<div class="sNews__cards-row row">
+						<div class="col-sm-6 col-lg-3">
+							<a class="sNews__img" href="#"><img loading="lazy" src="img/@2x/sNews-slide-1.png" alt=""/>
+							</a>
+							<div class="sNews__date-row row align-items-center">
+								<div class="col">
+									<div class="sNews__date">19.08.21
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="sNews__location">Республика Удмуртия
+									</div>
+								</div>
+							</div>
+							<a class="sNews__title" href="#">Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<a class="sNews__img" href="#"><img loading="lazy" src="img/@2x/sNews-slide-2.png" alt=""/>
+							</a>
+							<div class="sNews__date-row row align-items-center">
+								<div class="col">
+									<div class="sNews__date">19.08.21
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="sNews__location">Республика Удмуртия
+									</div>
+								</div>
+							</div>
+							<a class="sNews__title" href="#">В МЧС России простились с Министром МЧС России Евгением Зиничевым
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<a class="sNews__img" href="#"><img loading="lazy" src="img/@2x/sNews-slide-3.png" alt=""/>
+							</a>
+							<div class="sNews__date-row row align-items-center">
+								<div class="col">
+									<div class="sNews__date">19.08.21
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="sNews__location">Республика Удмуртия
+									</div>
+								</div>
+							</div>
+							<a class="sNews__title" href="#">Главное управление сообщает о лесопожарной обстановке на территории
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<a class="sNews__img" href="#"><img loading="lazy" src="img/@2x/sNews-slide-4.png" alt=""/>
+							</a>
+							<div class="sNews__date-row row align-items-center">
+								<div class="col">
+									<div class="sNews__date">19.08.21
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="sNews__location">Республика Удмуртия
+									</div>
+								</div>
+							</div>
+							<a class="sNews__title" href="#">Президент Российской Федерации, главы зарубежных стран, государственные деятели, коллеги и друзья выразил
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
-			<!-- end sForm-->
-			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
+			<!-- end sNews-->
+			<!-- start sPromo-->
+			<section class="sPromo section" id="sPromo">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sContact</h2>
+					<div class="sPromo__box">
+						<div class="row gx-0 gy-0">
+							<div class="sPromo__col sPromo__col--img col-lg-auto">
+								<a class="sPromo__img" href="#"><img loading="lazy" src="img/@2x/sPromo.png" alt=""/>
+								</a>
+							</div>
+							<div class="sPromo__col sPromo__col--txt col-lg">
+								<div class="section-title">
+									<h2>Мы спасатели,<br/>Мы добровольцы!</h2>
+									<p>Всероссийский студенческий корпус спасателей – одна из крупнейших студенческих добровольческих организаций в Российской Федерации. Образована в 2001 году. В состав ВСКС входит свыше 8000 добровольцев из 67 субъектов Российской Федерации. Все студенты-спасатели проходят специальную подготовку для оказания квалифицированной помощи специальным службам при возникновении...</p><a href="#">Узнать больше...</a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
+					<div class="sPromo__pills-row row">
+						<div class="col-sm-4 text-sm-center">
+							<div class="sPromo__sub-row row align-items-center">
+								<div class="col-auto col-sm-12">
+									<div class="sPromo__p-img"><img loading="lazy" src="img/svg/sPromo-1.svg" alt=""/>
+									</div>
+								</div>
+								<div class="sPromo__p-txt col col-sm-12">основана<br/>в 2001г
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 text-sm-center">
+							<div class="sPromo__sub-row row align-items-center">
+								<div class="col-auto col-sm-12">
+									<div class="sPromo__p-img"><img loading="lazy" src="img/svg/sPromo-2.svg" alt=""/>
+									</div>
+								</div>
+								<div class="sPromo__p-txt col col-sm-12">более 8 000<br/>добровольцев
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 text-sm-center">
+							<div class="sPromo__sub-row row align-items-center">
+								<div class="col-auto col-sm-12">
+									<div class="sPromo__p-img"><img loading="lazy" src="img/svg/sPromo-3.svg" alt=""/>
+									</div>
+								</div>
+								<div class="sPromo__p-txt col col-sm-12">из 67 субъектов<br/>Российской Федерации
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
-			<!-- end sContact-->
+			<!-- end sPromo-->
+			<!-- start sMap-->
+			<section class="sMap section" id="sMap">
+				<div class="container">
+					<div class="section-title">
+						<h2>Наши представительства в регионах</h2>
+					</div>
+					<div class="sMap__map">
+					</div>
+				</div>
+			</section>
+			<!-- end sMap-->
+			<!-- start sStat-->
+			<div class="sStat section" id="sStat">
+				<div class="container">
+					<div class="sStat__row row">
+						<div class="col-6 col-xl-3 text-center">
+							<div class="sStat__item">
+								<div class="sStat__black">свыше
+								</div>
+								<div class="sStat__number">1000
+								</div>
+								<div class="sStat__txt">спасенных <br> жизней
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-xl-3 text-center">
+							<div class="sStat__item smaller">
+								<div class="sStat__black">свыше
+								</div>
+								<div class="sStat__number">1 670 000
+								</div>
+								<div class="sStat__txt">человек, получивших знания и навыки в области культуры безопасности
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-xl-3 text-center">
+							<div class="sStat__item">
+								<div class="sStat__black">участие в ликвидации
+								</div>
+								<div class="sStat__number">22
+								</div>
+								<div class="sStat__txt">крупных ЧС <br> за 20 лет
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-xl-3 text-center">
+							<div class="sStat__item">
+								<div class="sStat__black">участие в ликвидации
+								</div>
+								<div class="sStat__number">4
+								</div>
+								<div class="sStat__txt">крупных ЧС <br> за 2021 год
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sStat-->
+			<!-- start sEvents-->
+			<section class="sEvents section" id="sEvents">
+				<div class="container">
+					<div class="sEvents__title-row row gy-3">
+						<div class="col">
+							<div class="section-title">
+								<h2>Мероприятия корпуса</h2>
+							</div>
+						</div>
+						<div class="col-auto">
+							<a class="sEvents__btn" href="#">Все мероприятия
+							</a>
+						</div>
+					</div>
+					<div class="sEvents__nav-row row">
+						<div class="col-sm-6 col-md-4 col-xl-auto">
+							<div class="sEvents__input-wrap form-group">
+								<select class="sEvents__input form-select" name="select">
+									<option value="Все">Все</option>
+									<option value=" placeholder 1">placeholder 1</option>
+									<option value=" placeholder 2">placeholder 2</option>
+									<option value=" placeholder 3">placeholder 3</option>
+									<option value=" placeholder 4">placeholder 4</option>
+								</select>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-sm-6 col-md-4 col-xl-auto">
+							<div class="sEvents__input-wrap form-group">
+								<select class="sEvents__input form-select disabled" name="select">
+									<option value="Выберите город">Выберите город</option>
+									<option value=" placeholder 1">placeholder 1</option>
+									<option value=" placeholder 2">placeholder 2</option>
+									<option value=" placeholder 3">placeholder 3</option>
+									<option value=" placeholder 4">placeholder 4</option>
+								</select>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-sm-6 col-md-4 col-xl-auto">
+							<div class="sEvents__input-wrap form-group">
+								<select class="sEvents__input form-select" name="select">
+									<option value="Даты проведения">Даты проведения</option>
+									<option value=" placeholder 1">placeholder 1</option>
+									<option value=" placeholder 2">placeholder 2</option>
+									<option value=" placeholder 3">placeholder 3</option>
+									<option value=" placeholder 4">placeholder 4</option>
+								</select>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-auto col-sm-6 col-md-auto ms-xl-auto">
+							<label class="btn-chb red">
+								<input class="invisible" type="checkbox" name="ЧС"/><span class="bar"></span><span class="txt">ЧС</span>
+							</label>
+						</div>
+						<div class="col-auto col-sm-6 col-md-auto">
+							<label class="btn-chb blue">
+								<input class="invisible" type="checkbox" name="Регистрация открыта"/><span class="bar"></span><span class="txt">Регистрация открыта</span>
+							</label>
+						</div>
+					</div>
+					<div class="sEvents__slide-wrap">
+						<div class="swiper sEvents-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="sEvents__card">
+										<div class="sEvents__tag sEvents__tag--blue">Регистрация открыта
+										</div>
+										<a class="sEvents__c-img" href="#"><img loading="lazy" src="img/@2x/sEventsSlide-1.png" alt=""/>
+										</a>
+										<div class="sEvents__txt-box">
+											<a class="sEvents__c-title" href="#">Добровольцы ресурсного центра ЧС организовали демонстрационную точку
+											</a>
+											<div class="sEvents__c-date">19 августа, с 18:00 до 20:00
+											</div>
+											<div class="sEvents__c-location">Республика Удмуртия
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sEvents__card">
+										<div class="sEvents__tag sEvents__tag--blue">Регистрация закрыта
+										</div>
+										<a class="sEvents__c-img" href="#"><img loading="lazy" src="img/@2x/sEventsSlide-1.png" alt=""/>
+										</a>
+										<div class="sEvents__txt-box">
+											<a class="sEvents__c-title" href="#">Добровольцы оказывают помощь в реализации проекта &quot;Первая помощь: от Мала до Велика&quot;
+											</a>
+											<div class="sEvents__c-date">19 августа, с 18:00 до 20:00
+											</div>
+											<div class="sEvents__c-location">Республика Удмуртия
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sEvents__card">
+										<div class="sEvents__tag sEvents__tag--blue">Регистрация открыта
+										</div>
+										<a class="sEvents__c-img" href="#"><img loading="lazy" src="img/@2x/sEventsSlide-1.png" alt=""/>
+										</a>
+										<div class="sEvents__txt-box">
+											<a class="sEvents__c-title" href="#">Тренировка поисково-спасательных собак
+											</a>
+											<div class="sEvents__c-date">19 августа, с 18:00 до 20:00
+											</div>
+											<div class="sEvents__c-location">Республика Удмуртия
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sEvents__card">
+										<div class="sEvents__tag sEvents__tag--blue">Регистрация открыта
+										</div>
+										<a class="sEvents__c-img" href="#"><img loading="lazy" src="img/@2x/sEventsSlide-1.png" alt=""/>
+										</a>
+										<div class="sEvents__txt-box">
+											<a class="sEvents__c-title" href="#">Добровольцы ресурсного центра ЧС организовали демонстрационную точку
+											</a>
+											<div class="sEvents__c-date">19 августа, с 18:00 до 20:00
+											</div>
+											<div class="sEvents__c-location">Республика Удмуртия
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sEvents__card">
+										<div class="sEvents__tag sEvents__tag--blue">Регистрация закрыта
+										</div>
+										<a class="sEvents__c-img" href="#"><img loading="lazy" src="img/@2x/sEventsSlide-1.png" alt=""/>
+										</a>
+										<div class="sEvents__txt-box">
+											<a class="sEvents__c-title" href="#">Добровольцы оказывают помощь в реализации проекта &quot;Первая помощь: от Мала до Велика&quot;
+											</a>
+											<div class="sEvents__c-date">19 августа, с 18:00 до 20:00
+											</div>
+											<div class="sEvents__c-location">Республика Удмуртия
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sEvents__card">
+										<div class="sEvents__tag sEvents__tag--blue">Регистрация открыта
+										</div>
+										<a class="sEvents__c-img" href="#"><img loading="lazy" src="img/@2x/sEventsSlide-1.png" alt=""/>
+										</a>
+										<div class="sEvents__txt-box">
+											<a class="sEvents__c-title" href="#">Тренировка поисково-спасательных собак
+											</a>
+											<div class="sEvents__c-date">19 августа, с 18:00 до 20:00
+											</div>
+											<div class="sEvents__c-location">Республика Удмуртия
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sEvents-->
+			<!-- start sBecome-->
+			<section class="sBecome section" id="sBecome">
+				<div class="container">
+					<div class="sBecome__box">
+						<div class="sBecome__row row gx-0">
+							<div class="sBecome__col sBecome__col--txt col-lg-auto">
+								<div class="section-title">
+									<h2>Стань участником</h2>
+									<p>Вступление в организацию дает расширенные возможности участникам</p>
+								</div>
+								<div class="sBecome__sub-title">
+									<p>Вы сможете проходить специальное обучение, принимать участие в мероприятиях и спасательных операциях, а также молодежных форумах и соревнованиях</p><a href="#">Подать заявку</a>
+								</div>
+							</div>
+							<div class="sBecome__col sBecome__col--img col-lg">
+								<div class="sBecome__img"><img loading="lazy" src="img/@2x/sBecome-img.png" alt=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sBecome-->
+			<!-- start sHero-->
+			<section class="sHero sHero--js section" id="sHero">
+				<div class="container">
+					<div class="sHero__row row">
+						<div class="col">
+							<div class="section-title">
+								<h2>Наши герои</h2>
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="sw-arrows">
+								<div class="sw-arrows__row row justify-content-center">
+									<div class="col-auto">
+										<div class="swiper-prev">
+											<svg class="icon icon-chevron-left ">
+												<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="sw-arrows__fract fract-js col-auto">3 / 5
+									</div>
+									<div class="col-auto">
+										<div class="swiper-next">
+											<svg class="icon icon-chevron-right ">
+												<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sHero__slider-wrap">
+						<div class="swiper sHero-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="sHero__item text-center">
+										<div class="sHero__img-cont">
+											<a class="sHero__img" href="#"><img loading="lazy" src="img/@2x/sHero-1.png" alt=""/>
+											</a>
+										</div>
+										<a class="sHero__title" href="#">Зайцев Евгений 
+										</a>
+										<div class="sHero__location">Ноябрьск
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sHero__item text-center">
+										<div class="sHero__img-cont">
+											<a class="sHero__img" href="#"><img loading="lazy" src="img/@2x/sHero-2.png" alt=""/>
+											</a>
+										</div>
+										<a class="sHero__title" href="#">Ташибаев Адилет
+										</a>
+										<div class="sHero__location">Астрахань
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sHero__item text-center">
+										<div class="sHero__img-cont">
+											<a class="sHero__img" href="#"><img loading="lazy" src="img/@2x/sHero-3.png" alt=""/>
+											</a>
+										</div>
+										<a class="sHero__title" href="#">Галямов Максим
+										</a>
+										<div class="sHero__location">Ростов-на-Дону
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sHero__item text-center">
+										<div class="sHero__img-cont">
+											<a class="sHero__img" href="#"><img loading="lazy" src="img/@2x/sHero-4.png" alt=""/>
+											</a>
+										</div>
+										<a class="sHero__title" href="#">Нагольнов Александр
+										</a>
+										<div class="sHero__location">Марий Эл
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sHero-->
+			<!-- start sPartners-->
+			<section class="sPartners section" id="sPartners">
+				<div class="container">
+					<div class="section-title">
+						<h2>Партнеры</h2>
+					</div>
+					<div class="sPartners__row row">
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 bigger-col">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-1.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">МЧС России
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 bigger-col">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-2.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Минобрнауки
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 bigger-col">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-3.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Министерство просвещения
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 bigger-col">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-4.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Росмолодежь
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-5.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-6.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-7.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-8.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-9.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-10.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-5.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-6.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-7.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-8.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-9.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+						<div class="sPartners__col col-4 col-sm-4 col-lg-3 col-xl-2">
+							<div class="sPartners__item">
+								<a class="sPartners__img" href="#"><img loading="lazy" src="img/@2x/sPartners-10.png" alt=""/>
+								</a>
+								<a class="sPartners__name" href="#">Партнер
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sPartners-->
+			<!--+sForm()-->
+			<!--+sContact()-->
 			<footer class="footer">
 				<div class="container">
-					<div class="row">
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+					<div class="footer__row row">
+						<div class="col-6 col-md-3 col-xl-2">
+							<a class="footer__menu-title" href="#">О ВСКС
+							</a>
+							<div class="footer__menu">
+								<ul>
+									<li><a href="#">Документы</a></li>
+									<li><a href="#">Пресс-кит</a></li>
+									<li><a href="#">Об организации</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-6 col-md-3 col-xl-2">
+							<a class="footer__menu-title" href="#">Пресс-центр
+							</a>
+							<div class="footer__menu">
+								<ul>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">Герои</a></li>
+									<li><a href="#">Региональные новости</a></li>
+									<li><a href="#">СМИ о нас</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col text-md-end">
+							<a class="footer__tel" href="tel:+74953690573">+7(495) 369-05-73
+							</a>
+							<div>
+								<a class="footer__mail" href="mailto:info@911mail.ru">info@911mail.ru
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__soc-row row align-items-center gy-4">
+						<div class="col-sm">
+							<div class="footer__s-txt">© 2006-<span class="set-curr-year-js">2021</span>
+								Всероссийская Общественная Молодежная Организация
+								«Всероссийский студенческий корпус спасателей»
+							</div>
+						</div>
+						<div class="col-sm-auto">
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-vk.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-in.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-yt.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-fb.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-tw.svg" alt=""/>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bot-box">
+						<div class="footer__b-row row">
+							<div class="col-lg">
+								<div class="footer__b-txt">Все права на любые материалы, опубликованные на сайте, защищены в соответствии с российским и международным законодательством об авторском праве и смежных правах.При любом использовании текстовых, аудио-, фото- и видеоматериалов ссылка на www.vsks.ru обязательна.
+								</div>
+							</div>
+							<div class="col-lg-auto">
+								<a class="footer__policy" href="#" target="_blank">Политика конфидецнальности
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</footer>
@@ -130,10 +1016,10 @@
 						</div>
 						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
+					<button class="form-wrap__btn btn" type="submit">
 					</button>
 					<div class="p-5"></div>
 					<div class="p-5"></div>

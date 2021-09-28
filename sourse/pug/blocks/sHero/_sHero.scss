@@ -1,0 +1,82 @@
+// start .sHero
+.sHero {
+	overflow: hidden;
+	--sTPB: 0;
+
+	--sPT: #{rem(30)};
+	--sPB: #{rem(35)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(50)};
+		--sPB: #{rem(60)};
+	}
+
+	&__row{
+		--bs-gutter-y: #{rem(8)};
+		--bs-gutter-x: #{rem(16)};
+
+		padding-bottom: rem(40);
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(97);
+		}
+	}
+
+	.section-title{
+		h2{
+
+		}
+	}
+	&__slider-wrap{
+		.swiper{
+			@include media-breakpoint-down(sm){
+				overflow: visible!important;
+			}
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			height: auto;
+
+			width: 200px;
+			@include media-breakpoint-up(sm){
+				width: calc(100%/2 - 20px*1/2);
+			}
+			@include media-breakpoint-up(md){
+				width: calc(100%/3 - 20px*2/3);
+			}
+			@include media-breakpoint-up(lg){
+				width: calc(100%/4 - 20px*3/4);
+			}
+		}
+	}
+	&__item{
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
+	&__img-cont{
+		width: rem(165);
+		margin: 0 auto rem(45);
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: calc(184/165 * 100%);
+		border-radius: 4px;
+	}
+	&__title{
+		flex-grow: 1;
+		display: block;
+		font-weight: bold;
+		font-size: rem(20);
+		margin-bottom: rem(18);
+
+		color: $black;
+	}
+	&__location{
+		@extend .loc-txt;
+		justify-content: center;
+
+	}
+	&__{}
+	&__{}
+} // end.sHero

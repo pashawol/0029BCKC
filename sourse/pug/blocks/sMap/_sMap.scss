@@ -1,0 +1,26 @@
+// start .sMap
+.sMap {
+	background: $light-blue;
+
+	--sPT: #{rem(30)};
+	--sPB: #{rem(45)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(40)};
+		--sPB: #{rem(75)};
+		--sTPB: #{rem(35)};
+	}
+
+	.section-title{
+		h2{
+			color: $primary;
+		}
+	}
+	&__map{
+		height: 582px;
+		background-color: $primary;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sMap

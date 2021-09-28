@@ -1,0 +1,43 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+e.title-row.row
+				.col
+					+b.section-title
+						h2 Новости
+				.col-auto
+					+e.all-btn(href="#") Все новости
+			+e.nav-row.row
+				.col-md-auto
+					+e.btns-box
+						+e.b-row.row
+							+sNewsRadio('Все')(checked)
+							+sNewsRadio('Главные')
+							+sNewsRadio('Региональные')
+							+sNewsRadio('Город')
+				.col-md-auto
+					+input('Выберите город', 'select')(class="disabled")
+			+e.cards-row.row
+				+sNewsSlide(1, 'Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края')
+				+sNewsSlide(2, 'В МЧС России простились с Министром МЧС России Евгением Зиничевым')
+				+sNewsSlide(3, 'Главное управление сообщает о лесопожарной обстановке на территории')
+				+sNewsSlide(4, 'Президент Российской Федерации, главы зарубежных стран, государственные деятели, коллеги и друзья выразил')
+	// end sNews
+
+mixin sNewsSlide(imgNum, txt)
+	.col-sm-6.col-lg-3
+		+e.img(href="#")
+			img(loading="lazy" src=`img/@2x/sNews-slide-${imgNum}.png` alt="")
+		+e.date-row.row.align-items-center
+			.col
+				+e.date 19.08.21
+			.col-auto
+				+e.location Республика Удмуртия
+		+e.title(href="#")=txt
+
+mixin sNewsRadio(txt)
+	.col-auto
+		+e.LABEL.radio
+			input(type="radio" name="sNews" value=txt class="invisible")&attributes(attributes)
+			span.radio-btn=txt

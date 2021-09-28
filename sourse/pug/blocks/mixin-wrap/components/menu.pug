@@ -2,22 +2,20 @@
 mixin mnu()
 	-
 		var nav= { 
-			"Наши работы":"#",
-			"Цены":"#",
-			"Калькулятор":"#",
-			"Акции":"#" ,
-			"Заказать":"#",
+			"Пресс-центр":"#",
+			"Мероприятия":"#",
+			"Контакты":"#",
+			"Набор на ЧС":"#",
 			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		li.menu-item.menu-item-has-children
-			a(href="#" itemprop="url") О нас
+			a(href="#" itemprop="url") О ВСКС
 			ul.sub-menu
 				-
 					var subnav= { 
-						"Строительство загородных домов":"#",
-						"Отделка загородных домов":"#",
-						"Покраска деревянных домов":"#",
-						"Штукатурные фасады загородных домов":"#" ,
+						"Об организации":"#",
+						"Документы":"#",
+						"Пресс-кит":"#",
 						}
 				each sublinkPatch, sublinkName in subnav
 					li.menu-item(itemprop="item" ): a(href= sublinkPatch itemprop="url")= sublinkName

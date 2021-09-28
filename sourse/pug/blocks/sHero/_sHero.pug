@@ -1,0 +1,27 @@
+mixin sHero(data)
+	// start sHero
+	+b.SECTION.sHero--js.section#sHero&attributes(attributes)
+		.container
+			+e.row.row
+				.col
+					+b.section-title
+						h2 Наши герои
+				.col-auto
+					+arrow2()
+			+e.slider-wrap
+				.swiper.sHero-slider-js
+					.swiper-wrapper
+						+sHeroSlide(1, 'Зайцев Евгений ', 'Ноябрьск')
+						+sHeroSlide(2, 'Ташибаев Адилет', 'Астрахань')
+						+sHeroSlide(3, 'Галямов Максим', 'Ростов-на-Дону')
+						+sHeroSlide(4, 'Нагольнов Александр', 'Марий Эл')
+	// end sHero
+
+mixin sHeroSlide(imgNum, name, loc)
+	.swiper-slide
+		+e.item.text-center
+			+e.img-cont
+				+e.img(href="#")
+					img(loading="lazy" src=`img/@2x/sHero-${imgNum}.png` alt="")
+			+e.title(href='#')=name
+			+e.location=loc

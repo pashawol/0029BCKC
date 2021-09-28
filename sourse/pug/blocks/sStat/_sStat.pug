@@ -1,0 +1,34 @@
+mixin sStat(data)
+	// start sStat
+	+b.sStat.section#sStat&attributes(attributes)
+		.container
+			+e.row.row
+				+sStatItem({
+					black: 'свыше',
+					num: '1000',
+					txt: `спасенных <br> жизней`,
+				})
+				+sStatItem({
+					black: 'свыше',
+					num: '1 670 000',
+					addClasses: 'smaller',
+					txt: 'человек, получивших знания и навыки в области культуры безопасности',
+				})
+				+sStatItem({
+					black: 'участие в ликвидации',
+					num: '22',
+					txt: `крупных ЧС <br> за 20 лет`,
+				})
+				+sStatItem({
+					black: 'участие в ликвидации',
+					num: '4',
+					txt: `крупных ЧС <br> за 2021 год`,
+				})
+	// end sStat
+
+mixin sStatItem(data)
+	.col-6.col-xl-3.text-center
+		+e.item(class=`${data.addClasses || ''}`)
+			+e.black=data.black
+			+e.number=data.num
+			+e.txt!=data.txt

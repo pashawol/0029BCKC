@@ -1,9 +1,40 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+			+e.row.row
+				+footerMenuCol('О ВСКС')
+					li: a(href="#") Документы
+					li: a(href="#") Пресс-кит
+					li: a(href="#") Об организации
+				+footerMenuCol('Пресс-центр')
+					li: a(href="#") Новости
+					li: a(href="#") Герои
+					li: a(href="#") Региональные новости
+					li: a(href="#") СМИ о нас
+				.col.text-md-end
+					+e.tel(href="tel:+74953690573") +7(495) 369-05-73
+					div
+						+e.mail(href="mailto:info@911mail.ru") info@911mail.ru
+			+e.soc-row.row.align-items-center.gy-4
+				.col-sm
+					+e.s-txt
+						| © 2006-
+						span.set-curr-year-js 2021
+						|
+						| Всероссийская Общественная Молодежная Организация
+						| «Всероссийский студенческий корпус спасателей»
+				.col-sm-auto
+					+soc()
+			+e.bot-box
+				+e.b-row.row
+					.col-lg
+						+e.b-txt Все права на любые материалы, опубликованные на сайте, защищены в соответствии с российским и международным законодательством об авторском праве и смежных правах.При любом использовании текстовых, аудио-, фото- и видеоматериалов ссылка на www.vsks.ru обязательна.
+					.col-lg-auto
+						+e.policy(href="#" target="_blank") Политика конфидецнальности
+
+mixin footerMenuCol(title)
+	.col-6.col-md-3.col-xl-2
+		+e.menu-title(href="#")=title
+		+e.menu
+			ul
+				block

@@ -1,0 +1,40 @@
+mixin sPromo(data)
+	// start sPromo
+	+b.SECTION.sPromo.section#sPromo&attributes(attributes)
+		.container
+			+e.box
+				.row.gx-0.gy-0
+					+e.col--img.col-lg-auto
+						+e.img(href="#")
+							img(loading="lazy" src="img/@2x/sPromo.png" alt="")
+					+e.col--txt.col-lg
+						+b.section-title
+							h2
+								| Мы спасатели,
+								br
+								| Мы добровольцы!
+							p Всероссийский студенческий корпус спасателей – одна из крупнейших студенческих добровольческих организаций в Российской Федерации. Образована в 2001 году. В состав ВСКС входит свыше 8000 добровольцев из 67 субъектов Российской Федерации. Все студенты-спасатели проходят специальную подготовку для оказания квалифицированной помощи специальным службам при возникновении...
+							a(href="#") Узнать больше...
+			+e.pills-row.row
+				+sPromoPill(1)
+					| основана
+					br
+					| в 2001г
+				+sPromoPill(2)
+					| более 8 000
+					br
+					| добровольцев
+				+sPromoPill(3)
+					| из 67 субъектов
+					br
+					| Российской Федерации
+	// end sPromo
+
+mixin sPromoPill(imgNum)
+	.col-sm-4.text-sm-center
+		+e.sub-row.row.align-items-center
+			.col-auto.col-sm-12
+				+e.p-img
+					img(loading="lazy" src=`img/svg/sPromo-${imgNum}.svg` alt="")
+			+e.p-txt.col.col-sm-12
+				block

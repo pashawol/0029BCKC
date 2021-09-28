@@ -3,7 +3,7 @@
 	background: $light-blue;
 
 	--sPT: #{rem(30)};
-	--sPB: #{rem(45)};
+	--sPB: #{rem(0)};
 	--sTPB: #{rem(30)};
 	@include media-breakpoint-up(lg){
 		--sPT: #{rem(40)};
@@ -17,10 +17,67 @@
 		}
 	}
 	&__map{
-		height: 582px;
+		@include media-breakpoint-down(md){
+			position: relative;
+			width: 100vw;
+			left: calc((100vw - 100%) / -2);
+		}
+		height: rem(400);
+		@include media-breakpoint-up(lg){
+			height: rem(582);
+		}
 		background-color: $primary;
 	}
 	&__{}
 	&__{}
 	&__{}
 } // end.sMap
+
+.yandex{
+
+	//-
+	&__title{
+		font-weight: bold;
+		font-size: rem(14);
+		color: $primary;
+		margin-bottom: rem(7);
+	}
+	&__body{
+		font-weight: bold;
+		font-size: 12px;
+		margin-bottom: rem(14);
+	}
+	&__name{
+		font-weight: bold;
+	}
+	&__tel{
+		color: $black;
+		display: block;
+	}
+	&__mail{
+		color: $primary;
+		display: block;
+	}
+	//
+	&__data-box{
+		font-size: rem(12);
+	}
+	&__data-row{
+		--bs-gutter-x: #{rem(30)};
+		padding-bottom: rem(5);
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+	&__d-key{
+
+	}
+	&__d-val{
+		font-weight: bold;
+	}
+	&__data-row{}
+	&__d-key{}
+	&__d-val{}
+	&__{}
+	&__{}
+}

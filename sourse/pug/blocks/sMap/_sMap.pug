@@ -4,5 +4,19 @@ mixin sMap(data)
 		.container
 			+b.section-title
 				h2 Наши представительства в регионах
-			+e.map
+			+e.map#map
+			// remove block, yandex if I will forget
+			+b.yandex.d-none
+				+e.title Екатеринбургская обл.
+				+e.body
+					+e.name Викторов Олег Викторович
+					+e.tel(href="tel:+79856698899") +7 985 669 88 99
+					+e.mail(href='mailto:sample@sample.com') sample@sample.com
+				+e.data-box
+					+e.data-row.row
+						+e.d-key.col Участников ВСКС
+						+e.d-val.col-auto 456
+					+e.data-row.row
+						+e.d-key.col Количество отрядов ВСКС
+						+e.d-val.col-auto 12
 	// end sMap

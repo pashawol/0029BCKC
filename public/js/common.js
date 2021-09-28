@@ -234,21 +234,6 @@ function eventHandler() {
 	}
 
 	//luckyOne Js
-	let headerH;
-	let header = document.querySelector(".header--js");
-	function calcHeaderHeight() {
-		document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
-		headerH = header.offsetHeight;
-
-		if (!header) return;
-		window.scrollY > 0
-			? header.classList.add('fixed')
-			: header.classList.remove('fixed');
-	}
-	window.addEventListener('resize', calcHeaderHeight, { passive: true });
-	window.addEventListener('scroll', calcHeaderHeight, { passive: true });
-	calcHeaderHeight();
-
 
 	let defaultSl = {
 		spaceBetween: 0,
@@ -390,7 +375,59 @@ function eventHandler() {
 	});
 	$('.set-curr-year-js').each(function (){
 		this.innerHTML = new Date().getFullYear();
-	})
+	});
+	//yandex lazy
+	//<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98" type="text/javascript"></script>
+	window.setTimeout(function (){
+		let yandexScript = document.createElement('script');
+		yandexScript.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98');
+		yandexScript.setAttribute('type', 'text/javascript');
+		document.body.appendChild(yandexScript);
+		//-console.log(yandexScript);
+
+		let yandexJq = document.createElement('script');
+		yandexJq.setAttribute('src', 'https://yandex.st/jquery/2.2.3/jquery.min.js');
+		yandexJq.setAttribute('type', 'text/javascript');
+		document.body.appendChild(yandexJq);
+		//-console.log(yandexJq);
+
+
+		window.setTimeout(function (){
+			ymaps.ready(function () {
+					var myMap = new ymaps.Map('map', {
+							center: [63.63, 99.22],
+							zoom: 3,
+						},{
+							minZoom: 3,
+							maxZoom: 5,
+						}, {
+							searchControlProvider: 'yandex#search'
+						}),
+						objectManager = new ymaps.ObjectManager({
+							// Чтобы метки начали кластеризоваться, выставляем опцию.
+							clusterize: true,
+							// ObjectManager принимает те же опции, что и кластеризатор.
+							gridSize: 32,
+							clusterDisableClickZoom: true
+						});
+
+					// Чтобы задать опции одиночным объектам и кластерам,
+					// обратимся к дочерним коллекциям ObjectManager.
+					objectManager.objects.options.set('preset', 'islands#circleDotIcon');
+					objectManager.objects.options.set('iconColor', '#E31E24');
+					objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
+					myMap.geoObjects.add(objectManager);
+
+					$.ajax({
+						url: "data.json"
+					}).done(function(data) {
+						objectManager.add(data);
+					});
+			});
+		}, 1000);
+
+	}, 2000);
+
 
 	//end luckyOne Js
 

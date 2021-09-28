@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.638980,
+          99.223582
+        ]
+      },
+      "properties": {
+        "balloonContentHeader": "<div class='yandex__title'>Екатеринбургская обл.</div>",
+        "balloonContentBody": "<div class='yandex__body'><div class='yandex__name'>Викторов Олег Викторович</div><a class='yandex__tel' href='tel:+79856698899'>+7 985 669 88 99</a><a class='yandex__mail' href='mailto:sample@sample.com'>sample@sample.com</a></div>",
+        "balloonContentFooter": "<div class='yandex__data-box'><div class='yandex__data-row row'><div class='yandex__d-key col'>Участников ВСКС</div><div class='yandex__d-val col-auto'>456</div></div><div class='yandex__data-row row'><div class='yandex__d-key col'>Количество отрядов ВСКС</div><div class='yandex__d-val col-auto'>12</div></div></div>"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.638980,
+          90.223582
+        ]
+      },
+      "properties": {
+        "balloonContentHeader": "<div class='yandex__title'>Екатеринбургская обл2222</div>",
+        "balloonContentBody": "<div class='yandex__body'><div class='yandex__name'>Викторов Олег Викторович2</div><a class='yandex__tel' href='tel:+79856698899'>+7 985 669 88 99</a><a class='yandex__mail' href='mailto:sample@sample.com'>sample@sample.com</a></div>",
+        "balloonContentFooter": "<div class='yandex__data-box'><div class='yandex__data-row row'><div class='yandex__d-key col'>Участников ВСКС</div><div class='yandex__d-val col-auto'>456</div></div><div class='yandex__data-row row'><div class='yandex__d-key col'>Количество отрядов ВСКС</div><div class='yandex__d-val col-auto'>12</div></div></div>"
+      }
+    }
+  ]
+}

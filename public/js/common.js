@@ -436,7 +436,7 @@ function eventHandler() {
 		$('.counter-js').css('opacity', '1');
 		$('.counter-js').spincrement({
 			thousandSeparator: " ",
-			duration: 3000
+			duration: 1000
 		});
 		show = false;
 	}

@@ -6,29 +6,36 @@ mixin sStat(data)
 				+sStatItem({
 					black: 'свыше',
 					num: '1000',
+					goal: 68,
 					txt: `спасенных <br> жизней`,
 				})
 				+sStatItem({
 					black: 'свыше',
 					num: '1 670 000',
+					goal: 92,
 					addClasses: 'smaller',
 					txt: 'человек, получивших знания и навыки в области культуры безопасности',
 				})
 				+sStatItem({
 					black: 'участие в ликвидации',
 					num: '22',
+					goal: 88,
 					txt: `крупных ЧС <br> за 20 лет`,
 				})
 				+sStatItem({
 					black: 'участие в ликвидации',
 					num: '4',
+					goal: 30,
 					txt: `крупных ЧС <br> за 2021 год`,
 				})
+			//-
 	// end sStat
 
 mixin sStatItem(data)
-	.col-6.col-xl-3.text-center
+	.col-6.col-xl-3.text-center.col-circle-js
 		+e.item(class=`${data.addClasses || ''}`)
 			+e.black=data.black
-			+e.number=data.num
+			+e.number
+				span.counter-js=data.num
+				.pieProgress(role='progressbar' data-goal=data.goal   data-step='2')
 			+e.txt!=data.txt

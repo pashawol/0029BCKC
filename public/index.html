@@ -468,7 +468,14 @@
 					<div class="yandex d-none">
 						<div class="yandex__title">Екатеринбургская обл.
 						</div>
-						<div class='yandex__body'><div class='yandex__name'>Викторов Олег Викторович</div><a class='yandex__tel' href='tel:+79856698899'>+7 985 669 88 99</a><a class='yandex__mail' href='mailto:sample@sample.com'>sample@sample.com</a></div>
+						<div class="yandex__body">
+							<div class="yandex__name">Викторов Олег Викторович
+							</div>
+							<a class="yandex__tel" href="tel:+79856698899">+7 985 669 88 99
+							</a>
+							<a class="yandex__mail" href="mailto:sample@sample.com">sample@sample.com
+							</a>
+						</div>
 						<div class="yandex__data-box">
 							<div class="yandex__data-row row">
 								<div class="yandex__d-key col">Участников ВСКС
@@ -491,41 +498,45 @@
 			<div class="sStat section" id="sStat">
 				<div class="container">
 					<div class="sStat__row row">
-						<div class="col-6 col-xl-3 text-center">
+						<div class="col-6 col-xl-3 text-center col-circle-js">
 							<div class="sStat__item">
 								<div class="sStat__black">свыше
 								</div>
-								<div class="sStat__number">1000
+								<div class="sStat__number"><span class="counter-js">1000</span>
+									<div class="pieProgress" role="progressbar" data-goal="68" data-step="2"></div>
 								</div>
 								<div class="sStat__txt">спасенных <br> жизней
 								</div>
 							</div>
 						</div>
-						<div class="col-6 col-xl-3 text-center">
+						<div class="col-6 col-xl-3 text-center col-circle-js">
 							<div class="sStat__item smaller">
 								<div class="sStat__black">свыше
 								</div>
-								<div class="sStat__number">1 670 000
+								<div class="sStat__number"><span class="counter-js">1 670 000</span>
+									<div class="pieProgress" role="progressbar" data-goal="92" data-step="2"></div>
 								</div>
 								<div class="sStat__txt">человек, получивших знания и навыки в области культуры безопасности
 								</div>
 							</div>
 						</div>
-						<div class="col-6 col-xl-3 text-center">
+						<div class="col-6 col-xl-3 text-center col-circle-js">
 							<div class="sStat__item">
 								<div class="sStat__black">участие в ликвидации
 								</div>
-								<div class="sStat__number">22
+								<div class="sStat__number"><span class="counter-js">22</span>
+									<div class="pieProgress" role="progressbar" data-goal="88" data-step="2"></div>
 								</div>
 								<div class="sStat__txt">крупных ЧС <br> за 20 лет
 								</div>
 							</div>
 						</div>
-						<div class="col-6 col-xl-3 text-center">
+						<div class="col-6 col-xl-3 text-center col-circle-js">
 							<div class="sStat__item">
 								<div class="sStat__black">участие в ликвидации
 								</div>
-								<div class="sStat__number">4
+								<div class="sStat__number"><span class="counter-js">4</span>
+									<div class="pieProgress" role="progressbar" data-goal="30" data-step="2"></div>
 								</div>
 								<div class="sStat__txt">крупных ЧС <br> за 2021 год
 								</div>
@@ -697,6 +708,12 @@
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+					<div class="sEvents__empty">
+						<div class="sEvents__e-img"><img loading="lazy" src="img/svg/calendar.svg" alt=""/>
+						</div>
+						<div class="sEvents__e-txt text-center">К сожалению на эти даты нет запланированных мероприятий. Выберите другие даты или увеличьте географию фильтра
 						</div>
 					</div>
 				</div>
@@ -1056,6 +1073,8 @@
 		<!-- #modal-call-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/jquery-asPieProgress/jquery-asPieProgress.min.js"></script>
+		<script src="js/jquery.spincrement.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>

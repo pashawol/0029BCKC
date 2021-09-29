@@ -39,6 +39,10 @@ mixin sEvents(data)
 								imgNum: 1,
 								title: 'Тренировка поисково-спасательных собак',
 							})
+			+e.empty
+				+e.e-img
+					img(loading="lazy" src="img/svg/calendar.svg" alt="")
+				+e.e-txt.text-center К сожалению на эти даты нет запланированных мероприятий. Выберите другие даты или увеличьте географию фильтра
 	// end sEvents
 
 mixin sEventsSlide(data)

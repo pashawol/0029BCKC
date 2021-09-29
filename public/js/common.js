@@ -428,6 +428,63 @@ function eventHandler() {
 
 	}, 2000);
 
+	//
+	let show = true;
+	function counters() {
+		var countbox = $('.counter-wrap-js');
+		if (!countbox.length && !show) return;
+		$('.counter-js').css('opacity', '1');
+		$('.counter-js').spincrement({
+			thousandSeparator: " ",
+			duration: 3000
+		});
+		show = false;
+	}
+
+	//
+	let progress = document.querySelector('.pieProgress');
+	if (progress) {
+		let bar = $('.pieProgress');
+
+		let target = bar;
+		let targetPos = target.offset().top;
+		let winHeight = $(window).height();
+		let scrollToElem = targetPos - winHeight;
+
+
+		let arr = {
+			namespace: 'pie_progress',
+			easing: 'linear',
+			min: 0,
+			first: 0,
+			size: 68,
+			barcolor: '#EB7329',
+			barsize: '1',
+			speed: 30,
+			trackcolor: 'transparent',
+			goal: 0,
+		}
+
+		let bars = document.querySelectorAll('.col-circle-js .pieProgress');
+		for (let bar of bars){
+			$(bar).asPieProgress(arr);
+		}
+
+		function startPrigess() {
+			for (let bar of bars){
+				$(bar).asPieProgress('start');
+			}
+		}
+
+		$(window).scroll(function () {
+			let winScrollTop = $(this).scrollTop();
+			if (winScrollTop > scrollToElem) {
+				startPrigess();
+				counters();
+			}
+		});
+	}
+
 
 	//end luckyOne Js
 

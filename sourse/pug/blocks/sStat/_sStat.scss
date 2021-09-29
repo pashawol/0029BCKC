@@ -15,14 +15,21 @@
 		--bs-gutter-x: #{rem(20)};
 
 		& > *{
-			&:nth-child(3n + 1){
-				--circle-bg-img: url(../img/svg/sStat-circle-1.svg);
+			&:nth-child(4n + 1){
+				//--circle-bg-img: url(../img/svg/sStat-circle-1.svg);
+				--c-rot: 225deg;
 			}
-			&:nth-child(3n + 2){
-				--circle-bg-img: url(../img/svg/sStat-circle-2.svg);
+			&:nth-child(4n + 2){
+				//--circle-bg-img: url(../img/svg/sStat-circle-2.svg);
+				--c-rot: 120deg;
 			}
-			&:nth-child(3n + 3){
-				--circle-bg-img: url(../img/svg/sStat-circle-3.svg);
+			&:nth-child(4n + 3){
+				//--circle-bg-img: url(../img/svg/sStat-circle-3.svg);
+				--c-rot: -45deg;
+			}
+			&:nth-child(4n + 4){
+				//--circle-bg-img: url(../img/svg/sStat-circle-3.svg);
+				--c-rot: -190deg;
 			}
 		}
 	}
@@ -71,7 +78,7 @@
 		position: relative;
 		z-index: 1;
 		&:after{
-			content: '';
+			//content: '';
 			position: absolute;
 			z-index: -1;
 			width: calc(100% + #{rem(24)});
@@ -85,6 +92,17 @@
 			background-position: center;
 		}
 	}
+	.pieProgress{
+		transform: rotate(var(--c-rot, 0deg));
+		position: absolute;
+		opacity: .2;
+		z-index: -1;
+		width: calc(100% + #{rem(24)});
+		height: calc(100% + #{rem(24)});
+		top: rem(-12);
+		left: rem(-12);
+	}
+
 	&__txt{
 		font-size: 12px;
 		@include media-breakpoint-up(sm){

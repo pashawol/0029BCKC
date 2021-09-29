@@ -48,6 +48,7 @@
     "@fancyapps/ui": "^4.0.5",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
+    "jquery-asPieProgress": "^0.4.7",
     "swiper": "^7.0.6"
   }
 }

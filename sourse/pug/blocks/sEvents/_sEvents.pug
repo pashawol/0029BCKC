@@ -14,7 +14,7 @@ mixin sEvents(data)
 				.col-sm-6.col-md-4.col-xl-auto
 					+input('Выберите город', 'select')(class="disabled")
 				.col-sm-6.col-md-4.col-xl-auto
-					+input('Даты проведения', 'select')
+					+input('Даты проведения', 'text').input-date-picker-js(autocomplete="off")
 				//-.col-12.d-xl-none.m-0
 				.col-auto.col-sm-6.col-md-auto.ms-xl-auto
 					+sEventsChb('ЧС', 'red')
@@ -57,7 +57,7 @@ mixin sEvents2(data)
 				.col-sm-6.col-md-4.col-xl-auto
 					+input('Новосибирск', 'select')(class="disabled")
 				.col-sm-6.col-md-4.col-xl-auto
-					+input('18 авг. - 24 авг. 2021', 'select')
+					+input('Даты проведения', 'text').input-date-picker-js(autocomplete="off")
 				//-.col-12.d-xl-none.m-0
 				.col-auto.col-sm-6.col-md-auto.ms-xl-auto
 					+sEventsChb('ЧС', 'red')

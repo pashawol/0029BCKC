@@ -1,10 +1,24 @@
-.top-nav {
-	background: $light-blue;
+.main-page{
+	.top-nav{
 
-	padding: rem(12) 0;
-	@include media-breakpoint-up(lg){
-		padding: rem(31) 0;
+		background: $light-blue;
+		padding: rem(12) 0;
+		@include media-breakpoint-up(lg){
+			padding: rem(31) 0;
+		}
+
+			&__sub-row{
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(42)};
+		}
+
+		padding-bottom: rem(32);
 	}
+	}
+}
+
+.top-nav {
+
 
 	&__main-row{
 
@@ -29,13 +43,7 @@
 			width: auto;
 		}
 	}
-	&__sub-row{
-		@include media-breakpoint-up(xxl){
-			--bs-gutter-x: #{rem(42)};
-		}
 
-		padding-bottom: rem(32);
-	}
 	.menu{
 		padding: 0;
 		margin: 0;

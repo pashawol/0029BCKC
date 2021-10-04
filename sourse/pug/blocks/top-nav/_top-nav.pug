@@ -14,7 +14,7 @@ mixin mob-mnu()
 
 	//  мобильное меню
 
-mixin top-nav() 
+mixin top-nav(main) 
 	// start top-nav
 	+b.top-nav.block-with-lazy&attributes(attributes)
 		.container
@@ -39,6 +39,7 @@ mixin top-nav()
 						.col-auto.d-lg-none
 							+b.toggle-menu-mobile--js
 								span
-					+e.title
-						h1 Всероссийский студенческий корпус спасателей
+					if main
+						+e.title
+							h1 Всероссийский студенческий корпус спасателей
 	// end top-nav

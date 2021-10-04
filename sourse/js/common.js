@@ -212,12 +212,31 @@ const JSCCommon = {
 			}
 		});
 	},
+	datepicker() {
+		let pickers = document.querySelectorAll(".input-date-picker-js")
+		pickers.forEach(el => {
+			new Litepicker({
+				element: el,
+				singleMode: false,
+				showTooltip: false,
+				dropdowns: true,
+				// tooltipText: {
+				// 	one: 'night',
+				// 	other: 'nights'
+				// },
+				lang: 'ru-RU',
+				format: "DD.MM.YYYY",
+			})
+		})
+
+	}
 };
 const $ = jQuery;
 
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
+	JSCCommon.datepicker();
 	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();

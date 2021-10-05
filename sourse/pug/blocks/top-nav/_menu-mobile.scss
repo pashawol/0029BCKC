@@ -106,6 +106,14 @@ $h: em(2);
 		opacity: var(--opacity);
 
 		background-color: $white;
+		.exit-btn{
+			display: flex;
+			p{
+				font-weight: 700;
+				margin-top: -3px;
+				margin-left: 11px;
+			}
+		}
 	}
 
 	&.active { 

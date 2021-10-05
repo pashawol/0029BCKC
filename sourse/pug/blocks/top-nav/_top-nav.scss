@@ -1,95 +1,111 @@
-.main-page{
-	.top-nav{
-
+.main-page {
+	.top-nav {
 		background: $light-blue;
 		padding: rem(12) 0;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			padding: rem(31) 0;
 		}
 
-			&__sub-row{
-		@include media-breakpoint-up(xxl){
-			--bs-gutter-x: #{rem(42)};
-		}
+		&__sub-row {
+			@include media-breakpoint-up(xxl) {
+				--bs-gutter-x: #{rem(42)};
+			}
 
-		padding-bottom: rem(32);
-	}
+			padding-bottom: rem(32);
+		}
+		&__logo {
+			display: block;
+			width: 60px;
+			@include media-breakpoint-up(lg) {
+				width: rem(138);
+			}
+
+			img {
+				max-width: 100%;
+				width: auto;
+			}
+		}
 	}
 }
 
 .top-nav {
-
-
-	&__main-row{
-
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(17);
 	}
-	&__col{
-
-		&--content{
-			@include media-breakpoint-up(xxl){
-				padding-left: calc(var(--bs-gutter-x)/2 + 11px);
+	&__main-row {
+	}
+	&__col {
+		&--content {
+			@include media-breakpoint-up(xxl) {
+				padding-left: calc(var(--bs-gutter-x) / 2 + 11px);
+			}
+		}
+		&--profile{
+			@include media-breakpoint-up(lg){
+				padding-right: rem(12);
+			}
+			.login-bl__img{
+				margin-right: rem(32);
 			}
 		}
 	}
-	&__logo{
+	&__logo {
 		display: block;
 		width: 60px;
-		@include media-breakpoint-up(lg){
-			width: rem(138);
+		@include media-breakpoint-up(lg) {
+			width: rem(48);
 		}
 
-		img{
+		img {
 			max-width: 100%;
 			width: auto;
 		}
 	}
 
-	.menu{
+	.menu {
 		padding: 0;
 		margin: 0;
 		display: flex;
 		align-items: center;
 		list-style: none;
 
-		& > .menu-item{
+		& > .menu-item {
 			margin-right: rem(20);
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(xl) {
 				margin-right: rem(38);
 			}
-			&:last-child{
+			&:last-child {
 				margin-right: 0;
 			}
 
-
-			& > a{
+			& > a {
 				font-weight: bold;
 
-
 				color: $body-color;
-				&:hover{
+				&:hover {
 					color: $blue;
 				}
 			}
 
-			&:last-child{
-				& > a{
+			&:last-child {
+				& > a {
 					@extend .btn;
 					@extend .btn-danger;
 					padding: 1px rem(7);
 				}
 			}
 		}
-		.menu-item-has-children{
+		.menu-item-has-children {
 			position: relative;
 
-			&:hover{
+			&:hover {
 				--sb-o: 1;
 				--sb-scale: 1;
 			}
 		}
 	}
 
-	.sub-menu{
+	.sub-menu {
 		transform-origin: top left;
 		@include mt();
 		transform: scale(var(--sb-scale, 0));
@@ -109,15 +125,15 @@
 		min-width: 144px;
 		position: absolute;
 		z-index: 10;
-		&:before{
-			content: '';
+		&:before {
+			content: "";
 			position: absolute;
 			bottom: 100%;
 			width: 100%;
 			height: var(--sb-shift, 9px);
 		}
-		&:after{
-			content: '';
+		&:after {
+			content: "";
 			position: absolute;
 			transform: rotate(45deg) translateY(-50%);
 			top: 0;
@@ -127,55 +143,57 @@
 			background-color: $white;
 		}
 
-		.menu-item{
-			a{
+		.menu-item {
+			a {
 				display: block;
 				white-space: nowrap;
 				padding: rem(9) rem(16);
 				font-size: 13px;
 
 				color: $body-color;
-				&:hover{
+				&:hover {
 					color: $primary;
 				}
 			}
 
 			border-bottom: 1px solid $light-blue;
-			&:last-child{
+			&:last-child {
 				border-bottom: none;
 			}
 		}
 	}
 
 	//-
-	&__title{
+	&__title {
 		max-width: 900px;
 
-		h1{
+		h1 {
 			font-weight: 900;
 
-			@include media-breakpoint-up(xxl){
+			@include media-breakpoint-up(xxl) {
 				font-size: rem(52);
 			}
 
-			line-height: calc(57/52);
+			line-height: calc(57 / 52);
 		}
 	}
-	&__{}
-	&__{}
+	&__ {
+	}
+	&__ {
+	}
 }
 
 //-
-.login-bl{
+.login-bl {
 	display: flex;
 	align-items: center;
 
 	color: $primary;
-	&:hover{
+	&:hover {
 		color: $black;
 	}
 
-	&__img{
+	&__img {
 		flex-shrink: 0;
 		width: rem(16);
 		height: rem(16);
@@ -187,19 +205,30 @@
 		align-items: center;
 		justify-content: center;
 
-		img{
+		img {
 			width: auto;
 			height: auto;
 			max-width: 100%;
 			max-height: 100%;
 		}
 	}
-	&__txt{
+	&__txt {
 		font-weight: bold;
 	}
 }
 
-.reg-btn{
+.reg-btn {
 	@extend .btn;
 	@extend .btn-warning;
+}
+.exit-btn {
+	// @extend .btn;
+	color: black;
+	.icon{
+		font-size: 15px;
+	}
+	@include media-breakpoint-down(lg){
+		position: relative;
+		top: -2px;
+	}
 }

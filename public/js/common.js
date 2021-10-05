@@ -237,7 +237,7 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.datepicker();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();

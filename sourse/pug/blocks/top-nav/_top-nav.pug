@@ -1,4 +1,4 @@
-mixin mob-mnu()
+mixin mob-mnu(main)
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
@@ -6,12 +6,20 @@ mixin mob-mnu()
 			+e.logo(href="/")
 				img(loading="lazy" src="img/@2x/logo.png" alt="")
 			+mnu()
-			+b.login-bl.mb-4(href="#")
-				+e.img
-					img(loading="lazy" src="img/svg/user.svg" alt="")
-				+e.txt Войти
-			+b.reg-btn(href="#") Регистрация
-
+			if main
+				+b.login-bl.mb-4(href="#")
+					+e.img
+						img(loading="lazy" src="img/svg/user.svg" alt="")
+					+e.txt Войти
+				+b.reg-btn(href="#") Регистрация
+			else
+				+b.login-bl.mb-4(href="#")
+					+e.img
+						img(loading="lazy" src="img/svg/user.svg" alt="")
+					+e.txt Анастасия В.
+					+b.exit-btn(href="#")
+						+icon('exit')
+						p Выйти
 	//  мобильное меню
 
 mixin top-nav(main) 
@@ -19,9 +27,14 @@ mixin top-nav(main)
 	+b.top-nav.block-with-lazy&attributes(attributes)
 		.container
 			+e.main-row.row.align-items-center
-				.col-lg-auto.col-xl-2.d-none.d-lg-block
-					+e.logo(href="/")
-						img(loading="lazy" src="img/@2x/logo.png" alt="")
+				if main
+					.col-lg-auto.col-xl-2.d-none.d-lg-block
+						+e.logo(href="/")
+							img(loading="lazy" src="img/@2x/logo.png" alt="")
+				else
+					.col-lg-auto.d-none.d-lg-block
+						+e.logo(href="/")
+							img(loading="lazy" src="img/@2x/logo.png" alt="")
 				+e.col--content.col
 					+e.sub-row.row.align-items-center
 						.col.col-sm-auto.d-lg-none
@@ -29,13 +42,23 @@ mixin top-nav(main)
 								img(loading="lazy" src="img/@2x/logo.png" alt="")
 						.col-auto.d-none.d-lg-block
 							+mnu()
-						.col-auto.ms-auto.d-none.d-sm-block
-							+b.login-bl(href="#")
-								+e.img
-									img(loading="lazy" src="img/svg/user.svg" alt="")
-								+e.txt Войти
-						.col-auto.d-none.d-sm-block
-							+b.reg-btn(href="#") Регистрация
+						if main
+							.col-auto.ms-auto.d-none.d-sm-block
+								+b.login-bl(href="#")
+									+e.img
+										img(loading="lazy" src="img/svg/user.svg" alt="")
+									+e.txt Войти
+							.col-auto.d-none.d-sm-block
+								+b.reg-btn(href="#") Регистрация
+						else
+							+e.col--profile.col-auto.ms-auto.d-none.d-sm-block
+								+b.login-bl(href="#")
+									+e.img
+										img(loading="lazy" src="img/svg/user.svg" alt="")
+									+e.txt Анастасия В.
+							.col-auto.d-none.d-sm-block
+								+b.exit-btn(href="#")
+									+icon('exit')
 						.col-auto.d-lg-none
 							+b.toggle-menu-mobile--js
 								span

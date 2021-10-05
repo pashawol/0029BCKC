@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sPressCenter/_sPressCenter.pug
+//- include ../blocks/sPromo/_sPromo.pug
+//- include ../blocks/sMap/_sMap.pug
+//- include ../blocks/sStat/_sStat.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sBecome/_sBecome.pug
+//- include ../blocks/sHero/_sHero.pug
+//- include ../blocks/sPartners/_sPartners.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg="02-press-center.jpg"
+
+block title
+	- let  title= 'Пресс-центр'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+sPressCenter()
+	//- +sPromo()
+	//- +sMap()
+	//- +sStat()
+	//- +sEvents()
+	//- +sEvents2()
+	//- +sBecome()
+	//- +sHero()
+	//- +sPartners()
+	//+sForm()
+	//+sContact()
+	+footer()

@@ -1,0 +1,167 @@
+// start .sPressCenter
+.sPressCenter {
+	--sPT: #{rem(27)};
+	--sPB: #{rem(39)};
+	// --sTPB: ;
+	h1 {
+		@include media-breakpoint-up(lg) {
+			font-size: rem(52);
+			line-height: rem(57);
+			margin-bottom: rem(47);
+		}
+		margin-bottom: 20px;
+		font-weight: 900;
+	}
+	.tabs {
+		&__btn {
+			@include mt;
+			font-weight: bold;
+			font-size: rem(20);
+			line-height: 150%;
+			margin-bottom: rem(15);
+		}
+		&__caption {
+			.active {
+				color: $orange;
+			}
+		}
+		&__content {
+			h2 {
+				margin-bottom: rem(27);
+			}
+			.date-wrap {
+				margin-bottom: rem(28);
+				p {
+					margin-bottom: rem(5);
+				}
+				input {
+					&::placeholder {
+						font-weight: bold;
+						color: $blue;
+					}
+				}
+			}
+			.day-news {
+				@include media-breakpoint-down(sm) {
+					margin-top: 0;
+				}
+				&__head {
+					display: flex;
+					align-items: center;
+					margin-bottom: rem(25);
+					p {
+						margin-bottom: 0;
+						line-height: 150%;
+						font-size: rem(16);
+						color: rgba(black, 0.5);
+						padding-right: rem(21);
+					}
+					&-line {
+						flex-grow: 1;
+						hr {
+							width: 100%;
+							opacity: 0.1;
+						}
+					}
+				}
+				&__item {
+					height: rem(176);
+					display: flex;
+					width: 100%;
+					margin-bottom: rem(32);
+					@include media-breakpoint-down(sm) {
+						height: 150px;
+						margin-bottom: 26px;
+					}
+					.news-img {
+						height: 100%;
+						min-width: rem(239);
+						@include media-breakpoint-down(sm) {
+							min-width: 115px;
+						}
+						img {
+							border-radius: 4px;
+						}
+					}
+					&-body {
+						height: 100%;
+						padding-left: rem(30);
+						flex-grow: 1;
+						@include media-breakpoint-down(sm) {
+							padding-left: 10px;
+						}
+						.date {
+							font-size: rem(13);
+							line-height: 150%;
+							color: rgba(black, 0.5);
+							margin-bottom: rem(17);
+							@include media-breakpoint-down(sm) {
+								margin-bottom: 2px;
+							}
+						}
+						.caption {
+							font-weight: bold;
+							line-height: 150%;
+							max-height: rem(72);
+							display: -webkit-box;
+							-webkit-box-orient: vertical;
+							-moz-box-orient: vertical;
+							-ms-box-orient: vertical;
+							box-orient: vertical;
+							-webkit-line-clamp: 3;
+							-moz-line-clamp: 3;
+							-ms-line-clamp: 3;
+							line-clamp: 3;
+							overflow: hidden;
+							margin-bottom: rem(28);
+							@include media-breakpoint-down(sm) {
+								margin-bottom: 10px;
+								-webkit-line-clamp: 4;
+								-moz-line-clamp: 4;
+								-ms-line-clamp: 4;
+								line-clamp: 4;
+								max-height: none
+							}
+						}
+						.detailed {
+							@extend .btn, .btn-warning;
+						}
+					}
+				}
+			}
+			.row {
+				@include media-breakpoint-up(lg) {
+					--bs-gutter-x: #{rem(40)};
+				}
+				@include media-breakpoint-down(lg) {
+					--bs-gutter-y: 25px;
+				}
+			}
+			.show-more {
+				@extend .btn, .btn-outline-primary;
+				width: rem(141);
+				margin-left: calc(var(--bs-gutter-x) * 0.5);
+				@include media-breakpoint-up(lg) {
+					margin-top: rem(7);
+				}
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPressCenter

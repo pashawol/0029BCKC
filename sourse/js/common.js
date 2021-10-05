@@ -328,7 +328,9 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	});
-
+	$('.input-location-picker-js').click(function(){
+		$('.input-location-modal-wrap').toggleClass('active');
+	});
 	//.headerBlock-slider-js
 	let headerBlockSlider = new Swiper('.headerBlock-slider-js', {
 		spaceBetween: 0,
@@ -368,6 +370,7 @@ function eventHandler() {
 		},
 	});
 	//
+	
 	let sHeroSlider = new Swiper('.sHero-slider-js', {
 		slidesPerView: "auto",
 		loop: true,

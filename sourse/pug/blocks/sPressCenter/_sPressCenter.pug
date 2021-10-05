@@ -11,16 +11,16 @@ mixin sPressCenter(data)
 					.tabs__btn СМИ о нас
 				.tabs__wrap.col-lg-8.col-12
 					.tabs__content.active 
+						mixin item(i)
+							.day-news__item
+								+pic(`news-${i}.png`,'',0).news-img
+								.day-news__item-body
+									.date 19.08.21
+									.caption Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
+									a.detailed(href="#") Подробнее
 						h2 Главные новости
 						.row
-							.date-wrap.col-lg-6.col-12
-								mixin item(i)
-										.day-news__item
-											+pic(`news-${i}.png`,'',0).news-img
-											.day-news__item-body
-												.date 19.08.21
-												.caption Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
-												a.detailed(href="#") Подробнее
+							.input-wrapper.col-lg-6.col-12
 								p Даты
 								+input('Выберите период').input-date-picker-js(autocomplete="off")
 							.day-news
@@ -44,7 +44,108 @@ mixin sPressCenter(data)
 								+item(2)
 								+item(1)
 							a.show-more(href="#") Показать еще
-					.tabs__content 2
+					.tabs__content 
+						mixin item(i)
+							.day-news__item
+								+pic(`news-${i}.png`,'',0).news-img
+								.day-news__item-body
+									.date.date--loc
+										p 19.08.21
+										p.loc Республика Удмуртия
+									.caption Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
+									a.detailed(href="#") Подробнее
+						h2 Региональные новости
+						.row
+							.input-wrapper.col-lg-6.col-12
+								p Даты
+								+input('Выберите период').input-date-picker-js(autocomplete="off")
+							.input-wrapper.input-location-picker-js.col-lg-6.col-12
+								p Локация
+								+input('Выберите округ или регион').input-location-picker(disabled)
+								.input-location-modal-wrap
+									.input-location-modal
+										.list-wrap
+											+input('Поиск по регионам и округам').input-location-modal-search
+											ul
+												li
+													+in-c('checkbox','Центральный ФО')
+												li
+													+in-c('checkbox','Московская область')
+												li
+													+in-c('checkbox','Московская область')
+												li
+													+in-c('checkbox','Московская область')
+												li
+													+in-c('checkbox','Московская область')
+												li
+													+in-c('checkbox','Московская область')
+											ul
+												li
+													+in-c('checkbox','Северо-западный ФО ')
+												li
+													+in-c('checkbox','Московская область')
+												li
+													+in-c('checkbox','Московская область')
+										.input-location-btns-wrap
+											.input-location-btns
+												a.input-location-btn.input-location-btn--show(href="#") Показать
+												a.input-location-btn.input-location-btn--reset(href="#") Скрыть
+							.day-news.col-12
+								.day-news__head
+									p 21 сентября
+									.day-news__head-line
+										hr
+								+item(1)
+								+item(2)
+							.day-news
+								.day-news__head
+									p 20 сентября
+									.day-news__head-line
+										hr
+								+item(3)
+							.day-news
+								.day-news__head
+									p 19 сентября
+									.day-news__head-line
+										hr
+								+item(2)
+								+item(1)
 					.tabs__content
+						h2 Наши герои
+						.heroes-wrap
 					.tabs__content
+						mixin item(i,p)
+							.day-news__item
+								+pic(`news-${i}.png`,'',0).news-img
+								.day-news__item-body
+									.date.date--publ
+										p 19.08.21
+										a.publ(href="#")!=p
+									.caption Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
+									a.detailed(href="#") Подробнее
+						h2 СМИ о нас
+						.row
+							.input-wrapper.col-lg-6.col-12
+								p Даты
+								+input('Выберите период').input-date-picker-js(autocomplete="off")
+							.day-news.col-12
+								.day-news__head
+									p 21 сентября
+									.day-news__head-line
+										hr
+								+item(1,'Известия')
+								+item(2,'Россия 1')
+							.day-news
+								.day-news__head
+									p 20 сентября
+									.day-news__head-line
+										hr
+								+item(3,'Коммерсант')
+							.day-news
+								.day-news__head
+									p 19 сентября
+									.day-news__head-line
+										hr
+								+item(2,'Forbes')
+								+item(1,'Коммерсант')
 	// end sPressCenter

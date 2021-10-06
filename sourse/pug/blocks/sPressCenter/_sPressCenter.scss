@@ -30,7 +30,13 @@
 				margin-bottom: rem(27);
 			}
 			.input-wrapper {
-				margin-bottom: rem(28);
+				@include media-breakpoint-up(lg){
+					margin-bottom: rem(28);
+				}
+				@include media-breakpoint-down(lg){
+					margin-top: 12px;
+					margin-bottom: 12px;
+				}
 				position: relative;
 				p {
 					margin-bottom: rem(5);

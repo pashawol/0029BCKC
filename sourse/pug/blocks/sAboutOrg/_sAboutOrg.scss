@@ -180,6 +180,29 @@
 		}
 	}
 	
+	&--ispolkom{
+		@include media-breakpoint-up(lg) {
+			--sPB: #{rem(105)};
+		}
+		h2{
+			margin-bottom: rem(43);
+		}
+		.row{
+			--bs-gutter-x:#{rem(40)};
+			--bs-gutter-y:#{rem(32)}; 
+		}
+		.sAboutOrg__name{
+			font-weight: bold;
+			font-size: rem(20);
+			line-height: 150%;
+			padding-top: rem(18);
+		}
+		.sAboutOrg__city{
+			line-height: 150%;
+			font-size: rem(13);
+			padding-top: rem(12);
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

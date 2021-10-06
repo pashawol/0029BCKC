@@ -1,0 +1,24 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAboutOrg/_sAboutOrg.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg="03-about-organisation-ispolkom.jpg"
+
+block title
+	- let  title= 'Исполком'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+sAboutOrgIspolkom()
+	//+sForm()
+	//+sContact()
+	+footer()

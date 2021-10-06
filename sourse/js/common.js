@@ -328,7 +328,7 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	});
-	$('.input-location-picker-js').click(function(){
+	$('.input-location-picker').click(function(){
 		$('.input-location-modal-wrap').toggleClass('active');
 	});
 	//.headerBlock-slider-js

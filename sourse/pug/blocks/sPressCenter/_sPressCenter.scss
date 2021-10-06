@@ -48,9 +48,26 @@
 					background-color: $white !important;
 					cursor: pointer;
 					position: relative;
-					background-image: url("../img/svg/input-location-arrow.svg");
-					background-repeat: no-repeat;
-					background-position: right rem(19) top rem(15);
+					border-radius: 4px;
+					cursor: pointer;
+					font-size: rem(16);
+					border: 1px solid #238ece;
+					color: $primary;
+					font-weight: bold;
+					padding: 0.4375rem 0.75rem;
+					&::after {
+						content: "";
+						background-image: url("../img/svg/input-location-arrow.svg");
+						position: absolute;
+						top: 50%;
+						right: rem(19);
+						transform: translateY(-50%);
+						height: 8px;
+						width: 13px;
+					}
+					// background-image: url("../img/svg/input-location-arrow.svg");
+					// background-repeat: no-repeat;
+					// background-position: right rem(19) top rem(15);
 				}
 				.input-location-modal-wrap {
 					position: absolute;
@@ -62,7 +79,7 @@
 					z-index: 20;
 					display: none;
 				}
-				.input-location-modal{
+				.input-location-modal {
 					box-shadow: 0px 23px 38px rgba(0, 0, 0, 0.15);
 					border-radius: 4px;
 				}
@@ -121,11 +138,11 @@
 				.input-location-btn {
 					@extend .btn;
 					width: 50%;
-					&--show{
+					&--show {
 						@extend .btn-warning;
 						margin-right: rem(16);
 					}
-					&--reset{
+					&--reset {
 						@extend .btn-light;
 						margin-left: rem(16);
 					}
@@ -216,7 +233,7 @@
 									}
 								}
 							}
-							&--publ{
+							&--publ {
 								display: flex;
 								p {
 									margin-bottom: 0;
@@ -225,9 +242,9 @@
 									}
 									margin-right: 20px;
 								}
-								.publ{
+								.publ {
 									font-weight: bold;
-									color:$primary;
+									color: $primary;
 								}
 							}
 						}

@@ -59,9 +59,10 @@ mixin sPressCenter(data)
 							.input-wrapper.col-lg-6.col-12
 								p Даты
 								+input('Выберите период').input-date-picker-js(autocomplete="off")
-							.input-wrapper.input-location-picker-js.col-lg-6.col-12
+							.input-wrapper.col-lg-6.col-12
 								p Локация
-								+input('Выберите округ или регион').input-location-picker(disabled)
+								//- +input('Выберите округ или регион').input-location-picker(disabled)
+								.input-location-picker Выберите период
 								.input-location-modal-wrap
 									.input-location-modal
 										.list-wrap

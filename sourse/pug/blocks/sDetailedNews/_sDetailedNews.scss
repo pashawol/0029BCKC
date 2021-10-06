@@ -1,0 +1,106 @@
+// start .sDetailedNews
+.sDetailedNews {
+	--sPB: #{rem(50)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(52)};
+		--sPB: #{rem(89)};
+	}
+	&__link-back {
+		display: inline-flex;
+		align-items: center;
+		color: $black;
+		padding: rem(5);
+		margin-left: rem(-5);
+		margin-top: rem(-5);
+		margin-bottom: rem(20);
+		.icon {
+			font-size: 16px;
+			fill: none;
+			stroke: currentColor;
+		}
+	}
+	&__content {
+		max-width: 799px;
+		h1 {
+			margin-bottom: rem(38);
+			font-weight: 900;
+			line-height: calc(44 / 40);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(48);
+			}
+		}
+		picture {
+			margin-bottom: rem(36);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(46);
+			}
+			img {
+				border-radius: $border-radius;
+			}
+		}
+		p {
+			font-size: rem(20);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(30);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.date-n-location {
+			display: flex;
+			margin-bottom: rem(25);
+			flex-wrap: wrap;
+			margin-top: rem(-7);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(35);
+			}
+			p {
+				margin-top: rem(7);
+				margin-bottom: 0;
+				font-size: 13px;
+				line-height: 150%;
+				&:first-of-type {
+					color: rgba($black, 0.5);
+					margin-right: rem(25);
+					@include media-breakpoint-up(sm) {
+						margin-right: rem(67);
+					}
+				}
+			}
+			.loc {
+				position: relative;
+				margin-right: 0;
+				color: $black;
+				padding-left: rem(24);
+				&::after {
+					content: "";
+					position: absolute;
+					width: 13px;
+					height: 14px;
+					top: 2px;
+					left: 0;
+					// transform: translateY(-50%);
+					background-image: url("../img/svg/loc-point.svg");
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sDetailedNews

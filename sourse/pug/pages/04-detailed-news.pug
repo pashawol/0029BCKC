@@ -3,7 +3,7 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
-include ../blocks/sPressCenter/_sPressCenter.pug
+include ../blocks/sDetailedNews/_sDetailedNews.pug
 //- include ../blocks/sPromo/_sPromo.pug
 //- include ../blocks/sMap/_sMap.pug
 //- include ../blocks/sStat/_sStat.pug
@@ -14,10 +14,10 @@ include ../blocks/sPressCenter/_sPressCenter.pug
 
 block variables
 	- let  mainPage= '' 
-	- let  bg="02-press-center-2.jpg"
+	- let  bg="04-detailed-news.jpg"
 
 block title
-	- let  title= 'Пресс-центр'
+	- let  title= 'Новость'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -25,7 +25,7 @@ block pagecontent
 		+top-nav()
 		//-+topLine()
 	//- +headerBlock()
-	+sPressCenter()
+	+sDetailedNews()
 	//- +sPromo()
 	//- +sMap()
 	//- +sStat()

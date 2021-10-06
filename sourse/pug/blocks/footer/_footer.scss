@@ -36,10 +36,10 @@
 				}
 			}
 			a {
-				display: block;
+				display: inline-block;
 				color: $black;
 				&:hover {
-					color: $link-hover-color;
+					color: $primary;
 				}
 			}
 		}

@@ -23,20 +23,20 @@ mixin sPressCenter(data)
 							.input-wrapper.col-lg-6.col-12
 								p Даты
 								+input('Выберите период').input-date-picker-js(autocomplete="off")
-							.day-news
+							.day-news.col-12
 								.day-news__head
 									p 21 сентября
 									.day-news__head-line
 										hr
 								+item(1)
 								+item(2)
-							.day-news
+							.day-news.col-12
 								.day-news__head
 									p 20 сентября
 									.day-news__head-line
 										hr
 								+item(3)
-							.day-news
+							.day-news.col-12
 								.day-news__head
 									p 19 сентября
 									.day-news__head-line
@@ -59,9 +59,10 @@ mixin sPressCenter(data)
 							.input-wrapper.col-lg-6.col-12
 								p Даты
 								+input('Выберите период').input-date-picker-js(autocomplete="off")
-							.input-wrapper.input-location-picker-js.col-lg-6.col-12
+							.input-wrapper.col-lg-6.col-12
 								p Локация
-								+input('Выберите округ или регион').input-location-picker(disabled)
+								//- +input('Выберите округ или регион').input-location-picker(disabled)
+								.input-location-picker Выберите период
 								.input-location-modal-wrap
 									.input-location-modal
 										.list-wrap
@@ -69,23 +70,31 @@ mixin sPressCenter(data)
 											ul
 												li
 													+in-c('checkbox','Центральный ФО')
-												li
-													+in-c('checkbox','Московская область')
-												li
-													+in-c('checkbox','Московская область')
-												li
-													+in-c('checkbox','Московская область')
-												li
-													+in-c('checkbox','Московская область')
-												li
-													+in-c('checkbox','Московская область')
+													ul
+														li
+															+in-c('checkbox','Московская область')
+														li
+															+in-c('checkbox','Московская область')
+														li
+															+in-c('checkbox','Московская область')
+														li
+															+in-c('checkbox','Московская область')
+														li
+															+in-c('checkbox','Московская область')
 											ul
 												li
-													+in-c('checkbox','Северо-западный ФО ')
-												li
-													+in-c('checkbox','Московская область')
-												li
-													+in-c('checkbox','Московская область')
+													+in-c('checkbox','Северо-западный ФО')
+													ul
+														li
+															+in-c('checkbox','Московская область')
+														li
+															+in-c('checkbox','Московская область')
+														li
+															+in-c('checkbox','Московская область')
+														li
+															+in-c('checkbox','Московская область')
+														li
+															+in-c('checkbox','Московская область')
 										.input-location-btns-wrap
 											.input-location-btns
 												a.input-location-btn.input-location-btn--show(href="#") Показать
@@ -97,13 +106,13 @@ mixin sPressCenter(data)
 										hr
 								+item(1)
 								+item(2)
-							.day-news
+							.day-news.col-12
 								.day-news__head
 									p 20 сентября
 									.day-news__head-line
 										hr
 								+item(3)
-							.day-news
+							.day-news.col-12
 								.day-news__head
 									p 19 сентября
 									.day-news__head-line
@@ -148,13 +157,13 @@ mixin sPressCenter(data)
 										hr
 								+item(1,'Известия')
 								+item(2,'Россия 1')
-							.day-news
+							.day-news.col-12
 								.day-news__head
 									p 20 сентября
 									.day-news__head-line
 										hr
 								+item(3,'Коммерсант')
-							.day-news
+							.day-news.col-12
 								.day-news__head
 									p 19 сентября
 									.day-news__head-line

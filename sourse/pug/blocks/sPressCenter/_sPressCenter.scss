@@ -31,7 +31,13 @@
 				margin-bottom: rem(27);
 			}
 			.input-wrapper {
-				margin-bottom: rem(28);
+				@include media-breakpoint-up(lg){
+					margin-bottom: rem(28);
+				}
+				@include media-breakpoint-down(lg){
+					margin-top: 12px;
+					margin-bottom: 12px;
+				}
 				position: relative;
 				p {
 					margin-bottom: rem(5);
@@ -49,9 +55,26 @@
 					background-color: $white !important;
 					cursor: pointer;
 					position: relative;
-					background-image: url("../img/svg/input-location-arrow.svg");
-					background-repeat: no-repeat;
-					background-position: right rem(19) top rem(15);
+					border-radius: 4px;
+					cursor: pointer;
+					font-size: rem(16);
+					border: 1px solid #238ece;
+					color: $primary;
+					font-weight: bold;
+					padding: 0.4375rem 0.75rem;
+					&::after {
+						content: "";
+						background-image: url("../img/svg/input-location-arrow.svg");
+						position: absolute;
+						top: 50%;
+						right: rem(19);
+						transform: translateY(-50%);
+						height: 8px;
+						width: 13px;
+					}
+					// background-image: url("../img/svg/input-location-arrow.svg");
+					// background-repeat: no-repeat;
+					// background-position: right rem(19) top rem(15);
 				}
 				.input-location-modal-wrap {
 					position: absolute;
@@ -89,14 +112,8 @@
 							margin-bottom: 0;
 						}
 						li {
-							margin-bottom: rem(12);
-							padding-left: rem(16);
-							&:nth-child(1) {
-								padding-left: 0;
-								span {
-									font-weight: bold;
-								}
-							}
+							margin-bottom: rem(8);
+							// padding-left: rem(16);
 							label {
 								input {
 									margin-right: 14px;
@@ -104,6 +121,18 @@
 								}
 								span {
 									line-height: 150%;
+									font-weight: bold;
+								}
+							}
+							ul{
+								margin-top: rem(8);
+								li{
+									padding-left: rem(16);
+									label{
+										span{
+											font-weight: normal;
+										}
+									}
 								}
 							}
 						}

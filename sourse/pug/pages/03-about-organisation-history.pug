@@ -1,0 +1,24 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAboutOrgHistory/_sAboutOrgHistory.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg="02-press-center-2.jpg"
+
+block title
+	- let  title= 'Пресс-центр'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+sAboutOrgHistory()
+	//+sForm()
+	//+sContact()
+	+footer()

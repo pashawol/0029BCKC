@@ -105,14 +105,8 @@
 							margin-bottom: 0;
 						}
 						li {
-							margin-bottom: rem(12);
-							padding-left: rem(16);
-							&:nth-child(1) {
-								padding-left: 0;
-								span {
-									font-weight: bold;
-								}
-							}
+							margin-bottom: rem(8);
+							// padding-left: rem(16);
 							label {
 								input {
 									margin-right: 14px;
@@ -120,6 +114,18 @@
 								}
 								span {
 									line-height: 150%;
+									font-weight: bold;
+								}
+							}
+							ul{
+								margin-top: rem(8);
+								li{
+									padding-left: rem(16);
+									label{
+										span{
+											font-weight: normal;
+										}
+									}
 								}
 							}
 						}

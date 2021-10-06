@@ -1,0 +1,29 @@
+// start .sAboutOrgHistory
+.sAboutOrgHistory {
+	--sPT: #{rem(27)};
+	--sPB: #{rem(39)};
+	// --sTPB: ;
+	h1 {
+		@include media-breakpoint-up(lg) {
+			font-size: rem(52);
+			line-height: rem(57);
+			margin-bottom: rem(47);
+		}
+		margin-bottom: 20px;
+		font-weight: 900;
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sAboutOrgHistory

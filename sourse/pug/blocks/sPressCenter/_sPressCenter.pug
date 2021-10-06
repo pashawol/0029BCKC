@@ -3,14 +3,20 @@ mixin sPressCenter(data)
 	+b.SECTION.sPressCenter.section#sPressCenter&attributes(attributes)
 		.container
 			h1 Пресс-центр
-			.row.tabs
-				.tabs__caption.col-lg-4.col-12
-					.tabs__btn.active Главные новости
-					.tabs__btn Региональные новости
-					.tabs__btn Наши герои
-					.tabs__btn СМИ о нас
-				.tabs__wrap.col-lg-8.col-12
-					.tabs__content.active 
+			.row
+				.col-lg-4.col-12
+					+e.menu
+						ul
+							li
+								+e.menu-btn.active(href="#") Главные новости
+							li
+								+e.menu-btn(href="#") Региональные новости
+							li
+								+e.menu-btn(href="#") Наши герои
+							li
+								+e.menu-btn(href="#") СМИ о нас
+				.col-lg-8.col-12
+					.news-content
 						mixin item(i)
 							.day-news__item
 								+pic(`news-${i}.png`,'',0).news-img
@@ -44,7 +50,25 @@ mixin sPressCenter(data)
 								+item(2)
 								+item(1)
 							a.show-more(href="#") Показать еще
-					.tabs__content 
+
+mixin sPressCenterRegion(data)
+	+b.SECTION.sPressCenter--region.section#sPressCenterRegion&attributes(attributes)
+		.container
+			h1 Пресс-центр
+			.row
+				.col-lg-4.col-12
+					+e.menu
+						ul
+							li
+								+e.menu-btn(href="#") Главные новости
+							li
+								+e.menu-btn.active(href="#") Региональные новости
+							li
+								+e.menu-btn(href="#") Наши герои
+							li
+								+e.menu-btn(href="#") СМИ о нас
+				.col-lg-8.col-12
+					.news-content
 						mixin item(i)
 							.day-news__item
 								+pic(`news-${i}.png`,'',0).news-img
@@ -119,7 +143,26 @@ mixin sPressCenter(data)
 										hr
 								+item(2)
 								+item(1)
-					.tabs__content
+
+mixin sPressCenterHeroes(data)
+	// start sPressCenter
+	+b.SECTION.sPressCenter--heroes.section#sPressCenterHeroes&attributes(attributes)
+		.container
+			h1 Пресс-центр
+			.row
+				.col-lg-4.col-12
+					+e.menu
+						ul
+							li
+								+e.menu-btn(href="#") Главные новости
+							li
+								+e.menu-btn(href="#") Региональные новости
+							li
+								+e.menu-btn.active(href="#") Наши герои
+							li
+								+e.menu-btn(href="#") СМИ о нас
+				.col-lg-8.col-12
+					.news-content
 						h2 Наши герои
 						+b.heroes
 							mixin item(i, h, t)
@@ -134,8 +177,25 @@ mixin sPressCenter(data)
 							+item(3, `Яков Миндрулев`, `Яков Миндрулев, руководитель Иркутского регионального отделения ВСКС, 6&nbsp;июля спас ребёнка при дорожно-транспортной ситуации на&nbsp;Култукском тракте. Он&nbsp;вытащил мальчика из&nbsp;повреждённой машины и&nbsp;оказал ему первую помощь. А&nbsp;также помог семье при организационных вопросах, с&nbsp;перелетом и&nbsp;проживанием...`)
 							+item(4, `Айгумов Артур`, `Матросы-спасатели Кемеровского регионального отделения ВСКС студенческого отряда &laquo;Скала&raquo; Анастасия Тихонова и&nbsp;Руслан Хоркашов спасли ребенка и&nbsp;женщину.&nbsp;27&nbsp;июня Анастасия Тихонова, находясь на&nbsp;дежурстве, в&nbsp;10&nbsp;метрах от&nbsp;берега заметила тонущего ребенка. Шестилетняя девочка была...`)
 
-
-					.tabs__content
+mixin sPressCenterSmi(data)
+	// start sPressCenter
+	+b.SECTION.sPressCenter--smi.section#sPressCenterSmi&attributes(attributes)
+		.container
+			h1 Пресс-центр
+			.row
+				.col-lg-4.col-12
+					+e.menu
+						ul
+							li
+								+e.menu-btn(href="#") Главные новости
+							li
+								+e.menu-btn(href="#") Региональные новости
+							li
+								+e.menu-btn(href="#") Наши герои
+							li
+								+e.menu-btn.active(href="#") СМИ о нас
+				.col-lg-8.col-12
+					.news-content
 						mixin item(i,p)
 							.day-news__item
 								+pic(`news-${i}.png`,'',0).news-img

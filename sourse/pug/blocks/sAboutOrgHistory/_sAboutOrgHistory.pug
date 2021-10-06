@@ -6,6 +6,46 @@ mixin sAboutOrgHistory(data)
 			.row
 				.col-lg-4.col-12
 					ul
+						li
+							p.active Об организации
+							ul
+								li
+									p.active История
+								li
+									p Руководство
+								li
+									p Исполком
+								li
+									p Достижения
+								li
+									p Добровольцы
+								li
+									p Партнеры
+						li
+							p Документы
+						li
+							p Пресс-кит
 				.col-lg-8.col-12
-
+					h2 История
+					.row
+						+e.col.col-12
+							+e.aboutSwiper--js.swiper
+								.swiper-wrapper
+									.swiper-slide
+										+pic('about-slider-1.png','',0)
+									.swiper-slide
+										+pic('about-slider-2.png','',0)
+									.swiper-slide
+										+pic('about-slider-1.png','',0)
+									.swiper-slide
+										+pic('about-slider-2.png','',0)
+									.swiper-slide
+										+pic('about-slider-1.png','',0)
+									.swiper-slide
+										+pic('about-slider-2.png','',0)
+									.swiper-slide
+										+pic('about-slider-1.png','',0)
+									.swiper-slide
+										+pic('about-slider-2.png','',0)
+								.swiper-pagination
 	// end sAboutOrgHistory

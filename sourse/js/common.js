@@ -331,15 +331,18 @@ function eventHandler() {
 	$('.input-location-picker').click(function () {
 		$('.input-location-modal-wrap').toggleClass('active');
 	});
-	var aboutSlider = new Swiper('.sAboutOrgHistory__aboutSwiper--js', {
+	var aboutSlider = new Swiper('.sAboutOrg__aboutSwiper--js', {
 		slidesPerView: 2,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
 		},
-		breakpoints:{
-			576:{
-				slidesPerView:3,
+		breakpoints: {
+			576: {
+				slidesPerView: 3,
+			},
+			2200: {
+				slidesPerView: 4,
 			}
 		},
 	});

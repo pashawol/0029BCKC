@@ -194,6 +194,7 @@ const JSCCommon = {
 				let targetSelector = self.getAttribute('href');
 				let target = document.querySelector(targetSelector);
 
+				
 				if (!target) {
 					self.setAttribute("href", '/' + targetSelector);
 				}

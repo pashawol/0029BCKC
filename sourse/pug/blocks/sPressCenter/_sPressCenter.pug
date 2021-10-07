@@ -61,7 +61,7 @@ mixin sPressCenterRegion(data)
 				.input-wrapper.col-lg-6.col-12
 					p Локация
 					//- +input('Выберите округ или регион').input-location-picker(disabled)
-					.input-location-picker Выберите период
+					.input-location-picker Выберите округ или регион
 					.input-location-modal-wrap
 						.input-location-modal
 							.list-wrap
@@ -118,6 +118,7 @@ mixin sPressCenterRegion(data)
 							hr
 					+item(2)
 					+item(1)
+				a.show-more(href="#") Показать еще
 
 mixin sPressCenterHeroes(data)
 	// start sPressCenter
@@ -177,4 +178,5 @@ mixin sPressCenterSmi(data)
 							hr
 					+item(2,'Forbes')
 					+item(1,'Коммерсант')
+				a.show-more(href="#") Показать еще
 	// end sPressCenter

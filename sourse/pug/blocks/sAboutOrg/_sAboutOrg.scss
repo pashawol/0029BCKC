@@ -123,7 +123,8 @@
 		}
 	}
 }
-.ispolkom {
+.sAboutOrgIspolkom {
+	--sPT: 0;
 	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(105)};
 	}
@@ -134,16 +135,85 @@
 		--bs-gutter-x: #{rem(40)};
 		--bs-gutter-y: #{rem(32)};
 	}
-	.sAboutOrg__name {
+	&__name {
 		font-weight: bold;
-		font-size: rem(20);
+		font-size: 15px;
 		line-height: 150%;
 		padding-top: rem(18);
+		@include media-breakpoint-up(sm) {
+			font-size: rem(20);
+		}
 	}
-	.sAboutOrg__city {
+	&__city {
 		line-height: 150%;
 		font-size: rem(13);
 		padding-top: rem(12);
+	}
+}
+.sAboutOrgProgress {
+	--sPT: 0;
+	@include media-breakpoint-up(lg) {
+		--sPB:#{rem(139)};
+	}
+	h2{
+		margin-bottom: rem(43);
+	}
+	.row {
+		--bs-gutter-x: #{rem(40)};
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	&__item {
+		background-color: #ecf8ff;
+		padding-left: rem(36);
+		padding-right: rem(36);
+		padding-top: rem(40);
+		padding-bottom: rem(20);
+		picture {
+			height: rem(316);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&-caption {
+			padding-top: rem(32);
+			text-align: center;
+			font-size: rem(12);
+			line-height: 150%;
+			color:rgba(black, 0.5)
+		}
+		&-year{
+			text-align: center;
+			font-size: rem(12);
+			line-height: 150%;
+			padding-top: rem(18);
+		}
+	}
+}
+.sAboutOrgPartners{
+	--sPT: 0;
+	@include media-breakpoint-up(lg){
+		--sPB:#{rem(230)};
+	}
+	h2{
+		margin-bottom: rem(43);
+	}
+	.row{
+		--bs-gutter-x: #{rem(40)};
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	&__partner{
+		picture{
+			height: rem(141);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&-caption{
+			font-size: rem(13);
+			line-height: 150%;
+			padding-top: rem(20);
+			text-align: center;
+		}
 	}
 }
 @include media-breakpoint-up(xl) {

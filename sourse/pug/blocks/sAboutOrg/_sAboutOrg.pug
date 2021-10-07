@@ -56,47 +56,55 @@ mixin sAboutOrgLeader(data)
 
 
 mixin sAboutOrgIspolkom(data)
-	+b.SECTION.sAboutOrg--ispolkom.section#sAboutOrgIspolkom&attributes(attributes)
-		.container 
-			h1 О ВСКС
-			.row
-				.col-lg-4.col-12
-					ul
-						li
-							p.active Об организации
-							ul
-								li
-									p История
-								li
-									p Руководство
-								li
-									p.active Исполком
-								li
-									p Достижения
-								li
-									p Добровольцы
-								li
-									p Партнеры
-						li
-							p Документы
-						li
-							p Пресс-кит
-				.col-lg-8.col-12
-					h2 Исполком
-					.row
-						mixin item(i,n,c)
-							.col-md-3.col-6
-								+pic(`ispolkom-${i}`,'',0)
-								+e.name!=n
-								if c
-									+e.city!=c
-						+item(1,`Козеев<br>Евгений<br>Николаевич`)
-						+item(2,`Потапова<br>Наталья<br>Сергеевна`,`Москва`)
-						+item(3,`Маркодеева<br>Анастасия<br>Олеговна`,`Москва`)
-						+item(4,`Логвинов<br>Олег<br>Александрович`,`Москва`)
-						+item(5,`Андреев<br>Алексей<br>Евгеньевич`)
-						+item(6,`Колодкин<br>Андрей<br>Андреевич`,`Краснодарский край`)
-						+item(7,`Караев<br>Роман<br>Юрьевич`,`Северная Осетия`)
-						+item(8,`Карасёв<br>Роман<br>Евгеньевич`,`Ростовская область`)
-						+item(9,`Тлеубаев<br>Ильяс<br>Жумагалиевич`,`Свердловская область`)
-						+item(10,`Миндрулев<br>Яков<br>Александрович`,`Иркутская область`)
+	+b.SECTION.sAboutOrgIspolkom.section#sAboutOrgIspolkom&attributes(attributes)
+		h2 Исполком
+		.row
+			mixin item(i,n,c)
+				.col-md-3.col-6
+					+pic(`ispolkom-${i}`,'',0)
+					+e.name!=n
+					if c
+						+e.city!=c
+			+item(1,`Козеев<br>Евгений<br>Николаевич`)
+			+item(2,`Потапова<br>Наталья<br>Сергеевна`,`Москва`)
+			+item(3,`Маркодеева<br>Анастасия<br>Олеговна`,`Москва`)
+			+item(4,`Логвинов<br>Олег<br>Александрович`,`Москва`)
+			+item(5,`Андреев<br>Алексей<br>Евгеньевич`)
+			+item(6,`Колодкин<br>Андрей<br>Андреевич`,`Краснодарский край`)
+			+item(7,`Караев<br>Роман<br>Юрьевич`,`Северная Осетия`)
+			+item(8,`Карасёв<br>Роман<br>Евгеньевич`,`Ростовская область`)
+			+item(9,`Тлеубаев<br>Ильяс<br>Жумагалиевич`,`Свердловская область`)
+			+item(10,`Миндрулев<br>Яков<br>Александрович`,`Иркутская область`)
+
+mixin sAboutOrgProgress(data)
+	+b.SECTION.sAboutOrgProgress.section#sAboutOrgProgress&attributes(attributes)
+		h2 Достижения
+		.row
+			mixin item(i)
+				.col-sm-6.col-12
+					+e.item
+						+pic(`progress-${i}.png`,'',0)
+						+e.item-caption Описание достижения в несколько строк для нагляднсоти отображения информации
+						+e.item-year 2021 г.
+			+item(1)
+			+item(2)
+			+item(3)
+			+item(4)
+
+mixin sAboutOrgPartners(data)
+	+b.SECTION.sAboutOrgPartners.section#sAboutOrgPartners&attributes(attributes)
+		h2 Партнеры
+		.row
+			mixin partner(i,c)
+				.col-md-3.col-6
+					+e.partner
+						+pic(`partners-${i}.png`,'',0)
+						+e.partner-caption!=c
+			+partner(1,`МЧС России`)
+			+partner(2,`Минобрнауки`)
+			+partner(3,`Министерство просвещения`)
+			+partner(4,`Росмолодежь`)
+			- for(var x=5;x<9;x++)
+				+partner(x,'Партнер')
+			- for(var x=5;x<9;x++)
+				+partner(x,'Партнер')

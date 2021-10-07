@@ -7,10 +7,10 @@ include ../blocks/sAboutOrg/_sAboutOrg.pug
 
 block variables
 	- let  mainPage= '' 
-	- let  bg="03-about-organisation-ispolkom.jpg"
+	- let  bg="03-about-organisation-partners.jpg"
 
 block title
-	- let  title= 'Исполком'
+	- let  title= 'Партнеры'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -20,7 +20,7 @@ block pagecontent
 	//- +headerBlock()
 	+pageHead('О ВСКС')
 	+pageBody(`about`,1)
-		+sAboutOrgIspolkom()
+		+sAboutOrgPartners()
 	//+sForm()
 	//+sContact()
 	+footer()

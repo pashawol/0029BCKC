@@ -45,19 +45,55 @@ mixin pageHead(h1, back)
 					.col-lg-2.order-first
 						+e.link-back(href="#" title="Назад")
 							+icon('arrow-left')
-mixin pageBody()
+mixin pageBody(about,type)
 	main.container.container--main 
 		.row.row--main
 			.col-lg-4.order-lg-first.order-last
-				+b.sidebar
-					ul
-						li
-							a.active(href="#") Главные новости
-						li
-							a(href="#") Региональные новости
-						li
-							a(href="#") Наши герои
-						li
-							a(href="#") СМИ о нас
+				if about
+					+b.sidebar
+						ul
+							li
+								a.active(href="#") Об организации
+								if type == 1
+									ul
+										li
+											a.active(href="#") История
+										li
+											a(href="#") Руководство
+										li
+											a(href="#") Исполком
+										li
+											a(href="#") Достижения
+										li
+											a(href="#") Добровольцы
+										li
+											a(href="#") Партнеры
+							li
+								a(href="#") Документы
+							li
+								a(href="#") Пресс-кит
+								if type == 3
+									ul
+										li
+											a.active(href="#") Айдентика
+										li
+											a(href="#") Отчеты о деятельности
+										li
+											a(href="#") Логотипы региональных подразделений
+										li
+											a(href="#") Видеогалерея
+				else
+					+b.sidebar
+						ul
+							li
+								a.active(href="#") Главные новости
+							li
+								a(href="#") Региональные новости
+							li
+								a(href="#") Наши герои
+							li
+								a(href="#") СМИ о нас
 			.col-lg-8
 				block
+
+

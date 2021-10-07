@@ -59,6 +59,7 @@
 		width: 60px;
 		@include media-breakpoint-up(lg) {
 			width: rem(48);
+			margin-right: rem(30);
 		}
 
 		img {

@@ -1,8 +1,7 @@
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -10,9 +9,8 @@
 	}
 }
 
-
-.page-head{
-		--sPT: #{rem(27)};
+.page-head {
+	--sPT: #{rem(27)};
 	--sPB: #{rem(0)};
 	// --sTPB: ;
 	h1 {
@@ -25,12 +23,12 @@
 		font-weight: 900;
 		max-width: rem(810);
 	}
-	.date-n-location + h1{
+	.date-n-location + h1 {
 		@include media-breakpoint-up(lg) {
 			font-size: rem(40);
 		}
 	}
-		&__link-back {
+	&__link-back {
 		display: inline-flex;
 		align-items: center;
 		color: $black;
@@ -46,71 +44,78 @@
 	}
 }
 
-
-.sidebar{
-		// 	@include media-breakpoint-down(lg){
-		// 	margin-bottom: calc(var(--bs-gutter-x)*0.5);
-		// }
-		margin-bottom: var(--sPB);
-		a {
-			font-weight: bold;
-			font-size: rem(20);
-			line-height: 150%;
-			color: black;
-			&:hover,
-			&.active {
-				color: $orange;
-			}
+.sidebar {
+	// 	@include media-breakpoint-down(lg){
+	// 	margin-bottom: calc(var(--bs-gutter-x)*0.5);
+	// }
+	margin-bottom: var(--sPB);
+	a {
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: 150%;
+		color: black;
+		&:hover,
+		&.active {
+			color: $orange;
 		}
-		ul {
-			list-style-type: none;
-			li {
-				margin-bottom: rem(15);
-			}
-		}
-}
-
-
-
-
-	.date-n-location {
-			display: flex;
-			margin-bottom: rem(25);
-			flex-wrap: wrap;
-			margin-top: rem(-7);
-			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(35);
-			}
-			p {
-				margin-top: rem(7);
-				margin-bottom: 0;
-				font-size: 13px;
-				line-height: 150%;
-				&:first-of-type {
-					color: rgba($black, 0.5);
-					margin-right: rem(25);
-					@include media-breakpoint-up(sm) {
-						margin-right: rem(67);
+	}
+	ul {
+		list-style-type: none;
+		li {
+			margin-bottom: rem(15);
+			ul {
+				margin-top: rem(14);
+				margin-bottom: rem(26);
+				padding-left: rem(23);
+				li {
+					margin-bottom: rem(14);
+					a {
+						font-weight: normal;
+						color: rgba(black, 0.5);
 					}
 				}
 			}
-			.loc {
-				position: relative;
-				margin-right: 0;
-				color: $black;
-				padding-left: rem(24);
-				&::after {
-					content: "";
-					position: absolute;
-					width: 13px;
-					height: 14px;
-					top: 2px;
-					left: 0;
-					// transform: translateY(-50%);
-					background-image: url("../img/svg/loc-point.svg");
-					background-size: contain;
-					background-repeat: no-repeat;
-				}
+		}
+	}
+}
+
+.date-n-location {
+	display: flex;
+	margin-bottom: rem(25);
+	flex-wrap: wrap;
+	margin-top: rem(-7);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(35);
+	}
+	p {
+		margin-top: rem(7);
+		margin-bottom: 0;
+		font-size: 13px;
+		line-height: 150%;
+		&:first-of-type {
+			color: rgba($black, 0.5);
+			margin-right: rem(25);
+			@include media-breakpoint-up(sm) {
+				margin-right: rem(67);
 			}
 		}
-		
+	}
+	.loc {
+		position: relative;
+		margin-right: 0;
+		color: $black;
+		padding-left: rem(24);
+		&::after {
+			content: "";
+			position: absolute;
+			width: 13px;
+			height: 14px;
+			top: 2px;
+			left: 0;
+			// transform: translateY(-50%);
+			background-image: url("../img/svg/loc-point.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+}

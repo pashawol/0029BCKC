@@ -332,18 +332,11 @@ function eventHandler() {
 		$('.input-location-modal-wrap').toggleClass('active');
 	});
 	var aboutSlider = new Swiper('.sAboutOrg__aboutSwiper--js', {
-		slidesPerView: 2,
+		slidesPerView: 'auto',
+		spaceBetween:40,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
-		},
-		breakpoints: {
-			576: {
-				slidesPerView: 3,
-			},
-			2200: {
-				slidesPerView: 4,
-			}
 		},
 	});
 	//.headerBlock-slider-js

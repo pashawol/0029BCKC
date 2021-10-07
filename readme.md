@@ -10,4 +10,6 @@
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-history.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-leader.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-ispolkom.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-progress.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-partners.html>
 1

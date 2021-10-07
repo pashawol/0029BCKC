@@ -1,0 +1,23 @@
+// start .sAboutIdentity
+.sAboutIdentity, .sAboutReports{
+	--sPT: 0;
+	// --sPB: ;
+	// --sTPB: ;
+	h2{
+		margin-bottom: rem(29);
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sAboutIdentity

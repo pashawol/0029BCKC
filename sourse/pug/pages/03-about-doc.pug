@@ -1,0 +1,26 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAboutDoc/_sAboutDoc.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg="03-about-doc.jpg"
+
+block title
+	- let  title= 'Документы'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+pageHead('О ВСКС')
+	+pageBody(`about`)
+		+sAboutDoc()
+	//+sForm()
+	//+sContact()
+	+footer()

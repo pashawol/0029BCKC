@@ -119,3 +119,33 @@
 		}
 	}
 }
+
+.document-item {
+	margin-bottom: rem(24);
+	padding-left: rem(33);
+	&__title {
+		font-weight: normal;
+		line-height: 150%;
+		font-size: rem(20);
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: rem(-37);
+			top: 0;
+			background-image: url('../img/svg/doc-file.svg');
+			width: 18px;
+			height: 24px;
+
+		}
+	}
+	&__type {
+		color: rgba(black, 0.3);
+		font-size: rem(13);
+		line-height: 150%;
+		margin-bottom: rem(8);
+	}
+	&__caption{
+		color: rgba(black, 0.5);
+	}
+}

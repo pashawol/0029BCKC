@@ -333,6 +333,10 @@ function eventHandler() {
 	$('.input-location-picker').click(function () {
 		$('.input-location-modal-wrap').toggleClass('active');
 	});
+	$('.accordion-button').click(function(){
+		$(this).toggleClass('active')
+		.next().slideToggle();
+	});
 	var aboutSlider = new Swiper('.sAboutOrg__aboutSwiper--js', {
 		slidesPerView: 'auto',
 		spaceBetween:40,
@@ -537,6 +541,21 @@ function eventHandler() {
 		}
 	})
 	$(".toggle-content").each(function(){
+	})
+	$('.toggle-text-volunteers').click(function(e){
+		e.preventDefault();
+		let text = $(this).prev();
+		let attr = text.attr("style");
+		if (typeof attr !== typeof undefined && attr !== false) { 
+			$(this).html("подробнее...")
+			text.removeAttr("style");
+		}
+		else{ 
+			$(this).html("cкрыть")
+			text.attr("style", '--clamp:" "')
+		}
+	})
+	$(".toggle-content-volunteers").each(function(){
 	})
 };
 if (document.readyState !== 'loading') {

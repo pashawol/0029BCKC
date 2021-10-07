@@ -12,4 +12,7 @@
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-ispolkom.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-progress.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-partners.html>
-1
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-volunteers.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-doc.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-identity.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-reports.html>

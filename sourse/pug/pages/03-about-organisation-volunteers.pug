@@ -1,0 +1,26 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAboutOrg/_sAboutOrg.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg="03-about-organisation-volunteers.jpg"
+
+block title
+	- let  title= 'Добровольцы'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+pageHead('О ВСКС')
+	+pageBody(`about`,1)
+		+sAboutOrgVolunteers()
+	//+sForm()
+	//+sContact()
+	+footer()

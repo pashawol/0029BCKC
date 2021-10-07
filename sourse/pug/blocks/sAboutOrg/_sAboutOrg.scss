@@ -153,9 +153,9 @@
 .sAboutOrgProgress {
 	--sPT: 0;
 	@include media-breakpoint-up(lg) {
-		--sPB:#{rem(139)};
+		--sPB: #{rem(139)};
 	}
-	h2{
+	h2 {
 		margin-bottom: rem(43);
 	}
 	.row {
@@ -179,9 +179,9 @@
 			text-align: center;
 			font-size: rem(12);
 			line-height: 150%;
-			color:rgba(black, 0.5)
+			color: rgba(black, 0.5);
 		}
-		&-year{
+		&-year {
 			text-align: center;
 			font-size: rem(12);
 			line-height: 150%;
@@ -189,30 +189,83 @@
 		}
 	}
 }
-.sAboutOrgPartners{
+.sAboutOrgPartners {
 	--sPT: 0;
-	@include media-breakpoint-up(lg){
-		--sPB:#{rem(230)};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(230)};
 	}
-	h2{
+	h2 {
 		margin-bottom: rem(43);
 	}
-	.row{
+	.row {
 		--bs-gutter-x: #{rem(40)};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
-	&__partner{
-		picture{
-			height: rem(141);
-			display: flex;
-			align-items: center;
-			justify-content: center;
+	&__item {
+		picture {
+			--pic-height:#{rem(141)};
+			height: var(--pic-height);
+			line-height: var(--pic-height);
+			vertical-align: middle;
+			text-align: center;
+			img{
+				max-height: var(--pic-height);
+			}
 		}
-		&-caption{
+		&-caption {
 			font-size: rem(13);
 			line-height: 150%;
 			padding-top: rem(20);
 			text-align: center;
+		}
+	}
+}
+.sAboutOrgVolunteers {
+	--sPT: 0;
+	@include media-breakpoint-up(lg) {
+		// --sPB:100px;
+	}
+	h2 {
+		margin-bottom: rem(7);
+	}
+	&__item {
+		padding-top: rem(32);
+		padding-bottom: rem(32);
+		border-bottom: 1px solid rgba(black, 0.1);
+		&:last-child {
+			border-bottom: unset;
+		}
+		.row {
+			--bs-gutter-x: #{rem(40)};
+		}
+		h5 {
+			line-height: 150%;
+			margin-bottom: 3px;
+		}
+		&-place {
+			line-height: 150%;
+			font-size: rem(13);
+			color: rgba(black, 0.5);
+		}
+		.toggle-content-volunteers{
+			p{
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-moz-box-orient: vertical;
+				-ms-box-orient: vertical;
+				box-orient: vertical;
+				-webkit-line-clamp: var(--clamp, 6);
+				-moz-line-clamp: var(--clamp, 6);
+				-ms-line-clamp: var(--clamp, 6);
+				line-clamp: var(--clamp, 6);
+				overflow: hidden;
+				position: relative;
+			}
+		}
+	}
+	&__col {
+		picture {
+			width: rem(168);
 		}
 	}
 }

@@ -96,4 +96,10 @@ mixin pageBody(about,type)
 			.col-lg-8
 				block
 
+mixin document-item(title,doc,caption)
+	+b.document-item
+		+e.title(href="#")!=title
+		+e.type!=`${doc}, 12 mb`
+		+e.caption!=caption
+
 

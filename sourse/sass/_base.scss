@@ -548,9 +548,13 @@ iframe {
 	}
 }
 
+.main-wrapper{
+	overflow: hidden;
+}
 
 @include media-breakpoint-down(sm) {
 	.row{
 		--bs-gutter-x: 30px;
 	}
 }
+

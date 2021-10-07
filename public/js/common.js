@@ -220,6 +220,7 @@ const JSCCommon = {
 				singleMode: false,
 				showTooltip: false,
 				dropdowns: true,
+				resetButton: true,
 				// tooltipText: {
 				// 	one: 'night',
 				// 	other: 'nights'
@@ -332,18 +333,11 @@ function eventHandler() {
 		$('.input-location-modal-wrap').toggleClass('active');
 	});
 	var aboutSlider = new Swiper('.sAboutOrg__aboutSwiper--js', {
-		slidesPerView: 2,
+		slidesPerView: 'auto',
+		spaceBetween:40,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
-		},
-		breakpoints: {
-			576: {
-				slidesPerView: 3,
-			},
-			2200: {
-				slidesPerView: 4,
-			}
 		},
 	});
 	//.headerBlock-slider-js
@@ -527,7 +521,22 @@ function eventHandler() {
 
 
 	//end luckyOne Js
-
+	
+	$('.toggle-text').click(function(e){
+		e.preventDefault();
+		let text = $(this).prev();
+		let attr = text.attr("style");
+		if (typeof attr !== typeof undefined && attr !== false) { 
+			$(this).html("читать&nbsp;полностью")
+			text.removeAttr("style");
+		}
+		else{ 
+			$(this).html("cкрыть")
+			text.attr("style", '--clamp:" "')
+		}
+	})
+	$(".toggle-content").each(function(){
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

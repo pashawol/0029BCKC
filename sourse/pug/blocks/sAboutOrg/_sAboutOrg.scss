@@ -1,220 +1,162 @@
 // start .sAboutOrg
 .sAboutOrg {
-	--sPT: #{rem(27)};
+	--sPT: 0;
 	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(111)};
 	}
-	overflow: hidden;
-	h1 {
-		@include media-breakpoint-up(lg) {
-			font-size: rem(52);
-			line-height: rem(57);
-			margin-bottom: rem(47);
-		}
-		margin-bottom: 20px;
-		font-weight: 900;
-	}
 	h2 {
-		margin-bottom: rem(48);
+		margin-bottom: rem(47);
 	}
-	ul {
-		list-style-type: none;
-		li {
-			margin-bottom: rem(15);
-			p {
-				margin-bottom: 0;
-				font-weight: bold;
-				font-size: rem(20);
-				line-height: 150%;
-			}
-			.active {
-				color: $warning;
-			}
-			ul {
-				margin-top: rem(14);
-				margin-bottom: rem(26);
-				padding-left: rem(23);
-				li {
-					margin-bottom: rem(14);
-					p {
-						font-weight: normal;
-						color: rgba(black, 0.5);
-					}
-				}
-			}
+	&__aboutSwiper {
+		@include media-breakpoint-up(lg) {
+			width: calc(100% + var(--witdh-slider));
+			--witdh-slider: calc(100vw - 150%);
+			margin-right: calc(-1 * var(--witdh-slider));
 		}
-	}
-
-	&--history {
-		.sAboutOrg__col {
-			position: relative;
-
-			@include media-breakpoint-up(lg) {
-				min-height: rem(333);
-			}
+		@include media-breakpoint-down(lg) {
+			overflow: visible;
+		}
+		.swiper-slide {
+			width: 320px;
+			max-width: 100%;
 			@include media-breakpoint-up(sm) {
-				min-height: 215px;
+				width: rem(376);
+			}
+			picture {
+				@include block(376, 293);
+				img {
+					border-radius: 4px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
-		.sAboutOrg__aboutSwiper {
+		.swiper-pagination {
+			padding-top: rem(31);
 			@include media-breakpoint-up(lg) {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: calc(50vw + 25%);
-				margin-left: calc(var(--bs-gutter-x) * 0.5);
-			}
-			.swiper-slide {
-				&:nth-child(1) {
-					margin-left: 0;
-				}
-				width: auto;
-				margin-left: rem(20);
-				margin-right: rem(20);
-				display: flex;
-				align-items: center;
-				@include media-breakpoint-up(lg) {
-					min-width: rem(376);
-					height: rem(294);
-				}
-				@include media-breakpoint-up(sm) {
-					min-width: 228px;
-					height: 178px;
-				}
-				@include media-breakpoint-down(sm) {
-					margin-left: 10px;
-					margin-right: 10px;
-				}
-				picture {
-					@include media-breakpoint-up(lg) {
-						min-width: rem(376);
-					}
-					@include media-breakpoint-up(sm) {
-						min-width: 228px;
-					}
-					img {
-						border-radius: 4px;
-					}
-				}
-			}
-			.swiper-pagination {
-				padding-top: rem(31);
-				@include media-breakpoint-up(lg) {
-					justify-content: flex-start;
-				}
-			}
-			.swiper-pagination-bullet {
-				border-radius: 50%;
-				background-color: #a1d8f6;
-				@include media-breakpoint-up(lg) {
-					margin-left: 0;
-					margin-right: rem(16);
-				}
-				margin-left: rem(8);
-				margin-right: rem(8);
-				&-active {
-					background-color: #eb7329;
-				}
+				justify-content: flex-start;
 			}
 		}
-
-		.sAboutOrg__main-caption {
+		.swiper-pagination-bullet {
+			border-radius: 50%;
+			background-color: #a1d8f6;
+			@include media-breakpoint-up(lg) {
+				margin-left: 0;
+				margin-right: rem(16);
+			}
+			margin-left: rem(8);
+			margin-right: rem(8);
+			&-active {
+				background-color: #eb7329;
+			}
+		}
+	}
+	&__content {
+		h4 {
 			padding-top: rem(31);
 			line-height: 150%;
-			font-size: rem(20);
 			margin-bottom: rem(20);
+			font-weight: normal;
 		}
-		.sAboutOrg__caption {
+		p {
 			line-height: 150%;
 			margin-bottom: rem(24);
 		}
 	}
-
-	&--leader {
-		@include media-breakpoint-up(lg) {
-			--sPB: #{rem(85)};
-		}
-		h2 {
-			margin-bottom: rem(46);
-		}
-		picture {
-			margin-bottom: rem(23);
-			margin-top: rem(5);
-		}
-		.sAboutOrg__leader {
-			padding-bottom: rem(12);
-			border-bottom: 1px solid rgba(black, 0.1);
-			padding-top: rem(32);
-			&:nth-child(2){
-				padding-top: 0;
-			}
-			&:last-child{
-				padding-bottom: 0;
-				border-bottom:unset;
-			}
-		}
-		.sAboutOrg__leader-name {
-			font-weight: bold;
-			line-height: 150%;
-			font-size: rem(20);
-			margin-bottom: rem(13);
-		}
-		.sAboutOrg__leader-job {
-			font-size: rem(13);
-			line-height: 150%;
-		}
-		.sAboutOrg__date{
-			display: flex;
-			margin-bottom: rem(16.8);
-			&-year{
-				font-weight: bold;
-				font-size: rem(12);
-				line-height: 150%;
-				color:$primary;
-				padding-right: rem(18);
-			}
-			&-caption{
-				line-height: 150%;
-				font-size: rem(13);
-			}
-		}
-	}
-	
-	&--ispolkom{
-		@include media-breakpoint-up(lg) {
-			--sPB: #{rem(105)};
-		}
-		h2{
-			margin-bottom: rem(43);
-		}
-		.row{
-			--bs-gutter-x:#{rem(40)};
-			--bs-gutter-y:#{rem(32)}; 
-		}
-		.sAboutOrg__name{
-			font-weight: bold;
-			font-size: rem(20);
-			line-height: 150%;
-			padding-top: rem(18);
-		}
-		.sAboutOrg__city{
-			line-height: 150%;
-			font-size: rem(13);
-			padding-top: rem(12);
-		}
-	}
-	@include media-breakpoint-up(xl) {
-	}
+}
+.sAboutOrgLeader {
+	--sPT: 0;
 	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(85)};
 	}
-	@include media-breakpoint-up(md) {
+	.row {
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: 0;
+		}
+		--bs-gutter-y: 2rem;
 	}
-	@include media-breakpoint-up(sm) {
+	h2 {
+		margin-bottom: rem(46);
 	}
-	@include media-breakpoint-between(md, xl) {
+	picture {
+		margin-bottom: rem(23);
+		margin-top: rem(5);
 	}
-	@include media-breakpoint-only(xl) {
+	&__leader {
+		padding-bottom: rem(12);
+		border-bottom: 1px solid rgba(black, 0.1);
+		padding-top: rem(32);
+		&:nth-child(2) {
+			padding-top: 0;
+		}
+		&:last-child {
+			padding-bottom: 0;
+			border-bottom: unset;
+		}
 	}
-	@include media-breakpoint-down(xl) {
+	&__leader-name {
+		font-weight: bold;
+		line-height: 150%;
+		font-size: rem(20);
+		margin-bottom: rem(13);
 	}
-} // end.sAboutOrg
+	&__leader-job {
+		font-size: rem(13);
+		line-height: 150%;
+	}
+	&__date {
+		display: flex;
+		margin-bottom: rem(16.8);
+		&-year {
+			font-weight: bold;
+			font-size: rem(12);
+			line-height: 150%;
+			color: $primary;
+			padding-right: rem(18);
+		}
+		&-caption {
+			line-height: 150%;
+			font-size: rem(13);
+		}
+	}
+}
+.ispolkom {
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(105)};
+	}
+	h2 {
+		margin-bottom: rem(43);
+	}
+	.row {
+		--bs-gutter-x: #{rem(40)};
+		--bs-gutter-y: #{rem(32)};
+	}
+	.sAboutOrg__name {
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: 150%;
+		padding-top: rem(18);
+	}
+	.sAboutOrg__city {
+		line-height: 150%;
+		font-size: rem(13);
+		padding-top: rem(12);
+	}
+}
+@include media-breakpoint-up(xl) {
+}
+@include media-breakpoint-up(lg) {
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(sm) {
+}
+@include media-breakpoint-between(md, xl) {
+}
+@include media-breakpoint-only(xl) {
+}
+@include media-breakpoint-down(xl) {
+}

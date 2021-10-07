@@ -1,37 +1,11 @@
 // start .sPressCenter
 .sPressCenter {
-	--sPT: #{rem(27)};
+	--sPT: #{rem(0)};
 	--sPB: #{rem(39)};
-	// --sTPB: ;
-	h1 {
-		@include media-breakpoint-up(lg) {
-			font-size: rem(52);
-			line-height: rem(57);
-			margin-bottom: rem(47);
-		}
-		margin-bottom: 20px;
-		font-weight: 900;
-	}
+ 
 	// --bs-gutter-y: calc(var(--bs-gutter-x) / 2);
 	&__menu {
-		@include media-breakpoint-down(lg){
-			margin-bottom: calc(var(--bs-gutter-x)*0.5);
-		}
-		&-btn {
-			font-weight: bold;
-			font-size: rem(20);
-			line-height: 150%;
-			color: black;
-		}
-		.active {
-			color: $orange;
-		}
-		ul {
-			list-style-type: none;
-			li {
-				margin-bottom: rem(15);
-			}
-		}
+
 	}
 	&__caption {
 		.active {

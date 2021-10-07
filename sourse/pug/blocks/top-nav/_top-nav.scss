@@ -29,6 +29,11 @@
 }
 
 .top-nav {
+	@include media-breakpoint-up(sm) {
+		.row{
+			--bs-gutter-x: 10px;
+		}
+	}
 	@include media-breakpoint-up(lg) {
 		padding-top: rem(17);
 	}
@@ -44,8 +49,8 @@
 			@include media-breakpoint-up(lg){
 				padding-right: rem(12);
 			}
-			.login-bl__img{
-				margin-right: rem(32);
+			.login-bl__txt{
+				margin-left: rem(32);
 			}
 		}
 	}
@@ -197,14 +202,13 @@
 		flex-shrink: 0;
 		width: rem(16);
 		height: rem(16);
-		margin-right: rem(16);
 		border-radius: 2px;
 		overflow: hidden;
-
+		
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
+		
 		img {
 			width: auto;
 			height: auto;
@@ -213,6 +217,7 @@
 		}
 	}
 	&__txt {
+		margin-left: rem(16);
 		font-weight: bold;
 	}
 }
@@ -225,10 +230,11 @@
 	// @extend .btn;
 	color: black;
 	.icon{
-		font-size: 15px;
+
+		font-size: 1rem;
 	}
-	@include media-breakpoint-down(lg){
+	// @include media-breakpoint-up(lg){
 		position: relative;
 		top: -2px;
-	}
+	// }
 }

@@ -32,3 +32,32 @@ mixin ie11()
 	//- modernizer and for ie11
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+
+mixin pageHead(h1, back)
+	+b.page-head.section
+		.container 
+			.row
+				.col
+					block
+					h1!= h1
+				if back 
+					.col-lg-2.order-first
+						+e.link-back(href="#" title="Назад")
+							+icon('arrow-left')
+mixin pageBody()
+	main.container.container--main 
+		.row.row--main
+			.col-lg-4.order-lg-first.order-last
+				+b.sidebar
+					ul
+						li
+							a.active(href="#") Главные новости
+						li
+							a(href="#") Региональные новости
+						li
+							a(href="#") Наши герои
+						li
+							a(href="#") СМИ о нас
+			.col-lg-8
+				block

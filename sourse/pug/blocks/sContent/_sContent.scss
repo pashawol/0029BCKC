@@ -1,5 +1,32 @@
 // start .sContent
 .sContent {
+	--sPB: #{rem(50)};
+	--sPT: #{rem(0)};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(89)};
+	}
+	&__inner{
+		max-width: rem(794);
+	}
+		picture {
+			margin-bottom: rem(36);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(46);
+			}
+			img {
+				border-radius: $border-radius;
+			}
+		}
+		p {
+			font-size: rem(20);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(30);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	&__{}
 	&__{}
 	&__{}

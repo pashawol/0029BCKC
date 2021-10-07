@@ -43,20 +43,20 @@ mixin top-nav(main)
 						.col-auto.d-none.d-lg-block
 							+mnu()
 						if main
-							.col-auto.ms-auto.d-none.d-sm-block
+							.col-auto.ms-auto
 								+b.login-bl(href="#")
 									+e.img
 										img(loading="lazy" src="img/svg/user.svg" alt="")
-									+e.txt Войти
+									+e.txt.d-none.d-sm-inline Войти
 							.col-auto.d-none.d-sm-block
 								+b.reg-btn(href="#") Регистрация
 						else
-							+e.col--profile.col-auto.ms-auto.d-none.d-sm-block
+							+e.col--profile.col-auto.ms-auto
 								+b.login-bl(href="#")
 									+e.img
 										img(loading="lazy" src="img/svg/user.svg" alt="")
-									+e.txt Анастасия В.
-							.col-auto.d-none.d-sm-block
+									+e.txt.d-none.d-sm-inline Анастасия В.
+							.col-auto
 								+b.exit-btn(href="#")
 									+icon('exit')
 						.col-auto.d-lg-none

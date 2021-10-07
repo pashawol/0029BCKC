@@ -547,3 +547,10 @@ iframe {
 		background-image: url(../img/svg/location.svg);
 	}
 }
+
+
+@include media-breakpoint-down(sm) {
+	.row{
+		--bs-gutter-x: 30px;
+	}
+}

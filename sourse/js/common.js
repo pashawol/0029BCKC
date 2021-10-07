@@ -422,13 +422,15 @@ function eventHandler() {
 		document.body.appendChild(yandexScript);
 		//-console.log(yandexScript);
 
-		let yandexJq = document.createElement('script');
-		yandexJq.setAttribute('src', 'https://yandex.st/jquery/2.2.3/jquery.min.js');
-		yandexJq.setAttribute('type', 'text/javascript');
-		document.body.appendChild(yandexJq);
+		// let yandexJq = document.createElement('script');
+		// yandexJq.setAttribute('src', 'https://yandex.st/jquery/2.2.3/jquery.min.js');
+		// yandexJq.setAttribute('type', 'text/javascript');
+		// document.body.appendChild(yandexJq);
 		//-console.log(yandexJq);
 
+		if (document.querySelector("#map")) {
 
+		
 		window.setTimeout(function () {
 			ymaps.ready(function () {
 				var myMap = new ymaps.Map('map', {
@@ -462,6 +464,7 @@ function eventHandler() {
 				});
 			});
 		}, 1000);
+		}
 
 	}, 2000);
 

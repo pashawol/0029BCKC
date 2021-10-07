@@ -78,15 +78,15 @@
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Набор на ЧС</a></li>
 										</ul>
 									</div>
-									<div class="top-nav__col top-nav__col--profile col-auto ms-auto d-none d-sm-block">
+									<div class="top-nav__col top-nav__col--profile col-auto ms-auto">
 										<a class="login-bl" href="#">
 											<div class="login-bl__img"><img loading="lazy" src="img/svg/user.svg" alt=""/>
 											</div>
-											<div class="login-bl__txt">Анастасия В.
+											<div class="login-bl__txt d-none d-sm-inline">Анастасия В.
 											</div>
 										</a>
 									</div>
-									<div class="col-auto d-none d-sm-block">
+									<div class="col-auto">
 										<a class="exit-btn" href="#">
 											<svg class="icon icon-exit ">
 												<use xlink:href="img/svg/sprite.svg#exit"></use>
@@ -105,24 +105,32 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start sDetailedNews-->
-			<section class="sDetailedNews section" id="sDetailedNews">
-				<div class="container">
+			<div class="page-head section">
+				<div class="container"> 
 					<div class="row">
-						<div class="col-12 col-lg-2">
-							<a class="sDetailedNews__link-back" href="#" title="Назад">
+						<div class="col">
+							<div class="date-n-location">
+								<p>19&nbsp;августа 2021&nbsp;в 21:00</p>
+								<p class="loc">Республика Удмуртия</p>
+							</div>
+							<h1>Главное управление сообщает о&nbsp;лесопожарной обстановке на&nbsp;территории Краснодарского края Президент Российской Федерации</h1>
+						</div>
+						<div class="col-lg-2 order-first">
+							<a class="page-head__link-back" href="#" title="Назад">
 								<svg class="icon icon-arrow-left ">
 									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
 								</svg>
 							</a>
 						</div>
-						<div class="col-12 col-lg-10">
-							<div class="sDetailedNews__content">
-								<div class="date-n-location">
-									<p>19&nbsp;августа 2021&nbsp;в 21:00</p>
-									<p class="loc">Республика Удмуртия</p>
-								</div>
-								<h1>Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации</h1>
+					</div>
+				</div>
+			</div>
+			<!-- start sContent-->
+			<section class="sContent section" id="sContent">
+				<div class="container"> 
+					<div class="row">
+						<div class="col-lg-10 ms-auto">
+							<div class="sContent__inner">
 								<!-- picture-->
 								<picture> 
 									<source type="image/webp" srcset="img/@2x/webp/detailed-news.webp"/><img src="img/@2x/detailed-news.jpg" alt="" loading="lazy"/>
@@ -135,7 +143,7 @@
 					</div>
 				</div>
 			</section>
-			<!-- end sDetailedNews-->
+			<!-- end sContent-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">

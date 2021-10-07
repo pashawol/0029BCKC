@@ -78,15 +78,15 @@
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Набор на ЧС</a></li>
 										</ul>
 									</div>
-									<div class="top-nav__col top-nav__col--profile col-auto ms-auto d-none d-sm-block">
+									<div class="top-nav__col top-nav__col--profile col-auto ms-auto">
 										<a class="login-bl" href="#">
 											<div class="login-bl__img"><img loading="lazy" src="img/svg/user.svg" alt=""/>
 											</div>
-											<div class="login-bl__txt">Анастасия В.
+											<div class="login-bl__txt d-none d-sm-inline">Анастасия В.
 											</div>
 										</a>
 									</div>
-									<div class="col-auto d-none d-sm-block">
+									<div class="col-auto">
 										<a class="exit-btn" href="#">
 											<svg class="icon icon-exit ">
 												<use xlink:href="img/svg/sprite.svg#exit"></use>
@@ -105,34 +105,30 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start sPressCenter-->
-			<section class="sPressCenter sPressCenter--smi section" id="sPressCenterSmi">
-				<div class="container">
-					<h1>Пресс-центр</h1>
+			<div class="page-head section">
+				<div class="container"> 
 					<div class="row">
-						<div class="col-lg-4 col-12">
-							<div class="sPressCenter__menu">
-								<ul>
-									<li>
-										<a class="sPressCenter__menu-btn" href="#">Главные новости
-										</a>
-									</li>
-									<li>
-										<a class="sPressCenter__menu-btn" href="#">Региональные новости
-										</a>
-									</li>
-									<li>
-										<a class="sPressCenter__menu-btn" href="#">Наши герои
-										</a>
-									</li>
-									<li>
-										<a class="sPressCenter__menu-btn active" href="#">СМИ о нас
-										</a>
-									</li>
-								</ul>
-							</div>
+						<div class="col">
+							<h1>Пресс-центр</h1>
 						</div>
-						<div class="col-lg-8 col-12">
+					</div>
+				</div>
+			</div>
+			<main class="container container--main"> 
+				<div class="row row--main">
+					<div class="col-lg-4 order-lg-first order-last">
+						<div class="sidebar">
+							<ul>
+								<li><a class="active" href="#">Главные новости</a></li>
+								<li><a href="#">Региональные новости</a></li>
+								<li><a href="#">Наши герои</a></li>
+								<li><a href="#">СМИ о нас</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<!-- start sPressCenter-->
+						<section class="sPressCenter section">
 							<div class="news-content">
 								<h2>СМИ о нас</h2>
 								<div class="row">
@@ -149,32 +145,32 @@
 												<hr/>
 											</div>
 										</div>
-														<div class="day-news__item">
-															<!-- picture-->
-															<picture class="news-img"> 
-																<source type="image/webp" srcset="img/@2x/webp/news-1.webp"/><img src="img/@2x/news-1.png" alt="" loading="lazy"/>
-															</picture>
-															<!-- /picture-->
-															<div class="day-news__item-body">
-																<div class="date date--publ">
-																	<p>19.08.21</p><a class="publ" href="#">Известия</a>
-																</div>
-																<div class="caption">Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</div><a class="detailed" href="#">Подробнее</a>
-															</div>
-														</div>
-														<div class="day-news__item">
-															<!-- picture-->
-															<picture class="news-img"> 
-																<source type="image/webp" srcset="img/@2x/webp/news-2.webp"/><img src="img/@2x/news-2.png" alt="" loading="lazy"/>
-															</picture>
-															<!-- /picture-->
-															<div class="day-news__item-body">
-																<div class="date date--publ">
-																	<p>19.08.21</p><a class="publ" href="#">Россия 1</a>
-																</div>
-																<div class="caption">Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</div><a class="detailed" href="#">Подробнее</a>
-															</div>
-														</div>
+											<div class="day-news__item"><a href="#">
+													<!-- picture-->
+													<picture class="news-img"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-1.webp"/><img src="img/@2x/news-1.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+												<div class="day-news__item-body">
+													<div class="date date--publ">
+														<p>19.08.21</p><a class="publ" href="#">Известия</a>
+													</div>
+													<div class="caption"><a class="text-body" href="#"> Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</a></div><a class="detailed" href="#">Подробнее</a>
+												</div>
+											</div>
+											<div class="day-news__item"><a href="#">
+													<!-- picture-->
+													<picture class="news-img"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-2.webp"/><img src="img/@2x/news-2.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+												<div class="day-news__item-body">
+													<div class="date date--publ">
+														<p>19.08.21</p><a class="publ" href="#">Россия 1</a>
+													</div>
+													<div class="caption"><a class="text-body" href="#"> Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</a></div><a class="detailed" href="#">Подробнее</a>
+												</div>
+											</div>
 									</div>
 									<div class="day-news col-12">
 										<div class="day-news__head">
@@ -183,19 +179,19 @@
 												<hr/>
 											</div>
 										</div>
-														<div class="day-news__item">
-															<!-- picture-->
-															<picture class="news-img"> 
-																<source type="image/webp" srcset="img/@2x/webp/news-3.webp"/><img src="img/@2x/news-3.png" alt="" loading="lazy"/>
-															</picture>
-															<!-- /picture-->
-															<div class="day-news__item-body">
-																<div class="date date--publ">
-																	<p>19.08.21</p><a class="publ" href="#">Коммерсант</a>
-																</div>
-																<div class="caption">Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</div><a class="detailed" href="#">Подробнее</a>
-															</div>
-														</div>
+											<div class="day-news__item"><a href="#">
+													<!-- picture-->
+													<picture class="news-img"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-3.webp"/><img src="img/@2x/news-3.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+												<div class="day-news__item-body">
+													<div class="date date--publ">
+														<p>19.08.21</p><a class="publ" href="#">Коммерсант</a>
+													</div>
+													<div class="caption"><a class="text-body" href="#"> Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</a></div><a class="detailed" href="#">Подробнее</a>
+												</div>
+											</div>
 									</div>
 									<div class="day-news col-12">
 										<div class="day-news__head">
@@ -204,40 +200,40 @@
 												<hr/>
 											</div>
 										</div>
-														<div class="day-news__item">
-															<!-- picture-->
-															<picture class="news-img"> 
-																<source type="image/webp" srcset="img/@2x/webp/news-2.webp"/><img src="img/@2x/news-2.png" alt="" loading="lazy"/>
-															</picture>
-															<!-- /picture-->
-															<div class="day-news__item-body">
-																<div class="date date--publ">
-																	<p>19.08.21</p><a class="publ" href="#">Forbes</a>
-																</div>
-																<div class="caption">Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</div><a class="detailed" href="#">Подробнее</a>
-															</div>
-														</div>
-														<div class="day-news__item">
-															<!-- picture-->
-															<picture class="news-img"> 
-																<source type="image/webp" srcset="img/@2x/webp/news-1.webp"/><img src="img/@2x/news-1.png" alt="" loading="lazy"/>
-															</picture>
-															<!-- /picture-->
-															<div class="day-news__item-body">
-																<div class="date date--publ">
-																	<p>19.08.21</p><a class="publ" href="#">Коммерсант</a>
-																</div>
-																<div class="caption">Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</div><a class="detailed" href="#">Подробнее</a>
-															</div>
-														</div>
+											<div class="day-news__item"><a href="#">
+													<!-- picture-->
+													<picture class="news-img"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-2.webp"/><img src="img/@2x/news-2.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+												<div class="day-news__item-body">
+													<div class="date date--publ">
+														<p>19.08.21</p><a class="publ" href="#">Forbes</a>
+													</div>
+													<div class="caption"><a class="text-body" href="#"> Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</a></div><a class="detailed" href="#">Подробнее</a>
+												</div>
+											</div>
+											<div class="day-news__item"><a href="#">
+													<!-- picture-->
+													<picture class="news-img"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-1.webp"/><img src="img/@2x/news-1.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+												<div class="day-news__item-body">
+													<div class="date date--publ">
+														<p>19.08.21</p><a class="publ" href="#">Коммерсант</a>
+													</div>
+													<div class="caption"><a class="text-body" href="#"> Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест</a></div><a class="detailed" href="#">Подробнее</a>
+												</div>
+											</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						</section>
+						<!-- end sPressCenter-->
 					</div>
 				</div>
-			</section>
-			<!-- end sPressCenter-->
+			</main>
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">

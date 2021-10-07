@@ -1,233 +1,180 @@
 mixin sPressCenter(data)
 	// start sPressCenter
 	+b.SECTION.sPressCenter.section#sPressCenter&attributes(attributes)
-		.container
-			h1 Пресс-центр
+		.news-content
+			mixin item(i)
+				.day-news__item
+					a(href="#")
+						+pic(`news-${i}.png`,'',0).news-img
+					.day-news__item-body
+						.date 19.08.21
+						.caption 
+							a(href="#").text-body Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
+						a.detailed(href="#") Подробнее
+			h2 Главные новости
 			.row
-				.col-lg-4.col-12
-					+e.menu
-						ul
-							li
-								+e.menu-btn.active(href="#") Главные новости
-							li
-								+e.menu-btn(href="#") Региональные новости
-							li
-								+e.menu-btn(href="#") Наши герои
-							li
-								+e.menu-btn(href="#") СМИ о нас
-				.col-lg-8.col-12
-					.news-content
-						mixin item(i)
-							.day-news__item
-								+pic(`news-${i}.png`,'',0).news-img
-								.day-news__item-body
-									.date 19.08.21
-									.caption Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
-									a.detailed(href="#") Подробнее
-						h2 Главные новости
-						.row
-							.input-wrapper.col-lg-6.col-12
-								p Даты
-								+input('Выберите период').input-date-picker-js(autocomplete="off")
-							.day-news.col-12
-								.day-news__head
-									p 21 сентября
-									.day-news__head-line
-										hr
-								+item(1)
-								+item(2)
-							.day-news.col-12
-								.day-news__head
-									p 20 сентября
-									.day-news__head-line
-										hr
-								+item(3)
-							.day-news.col-12
-								.day-news__head
-									p 19 сентября
-									.day-news__head-line
-										hr
-								+item(2)
-								+item(1)
-							a.show-more(href="#") Показать еще
+				.input-wrapper.col-lg-6.col-12
+					p Даты
+					+input('Выберите период').input-date-picker-js(autocomplete="off")
+				.day-news.col-12
+					.day-news__head
+						p 21 сентября
+						.day-news__head-line
+							hr
+					+item(1)
+					+item(2)
+				.day-news.col-12
+					.day-news__head
+						p 20 сентября
+						.day-news__head-line
+							hr
+					+item(3)
+				.day-news.col-12
+					.day-news__head
+						p 19 сентября
+						.day-news__head-line
+							hr
+					+item(2)
+					+item(1)
+				a.show-more(href="#") Показать еще
 
 mixin sPressCenterRegion(data)
-	+b.SECTION.sPressCenter--region.section#sPressCenterRegion&attributes(attributes)
-		.container
-			h1 Пресс-центр
+	+b.SECTION.sPressCenter.section&attributes(attributes)
+	
+		.news-content
+			mixin item(i)
+				.day-news__item
+					a(href="#")
+						+pic(`news-${i}.png`,'',0).news-img
+					.day-news__item-body
+						.date.date--loc
+							p 19.08.21
+							p.loc Республика Удмуртия
+						.caption 
+							a(href="#").text-body Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
+						a.detailed(href="#") Подробнее
+			h2 Региональные новости
 			.row
-				.col-lg-4.col-12
-					+e.menu
-						ul
-							li
-								+e.menu-btn(href="#") Главные новости
-							li
-								+e.menu-btn.active(href="#") Региональные новости
-							li
-								+e.menu-btn(href="#") Наши герои
-							li
-								+e.menu-btn(href="#") СМИ о нас
-				.col-lg-8.col-12
-					.news-content
-						mixin item(i)
-							.day-news__item
-								+pic(`news-${i}.png`,'',0).news-img
-								.day-news__item-body
-									.date.date--loc
-										p 19.08.21
-										p.loc Республика Удмуртия
-									.caption Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
-									a.detailed(href="#") Подробнее
-						h2 Региональные новости
-						.row
-							.input-wrapper.col-lg-6.col-12
-								p Даты
-								+input('Выберите период').input-date-picker-js(autocomplete="off")
-							.input-wrapper.col-lg-6.col-12
-								p Локация
-								//- +input('Выберите округ или регион').input-location-picker(disabled)
-								.input-location-picker Выберите период
-								.input-location-modal-wrap
-									.input-location-modal
-										.list-wrap
-											+input('Поиск по регионам и округам').input-location-modal-search
-											ul
-												li
-													+in-c('checkbox','Центральный ФО')
-													ul
-														li
-															+in-c('checkbox','Московская область')
-														li
-															+in-c('checkbox','Московская область')
-														li
-															+in-c('checkbox','Московская область')
-														li
-															+in-c('checkbox','Московская область')
-														li
-															+in-c('checkbox','Московская область')
-											ul
-												li
-													+in-c('checkbox','Северо-западный ФО')
-													ul
-														li
-															+in-c('checkbox','Московская область')
-														li
-															+in-c('checkbox','Московская область')
-														li
-															+in-c('checkbox','Московская область')
-														li
-															+in-c('checkbox','Московская область')
-														li
-															+in-c('checkbox','Московская область')
-										.input-location-btns-wrap
-											.input-location-btns
-												a.input-location-btn.input-location-btn--show(href="#") Показать
-												a.input-location-btn.input-location-btn--reset(href="#") Скрыть
-							.day-news.col-12
-								.day-news__head
-									p 21 сентября
-									.day-news__head-line
-										hr
-								+item(1)
-								+item(2)
-							.day-news.col-12
-								.day-news__head
-									p 20 сентября
-									.day-news__head-line
-										hr
-								+item(3)
-							.day-news.col-12
-								.day-news__head
-									p 19 сентября
-									.day-news__head-line
-										hr
-								+item(2)
-								+item(1)
+				.input-wrapper.col-lg-6.col-12
+					p Даты
+					+input('Выберите период').input-date-picker-js(autocomplete="off")
+				.input-wrapper.col-lg-6.col-12
+					p Локация
+					//- +input('Выберите округ или регион').input-location-picker(disabled)
+					.input-location-picker Выберите период
+					.input-location-modal-wrap
+						.input-location-modal
+							.list-wrap
+								+input('Поиск по регионам и округам').input-location-modal-search
+								ul
+									li
+										+in-c('checkbox','Центральный ФО')
+										ul
+											li
+												+in-c('checkbox','Московская область')
+											li
+												+in-c('checkbox','Московская область')
+											li
+												+in-c('checkbox','Московская область')
+											li
+												+in-c('checkbox','Московская область')
+											li
+												+in-c('checkbox','Московская область')
+								ul
+									li
+										+in-c('checkbox','Северо-западный ФО')
+										ul
+											li
+												+in-c('checkbox','Московская область')
+											li
+												+in-c('checkbox','Московская область')
+											li
+												+in-c('checkbox','Московская область')
+											li
+												+in-c('checkbox','Московская область')
+											li
+												+in-c('checkbox','Московская область')
+							.input-location-btns-wrap
+								.input-location-btns
+									a.input-location-btn.input-location-btn--show(href="#") Показать
+									a.input-location-btn.input-location-btn--reset(href="#") Скрыть
+				.day-news.col-12
+					.day-news__head
+						p 21 сентября
+						.day-news__head-line
+							hr
+					+item(1)
+					+item(2)
+				.day-news.col-12
+					.day-news__head
+						p 20 сентября
+						.day-news__head-line
+							hr
+					+item(3)
+				.day-news.col-12
+					.day-news__head
+						p 19 сентября
+						.day-news__head-line
+							hr
+					+item(2)
+					+item(1)
 
 mixin sPressCenterHeroes(data)
 	// start sPressCenter
-	+b.SECTION.sPressCenter--heroes.section#sPressCenterHeroes&attributes(attributes)
-		.container
-			h1 Пресс-центр
-			.row
-				.col-lg-4.col-12
-					+e.menu
-						ul
-							li
-								+e.menu-btn(href="#") Главные новости
-							li
-								+e.menu-btn(href="#") Региональные новости
-							li
-								+e.menu-btn.active(href="#") Наши герои
-							li
-								+e.menu-btn(href="#") СМИ о нас
-				.col-lg-8.col-12
-					.news-content
-						h2 Наши герои
-						+b.heroes
-							mixin item(i, h, t)
-								+e.item
-									+pic(`heroes-${i}.png`,'bg',0).bg-wrap
-									+e.caption
-										h4!= h
-										p!= t
-											a(href="#") читать&nbsp;полностью
-							+item(1, `Яков Миндрулев`, `Яков Миндрулев, руководитель Иркутского регионального отделения ВСКС, 6&nbsp;июля спас ребёнка при дорожно-транспортной ситуации на&nbsp;Култукском тракте. Он&nbsp;вытащил мальчика из&nbsp;повреждённой машины и&nbsp;оказал ему первую помощь. А&nbsp;также помог семье при организационных вопросах, с&nbsp;перелетом и&nbsp;проживанием...`)
-							+item(2, `Анастасия Тихонова и&nbsp;Руслан Хоркашов`, `Матросы-спасатели Кемеровского регионального отделения ВСКС студенческого отряда &laquo;Скала&raquo; Анастасия Тихонова и&nbsp;Руслан Хоркашов спасли ребенка и&nbsp;женщину.&nbsp;27&nbsp;июня Анастасия Тихонова, находясь на&nbsp;дежурстве, в&nbsp;10&nbsp;метрах от&nbsp;берега заметила тонущего ребенка. Шестилетняя девочка была...`)
-							+item(3, `Яков Миндрулев`, `Яков Миндрулев, руководитель Иркутского регионального отделения ВСКС, 6&nbsp;июля спас ребёнка при дорожно-транспортной ситуации на&nbsp;Култукском тракте. Он&nbsp;вытащил мальчика из&nbsp;повреждённой машины и&nbsp;оказал ему первую помощь. А&nbsp;также помог семье при организационных вопросах, с&nbsp;перелетом и&nbsp;проживанием...`)
-							+item(4, `Айгумов Артур`, `Матросы-спасатели Кемеровского регионального отделения ВСКС студенческого отряда &laquo;Скала&raquo; Анастасия Тихонова и&nbsp;Руслан Хоркашов спасли ребенка и&nbsp;женщину.&nbsp;27&nbsp;июня Анастасия Тихонова, находясь на&nbsp;дежурстве, в&nbsp;10&nbsp;метрах от&nbsp;берега заметила тонущего ребенка. Шестилетняя девочка была...`)
+	+b.SECTION.sPressCenter.section&attributes(attributes)
+		.news-content
+			h2 Наши герои
+			+b.heroes
+				mixin item(i, h, t)
+					+e.item
+						+pic(`heroes-${i}.png`,'bg',0).bg-wrap
+						+e.caption
+							h4!= h
+							p!= t
+								a(href="#") читать&nbsp;полностью
+				+item(1, `Яков Миндрулев`, `Яков Миндрулев, руководитель Иркутского регионального отделения ВСКС, 6&nbsp;июля спас ребёнка при дорожно-транспортной ситуации на&nbsp;Култукском тракте. Он&nbsp;вытащил мальчика из&nbsp;повреждённой машины и&nbsp;оказал ему первую помощь. А&nbsp;также помог семье при организационных вопросах, с&nbsp;перелетом и&nbsp;проживанием...`)
+				+item(2, `Анастасия Тихонова и&nbsp;Руслан Хоркашов`, `Матросы-спасатели Кемеровского регионального отделения ВСКС студенческого отряда &laquo;Скала&raquo; Анастасия Тихонова и&nbsp;Руслан Хоркашов спасли ребенка и&nbsp;женщину.&nbsp;27&nbsp;июня Анастасия Тихонова, находясь на&nbsp;дежурстве, в&nbsp;10&nbsp;метрах от&nbsp;берега заметила тонущего ребенка. Шестилетняя девочка была...`)
+				+item(3, `Яков Миндрулев`, `Яков Миндрулев, руководитель Иркутского регионального отделения ВСКС, 6&nbsp;июля спас ребёнка при дорожно-транспортной ситуации на&nbsp;Култукском тракте. Он&nbsp;вытащил мальчика из&nbsp;повреждённой машины и&nbsp;оказал ему первую помощь. А&nbsp;также помог семье при организационных вопросах, с&nbsp;перелетом и&nbsp;проживанием...`)
+				+item(4, `Айгумов Артур`, `Матросы-спасатели Кемеровского регионального отделения ВСКС студенческого отряда &laquo;Скала&raquo; Анастасия Тихонова и&nbsp;Руслан Хоркашов спасли ребенка и&nbsp;женщину.&nbsp;27&nbsp;июня Анастасия Тихонова, находясь на&nbsp;дежурстве, в&nbsp;10&nbsp;метрах от&nbsp;берега заметила тонущего ребенка. Шестилетняя девочка была...`)
 
 mixin sPressCenterSmi(data)
 	// start sPressCenter
-	+b.SECTION.sPressCenter--smi.section#sPressCenterSmi&attributes(attributes)
-		.container
-			h1 Пресс-центр
+	+b.SECTION.sPressCenter.section&attributes(attributes)
+		.news-content
+			mixin item(i,p)
+				.day-news__item
+					a(href="#")
+						+pic(`news-${i}.png`,'',0).news-img
+					.day-news__item-body
+						.date.date--publ
+							p 19.08.21
+							a.publ(href="#")!=p
+						.caption
+							a(href="#").text-body  Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
+						a.detailed(href="#") Подробнее
+			h2 СМИ о нас
 			.row
-				.col-lg-4.col-12
-					+e.menu
-						ul
-							li
-								+e.menu-btn(href="#") Главные новости
-							li
-								+e.menu-btn(href="#") Региональные новости
-							li
-								+e.menu-btn(href="#") Наши герои
-							li
-								+e.menu-btn.active(href="#") СМИ о нас
-				.col-lg-8.col-12
-					.news-content
-						mixin item(i,p)
-							.day-news__item
-								+pic(`news-${i}.png`,'',0).news-img
-								.day-news__item-body
-									.date.date--publ
-										p 19.08.21
-										a.publ(href="#")!=p
-									.caption Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
-									a.detailed(href="#") Подробнее
-						h2 СМИ о нас
-						.row
-							.input-wrapper.col-lg-6.col-12
-								p Даты
-								+input('Выберите период').input-date-picker-js(autocomplete="off")
-							.day-news.col-12
-								.day-news__head
-									p 21 сентября
-									.day-news__head-line
-										hr
-								+item(1,'Известия')
-								+item(2,'Россия 1')
-							.day-news.col-12
-								.day-news__head
-									p 20 сентября
-									.day-news__head-line
-										hr
-								+item(3,'Коммерсант')
-							.day-news.col-12
-								.day-news__head
-									p 19 сентября
-									.day-news__head-line
-										hr
-								+item(2,'Forbes')
-								+item(1,'Коммерсант')
+				.input-wrapper.col-lg-6.col-12
+					p Даты
+					+input('Выберите период').input-date-picker-js(autocomplete="off")
+				.day-news.col-12
+					.day-news__head
+						p 21 сентября
+						.day-news__head-line
+							hr
+					+item(1,'Известия')
+					+item(2,'Россия 1')
+				.day-news.col-12
+					.day-news__head
+						p 20 сентября
+						.day-news__head-line
+							hr
+					+item(3,'Коммерсант')
+				.day-news.col-12
+					.day-news__head
+						p 19 сентября
+						.day-news__head-line
+							hr
+					+item(2,'Forbes')
+					+item(1,'Коммерсант')
 	// end sPressCenter

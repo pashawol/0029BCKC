@@ -347,10 +347,22 @@ function eventHandler() {
 	});
 	//.headerBlock-slider-js
 	let headerBlockSlider = new Swiper('.headerBlock-slider-js', {
-		spaceBetween: 0,
+		slidesPerView: 'auto',
 		watchOverflow: true,
+		spaceBetween: 0,
 		loop: true,
-
+		effect: "creative",
+		speed: 700,
+		creativeEffect: {
+			prev: {
+				shadow: false,
+				translate: [0, 0, -400],
+			},
+			next: {
+				translate: ["70%", "30%", 0],
+				scale: .5,
+			},
+		},
 		navigation: {
 			nextEl: '.swiper-next',
 			prevEl: '.swiper-prev',
@@ -368,6 +380,22 @@ function eventHandler() {
 			},
 		},
 	});
+
+	
+	let headerBlockSliderMob = new Swiper('.headerBlock-slider-mob-js', {
+		slidesPerView: 1,
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		speed: 700,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
+
 
 	//
 	let sEventsSlider = new Swiper('.sEvents-slider-js', {

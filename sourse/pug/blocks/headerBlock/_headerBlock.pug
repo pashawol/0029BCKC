@@ -2,8 +2,8 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+e.slider-wrap
-				.swiper.headerBlock-slider-js.fract-siwper-js
+			+e.slider-wrap.d-none.d-lg-block
+				.swiper.headerBlock-slider-js.fract-siwper-js 
 					.swiper-wrapper
 						+headerBlockSlide()
 						-for(let i=0; i < 4; i++)
@@ -11,22 +11,29 @@ mixin headerBlock()
 					.d-none.d-lg-block
 						+arrow2()
 					.swiper-pagination
+			+e.slider-wrap.d-lg-none
+			
+				.swiper.headerBlock-slider-mob-js.fract-siwper-js
+					.swiper-wrapper
+						+headerBlockSlide()
+						-for(let i=0; i < 4; i++)
+							+headerBlockSlide(i) 
+					.swiper-pagination
 	// end headerBlock
 
 mixin headerBlockSlide(mod='')
-	.swiper-slide
-		+e.row.row
-			+e.col--img.col-11.col-lg-8.col-xl-9
-				+e.img-box
-					img(loading="lazy" src="img/@2x/headerBlock-slide-1.png" alt="")
-					+e.title=`Встреча молодых спасателей с руководителями корпуса в г. Оренбург${mod}`
-					+e.btn(href="#") Подробнее
-			+e.col--orange.col-11.col-lg
-				+e.orange-box
-					+e.txt
-						p Встреча молодых спасателей с руководителями корпуса в г. Оренбург
-					+e.bot-row.row.align-items-center
-						.col
-							+e.date 19.06.2022
-						.col-auto
-							+e.btn.me-xl-1(href="#") Подробнее
+	.swiper-slide 
+		+e.img-box(href="#")
+			img(loading="lazy" src="img/@2x/headerBlock-slide-1.png" alt="")
+			+e.title=`Встреча молодых спасателей с руководителями корпуса в г. Оренбург${mod}`
+			div.mt-auto
+				+e.bot-row.row.align-items-center
+					+e.col-date.col
+						+e.date.text-white 19.06.2022
+					.col-auto
+						+e.btn.me-xl-1() Подробнее
+					//- +e.btn(href="#") Подробнее
+			//- +e.col--orange.col-11.col-lg
+			//- 	+e.orange-box
+			//- 		+e.txt
+			//- 			p Встреча молодых спасателей с руководителями корпуса в г. Оренбург

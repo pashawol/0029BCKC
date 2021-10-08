@@ -173,6 +173,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			img{
+				max-height: 100%;
+			}
 		}
 		&-caption {
 			padding-top: rem(32);
@@ -223,7 +226,7 @@
 .sAboutOrgVolunteers {
 	--sPT: 0;
 	@include media-breakpoint-up(lg) {
-		// --sPB:100px;
+		--sPB:#{rem(34)};
 	}
 	h2 {
 		margin-bottom: rem(7);
@@ -246,6 +249,7 @@
 			line-height: 150%;
 			font-size: rem(13);
 			color: rgba(black, 0.5);
+			margin-bottom: rem(11);
 		}
 		.toggle-content-volunteers{
 			p{
@@ -260,6 +264,7 @@
 				line-clamp: var(--clamp, 6);
 				overflow: hidden;
 				position: relative;
+				margin-bottom: 0;
 			}
 		}
 	}

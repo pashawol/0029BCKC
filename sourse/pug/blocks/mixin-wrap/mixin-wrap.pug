@@ -98,7 +98,7 @@ mixin pageBody(about,type)
 
 mixin document-item(title,doc,caption)
 	+b.document-item
-		+e.title(href="#")!=title
+		+e.title(href="#" target="_blank")!=title
 		+e.type!=`${doc}, 12 mb`
 		+e.caption!=caption
 

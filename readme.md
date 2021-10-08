@@ -16,3 +16,5 @@
 1. <https://pashawol.github.io/0029BCKC/public/03-about-doc.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-identity.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-reports.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-logos.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-videos.html>

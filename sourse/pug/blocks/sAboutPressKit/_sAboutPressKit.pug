@@ -13,3 +13,41 @@ mixin sAboutReports(data)
 		h2 Отчеты о деятельности
 		+document-item(`Отчет о деятельности ВСКС за 2019г.`,`pdf`,`Корпус принимает участие в единой государственной политике в области предупреждения и ликвидации ЧС, обусловленных авариями, катастрофами, стихийными и иными бедствиями`)
 		+document-item(`Отчет о деятельности ВСКС за 2020г.`,`pdf`,`Корпус принимает участие в единой государственной политике в области предупреждения и ликвидации ЧС, обусловленных авариями, катастрофами, стихийными и иными бедствиями`)
+
+mixin sAboutLogos(data)
+	// start sAboutLogos
+	+b.SECTION.sAboutLogos.section#sAboutLogos&attributes(attributes)
+		h2 Логотипы региональных подразделений
+		.row
+			mixin item(c)
+				.col-md-3.col-6
+					+e.item
+						+pic('about-logo.png','',0)
+						+e.item-caption!=c
+						a(href="#") cdr, 0.1 mb (CorelDRAW)
+			- for(var x=0;x<3;x++)
+				+item(`Эмблема Всероссийского студенческого корпуса спасателей (Уставная)`)
+				+item(`Флаг Всероссийского студенческого корпуса спасателей`)
+				+item(`Эмблема Всероссийского студенческого корпуса спасателей`)
+				+item(`Эмблема Общероссийской общественной организции "Российский союз спасателей"`)
+				+item(`Эмблема Всероссийского движения "Школа безопасности"`)
+				+item(`Эмблема Московского городского отделения ВСКС`)
+				+item(`Эмблема Кабардино-Балкарского регионального отделения ВСКС`)
+				+item(`Эмблема Калужского регионального отделения ВСКС`)
+
+mixin sAboutVideos(data)
+	// start sAboutVideos
+	+b.SECTION.sAboutVideos.section#sAboutVideos&attributes(attributes)
+		h2 Видеогалерея
+		mixin item(i)
+			+e.item
+				a(data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-width="1280" data-height="720")
+					+pic(`about-videos-${i}.png`,'',0)
+				+e.item-caption
+					+e.item-text Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, assumenda?
+					+e.item-date 19.08.21
+		+item(1)
+		+item(2)
+		+item(3)
+		a.show-more(href="#") Показать еще
+		

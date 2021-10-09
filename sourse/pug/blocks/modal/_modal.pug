@@ -15,5 +15,28 @@ mixin modal()
 				+e.reg-link='Впервые на сайте? '
 					a(href="#") Зарегистрируйтесь!
 	// #modal-login
-	
+	+b.modal-win--reg(id="modal-reg" style="display: none")
+		+e.head-wrap
+			h2 Регистрация
+			+e.head-login="Есть аккаунт? "
+				a(href="#") Войти
+		+form-wrap()
+			.row
+				.col-md-6.col-12
+					+input('Иванов','text','Фамилия')
+					+input('Иван','text','Имя')
+					+input('Sample@sample.com','text','E-mail')
+					+input('+7(999)000-00-00','tel','Телефон')
+					+input('******','password','Пароль')
+				.col-md-6.col-12
+					+e.LABEL.input-title Фото профиля
+					.load-photo
+			.row.align-items-md-end
+				.col-md-6.col-12
+					+e.btn-reg(href="#") Зарегистрироваться
+				.col-md-6.col-12
+					+e.accept!='Регистрируясь, вы соглашаетесь с '
+						a(href="#") правилами пользования сайтом
+						span!=' и даёте согласие на '
+						a(href="#") обработку персональных данных.
 	// end modals

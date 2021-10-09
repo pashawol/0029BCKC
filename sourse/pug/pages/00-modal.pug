@@ -1,0 +1,25 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+
+block variables
+	- let  mainPage= '' 
+	- let  bg="04-detailed-news.jpg"
+
+block title
+	- let  title= 'Новость'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	.container.mt-5
+		mixin btn(t,a)
+			a.btn.btn-primary.m-2.link-modal-js(href=a  )= t
+		+btn('Авторизация','#modal-login')
+	+footer()

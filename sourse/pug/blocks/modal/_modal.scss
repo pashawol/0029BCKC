@@ -1,14 +1,92 @@
 .modal-win {
 	width: 100%;
 	position: relative;
-	max-width: rem(500);
-
-	.carousel__button.is-close{
+	max-width: rem(664);
+	padding: 0;
+	.carousel__button.is-close {
 		top: 0;
 		color: $black;
-
-		svg{
-			//filter: none;
+		right: 9px;
+		top: 11px;
+		svg {
+			filter: none;
+			stroke-width: unset;
+			--carousel-button-svg-width: #{rem(32)};
+			--carousel-button-svg-height: #{rem(32)};
+		}
+	}
+	@include media-breakpoint-up(md) {
+		flex-direction: row;
+	}
+	&__logo-wrap {
+		padding-top: rem(28);
+		padding-bottom: rem(28);
+		padding-left: rem(37);
+		padding-right: rem(37);
+		background-color: $primary;
+		order: 1;
+		@include media-breakpoint-up(md) {
+			width: rem(312);
+			order: 0;
+		}
+		h2 {
+			font-weight: 900;
+			color: $white;
+			font-size: rem(40);
+			line-height: rem(44);
+			margin-bottom: rem(20);
+		}
+		picture {
+			text-align: center;
+		}
+	}
+	&__form {
+		padding-top: rem(39);
+		padding-bottom: rem(44);
+		padding-left: rem(40);
+		padding-right: rem(40);
+		@include media-breakpoint-up(md) {
+			width: rem(352);
+		}
+		.form-wrap {
+			p {
+				line-height: 150%;
+				margin-bottom: rem(23);
+				color: black;
+			}
+			&__input-title {
+				margin-bottom: rem(5);
+				line-height: 150%;
+				font-size: rem(13);
+				color: black;
+			}
+			&__input {
+				border: 1px solid #009fe2;
+				border-radius: 4px;
+				margin-bottom: rem(15);
+			}
+			&__btns-wrap {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: rem(28);
+				margin-bottom: rem(28);
+				a {
+					padding-left: rem(16);
+					padding-right: rem(16);
+					font-size: rem(13);
+					line-height: 150%;
+				}
+			}
+			&__btn {
+				@extend .btn, .btn-warning;
+				max-width: rem(81);
+				font-size: rem(16);
+			}
+			&__reg-link {
+				font-size: rem(13);
+				line-height: 150%;
+			}
 		}
 	}
 }

@@ -1,18 +1,19 @@
 mixin modal()
 	//  start modals
-	+b.modal-win(id="modal-call" style="display: none")
-		+form-wrap
-			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-			+input("Ваше Имя")(required)
-			+e.BUTTON.btn.btn(type="submit")
-			.p-5
-			.p-5
-			.p-5
-			.p-5
-			.p-5
-			+policy()
-	// #modal-call
+	+b.modal-win(id="modal-login" style="display: none")
+		+e.logo-wrap
+			h2!=`Вход в&nbsp;личный кабинет`
+			+pic('logo-white.png','',0)
+		+e.form
+			+form-wrap()
+				p Введите данные которые вы указывали при регистрации
+				+input('Sample@sample.com','text','E-mail')
+				+input('******','password','Пароль')
+				+e.btns-wrap
+					+e.btn Войти
+					a(href="#") Восстановить пароль
+				+e.reg-link='Впервые на сайте? '
+					a(href="#") Зарегистрируйтесь!
+	// #modal-login
 	
 	// end modals

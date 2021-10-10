@@ -93,11 +93,12 @@
 	&--reg {
 		padding-left: rem(40);
 		padding-right: rem(40);
-		padding-top: rem(28);
-		padding-bottom: 38px;
+		padding-top: rem(38);
+		padding-bottom: rem(38);
 		max-width: 400px;
 		@include media-breakpoint-up(md) {
 			flex-direction: column;
+			padding-top: rem(28);
 		}
 		@include media-breakpoint-up(md) {
 			max-width: rem(664);
@@ -165,6 +166,7 @@
 		@include media-breakpoint-down(md){
 			margin-bottom: rem(32);
 		}
+		overflow: hidden;
 	}
 	// &__input-title {
 	// 	display: inline-block;

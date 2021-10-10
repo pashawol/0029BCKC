@@ -194,7 +194,7 @@ const JSCCommon = {
 				let targetSelector = self.getAttribute('href');
 				let target = document.querySelector(targetSelector);
 
-				
+
 				if (!target) {
 					self.setAttribute("href", '/' + targetSelector);
 				}
@@ -333,13 +333,13 @@ function eventHandler() {
 	$('.input-location-picker').click(function () {
 		$('.input-location-modal-wrap').toggleClass('active');
 	});
-	$('.accordion-button').click(function(){
+	$('.accordion-button').click(function () {
 		$(this).toggleClass('active')
-		.next().slideToggle();
+			.next().slideToggle();
 	});
 	var aboutSlider = new Swiper('.sAboutOrg__aboutSwiper--js', {
 		slidesPerView: 'auto',
-		spaceBetween:40,
+		spaceBetween: 40,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -381,7 +381,7 @@ function eventHandler() {
 		},
 	});
 
-	
+
 	let headerBlockSliderMob = new Swiper('.headerBlock-slider-mob-js', {
 		slidesPerView: 1,
 		watchOverflow: true,
@@ -412,7 +412,26 @@ function eventHandler() {
 		},
 	});
 	//
-
+	// import * as FilePond from 'filepond';
+	// const pond = FilePond.create({
+	// 	multiple: true,
+	// 	name: 'filepond'
+	// });
+	// document.body.appendChild(pond.element);
+	
+	$('.load-photo').filepond({
+		labelIdle: `Добавить фото&nbsp;профиля`,
+		imagePreviewHeight: 170,
+		imageCropAspectRatio: '1:1',
+		imageResizeTargetWidth: 200,
+		imageResizeTargetHeight: 200,
+		// stylePanelLayout: 'compact circle',
+		// styleLoadIndicatorPosition: 'center bottom',
+		// styleProgressIndicatorPosition: 'right bottom',
+		// styleButtonRemoveItemPosition: 'left bottom',
+		// styleButtonProcessItemPosition: 'right bottom',
+	});
+	
 	let sHeroSlider = new Swiper('.sHero-slider-js', {
 		slidesPerView: "auto",
 		loop: true,
@@ -457,40 +476,40 @@ function eventHandler() {
 
 		if (document.querySelector("#map")) {
 
-		
-		window.setTimeout(function () {
-			ymaps.ready(function () {
-				var myMap = new ymaps.Map('map', {
-					center: [63.63, 99.22],
-					zoom: 3,
-				}, {
-					minZoom: 3,
-					maxZoom: 5,
-				}, {
-					searchControlProvider: 'yandex#search'
-				}),
-					objectManager = new ymaps.ObjectManager({
-						// Чтобы метки начали кластеризоваться, выставляем опцию.
-						clusterize: true,
-						// ObjectManager принимает те же опции, что и кластеризатор.
-						gridSize: 32,
-						clusterDisableClickZoom: true
+
+			window.setTimeout(function () {
+				ymaps.ready(function () {
+					var myMap = new ymaps.Map('map', {
+						center: [63.63, 99.22],
+						zoom: 3,
+					}, {
+						minZoom: 3,
+						maxZoom: 5,
+					}, {
+						searchControlProvider: 'yandex#search'
+					}),
+						objectManager = new ymaps.ObjectManager({
+							// Чтобы метки начали кластеризоваться, выставляем опцию.
+							clusterize: true,
+							// ObjectManager принимает те же опции, что и кластеризатор.
+							gridSize: 32,
+							clusterDisableClickZoom: true
+						});
+
+					// Чтобы задать опции одиночным объектам и кластерам,
+					// обратимся к дочерним коллекциям ObjectManager.
+					objectManager.objects.options.set('preset', 'islands#circleDotIcon');
+					objectManager.objects.options.set('iconColor', '#E31E24');
+					objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
+					myMap.geoObjects.add(objectManager);
+
+					$.ajax({
+						url: "data.json"
+					}).done(function (data) {
+						objectManager.add(data);
 					});
-
-				// Чтобы задать опции одиночным объектам и кластерам,
-				// обратимся к дочерним коллекциям ObjectManager.
-				objectManager.objects.options.set('preset', 'islands#circleDotIcon');
-				objectManager.objects.options.set('iconColor', '#E31E24');
-				objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
-				myMap.geoObjects.add(objectManager);
-
-				$.ajax({
-					url: "data.json"
-				}).done(function (data) {
-					objectManager.add(data);
 				});
-			});
-		}, 1000);
+			}, 1000);
 		}
 
 	}, 2000);
@@ -554,36 +573,36 @@ function eventHandler() {
 
 
 	//end luckyOne Js
-	
-	$('.toggle-text').click(function(e){
+
+	$('.toggle-text').click(function (e) {
 		e.preventDefault();
 		let text = $(this).prev();
 		let attr = text.attr("style");
-		if (typeof attr !== typeof undefined && attr !== false) { 
+		if (typeof attr !== typeof undefined && attr !== false) {
 			$(this).html("читать&nbsp;полностью")
 			text.removeAttr("style");
 		}
-		else{ 
+		else {
 			$(this).html("cкрыть")
 			text.attr("style", '--clamp:" "')
 		}
 	})
-	$(".toggle-content").each(function(){
+	$(".toggle-content").each(function () {
 	})
-	$('.toggle-text-volunteers').click(function(e){
+	$('.toggle-text-volunteers').click(function (e) {
 		e.preventDefault();
 		let text = $(this).prev();
 		let attr = text.attr("style");
-		if (typeof attr !== typeof undefined && attr !== false) { 
+		if (typeof attr !== typeof undefined && attr !== false) {
 			$(this).html("подробнее...")
 			text.removeAttr("style");
 		}
-		else{ 
+		else {
 			$(this).html("cкрыть")
 			text.attr("style", '--clamp:" "')
 		}
 	})
-	$(".toggle-content-volunteers").each(function(){
+	$(".toggle-content-volunteers").each(function () {
 	})
 };
 if (document.readyState !== 'loading') {

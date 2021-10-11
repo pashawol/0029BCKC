@@ -102,4 +102,10 @@ mixin document-item(title,doc,caption)
 		+e.type!=`${doc}, 12 mb`
 		+e.caption!=caption
 
+mixin sEventsChb(txt, addClasses='')
+	+b.LABEL.btn-chb(class=addClasses)
+		input(type="checkbox" class='invisible' name=txt)&attributes(attributes)
+		span.bar
+		span.txt=txt
+
 

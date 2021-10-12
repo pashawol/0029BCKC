@@ -587,13 +587,30 @@ iframe {
 			background-color: #7fcff0;
 			z-index: 2;
 		}
-		&::after{
+		&::after {
 			transform: translateX(-50%) rotate(90deg);
 		}
 	}
-	&--panel{
-		&-root{
+	&--panel {
+		&-root {
 			background-color: $white !important;
+		}
+	}
+}
+
+
+
+.activity-details {
+	.page-head {
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: rem(625);
+			left: 0;
+			top: 0;
+			background-color: #ECF8FF;
+			z-index: -1;
 		}
 	}
 }

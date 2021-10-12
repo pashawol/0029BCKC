@@ -28,6 +28,37 @@
 			font-size: rem(40);
 		}
 	}
+	&__features + h1 {
+		@include media-breakpoint-up(lg) {
+			font-size: rem(40);
+			margin-bottom: rem(35);
+		}
+	}
+	&__features {
+		@include roww(#{rem(8)}, m);
+		margin-top: #{rem(-8)};
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(25);
+		}
+		.feature-item {
+			margin-top: rem(8);
+		}
+	}
+
+	&__btn-row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(10)};
+		margin-bottom: 20px;
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(20)};
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(45);
+		}
+	}
 	&__link-back {
 		display: inline-flex;
 		align-items: center;
@@ -118,6 +149,23 @@
 			background-repeat: no-repeat;
 		}
 	}
+	&--head {
+		align-items: center;
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(16);
+		}
+
+		p {
+			&:first-of-type {
+				font-size: rem(20);
+				margin-right: rem(25);
+				@include media-breakpoint-up(sm) {
+					margin-right: rem(45);
+				}
+			}
+		}
+	}
 }
 
 .document-item {
@@ -133,10 +181,9 @@
 			position: absolute;
 			left: rem(-37);
 			top: 0;
-			background-image: url('../img/svg/doc-file.svg');
+			background-image: url("../img/svg/doc-file.svg");
 			width: 18px;
 			height: 24px;
-
 		}
 	}
 	&__type {
@@ -145,7 +192,35 @@
 		line-height: 150%;
 		margin-bottom: rem(8);
 	}
-	&__caption{
+	&__caption {
 		color: rgba(black, 0.5);
+	}
+}
+
+.feature-item {
+	display: inline-block;
+	padding: rem(3) rem(8);
+	font-weight: bold;
+	font-size: rem(12);
+	border-radius: 4px;
+	color: var(--color, #ffffff);
+	background-color: var(--bg-color, #238ece);
+}
+
+.score-item {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: rem(5) rem(15);
+	background-color: $white;
+	border-radius: 4px;
+	span {
+		font-size: rem(12);
+		color: $black;
+		&:first-of-type {
+			font-size: rem(20);
+			font-weight: bold;
+			margin-right: rem(13);
+		}
 	}
 }

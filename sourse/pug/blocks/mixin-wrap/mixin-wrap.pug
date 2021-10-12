@@ -108,4 +108,10 @@ mixin sEventsChb(txt, addClasses='')
 		span.bar
 		span.txt=txt
 
+mixin feature(t, c, bg)
+	.feature-item(style=`--color: ${c}; --bg-color: ${bg};`)!= t
 
+mixin score-item(c, t)
+	+b.score-item
+		span.text-primary!= c
+		span!= t

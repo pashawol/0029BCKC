@@ -7,6 +7,7 @@
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-smi.html>
 1. <https://pashawol.github.io/0029BCKC/public/04-detailed-news.html>
 1. <https://pashawol.github.io/0029BCKC/public/05-activities.html>
+1. <https://pashawol.github.io/0029BCKC/public/06-activity-details.html>
 # //////// 
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-history.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-leader.html>

@@ -10,7 +10,7 @@ block variables
 	- let  bg="04-detailed-news.jpg"
 
 block title
-	- let  title= 'Новость'
+	- let  title= 'Модальные окна'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -23,4 +23,5 @@ block pagecontent
 			a.btn.btn-primary.m-2.link-modal-js(href=a  )= t
 		+btn('Авторизация','#modal-login')
 		+btn('Регистрация','#modal-reg')
+		+btn('Регистрация на мероприятие','#modal-reg-event')
 	+footer()

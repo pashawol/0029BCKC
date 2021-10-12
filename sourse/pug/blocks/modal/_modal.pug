@@ -40,4 +40,26 @@ mixin modal()
 						a(href="#") правилами пользования сайтом
 						span!=' и даёте согласие на '
 						a(href="#") обработку персональных данных.
+
+	// #modal-reg-event
+	+b.modal-win--reg-event(id="modal-reg-event" style="display: none")
+		+e.heading
+			h3 Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;
+			.date-n-location
+				p 19&nbsp;августа&nbsp;&mdash; 21&nbsp;августа
+				p.loc Республика Удмуртия
+		+form-wrap()
+			h2 Регистрация на&nbsp;мероприятие
+			+input('45456489749','text','Номер членского билета ВСКС')
+			+input('Викторовский','text','Фамилия')
+			+input('Олег','text','Имя')
+			+input('Викторович','text','Отчество')
+			+input('ДД.ММ.ГГГГ','','Дата рождения').input-date-picker-js(autocomplete="off")
+			+input('__ __ ___ ___','text','Серия и номер паспорта')
+			+input('Введите','text','Регион')
+			+input('Введите','text','Город')
+			+input('+_(___)___-__-__','tel','Телефон')
+			+input('Sample@sample.com','text','E-mail')
+			+input('Введите','text','Учебное заведение')
+			+e.btn-reg(href="#") Зарегистрироваться
 	// end modals

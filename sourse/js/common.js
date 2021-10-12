@@ -241,7 +241,7 @@ function eventHandler() {
 	JSCCommon.datepicker();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	// JSCCommon.animateScroll();

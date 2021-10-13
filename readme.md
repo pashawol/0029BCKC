@@ -7,7 +7,9 @@
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-smi.html>
 1. <https://pashawol.github.io/0029BCKC/public/04-detailed-news.html>
 1. <https://pashawol.github.io/0029BCKC/public/05-activities.html>
-1. <https://pashawol.github.io/0029BCKC/public/06-activity-details.html>
+2. <https://pashawol.github.io/0029BCKC/public/06-activity-details.html>
+# //////  - 5
+1. <https://pashawol.github.io/0029BCKC/public/00-modal.html>
 # //////// 
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-history.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-leader.html>
@@ -20,5 +22,3 @@
 1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-reports.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-logos.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-videos.html>
-# //////
-1. <https://pashawol.github.io/0029BCKC/public/00-modal.html>

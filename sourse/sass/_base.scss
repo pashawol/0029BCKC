@@ -614,3 +614,39 @@ iframe {
 		}
 	}
 }
+
+.filepond--root .filepond--list-scroller {
+    margin: 0 !important;
+}
+
+.filepond--root .filepond--list-scroller {
+    /* margin-top: 1em; */
+    /* margin-bottom: 1em; */
+		margin: 0;
+}
+
+.filepond--root{
+	margin: 0;
+}
+
+.filepond--list-scroller[data-state=overflow]{
+	overflow: hidden  !important;
+}
+
+.filepond--item{
+	border-radius: 0 !important;
+	margin: 0 !important;
+}
+
+.filepond--list.filepond--list{
+	width: 100%;
+}
+
+.filepond--list-scroller[data-state=overflow] .filepond--list {
+    top: 0;
+    left: 0;
+}
+
+.filepond--file {
+	border-radius: 0 !important;
+}

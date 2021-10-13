@@ -3,6 +3,7 @@
 1. <https://pashawol.github.io/0029BCKC/public/index.html>
 # 1. Мероприятия, стр. мероприятия, форма регистрации на мероприятие 
 1. <https://pashawol.github.io/0029BCKC/public/05-activities.html>
+<<<<<<< HEAD
 1. <https://pashawol.github.io/0029BCKC/public/06-activity-details.html>
 1. <https://pashawol.github.io/0029BCKC/public/00-modal.html>
 # 2. Контакты, Стр. регион. представительства
@@ -13,6 +14,12 @@
 1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-logos.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-videos.html>
 # 4. История, Руководство, Исполком, Достижения, Добровольцы, Партнеры
+=======
+2. <https://pashawol.github.io/0029BCKC/public/06-activity-details.html>
+# //////  - 5
+1. <https://pashawol.github.io/0029BCKC/public/00-modal.html>
+# //////// 
+>>>>>>> 002f94c3a598cc276ecf1f84623ad2a839fdb758
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-history.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-leader.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-ispolkom.html>
@@ -20,6 +27,7 @@
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-partners.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-volunteers.html>
 1. <https://pashawol.github.io/0029BCKC/public/03-about-doc.html>
+<<<<<<< HEAD
 # 5. Регистрация, Авторизация, Восстановлние пароля
 1. <https://pashawol.github.io/0029BCKC/public/00-modal.html>
 
@@ -29,3 +37,9 @@
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-heroes.html>
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-smi.html>
 1. <https://pashawol.github.io/0029BCKC/public/04-detailed-news.html>
+=======
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-identity.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-reports.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-logos.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-videos.html>
+>>>>>>> 002f94c3a598cc276ecf1f84623ad2a839fdb758

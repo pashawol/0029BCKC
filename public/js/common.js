@@ -418,19 +418,44 @@ function eventHandler() {
 	// 	name: 'filepond'
 	// });
 	// document.body.appendChild(pond.element);
-	
-	$('.load-photo').filepond({
-		labelIdle: `Добавить фото&nbsp;профиля`,
-		imagePreviewHeight: 170,
-		imageCropAspectRatio: '1:1',
-		imageResizeTargetWidth: 200,
-		imageResizeTargetHeight: 200,
-		// stylePanelLayout: 'compact circle',
-		// styleLoadIndicatorPosition: 'center bottom',
-		// styleProgressIndicatorPosition: 'right bottom',
-		// styleButtonRemoveItemPosition: 'left bottom',
-		// styleButtonProcessItemPosition: 'right bottom',
-	});
+	FilePond.registerPlugin(
+		FilePondPluginImagePreview, 
+		FilePondPluginImageCrop,
+		FilePondPluginImageResize,
+		FilePondPluginImageTransform,
+		FilePondPluginImageEdit
+		// FilePondPluginImageExifOrientation,
+		// FilePondPluginFileValidateSize,
+		// FilePondPluginImageEdit
+	);
+
+	FilePond.create(
+		document.querySelector('.load-photo'),
+		{
+			labelIdle: `Добавить фото&nbsp;профиля`,
+			imagePreviewHeight: 300,
+			imageCropAspectRatio: '1:1',
+			imageResizeTargetWidth: 280,
+			imageResizeTargetHeight: 297,
+			styleLoadIndicatorPosition: 'center bottom',
+			styleProgressIndicatorPosition: 'left bottom',
+			styleButtonRemoveItemPosition: 'left bottom',
+			styleButtonProcessItemPosition: 'left bottom',
+		}
+	);
+
+	// $('.load-photo').filepond({
+	// 	labelIdle: `Добавить фото&nbsp;профиля`,
+	// 	imagePreviewHeight: 170,
+	// 	imageCropAspectRatio: '1:1',
+	// 	imageResizeTargetWidth: 200,
+	// 	imageResizeTargetHeight: 200,
+	// 	// stylePanelLayout: 'compact circle',
+	// 	// styleLoadIndicatorPosition: 'center bottom',
+	// 	// styleProgressIndicatorPosition: 'right bottom',
+	// 	// styleButtonRemoveItemPosition: 'left bottom',
+	// 	// styleButtonProcessItemPosition: 'right bottom',
+	// });
 	
 	let sHeroSlider = new Swiper('.sHero-slider-js', {
 		slidesPerView: "auto",

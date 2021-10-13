@@ -62,4 +62,17 @@ mixin modal()
 			+input('Sample@sample.com','text','E-mail')
 			+input('Введите','text','Учебное заведение')
 			+e.btn-reg(href="#") Зарегистрироваться
+		
+		// #modal-restore-pass
+		+b.modal-win--restore-pass(id="modal-restore-pass" style="display: none")
+			+e.logo-wrap
+				h2 Восстановить пароль
+				+pic('logo-white.png','',0)
+			+e.form
+				+form-wrap()
+					p Введите данные которые вы указывали при регистрации
+					+input('Sample@sample.com','text','E-mail')
+					+e.btns-wrap
+						+e.btn Продолжить
+
 	// end modals

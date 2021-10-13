@@ -227,6 +227,35 @@
 			}
 		}
 	}
+	&--restore-pass {
+		// @include media-breakpoint-up(md) {
+		// 	max-width: 700px;
+		// }
+		.modal-win__logo-wrap {
+			@include media-breakpoint-up(md) {
+				width: 49%;
+				padding-bottom: rem(35);
+			}
+			h2 {
+				font-size: rem(35);
+				@include media-breakpoint-up(md) {
+					font-size: rem(32);
+				}
+			}
+		}
+		.modal-win__form {
+			@include media-breakpoint-up(md) {
+				max-width: 51%;
+			}
+		}
+		.form-wrap__btns-wrap {
+			margin-bottom: 0;
+		}
+		.form-wrap__btn {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
 	&__head-wrap {
 		display: flex;
 		margin-bottom: rem(30);

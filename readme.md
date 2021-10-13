@@ -6,6 +6,7 @@
 1. <https://pashawol.github.io/0029BCKC/public/06-activity-details.html>
 1. <https://pashawol.github.io/0029BCKC/public/00-modal.html>
 # 2. Контакты, Стр. регион. представительства
+1. <https://pashawol.github.io/0029BCKC/public/07-contacts.html>
 
 # 3. Айдентика, Отчеты о деятельности, Логотипы, Видеогалерея, Документы 
 1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-identity.html>

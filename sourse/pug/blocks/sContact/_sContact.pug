@@ -1,9 +1,116 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+e.heading
+				h3 Контакты Центрального представительства:
+				.row
+					.col-md-6.col-lg-5
+						+e.title Исполнительный комитет "ВСКС"
+						+e.adress Россия, Москва, проспект Вернадского, 78&nbsp;пр&minus;т Вернадского, д.78, стр.8
+						+e.position Председатель
+						+e.name Козеев Евгений Викторович
+					.col-md-auto
+						+b.UL.communications
+							li
+								a(href="tel:+74953690573")
+									+icon('call')
+									span +7(495) 369-05-73
+							li
+								a(href="mailto:info@911mail.ru")
+									+icon('mail')
+									span info@911mail.ru
+							li
+								a(href="https://vk.com/mgovsks") 
+									+icon('vk-logo')
+									span https://vk.com/mgovsks
+
+			+e.map-wrap
+				h3 Наши представительства в регионах
+				+e.map#map
+			
+			+form-wrap
+				.row
+					.col-sm-6.col-md-auto
+							+input('Северо-Западный ФО', 'select', 'Федеральный округ')
+					.col-sm-6.col-md-auto
+						+input('Выберите', 'select', 'Регион')
+			+e.regions
+				+e.region-item
+					.row
+						.col-md-6.col-lg-4
+							+e.title.text-primary Архангельская область
+							+e.adress Архангельск, ул.Кутузова, д.8
+						.col-lg-4.order-md-last
+							+e.position Председатель
+							+e.name Порохина Надежда Анатольевна
+						.col-md-6.col-lg-4
+							+b.UL.communications
+								li
+									a(href="tel:+74953690573")
+										+icon('call')
+										span +7(495) 369-05-73
+								li
+									a(href="mailto:info@911mail.ru")
+										+icon('mail')
+										span info@911mail.ru
+								li
+									a(href="https://vk.com/mgovsks") 
+										+icon('vk-logo')
+										span https://vk.com/mgovsks
+				+e.region-item
+					.row
+						.col-md-6.col-lg-4
+							+e.title.text-primary Архангельская область
+							+e.adress 160022&nbsp;г. Вологда, ул. Козленская&nbsp;45, офис 113 
+						.col-lg-4.order-md-last
+							+e.position Председатель
+							+e.name Поморцев Алексей Александрович
+						.col-md-6.col-lg-4
+							+b.UL.communications
+								li
+									a(href="tel:+74953690573")
+										+icon('call')
+										span +7(495) 369-05-73
+								li
+									a(href="mailto:info@911mail.ru")
+										+icon('mail')
+										span info@911mail.ru
+								li
+									a(href="https://vk.com/mgovsks") 
+										+icon('vk-logo')
+										span https://vk.com/mgovsks
+				+e.region-item
+					.row
+						.col-md-6.col-lg-4
+							+e.title.text-primary Коми Республика
+							//- +e.adress 160022&nbsp;г. Вологда, ул. Козленская&nbsp;45, офис 113
+						.col-lg-4.order-md-last
+							+e.position Председатель
+							+e.name Захарова Светлана Алексеевна
+						.col-md-6.col-lg-4
+							+b.UL.communications
+								li
+									a(href="tel:+79129552012")
+										+icon('call')
+										span +7(912) 955 20 12
+				+e.region-item
+					.row
+						.col-md-6.col-lg-4
+							+e.title.text-primary Новгородская область
+							+e.adress Архангельск, ул.Кутузова, д.8
+						.col-lg-4.order-md-last
+							+e.position Председатель
+							+e.name Кощеева Наталья Александровна
+						.col-md-6.col-lg-4
+							+b.UL.communications
+								li
+									a(href="tel:+74953690573")
+										+icon('call')
+										span +7(495) 369-05-73
+								li
+									a(href="https://vk.com/mgovsks")
+										+icon('vk-logo')
+										span https://vk.com/mgovsks
+
 	// end sContact

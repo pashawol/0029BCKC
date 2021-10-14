@@ -274,14 +274,21 @@
 		}
 	}
 	.load-photo {
-		height: rem(299);
-		background-color: $white;
-		border-radius: 4px;
-		border: 1px dashed #238ece;
+		label{
+			display: block;
+		}
+		.filepond--root{
+			height: rem(299);
+			background-color: $white;
+			border-radius: 4px;
+			border: 1px dashed #238ece;
+			min-height: rem(299);
+
+		}
 		@include media-breakpoint-down(md) {
 			margin-bottom: rem(32);
 		}
-		overflow: hidden;
+		// overflow: hidden;
 	}
 	// &__input-title {
 	// 	display: inline-block;

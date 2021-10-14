@@ -36,6 +36,20 @@ mixin sContact()
 					.col-sm-6.col-md-auto
 						+input('Выберите', 'select', 'Регион')
 			+e.regions
+				+e.region-item--heading
+					.row.align-items-center
+						.col-md-6.col-lg-4
+							+e.title.text-primary Северо-Западный ФО
+						.col-lg-4.order-md-last
+							+e.position Региональный представитель СЗФО
+							+e.name Пивненко Юрий Александрович
+						.col-md-6.col-lg-4
+							+b.UL.communications
+								li
+									a(href="tel:+74953690573")
+										+icon('call')
+										span +7(495) 369-05-73
+
 				+e.region-item
 					.row
 						.col-md-6.col-lg-4

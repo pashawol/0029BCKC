@@ -53,6 +53,9 @@
 				@include media-breakpoint-up(lg) {
 					margin-bottom: rem(8);
 				}
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -91,6 +94,24 @@
 				margin-bottom: 0;
 			}
 		}
+		&--heading {
+			background: #ecf8ff;
+			border-radius: 4px;
+			border-bottom: none;
+			padding-left: rem(25);
+			padding-right: rem(25);
+			@include media-breakpoint-up(lg) {
+				padding-left: rem(40);
+				padding-right: rem(40);
+			}
+			.sContact__title {
+				font-size: rem(24);
+				font-weight: bold;
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 0;
+				}
+			}
+		}
 	}
 	&__map {
 		@include media-breakpoint-down(md) {
@@ -106,10 +127,7 @@
 		background-color: $primary;
 	}
 	.form-wrap {
-		margin-bottom: 15px;
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(32.5);
-		}
+		margin-bottom: rem(32.5);
 		.row {
 			--bs-gutter-y: calc(var(--bs-gutter-x) * 0.5);
 		}

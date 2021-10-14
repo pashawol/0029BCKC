@@ -100,6 +100,7 @@
 			border-bottom: none;
 			padding-left: rem(25);
 			padding-right: rem(25);
+			margin-bottom: rem(8);
 			@include media-breakpoint-up(lg) {
 				padding-left: rem(40);
 				padding-right: rem(40);

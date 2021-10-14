@@ -430,7 +430,7 @@ function eventHandler() {
 	);
 
 	FilePond.create(
-		document.querySelector('.load-photo'),
+		document.querySelector('.load-photo input'),
 		{
 			labelIdle: `Добавить фото&nbsp;профиля`,
 			imagePreviewHeight: 300,

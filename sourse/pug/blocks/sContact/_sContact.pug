@@ -134,27 +134,18 @@ mixin sContact-region()
 	+b.sContact--region.section#sContact-region&attributes(attributes)
 		.container
 			+e.heading
-				h3 Архангельская область
+				+e.row-title.row.align-items-start
+					.col-auto
+						+b.link-back(href="#" title="Назад")
+							+icon('arrow-left')
+					.col
+						h3 Архангельская область
 				.row
 					.col-lg-5
 						+e.title Архангельск, ул.Кутузова, д.8
 						+e.position Председатель отделения
 						+e.name Порохина Надежда Анатольевнa
-						//- +pic('sContact.jpg','bg', '').d-md-none
-						//- +b.UL.communications.d-lg-none
-						//- 	li
-						//- 		a(href="tel:+74953690573")
-						//- 			+icon('call')
-						//- 			span +7(495) 369-05-73
-						//- 	li
-						//- 		a(href="mailto:arh.vsks@mail.ru")
-						//- 			+icon('mail')
-						//- 			span arh.vsks@mail.ru
-						//- 	li
-						//- 		a(href="https://vk.com/pomorspas" target="_blank") 
-						//- 			+icon('vk-logo')
-						//- 			span https://vk.com/pomorspas
-						+e.participants 
+						+e.participants
 							.row
 								.col
 									span Количество участников ВСКС
@@ -179,8 +170,8 @@ mixin sContact-region()
 								a(href="https://vk.com/mgovsks" target="_blank") 
 									+icon('vk-logo')
 									span https://vk.com/mgovsks
-					.col-auto
-						+pic('sContact.jpg','', '')
+					.col-lg-auto
+						+pic('sActivities-2.png','bg', '')
 
 			+e.map-wrap
 				h3 Наши представительства в регионах

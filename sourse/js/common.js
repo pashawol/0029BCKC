@@ -411,6 +411,19 @@ function eventHandler() {
 			},
 		},
 	});
+	let sNewsSlider = new Swiper('.sNews-slider-js', {
+		slidesPerView: "auto",
+		loop: true,
+
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+		},
+	});
 	//
 	// import * as FilePond from 'filepond';
 	// const pond = FilePond.create({

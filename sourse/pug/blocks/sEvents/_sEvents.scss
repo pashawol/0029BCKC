@@ -188,7 +188,21 @@
 		font-size: rem(20);
 		color: $blue2;
 	}
-	
+	&--region {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(60)};
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(60)};
+			--sPB: #{rem(88)};
+		}
+		.sEvents__title-row {
+			--bs-gutter-y: #{rem(12)};
+			padding-bottom: rem(35);
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(50);
+			}
+		}
+	}
 	//-
 } // end.sEvents
 

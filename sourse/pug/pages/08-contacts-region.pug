@@ -7,11 +7,12 @@ extends layout/main.pug
 //- include ../blocks/sPromo/_sPromo.pug
 //- include ../blocks/sMap/_sMap.pug
 //- include ../blocks/sStat/_sStat.pug
-//- include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sEvents/_sEvents.pug
 //- include ../blocks/sBecome/_sBecome.pug
 //- include ../blocks/sHero/_sHero.pug
 //- include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sNews/_sNews.pug
 
 block variables
 	- let  mainPage= ''
@@ -28,6 +29,8 @@ block pagecontent
 	//- +headerBlock()
 	+pageHead(`Контакты`)
 	+sContact-region
+	+sNews-region()
+	+sEvents-region()
 	//- +sMap()
 	//- +sActivities()
 	//- +sPromo()

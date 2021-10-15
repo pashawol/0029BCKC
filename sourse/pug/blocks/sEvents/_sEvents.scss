@@ -61,7 +61,7 @@
 	&__card {
 		flex-grow: 1;
 		background: $light-blue;
-		border-radius: 4px;
+		border-radius: $border-radius;
 		overflow: hidden;
 
 		display: flex;
@@ -226,7 +226,7 @@
 
 		background-color: var(--btn-chb-color);
 		opacity: 0.1;
-		border-radius: 4px;
+		border-radius: $border-radius;
 	}
 
 	//

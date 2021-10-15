@@ -1,0 +1,34 @@
+mixin sCabinetProfile(data)
+	// start sCabinetProfile
+	+b.SECTION.sCabinetProfile.section#sCabinetProfile&attributes(attributes)
+		.container
+			+e.row-main.row
+				.col-auto
+					+pic('sCabinetProfile.png','bg', '')
+				.col-auto.order-md-last
+					+e.points
+						span.text-primary 256
+						span баллов
+				+e.col.col-12.col-md
+					h1 Игоревский <br> Анатолий Викторович
+					+b.date-n-location--profile
+						span 18.08.1988
+						span.loc Краснодарский край
+						a(href="#") Кубанский Государственный Аграрный Университет
+					+b.UL.communications
+						li
+							a(href="tel:+79859560033")
+								+icon('profile-call')
+								span +7 985 956 00 33
+						li
+							a(href="mailto:skfoundation@sk.ru")
+								+icon('profile-mail')
+								span skfoundation@sk.ru
+					+b.soc
+						+item-sos
+							+icon('profile-vk')
+						+item-sos
+							+icon('profile-fb')
+						+item-sos
+							+icon('profile-insta')
+	// end sCabinetProfile

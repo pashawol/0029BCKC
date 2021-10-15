@@ -74,7 +74,7 @@
 			}
 			&__input {
 				border: 1px solid #009fe2;
-				border-radius: 4px;
+				border-radius: $border-radius;
 				margin-bottom: rem(15);
 			}
 			&__btns-wrap {
@@ -281,7 +281,7 @@
 		.filepond--root{
 			height: rem(299);
 			background-color: $white;
-			border-radius: 4px;
+			border-radius: $border-radius;
 			border: 1px dashed #238ece;
 			min-height: rem(299);
 

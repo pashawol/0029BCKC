@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Контакты</title>
+		<title>Личный кабинет</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -14,7 +14,7 @@
 		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
-	<body class="cabinet">
+	<body class="cabinet" data-bg="09-cabinet-1.jpg">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -110,7 +110,7 @@
 					<div class="page-head__slider page-head__slider--js swiper">
 						<div class="swiper-wrapper">
 							<div class="page-head__slide swiper-slide">
-								<a class="page-head__btn" href="#">Профиль
+								<a class="page-head__btn active" href="#">Профиль
 								</a>
 							</div>
 							<div class="page-head__slide swiper-slide">
@@ -118,81 +118,64 @@
 								</a>
 							</div>
 							<div class="page-head__slide swiper-slide">
-								<a class="page-head__btn active notification" href="#">Электронный билет Участника ВСКС
+								<a class="page-head__btn" href="#">Электронный билет Участника ВСКС
 								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- start sContact-region-->
-			<div class="sContact sContact--region section" id="sContact-region">
+			<!-- start sCabinetProfile-->
+			<section class="sCabinetProfile section" id="sCabinetProfile">
 				<div class="container">
-					<div class="sContact__heading">
-						<div class="sContact__row-title row align-items-start">
-							<div class="col-auto">
-								<a class="link-back" href="#" title="Назад">
-									<svg class="icon icon-arrow-left ">
-										<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+					<div class="sCabinetProfile__row-main row">
+						<div class="col-auto">
+							<!-- picture-->
+							<picture> 
+								<source type="image/webp" srcset="img/@2x/webp/sCabinetProfile.webp"/><img class="object-fit-js" src="img/@2x/sCabinetProfile.png" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="col-auto order-md-last">
+							<div class="sCabinetProfile__points"><span class="text-primary">256</span><span>баллов</span>
+							</div>
+						</div>
+						<div class="sCabinetProfile__col col-12 col-md">
+							<h1>Игоревский <br> Анатолий Викторович</h1>
+							<div class="date-n-location date-n-location--profile"><span>18.08.1988</span><span class="loc">Краснодарский край</span><a href="#">Кубанский Государственный Аграрный Университет</a>
+							</div>
+							<ul class="communications">
+								<li><a href="tel:+79859560033">
+										<svg class="icon icon-profile-call ">
+											<use xlink:href="img/svg/sprite.svg#profile-call"></use>
+										</svg><span>+7 985 956 00 33</span></a></li>
+								<li><a href="mailto:skfoundation@sk.ru">
+										<svg class="icon icon-profile-mail ">
+											<use xlink:href="img/svg/sprite.svg#profile-mail"></use>
+										</svg><span>skfoundation@sk.ru</span></a></li>
+							</ul>
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-profile-vk ">
+										<use xlink:href="img/svg/sprite.svg#profile-vk"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-profile-fb ">
+										<use xlink:href="img/svg/sprite.svg#profile-fb"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-profile-insta ">
+										<use xlink:href="img/svg/sprite.svg#profile-insta"></use>
 									</svg>
 								</a>
 							</div>
-							<div class="col">
-								<h3>Архангельская область</h3>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-5">
-								<div class="sContact__title">Архангельск, ул.Кутузова, д.8
-								</div>
-								<div class="sContact__position">Председатель отделения
-								</div>
-								<div class="sContact__name">Порохина Надежда Анатольевнa
-								</div>
-								<div class="sContact__participants">
-									<div class="row">
-										<div class="col"><span>Количество участников ВСКС</span></div>
-										<div class="col-auto"><span>456</span></div>
-									</div>
-									<div class="row">
-										<div class="col"><span>Количество отрядов ВСКС</span></div>
-										<div class="col-auto"><span>12</span></div>
-									</div>
-								</div>
-							</div>
-							<div class="col">
-								<ul class="communications">
-									<li><a href="tel:+74953690573">
-											<svg class="icon icon-call ">
-												<use xlink:href="img/svg/sprite.svg#call"></use>
-											</svg><span>+7(495) 369-05-73</span></a></li>
-									<li><a href="mailto:info@911mail.ru">
-											<svg class="icon icon-mail ">
-												<use xlink:href="img/svg/sprite.svg#mail"></use>
-											</svg><span>info@911mail.ru</span></a></li>
-									<li><a href="https://vk.com/mgovsks" target="_blank"> 
-											<svg class="icon icon-vk-logo ">
-												<use xlink:href="img/svg/sprite.svg#vk-logo"></use>
-											</svg><span>https://vk.com/mgovsks</span></a></li>
-								</ul>
-							</div>
-							<div class="col-lg-auto">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/sContact.webp"/><img class="object-fit-js" src="img/@2x/sContact.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-							</div>
-						</div>
-					</div>
-					<div class="sContact__map-wrap">
-						<h3>Наши представительства в регионах</h3>
-						<div class="sContact__map" id="map">
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end sContact-region-->
+			</section>
+			<!-- end sCabinetProfile-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">

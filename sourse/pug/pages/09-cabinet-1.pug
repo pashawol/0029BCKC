@@ -7,19 +7,19 @@ extends layout/main.pug
 //- include ../blocks/sPromo/_sPromo.pug
 //- include ../blocks/sMap/_sMap.pug
 //- include ../blocks/sStat/_sStat.pug
-include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sEvents/_sEvents.pug
 //- include ../blocks/sBecome/_sBecome.pug
 //- include ../blocks/sHero/_sHero.pug
-//- include ../blocks/sPartners/_sPartners.pug
-include ../blocks/sContact/_sContact.pug
-include ../blocks/sNews/_sNews.pug
+include ../blocks/sCabinetProfile/_sCabinetProfile.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sNews/_sNews.pug
 
 block variables
 	- let  mainPage= 'cabinet'
-	- let  bg= null
+	- let  bg= '09-cabinet-1.jpg'
 
 block title
-	- let  title= 'Контакты'
+	- let  title= 'Личный кабинет'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -31,13 +31,13 @@ block pagecontent
 		+e.slider--js.swiper
 			.swiper-wrapper
 				+e.slide.swiper-slide
-					+e.btn(href="#") Профиль
+					+e.btn.active(href="#") Профиль
 				+e.slide.swiper-slide
 					+e.btn(href="#") Мои мероприятия
 				+e.slide.swiper-slide
-					+e.btn.active.notification(href="#") Электронный билет Участника ВСКС
-
-	+sContact-region
+					+e.btn(href="#") Электронный билет Участника ВСКС
+	+sCabinetProfile()
+	//- +sContact-region
 	//- +sNews-region()
 	//- +sEvents-region()
 	//- +sMap()

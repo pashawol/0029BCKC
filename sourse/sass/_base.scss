@@ -222,8 +222,8 @@ ul {
 			cursor: pointer;
 		}
 
-		&.active {
-		}
+		// &.active {
+		// }
 	}
 
 	&__content {
@@ -253,13 +253,13 @@ ul {
 	position: relative;
 }
 
-.swiper-button-hand-prev,
-.swiper-button-hand-next {
-}
-.swiper-button-hand-prev {
-}
-.swiper-button-hand-next {
-}
+// .swiper-button-hand-prev,
+// .swiper-button-hand-next {
+// }
+// .swiper-button-hand-prev {
+// }
+// .swiper-button-hand-next {
+// }
 
 .swiper-pagination {
 	width: 100%;
@@ -424,11 +424,11 @@ iframe {
 	position: relative;
 
 	overflow: hidden;
-	&:hover {
-		img {
-			//filter: brightness(100%);
-		}
-	}
+	// &:hover {
+	// 	img {
+	// 		//filter: brightness(100%);
+	// 	}
+	// }
 
 	img {
 		@include mt();
@@ -470,15 +470,15 @@ iframe {
 	}
 }
 
-.row {
-	//--bs-gutter-x: #{rem(20)};
-	//@include media-breakpoint-up(sm){
-	//	--bs-gutter-x: #{rem(30)};
-	//}
-	//@include media-breakpoint-up(xl){
-	//	--bs-gutter-x: #{$grid-gutter-width};
-	//}
-}
+// .row {
+// 	--bs-gutter-x: #{rem(20)};
+// 	@include media-breakpoint-up(sm){
+// 		--bs-gutter-x: #{rem(30)};
+// 	}
+// 	@include media-breakpoint-up(xl){
+// 		--bs-gutter-x: #{$grid-gutter-width};
+// 	}
+// }
 
 //-
 .sw-arrows {
@@ -491,10 +491,10 @@ iframe {
 	}
 
 	//-
-	&__ {
-	}
-	&__ {
-	}
+	// &__ {
+	// }
+	// &__ {
+	// }
 }
 .swiper-prev,
 .swiper-next {

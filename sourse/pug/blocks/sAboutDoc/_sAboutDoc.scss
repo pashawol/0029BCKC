@@ -12,7 +12,7 @@
 	.accordion-item {
 		padding-top: rem(17);
 		padding-bottom: rem(16);
-		border-bottom: 1px solid #ecf8ff;
+		border-bottom: 1px solid $light-blue;
 		.active{
 			&::before{
 				opacity: 0;

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Мероприятия</title>
+		<title>Контакты</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -14,7 +14,7 @@
 		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="05-activities.jpg">
+	<body class="cabinet">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -96,255 +96,103 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<div class="page-head section">
-				<div class="container"> 
-					<div class="row">
-						<div class="col">
-							<h1>Мероприятия</h1>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- start sActivities-->
-			<div class="sActivities section" id="sActivities">
+			<div class="page-head page-head--cabinet section">
 				<div class="container">
-					<div class="sActivities__filter">
-						<div class="sActivities__nav-row row">
-							<div class="col-sm-6 col-md-4 col-xl-auto">
-								<div class="sActivities__input-wrap form-group">
-									<label><span class="sActivities__input-title">Тип мероприятия</span>
-										<select class="sActivities__input form-select" name="select">
-											<option value="Региональные">Региональные</option>
-											<option value=" placeholder 1">placeholder 1</option>
-											<option value=" placeholder 2">placeholder 2</option>
-											<option value=" placeholder 3">placeholder 3</option>
-											<option value=" placeholder 4">placeholder 4</option>
-										</select>
-									</label>
-								</div>
-								<!-- +e.input-wrap-->
-							</div>
-							<div class="col-sm-6 col-md-4 col-xl-auto">
-								<div class="sActivities__input-wrap form-group">
-									<label><span class="sActivities__input-title">Города проведения</span>
-										<select class="sActivities__input form-select" name="select">
-											<option value="Новосибирск">Новосибирск</option>
-											<option value=" placeholder 1">placeholder 1</option>
-											<option value=" placeholder 2">placeholder 2</option>
-											<option value=" placeholder 3">placeholder 3</option>
-											<option value=" placeholder 4">placeholder 4</option>
-										</select>
-									</label>
-								</div>
-								<!-- +e.input-wrap-->
-							</div>
-							<div class="col-sm-6 col-md-4 col-xl-auto">
-								<div class="sActivities__input-wrap form-group">
-									<label><span class="sActivities__input-title">Даты</span><input class="sActivities__input form-control input-date-picker-js" name="text" type="text" placeholder="Даты проведения" autocomplete="off"/>
-									</label>
-								</div>
-								<!-- +e.input-wrap-->
-							</div>
+					<div class="page-head__row-title row">
+						<div class="col">
+							<h1>Личный кабинет</h1>
 						</div>
-						<div class="sActivities__btn-row row">
-							<div class="col-sm-6 col-md-auto">
-								<label class="btn-chb red">
-									<input class="invisible" type="checkbox" name="ЧС"/><span class="bar"></span><span class="txt">ЧС</span>
-								</label>
-							</div>
-							<div class="col-sm-6 col-md-auto">
-								<label class="btn-chb blue">
-									<input class="invisible" type="checkbox" name="Регистрация открыта"/><span class="bar"></span><span class="txt">Регистрация открыта</span>
-								</label>
-							</div>
-							<div class="col-sm-6 col-md-auto">
-								<label class="btn-chb blue">
-									<input class="invisible" type="checkbox" name="Только для членов ВСКС"/><span class="bar"></span><span class="txt">Только для членов ВСКС</span>
-								</label>
-							</div>
+						<div class="col-md-auto">
+							<a class="page-head__btn" href="#">Редактировать профиль
+							</a>
 						</div>
 					</div>
-					<div class="sActivities__cards-heading"><a class="active" href="#">Текущие</a><a href="#">Прошедшие</a>
-					</div>
-					<div class="sActivities__cards-content">
-						<div class="sActivities__item"><a href="#"><span>Окружное</span><span>Регистрация открыта</span>
-								<!-- span(style="--color: #009FE2; --bg-color: rgba(0, 0, 0, 0.8);") Окружное !!переменные управляют цветом текста и фона-->
-								<!-- span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта !!переменные управляют цветом текста и фона-->
-								<!-- picture-->
-								<picture class="bg-wrap"> 
-									<source type="image/webp" srcset="img/@2x/webp/sActivities-1.webp" media="(min-width:576px)"/>
-									<source type="image/webp" srcset="img/@1x/webp/sActivities-1.webp"/>
-									<source type="image/png" srcset="img/@2x/sActivities-1.png" media="(min-width:576px)"/>
-									<source type="image/png" srcset="img/@1x/sActivities-1.png"/><img class="object-fit-js" src="img/@2x/sActivities-1.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
-							<div class="sActivities__caption">
-								<div class="sActivities__points">Максимально баллов за участие: <span class="text-primary">500</span>
-								</div><a href="#">
-									<p>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;</p></a>
-								<div class="date-n-location">
-									<p>19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00</p>
-									<p class="loc">Республика Удмуртия</p>
-								</div>
+					<div class="page-head__slider page-head__slider--js swiper">
+						<div class="swiper-wrapper">
+							<div class="page-head__slide swiper-slide">
+								<a class="page-head__btn" href="#">Профиль
+								</a>
+							</div>
+							<div class="page-head__slide swiper-slide">
+								<a class="page-head__btn" href="#">Мои мероприятия
+								</a>
+							</div>
+							<div class="page-head__slide swiper-slide">
+								<a class="page-head__btn active notification" href="#">Электронный билет Участника ВСКС
+								</a>
 							</div>
 						</div>
-						<div class="sActivities__item"><a href="#"><span>Окружное</span><span>Регистрация открыта</span>
-								<!-- span(style="--color: #009FE2; --bg-color: rgba(0, 0, 0, 0.8);") Окружное !!переменные управляют цветом текста и фона-->
-								<!-- span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта !!переменные управляют цветом текста и фона-->
-								<!-- picture-->
-								<picture class="bg-wrap"> 
-									<source type="image/webp" srcset="img/@2x/webp/sActivities-2.webp" media="(min-width:576px)"/>
-									<source type="image/webp" srcset="img/@1x/webp/sActivities-2.webp"/>
-									<source type="image/png" srcset="img/@2x/sActivities-2.png" media="(min-width:576px)"/>
-									<source type="image/png" srcset="img/@1x/sActivities-2.png"/><img class="object-fit-js" src="img/@2x/sActivities-2.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
-							<div class="sActivities__caption">
-								<div class="sActivities__points">Максимально баллов за участие: <span class="text-primary">500</span>
-								</div><a href="#">
-									<p>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;</p>
-									<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, recusandae!</p>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nulla deleniti.</p></a>
-								<div class="date-n-location">
-									<p>19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00</p>
-									<p class="loc">Республика Удмуртия</p>
-								</div>
-							</div>
-						</div>
-						<div class="sActivities__item"><a href="#"><span>Окружное</span><span>Регистрация открыта</span>
-								<!-- span(style="--color: #009FE2; --bg-color: rgba(0, 0, 0, 0.8);") Окружное !!переменные управляют цветом текста и фона-->
-								<!-- span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта !!переменные управляют цветом текста и фона-->
-								<!-- picture-->
-								<picture class="bg-wrap"> 
-									<source type="image/webp" srcset="img/@2x/webp/sActivities-3.webp" media="(min-width:576px)"/>
-									<source type="image/webp" srcset="img/@1x/webp/sActivities-3.webp"/>
-									<source type="image/png" srcset="img/@2x/sActivities-3.png" media="(min-width:576px)"/>
-									<source type="image/png" srcset="img/@1x/sActivities-3.png"/><img class="object-fit-js" src="img/@2x/sActivities-3.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
-							<div class="sActivities__caption">
-								<div class="sActivities__points">Максимально баллов за участие: <span class="text-primary">500</span>
-								</div><a href="#">
-									<p>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;</p></a>
-								<div class="date-n-location">
-									<p>19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00</p>
-									<p class="loc">Республика Удмуртия</p>
-								</div>
-							</div>
-						</div>
-						<div class="sActivities__item"><a href="#"><span>Окружное</span><span>Регистрация открыта</span>
-								<!-- span(style="--color: #009FE2; --bg-color: rgba(0, 0, 0, 0.8);") Окружное !!переменные управляют цветом текста и фона-->
-								<!-- span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта !!переменные управляют цветом текста и фона-->
-								<!-- picture-->
-								<picture class="bg-wrap"> 
-									<source type="image/webp" srcset="img/@2x/webp/sActivities-4.webp" media="(min-width:576px)"/>
-									<source type="image/webp" srcset="img/@1x/webp/sActivities-4.webp"/>
-									<source type="image/png" srcset="img/@2x/sActivities-4.png" media="(min-width:576px)"/>
-									<source type="image/png" srcset="img/@1x/sActivities-4.png"/><img class="object-fit-js" src="img/@2x/sActivities-4.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
-							<div class="sActivities__caption">
-								<div class="sActivities__points">Максимально баллов за участие: <span class="text-primary">500</span>
-								</div><a href="#">
-									<p>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;</p></a>
-								<div class="date-n-location">
-									<p>19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00</p>
-									<p class="loc">Республика Удмуртия</p>
-								</div>
-							</div>
-						</div>
-						<div class="sActivities__item"><a href="#"><span>Окружное</span><span>Регистрация открыта</span>
-								<!-- span(style="--color: #009FE2; --bg-color: rgba(0, 0, 0, 0.8);") Окружное !!переменные управляют цветом текста и фона-->
-								<!-- span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта !!переменные управляют цветом текста и фона-->
-								<!-- picture-->
-								<picture class="bg-wrap"> 
-									<source type="image/webp" srcset="img/@2x/webp/sActivities-1.webp" media="(min-width:576px)"/>
-									<source type="image/webp" srcset="img/@1x/webp/sActivities-1.webp"/>
-									<source type="image/png" srcset="img/@2x/sActivities-1.png" media="(min-width:576px)"/>
-									<source type="image/png" srcset="img/@1x/sActivities-1.png"/><img class="object-fit-js" src="img/@2x/sActivities-1.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
-							<div class="sActivities__caption">
-								<div class="sActivities__points">Максимально баллов за участие: <span class="text-primary">500</span>
-								</div><a href="#">
-									<p>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;</p></a>
-								<div class="date-n-location">
-									<p>19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00</p>
-									<p class="loc">Республика Удмуртия</p>
-								</div>
-							</div>
-						</div>
-						<div class="sActivities__item"><a href="#"><span>Окружное</span><span>Регистрация открыта</span>
-								<!-- span(style="--color: #009FE2; --bg-color: rgba(0, 0, 0, 0.8);") Окружное !!переменные управляют цветом текста и фона-->
-								<!-- span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта !!переменные управляют цветом текста и фона-->
-								<!-- picture-->
-								<picture class="bg-wrap"> 
-									<source type="image/webp" srcset="img/@2x/webp/sActivities-2.webp" media="(min-width:576px)"/>
-									<source type="image/webp" srcset="img/@1x/webp/sActivities-2.webp"/>
-									<source type="image/png" srcset="img/@2x/sActivities-2.png" media="(min-width:576px)"/>
-									<source type="image/png" srcset="img/@1x/sActivities-2.png"/><img class="object-fit-js" src="img/@2x/sActivities-2.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
-							<div class="sActivities__caption">
-								<div class="sActivities__points">Максимально баллов за участие: <span class="text-primary">500</span>
-								</div><a href="#">
-									<p>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;</p></a>
-								<div class="date-n-location">
-									<p>19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00</p>
-									<p class="loc">Республика Удмуртия</p>
-								</div>
-							</div>
-						</div>
-						<div class="sActivities__item"><a href="#"><span>Окружное</span><span>Регистрация открыта</span>
-								<!-- span(style="--color: #009FE2; --bg-color: rgba(0, 0, 0, 0.8);") Окружное !!переменные управляют цветом текста и фона-->
-								<!-- span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта !!переменные управляют цветом текста и фона-->
-								<!-- picture-->
-								<picture class="bg-wrap"> 
-									<source type="image/webp" srcset="img/@2x/webp/sActivities-3.webp" media="(min-width:576px)"/>
-									<source type="image/webp" srcset="img/@1x/webp/sActivities-3.webp"/>
-									<source type="image/png" srcset="img/@2x/sActivities-3.png" media="(min-width:576px)"/>
-									<source type="image/png" srcset="img/@1x/sActivities-3.png"/><img class="object-fit-js" src="img/@2x/sActivities-3.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
-							<div class="sActivities__caption">
-								<div class="sActivities__points">Максимально баллов за участие: <span class="text-primary">500</span>
-								</div><a href="#">
-									<p>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo; Lorem ipsum dolor sit amet consectetur adipisicing.</p></a>
-								<div class="date-n-location">
-									<p>19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00</p>
-									<p class="loc">Республика Удмуртия</p>
-								</div>
-							</div>
-						</div>
-						<div class="sActivities__item"><a href="#"><span>Окружное</span><span>Регистрация открыта</span>
-								<!-- span(style="--color: #009FE2; --bg-color: rgba(0, 0, 0, 0.8);") Окружное !!переменные управляют цветом текста и фона-->
-								<!-- span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта !!переменные управляют цветом текста и фона-->
-								<!-- picture-->
-								<picture class="bg-wrap"> 
-									<source type="image/webp" srcset="img/@2x/webp/sActivities-1.webp" media="(min-width:576px)"/>
-									<source type="image/webp" srcset="img/@1x/webp/sActivities-1.webp"/>
-									<source type="image/png" srcset="img/@2x/sActivities-1.png" media="(min-width:576px)"/>
-									<source type="image/png" srcset="img/@1x/sActivities-1.png"/><img class="object-fit-js" src="img/@2x/sActivities-1.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
-							<div class="sActivities__caption">
-								<div class="sActivities__points">Максимально баллов за участие: <span class="text-primary">500</span>
-								</div><a href="#">
-									<p>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;</p></a>
-								<div class="date-n-location">
-									<p>19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00</p>
-									<p class="loc">Республика Удмуртия</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="text-center">
-						<a class="sActivities__btn" href="#">Показать еще
-						</a>
 					</div>
 				</div>
 			</div>
-			<!-- end sActivities-->
+			<!-- start sContact-region-->
+			<div class="sContact sContact--region section" id="sContact-region">
+				<div class="container">
+					<div class="sContact__heading">
+						<div class="sContact__row-title row align-items-start">
+							<div class="col-auto">
+								<a class="link-back" href="#" title="Назад">
+									<svg class="icon icon-arrow-left ">
+										<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="col">
+								<h3>Архангельская область</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-5">
+								<div class="sContact__title">Архангельск, ул.Кутузова, д.8
+								</div>
+								<div class="sContact__position">Председатель отделения
+								</div>
+								<div class="sContact__name">Порохина Надежда Анатольевнa
+								</div>
+								<div class="sContact__participants">
+									<div class="row">
+										<div class="col"><span>Количество участников ВСКС</span></div>
+										<div class="col-auto"><span>456</span></div>
+									</div>
+									<div class="row">
+										<div class="col"><span>Количество отрядов ВСКС</span></div>
+										<div class="col-auto"><span>12</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<ul class="communications">
+									<li><a href="tel:+74953690573">
+											<svg class="icon icon-call ">
+												<use xlink:href="img/svg/sprite.svg#call"></use>
+											</svg><span>+7(495) 369-05-73</span></a></li>
+									<li><a href="mailto:info@911mail.ru">
+											<svg class="icon icon-mail ">
+												<use xlink:href="img/svg/sprite.svg#mail"></use>
+											</svg><span>info@911mail.ru</span></a></li>
+									<li><a href="https://vk.com/mgovsks" target="_blank"> 
+											<svg class="icon icon-vk-logo ">
+												<use xlink:href="img/svg/sprite.svg#vk-logo"></use>
+											</svg><span>https://vk.com/mgovsks</span></a></li>
+								</ul>
+							</div>
+							<div class="col-lg-auto">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sContact.webp"/><img class="object-fit-js" src="img/@2x/sContact.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
+						</div>
+					</div>
+					<div class="sContact__map-wrap">
+						<h3>Наши представительства в регионах</h3>
+						<div class="sContact__map" id="map">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sContact-region-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">

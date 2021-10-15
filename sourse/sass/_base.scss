@@ -464,6 +464,12 @@ iframe {
 	color: $white !important;
 }
 
+.btn-outline-primary {
+	&:hover {
+		color: $white;
+	}
+}
+
 .row {
 	//--bs-gutter-x: #{rem(20)};
 	//@include media-breakpoint-up(sm){
@@ -609,7 +615,7 @@ iframe {
 			height: rem(625);
 			left: 0;
 			top: 0;
-			background-color: #ECF8FF;
+			background-color: $light-blue;
 			z-index: -1;
 		}
 	}
@@ -649,4 +655,10 @@ iframe {
 
 .filepond--file {
 	border-radius: 0 !important;
+}
+
+.cabinet {
+	.header {
+		background-color: $light-blue;
+	}
 }

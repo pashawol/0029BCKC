@@ -424,6 +424,13 @@ function eventHandler() {
 			},
 		},
 	});
+	
+	let pageHeadSlider = new Swiper('.page-head__slider--js', {
+		slidesPerView: "auto",
+		watchOverflow: true,
+		spaceBetween: 20,
+		
+	});
 	//
 	// import * as FilePond from 'filepond';
 	// const pond = FilePond.create({

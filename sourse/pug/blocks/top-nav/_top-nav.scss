@@ -93,13 +93,18 @@
 				}
 			}
 
-			&:last-child {
-				& > a {
-					@extend .btn;
-					@extend .btn-danger;
-					padding: 1px rem(7);
-				}
+			.closed {
+				@extend .btn, .btn-danger;
+				padding: 1px rem(7);
 			}
+
+			// &:last-child {
+			// 	& > a {
+			// 		@extend .btn;
+			// 		@extend .btn-danger;
+			// 		padding: 1px rem(7);
+			// 	}
+			// }
 		}
 		.menu-item-has-children {
 			position: relative;

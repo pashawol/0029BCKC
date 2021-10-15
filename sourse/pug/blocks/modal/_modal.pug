@@ -10,7 +10,7 @@ mixin modal()
 				+input('Sample@sample.com','text','E-mail')
 				+input('******','password','Пароль')
 				+e.btns-wrap
-					+e.btn Войти
+					+e.BUTTON.btn Войти
 					a(href="#") Восстановить пароль
 				+e.reg-link='Впервые на сайте? '
 					a(href="#") Зарегистрируйтесь!
@@ -73,6 +73,6 @@ mixin modal()
 					p Введите данные которые вы указывали при регистрации
 					+input('Sample@sample.com','text','E-mail')
 					+e.btns-wrap
-						+e.btn Продолжить
+						+e.btn(href="#") Продолжить
 
 	// end modals

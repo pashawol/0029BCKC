@@ -73,6 +73,58 @@
 			stroke: currentColor;
 		}
 	}
+	&--cabinet {
+		background-color: $light-blue;
+		h1 {
+			white-space: nowrap;
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
+			}
+		}
+		.page-head__row-title {
+			align-items: center;
+			--bs-gutter-y: calc(var(--bs-gutter-x) / 2);
+			padding-bottom: rem(38);
+			.page-head__btn {
+				@extend .btn;
+				@extend .btn-outline-primary;
+			}
+		}
+		.page-head__slider {
+			overflow: visible;
+			.page-head__slide {
+				width: auto;
+				
+			}
+			.page-head__btn {
+				@extend .btn;
+				padding-left: rem(20);
+				padding-right: rem(20);
+				border-radius: 4px 4px 0 0;
+				// &:not(.active) {
+				// 	padding-left: 0;
+				// 	padding-right: 0;
+				// }
+				&.active {
+					@extend .btn-primary;
+				}
+				&.notification {
+					position: relative;
+					&::before {
+						content: "";
+						position: absolute;
+						width: rem(7.21);
+						height: rem(7.21);
+						right: rem(5);
+						top: rem(5.5);
+						border-radius: 50%;
+						background-color: $danger;
+					}
+				}
+			}
+		}
+	}
 }
 
 .sidebar {

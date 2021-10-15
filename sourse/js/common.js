@@ -428,6 +428,10 @@ function eventHandler() {
 	let pageHeadSlider = new Swiper('.page-head__slider--js', {
 		slidesPerView: "auto",
 		watchOverflow: true,
+		freeMode: true,
+		touchRatio: 0.3,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
 		// spaceBetween: 20,
 		breakpoints: {
 			0: {

@@ -428,8 +428,15 @@ function eventHandler() {
 	let pageHeadSlider = new Swiper('.page-head__slider--js', {
 		slidesPerView: "auto",
 		watchOverflow: true,
-		spaceBetween: 20,
-		
+		// spaceBetween: 20,
+		breakpoints: {
+			0: {
+				spaceBetween: 5,
+			},
+			576: {
+				spaceBetween: 20,
+			},
+		},
 	});
 	//
 	// import * as FilePond from 'filepond';

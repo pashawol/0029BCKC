@@ -99,8 +99,10 @@
 			}
 			.page-head__btn {
 				@extend .btn;
-				padding-left: rem(20);
-				padding-right: rem(20);
+				@include media-breakpoint-up(lg) {
+					padding-left: rem(20);
+					padding-right: rem(20);
+				}
 				border-radius: $border-radius $border-radius 0 0;
 				// &:not(.active) {
 				// 	padding-left: 0;

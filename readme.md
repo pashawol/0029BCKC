@@ -27,6 +27,7 @@
 
 # 6. Личный кабинет
 1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-profile.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-activities.html>
 
 # ?. Новости
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center.html>

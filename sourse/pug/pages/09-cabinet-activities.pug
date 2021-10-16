@@ -10,13 +10,14 @@ extends layout/main.pug
 //- include ../blocks/sEvents/_sEvents.pug
 //- include ../blocks/sBecome/_sBecome.pug
 //- include ../blocks/sHero/_sHero.pug
-include ../blocks/sCabinetProfile/_sCabinetProfile.pug
+include ../blocks/sCabinetActivities/_sCabinetActivities.pug
+//- include ../blocks/sCabinetProfile/_sCabinetProfile.pug
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sNews/_sNews.pug
 
 block variables
 	- let  mainPage= 'cabinet'
-	- let  bg= '09-cabinet-profile.jpg'
+	- let  bg= '09-cabinet-activities.jpg'
 
 block title
 	- let  title= 'Личный кабинет'
@@ -31,12 +32,13 @@ block pagecontent
 		+e.slider--js.swiper
 			.swiper-wrapper
 				+e.slide.swiper-slide
-					+e.btn.active(href="#") Профиль
+					+e.btn(href="#") Профиль
 				+e.slide.swiper-slide
-					+e.btn(href="#") Мои мероприятия
+					+e.btn.active(href="#") Мои мероприятия
 				+e.slide.swiper-slide
-					+e.btn(href="#") Электронный билет Участника ВСКС
-	+sCabinetProfile()
+					+e.btn.notification(href="#") Электронный билет Участника ВСКС
+	+sCabinetActivities()
+	//- +sCabinetProfile()
 	//- +sContact-region
 	//- +sNews-region()
 	//- +sEvents-region()

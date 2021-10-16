@@ -464,7 +464,7 @@ iframe {
 	color: $white !important;
 }
 
-.btn-outline-primary {
+.btn-outline-primary, .btn-outline-warning {
 	&:hover {
 		color: $white;
 	}

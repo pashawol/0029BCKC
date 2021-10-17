@@ -105,7 +105,8 @@
 			margin-bottom: 0;
 		}
 		& > a {
-			--pos: #{rem(20)};
+			--pos: 5%;
+			// --pos: #{rem(20)};
 			position: relative;
 			display: block;
 			span {

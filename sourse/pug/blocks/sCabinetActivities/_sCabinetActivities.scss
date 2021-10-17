@@ -67,12 +67,14 @@
 			margin-bottom: 0;
 		}
 		& > a {
-			--pos: #{rem(20)};
+			--pos: 5%;
+			// --pos: #{rem(20)};
 			position: relative;
 			display: block;
 			span {
 				position: absolute;
 				top: rem(16);
+				// top: rem(16);
 				padding: rem(3) rem(8);
 				font-weight: bold;
 				font-size: rem(12);

@@ -474,6 +474,20 @@ function eventHandler() {
 			styleButtonProcessItemPosition: 'left bottom',
 		}
 	);
+	FilePond.create(
+		document.querySelector('.load-photo-ticket input'),
+		{
+			labelIdle: `Добавить фото&nbsp;для&nbsp;билета`,
+			imagePreviewHeight: 300,
+			imageCropAspectRatio: '1:1',
+			imageResizeTargetWidth: 280,
+			imageResizeTargetHeight: 297,
+			styleLoadIndicatorPosition: 'center bottom',
+			styleProgressIndicatorPosition: 'left bottom',
+			styleButtonRemoveItemPosition: 'left bottom',
+			styleButtonProcessItemPosition: 'left bottom',
+		}
+	);
 
 	// $('.load-photo').filepond({
 	// 	labelIdle: `Добавить фото&nbsp;профиля`,

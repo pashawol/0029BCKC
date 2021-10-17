@@ -8,7 +8,7 @@ mixin sCabinetActivities(data)
 				mixin item(btns, btn1, c, t, sc, st, i, ...items)
 					+e.item
 						a(href="#")
-							span(style=`--color: ${c}; --bg-color: rgba(0, 0, 0, 0.8);`)!= t
+							span(style=`--color: ${c};`)!= t
 							span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта
 							+pic(`sCabinetActivities-${i}.png`,'bg').bg-wrap
 						+e.caption

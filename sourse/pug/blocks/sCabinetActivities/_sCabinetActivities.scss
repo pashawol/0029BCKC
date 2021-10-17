@@ -16,6 +16,22 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		&--past {
+			picture {
+				opacity: 0.5;
+			}
+			.sCabinetActivities__item {
+				background-color: $white;
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				& > a {
+					span {
+						&:nth-child(1) {
+							background-color: rgba(0, 0, 0, 0.5);
+						}
+					}
+				}
+			}
+		}
 	}
 	&__btn {
 		@extend .btn;
@@ -64,7 +80,7 @@
 				z-index: 2;
 				&:nth-child(1) {
 					color: var(--color, #009fe2);
-					background-color: var(--bg-color, rgba(0, 0, 0, 0.8));
+					background-color: rgba(0, 0, 0, 0.8);
 					left: var(--pos);
 				}
 				&:nth-child(2) {

@@ -13,8 +13,7 @@
 	&__row-main {
 		--bs-gutter-y: calc(var(--bs-gutter-x) * 0.75);
 	}
-	h1 {
-		@extend .h2;
+	h2 {
 		line-height: calc(37 / 32);
 		margin-bottom: rem(20);
 		@include media-breakpoint-up(md) {

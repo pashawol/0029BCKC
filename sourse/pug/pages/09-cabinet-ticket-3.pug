@@ -27,7 +27,7 @@ block pagecontent
 		+top-nav()
 		//-+topLine()
 	//- +headerBlock()
-	+pageHead-cabinet(``, ``, `+`)
+	+pageHead-cabinet()
 		+e.slider--js.swiper
 			.swiper-wrapper
 				+e.slide.swiper-slide
@@ -41,7 +41,7 @@ block pagecontent
 			.col-auto
 				+e.alert.alert-success(role='alert') Ваша заявка на вступление в ВСКС одобрена
 			.col-auto
-				+e.btn.btn-warning Сформировать билет
+				+e.btn.btn-warning(href="#") Сформировать билет
 	//- +sContact-region
 	//- +sNews-region()
 	//- +sEvents-region()

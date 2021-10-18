@@ -27,7 +27,7 @@ block pagecontent
 		+top-nav()
 		//-+topLine()
 	//- +headerBlock()
-	+pageHead-cabinet(``, ``, `+`)
+	+pageHead-cabinet()
 		+e.slider--js.swiper
 			.swiper-wrapper
 				+e.slide.swiper-slide
@@ -44,9 +44,9 @@ block pagecontent
 				p Билет на это имя уже сформирован, добавьте билет по номеру или создайте новую заявку
 		+e.alert-row.row
 			.col-auto
-				+e.btn.btn-warning Сформировать билет
+				+e.btn.btn-warning(href="#") Сформировать билет
 			.col-auto
-				+e.btn.btn-outline-warning Добавить мой билет
+				+e.btn.btn-outline-warning(href="#") Добавить мой билет
 	//- +sContact-region
 	//- +sNews-region()
 	//- +sEvents-region()

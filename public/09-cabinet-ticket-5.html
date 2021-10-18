@@ -14,7 +14,7 @@
 		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
-	<body class="cabinet" data-bg="09-cabinet-ticket-3.jpg">
+	<body class="cabinet">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -125,25 +125,49 @@
 					</div>
 				</div>
 			</div>
-			<!-- start sTicketRequest-->
-			<section class="sTicketRequest section" id="sTicketRequest">
+			<!-- start sTicket-->
+			<section class="sTicket section" id="sTicket">
 				<div class="container">
 					<div class="section-title">
-						<h2>Вы сможете проходить специальное обучение, принимать участие в мероприятиях и спасательных операциях, а также молодежных форумах и соревнованиях</h2>
+						<h2>Номер электронного билета:<span>4564893_НТ</span></h2>
 					</div>
-					<div class="sTicketRequest__alert-row row">
-						<div class="col-auto">
-							<div class="sTicketRequest__alert alert-success" role="alert">Ваша заявка на вступление в ВСКС одобрена
+				</div>
+				<div class="sTicket__card-wrapper container">
+					<div class="ticket-card">
+						<div class="ticket-card__title"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
+							<h3>Всероссийский студенческий корпус спасателей</h3>
+						</div>
+						<div class="ticket-card__content row">
+							<div class="col">
+								<ul>
+									<li>Имя / Name</li>
+									<li>Виктор</li>
+									<li>Фамилия / Surname</li>
+									<li>Victorovskiy</li>
+									<li>Дата рождения / Born</li>
+									<li>18.08.1988</li>
+									<li>ID / идентификационный номер</li>
+									<li>77MK/45889</li>
+								</ul>
+							</div>
+							<div class="col-auto">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sCabinetProfile.webp"/><img class="object-fit-js" src="img/@2x/sCabinetProfile.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
 							</div>
 						</div>
-						<div class="col-auto">
-							<a class="sTicketRequest__btn btn-warning" href="#">Сформировать билет
-							</a>
+						<div class="ticket-card__footer">Moscow&gt;Region&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;77MK&gt;45889&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
 						</div>
 					</div>
 				</div>
+				<div class="container">
+					<a class="sTicket__btn" href="#" download="download">Скачать билет в pdf
+					</a>
+				</div>
 			</section>
-			<!-- end sTicketRequest-->
+			<!-- end sTicket-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">

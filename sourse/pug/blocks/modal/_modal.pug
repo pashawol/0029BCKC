@@ -1,13 +1,13 @@
 mixin modal()
 	//  start modals
-	+b.modal-win(id="modal-login" style="display: none")
+	+b.modal-win--login(id="modal-login" style="display: none")
 		+e.logo-wrap
 			h2!=`Вход в&nbsp;личный кабинет`
 			+pic('logo-white.png','',0)
 		+e.form
 			+form-wrap()
 				p Введите данные которые вы указывали при регистрации
-				+input('Sample@sample.com','text','E-mail')
+				+input('Sample@sample.com','email','E-mail')
 				+input('******','password','Пароль')
 				+e.btns-wrap
 					+e.BUTTON.btn Войти
@@ -25,7 +25,7 @@ mixin modal()
 				.col-md-6.col-12
 					+input('Иванов','text','Фамилия')
 					+input('Иван','text','Имя')
-					+input('Sample@sample.com','text','E-mail')
+					+input('Sample@sample.com','email','E-mail')
 					+input('+7(999)000-00-00','tel','Телефон')
 					+input('******','password','Пароль')
 				.col-md-6.col-12
@@ -59,7 +59,7 @@ mixin modal()
 			+input('Введите','text','Регион')
 			+input('Введите','text','Город')
 			+input('+_(___)___-__-__','tel','Телефон')
-			+input('Sample@sample.com','text','E-mail')
+			+input('Sample@sample.com','email','E-mail')
 			+input('Введите','text','Учебное заведение')
 			+e.BUTTON.btn-reg Зарегистрироваться
 		
@@ -71,7 +71,16 @@ mixin modal()
 			+e.form
 				+form-wrap()
 					p Введите данные которые вы указывали при регистрации
-					+input('Sample@sample.com','text','E-mail')
+					+input('Sample@sample.com','email','E-mail')
+					+e.btns-wrap
+						+e.btn(href="#") Продолжить
+
+		// #modal-add-ticket
+		+b.modal-win--add-ticket(id="modal-add-ticket" style="display: none")
+			+e.form
+				h2 Добавить билет
+				+form-wrap()
+					+input('Введите','text','Номер билета')
 					+e.btns-wrap
 						+e.btn(href="#") Продолжить
 

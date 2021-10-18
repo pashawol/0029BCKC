@@ -101,12 +101,25 @@
 			}
 		}
 	}
+	&--login {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 5px;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: $primary;
+		}
+	}
 	&--reg {
 		padding-left: rem(40);
 		padding-right: rem(40);
 		padding-top: rem(38);
 		padding-bottom: rem(38);
 		// max-width: 400px;
+		position: relative;
 		@include media-breakpoint-up(md) {
 			flex-direction: column;
 			padding-top: rem(28);
@@ -114,6 +127,15 @@
 		// @include media-breakpoint-up(md) {
 		// 	max-width: rem(664);
 		// }
+		&::before {
+			content: "";
+			position: absolute;
+			width: 5px;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: $primary;
+		}
 		.form-wrap {
 			&__input {
 				margin-bottom: rem(16);
@@ -156,8 +178,18 @@
 		// @include media-breakpoint-down(md) {
 		// 	max-width: 400px;
 		// }
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 5px;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: $primary;
+		}
 		.modal-win__heading {
-			background-color: #238ece;
+			background-color: $primary;
 			color: $white;
 			padding: rem(35);
 			margin-top: rem(45);
@@ -171,6 +203,7 @@
 			@include media-breakpoint-up(xl) {
 				padding: rem(40) rem(37);
 			}
+
 			h3 {
 				margin-bottom: rem(23);
 				@include media-breakpoint-down(md) {
@@ -204,6 +237,9 @@
 			@include media-breakpoint-up(xl) {
 				padding: rem(40);
 			}
+			h2 {
+				color: $black;
+			}
 			.form-wrap__input-wrap {
 				margin-bottom: rem(12);
 				margin-top: rem(12);
@@ -231,6 +267,16 @@
 		// @include media-breakpoint-up(md) {
 		// 	max-width: 700px;
 		// }
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 5px;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: $primary;
+		}
 		.modal-win__logo-wrap {
 			@include media-breakpoint-up(md) {
 				width: 49%;
@@ -257,6 +303,38 @@
 			font-size: rem(16) !important;
 		}
 	}
+	&--add-ticket {
+		position: relative;
+		@include media-breakpoint-up(md) {
+			max-width: 450px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 5px;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: $primary;
+		}
+		h2 {
+			font-weight: 900;
+			color: $black;
+			margin-bottom: rem(25);
+		}
+		.modal-win__form {
+			width: 100%;
+			.form-wrap__btns-wrap {
+				margin-top: rem(17);
+				margin-bottom: 0;
+			}
+			.form-wrap__btn {
+				max-width: 100%;
+				width: 100%;
+				font-size: rem(16) !important;
+			}
+		}
+	}
 	&__head-wrap {
 		display: flex;
 		margin-bottom: rem(30);
@@ -275,16 +353,15 @@
 		}
 	}
 	.load-photo {
-		label{
+		label {
 			display: block;
 		}
-		.filepond--root{
+		.filepond--root {
 			height: rem(299);
 			background-color: $white;
 			border-radius: $border-radius;
-			border: 1px dashed #238ece;
+			border: 1px dashed $primary;
 			min-height: rem(299);
-
 		}
 		@include media-breakpoint-down(md) {
 			margin-bottom: rem(32);

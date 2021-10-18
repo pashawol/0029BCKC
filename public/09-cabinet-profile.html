@@ -249,7 +249,7 @@
 			</footer>
 		</div>
 		<!--  start modals-->
-		<div class="modal-win" id="modal-login" style="display: none">
+		<div class="modal-win modal-win--login" id="modal-login" style="display: none">
 			<div class="modal-win__logo-wrap">
 				<h2>Вход в&nbsp;личный кабинет</h2>
 				<!-- picture-->
@@ -263,7 +263,7 @@
 					<form>
 						<p>Введите данные которые вы указывали при регистрации</p>
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
@@ -304,7 +304,7 @@
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
@@ -398,7 +398,7 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+						<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
@@ -426,7 +426,26 @@
 						<form>
 							<p>Введите данные которые вы указывали при регистрации</p>
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__btns-wrap">
+								<a class="form-wrap__btn" href="#">Продолжить
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- #modal-add-ticket-->
+			<div class="modal-win modal-win--add-ticket" id="modal-add-ticket" style="display: none">
+				<div class="modal-win__form">
+					<h2>Добавить билет</h2>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Номер билета</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->

@@ -195,6 +195,14 @@
 			--sPT: #{rem(60)};
 			--sPB: #{rem(88)};
 		}
+		.swiper {
+			overflow: hidden !important;
+		}
+		// .swiper-slide {
+		// 	@include media-breakpoint-up(xl) {
+		// 		width: calc(100% / 3 - 40px * 2 / 3);
+		// 	}
+		// }
 		.sEvents__title-row {
 			--bs-gutter-y: #{rem(12)};
 			padding-bottom: rem(35);

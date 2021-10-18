@@ -229,6 +229,22 @@ const JSCCommon = {
 				lang: 'ru-RU',
 				format: "DD.MM.YYYY",
 			})
+		});
+		let pickerSingle = document.querySelectorAll(".input-date-picker-single-js")
+		pickerSingle.forEach(el => {
+			new Litepicker({
+				element: el,
+				singleMode: true,
+				showTooltip: false,
+				dropdowns: true,
+				resetButton: true,
+				// tooltipText: {
+				// 	one: 'night',
+				// 	other: 'nights'
+				// },
+				lang: 'ru-RU',
+				format: "DD.MM.YYYY",
+			})
 		})
 
 	}
@@ -411,9 +427,11 @@ function eventHandler() {
 			},
 		},
 	});
-	let sNewsSlider = new Swiper('.sNews-slider-js', {
+
+	let sEventsSliderRegion = new Swiper('.sEvents--region .sEvents-slider--js', {
 		slidesPerView: "auto",
-		loop: true,
+		// loop: true,
+		watchOverflow: true,
 
 		breakpoints: {
 			0: {
@@ -424,7 +442,22 @@ function eventHandler() {
 			},
 		},
 	});
-	
+
+	let sNewsSlider = new Swiper('.sNews-slider-js', {
+		slidesPerView: "auto",
+		// loop: true,
+		watchOverflow: true,
+
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+		},
+	});
+
 	let pageHeadSlider = new Swiper('.page-head__slider--js', {
 		slidesPerView: "auto",
 		watchOverflow: true,
@@ -450,7 +483,7 @@ function eventHandler() {
 	// });
 	// document.body.appendChild(pond.element);
 	FilePond.registerPlugin(
-		FilePondPluginImagePreview, 
+		FilePondPluginImagePreview,
 		FilePondPluginImageCrop,
 		FilePondPluginImageResize,
 		FilePondPluginImageTransform,
@@ -501,7 +534,7 @@ function eventHandler() {
 	// 	// styleButtonRemoveItemPosition: 'left bottom',
 	// 	// styleButtonProcessItemPosition: 'right bottom',
 	// });
-	
+
 	let sHeroSlider = new Swiper('.sHero-slider-js', {
 		slidesPerView: "auto",
 		loop: true,

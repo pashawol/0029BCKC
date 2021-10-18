@@ -124,6 +124,14 @@
 			--sPT: #{rem(60)};
 			--sPB: #{rem(88)};
 		}
+		.swiper {
+			overflow: hidden !important;
+		}
+		.swiper-slide {
+			@include media-breakpoint-up(xl) {
+				width: calc(100% / 4 - 60px * 2 / 4);
+			}
+		}
 		.sNews__title-row {
 			--bs-gutter-x: #{rem(16)};
 			--bs-gutter-y: #{rem(12)};

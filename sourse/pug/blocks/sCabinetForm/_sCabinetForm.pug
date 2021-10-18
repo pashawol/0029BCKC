@@ -33,7 +33,7 @@ mixin sCabinetForm(data)
 								.col-sm-6
 									+input('Введите','text','Отчество')
 								.col-sm-6
-									+input('******','text','Дата рождения')
+									+input('ДД.ММ.ГГГГ','text','Дата рождения').input-date-picker-single-js(autocomplete="off")
 								.col
 									+input('Введите','text','Учебное заведение')
 
@@ -65,7 +65,7 @@ mixin sCabinetForm(data)
 								.col-sm-6
 									+input('VK', 'select', 'Соц. сеть')
 								.col-sm-6
-									+input('Http://','text','Ссылка на профиль')
+									+input('http://','url','Ссылка на профиль')
 							+e.BUTTON.btn-soc + Добавить
 						+e.btn-row.row
 							.col-sm-6

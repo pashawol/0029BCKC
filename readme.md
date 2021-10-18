@@ -29,6 +29,9 @@
 1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-profile.html>
 1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-activities.html>
 1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-1.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-2.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-3.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-4.html>
 
 # ?. Новости
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center.html>

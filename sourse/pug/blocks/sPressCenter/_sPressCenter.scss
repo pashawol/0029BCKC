@@ -2,10 +2,9 @@
 .sPressCenter {
 	--sPT: #{rem(0)};
 	--sPB: #{rem(39)};
- 
+
 	// --bs-gutter-y: calc(var(--bs-gutter-x) / 2);
 	&__menu {
-
 	}
 	&__caption {
 		.active {
@@ -297,6 +296,16 @@
 			}
 		}
 	}
+	&--smi {
+		.day-news__item {
+			.day-news__item-body {
+				padding-left: 0;
+				.date--publ {
+					justify-content: center;
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -367,8 +376,8 @@
 			margin-bottom: 0;
 		}
 	}
-	.toggle-content{
-		p{
+	.toggle-content {
+		p {
 			display: -webkit-box;
 			-webkit-box-orient: vertical;
 			-moz-box-orient: vertical;

@@ -142,12 +142,10 @@ mixin sPressCenterHeroes(data)
 
 mixin sPressCenterSmi(data)
 	// start sPressCenter
-	+b.SECTION.sPressCenter.section&attributes(attributes)
+	+b.SECTION.sPressCenter--smi.section&attributes(attributes)
 		.news-content
-			mixin item(i,p)
+			mixin item(p)
 				.day-news__item
-					a(href="#")
-						+pic(`news-${i}.png`,'',0).news-img
 					.day-news__item-body
 						.date.date--publ
 							p 19.08.21
@@ -165,21 +163,21 @@ mixin sPressCenterSmi(data)
 						p 21 сентября
 						.day-news__head-line
 							hr
-					+item(1,'Известия')
-					+item(2,'Россия 1')
+					+item('Известия')
+					+item('Россия 1')
 				.day-news.col-12
 					.day-news__head
 						p 20 сентября
 						.day-news__head-line
 							hr
-					+item(3,'Коммерсант')
+					+item('Коммерсант')
 				.day-news.col-12
 					.day-news__head
 						p 19 сентября
 						.day-news__head-line
 							hr
-					+item(2,'Forbes')
-					+item(1,'Коммерсант')
+					+item('Forbes')
+					+item('Коммерсант')
 				a.show-more(href="#") Показать еще
 	// end sPressCenter
 	

@@ -297,11 +297,14 @@
 		}
 	}
 	&--smi {
-		.day-news__item {
-			.day-news__item-body {
-				padding-left: 0;
-				.date--publ {
-					justify-content: center;
+		.news-content {
+			.day-news__item {
+				height: auto;
+				.day-news__item-body {
+					padding-left: 0;
+					.date--publ {
+						justify-content: center;
+					}
 				}
 			}
 		}

@@ -16,7 +16,7 @@ include ../blocks/sCabinetForm/_sCabinetForm.pug
 
 block variables
 	- let  mainPage= 'cabinet'
-	- let  bg= '09-cabinet-ticket-1.jpg'
+	- let  bg= null
 
 block title
 	- let  title= 'Личный кабинет'
@@ -35,7 +35,7 @@ block pagecontent
 				+e.slide.swiper-slide
 					+e.btn(href="#") Мои мероприятия
 				+e.slide.swiper-slide
-					+e.btn.active(href="#") Электронный билет Участника ВСКС
+					+e.btn.active(href="#") Электронный билет члена ВСКС
 	+sCabinetForm()
 	//- +sContact-region
 	//- +sNews-region()

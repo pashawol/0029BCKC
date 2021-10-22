@@ -28,7 +28,20 @@
 		&__polite {
 			font-size: 12px;
 			@include media-breakpoint-up(sm) {
-				max-width: 17em;
+				max-width: 19em;
+			}
+			.form-check {
+				margin-bottom: 0;
+				padding-left: 22px;
+				.form-check-input {
+					margin-left: -22px;
+				}
+			}
+			a {
+				&:not(:hover) {
+					color: $black;
+					text-decoration: underline;
+				}
 			}
 			
 			a {

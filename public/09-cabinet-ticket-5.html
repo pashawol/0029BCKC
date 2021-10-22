@@ -118,56 +118,32 @@
 								</a>
 							</div>
 							<div class="page-head__slide swiper-slide">
-								<a class="page-head__btn active notification" href="#">Электронный билет Участника ВСКС
+								<a class="page-head__btn active" href="#">Электронный билет члена ВСКС
 								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- start sTicket-->
-			<section class="sTicket section" id="sTicket">
+			<!-- start sTicketRequest-->
+			<section class="sTicketRequest section" id="sTicketRequest">
 				<div class="container">
 					<div class="section-title">
-						<h2>Номер электронного билета:<span>4564893_НТ</span></h2>
+						<h2>Вы сможете проходить специальное обучение, принимать участие в мероприятиях и спасательных операциях, а также молодежных форумах и соревнованиях</h2>
 					</div>
-				</div>
-				<div class="sTicket__card-wrapper container">
-					<div class="ticket-card">
-						<div class="ticket-card__title"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
-							<h3>Всероссийский студенческий корпус спасателей</h3>
+					<div class="sTicketRequest__alert-row row">
+						<div class="col-auto">
+							<a class="sTicketRequest__btn btn-warning" href="#">Стать участником
+							</a>
 						</div>
-						<div class="ticket-card__content row">
-							<div class="col">
-								<ul>
-									<li>Имя / Name</li>
-									<li>Виктор</li>
-									<li>Фамилия / Surname</li>
-									<li>Victorovskiy</li>
-									<li>Дата рождения / Born</li>
-									<li>18.08.1988</li>
-									<li>ID / идентификационный номер</li>
-									<li>77MK/45889</li>
-								</ul>
-							</div>
-							<div class="col-auto">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/sCabinetProfile.webp"/><img class="object-fit-js" src="img/@2x/sCabinetProfile.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-							</div>
-						</div>
-						<div class="ticket-card__footer">Moscow&gt;Region&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;77MK&gt;45889&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+						<div class="col-auto">
+							<a class="sTicketRequest__btn btn-outline-warning" href="#">Добавить мой билет
+							</a>
 						</div>
 					</div>
-				</div>
-				<div class="container">
-					<a class="sTicket__btn" href="#" download="download">Скачать билет в pdf
-					</a>
 				</div>
 			</section>
-			<!-- end sTicket-->
+			<!-- end sTicketRequest-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">
@@ -205,8 +181,8 @@
 					</div>
 					<div class="footer__soc-row row align-items-center gy-4">
 						<div class="col-sm">
-							<div class="footer__s-txt">© 2006-<span class="set-curr-year-js">2021</span>
-								Всероссийская Общественная Молодежная Организация
+							<div class="footer__s-txt">© 2001-<span class="set-curr-year-js">2021</span>
+								всероссийская общественная молодежная организация
 								«Всероссийский студенческий корпус спасателей»
 							</div>
 						</div>
@@ -326,6 +302,62 @@
 						</div>
 						<div class="col-md-6 col-12">
 							<div class="form-wrap__accept">Регистрируясь, вы соглашаетесь с <a href="#">правилами пользования сайтом</a><span> и даёте согласие на </span><a href="#">обработку персональных данных.</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-edit-profile-->
+		<div class="modal-win modal-win--edit-profile" id="modal-edit-profile" style="display: none">
+			<div class="modal-win__head-wrap">
+				<h2>Редактирование профля</h2>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="row">
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иванов"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иван"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7(999)000-00-00"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-md-6 col-12">
+							<label class="form-wrap__input-title">Фото профиля
+							</label>
+							<div class="load-photo load-photo--edit">
+								<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-md-end">
+						<div class="col-md-6 col-12">
+							<a class="form-wrap__btn-reg" href="#">Сохранить
+							</a>
+						</div>
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__accept">Нажимая кнопку &laquo;Сохранить&raquo;, вы соглашаетесь с <a href="#">правилами пользования сайтом</a><span> и даёте согласие на </span><a href="#">обработку персональных данных.</a>
 							</div>
 						</div>
 					</div>

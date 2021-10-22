@@ -10,7 +10,7 @@ extends layout/main.pug
 //- include ../blocks/sEvents/_sEvents.pug
 //- include ../blocks/sBecome/_sBecome.pug
 //- include ../blocks/sHero/_sHero.pug
-include ../blocks/sTicketRequest/_sTicketRequest.pug
+include ../blocks/sTicket/_sTicket.pug
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sNews/_sNews.pug
 
@@ -36,17 +36,7 @@ block pagecontent
 					+e.btn(href="#") Мои мероприятия
 				+e.slide.swiper-slide
 					+e.btn.active.notification(href="#") Электронный билет члена ВСКС
-	+sTicketRequest()
-		+e.alert-row.row
-			.col-auto
-				+e.alert.alert-danger(role='alert') Ваша заявка на вступление в ВСКС отклонена
-			.col-auto
-				p Билет на это имя уже сформирован, добавьте билет по номеру или создайте новую заявку
-		+e.alert-row.row
-			.col-auto
-				+e.btn.btn-warning(href="#") Сформировать билет
-			.col-auto
-				+e.btn.btn-outline-warning(href="#") Добавить мой билет
+	+sTicket()
 	//- +sContact-region
 	//- +sNews-region()
 	//- +sEvents-region()

@@ -14,7 +14,7 @@
 		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
-	<body class="cabinet" data-bg="09-cabinet-ticket-3.jpg">
+	<body class="cabinet">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -118,7 +118,7 @@
 								</a>
 							</div>
 							<div class="page-head__slide swiper-slide">
-								<a class="page-head__btn active notification" href="#">Электронный билет Участника ВСКС
+								<a class="page-head__btn active notification" href="#">Электронный билет члена ВСКС
 								</a>
 							</div>
 						</div>
@@ -181,8 +181,8 @@
 					</div>
 					<div class="footer__soc-row row align-items-center gy-4">
 						<div class="col-sm">
-							<div class="footer__s-txt">© 2006-<span class="set-curr-year-js">2021</span>
-								Всероссийская Общественная Молодежная Организация
+							<div class="footer__s-txt">© 2001-<span class="set-curr-year-js">2021</span>
+								всероссийская общественная молодежная организация
 								«Всероссийский студенческий корпус спасателей»
 							</div>
 						</div>
@@ -302,6 +302,62 @@
 						</div>
 						<div class="col-md-6 col-12">
 							<div class="form-wrap__accept">Регистрируясь, вы соглашаетесь с <a href="#">правилами пользования сайтом</a><span> и даёте согласие на </span><a href="#">обработку персональных данных.</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-edit-profile-->
+		<div class="modal-win modal-win--edit-profile" id="modal-edit-profile" style="display: none">
+			<div class="modal-win__head-wrap">
+				<h2>Редактирование профля</h2>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="row">
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иванов"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иван"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7(999)000-00-00"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-md-6 col-12">
+							<label class="form-wrap__input-title">Фото профиля
+							</label>
+							<div class="load-photo load-photo--edit">
+								<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-md-end">
+						<div class="col-md-6 col-12">
+							<a class="form-wrap__btn-reg" href="#">Сохранить
+							</a>
+						</div>
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__accept">Нажимая кнопку &laquo;Сохранить&raquo;, вы соглашаетесь с <a href="#">правилами пользования сайтом</a><span> и даёте согласие на </span><a href="#">обработку персональных данных.</a>
 							</div>
 						</div>
 					</div>

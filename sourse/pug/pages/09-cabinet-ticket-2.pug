@@ -16,7 +16,7 @@ include ../blocks/sTicketRequest/_sTicketRequest.pug
 
 block variables
 	- let  mainPage= 'cabinet'
-	- let  bg= '09-cabinet-ticket-2.jpg'
+	- let  bg= null
 
 block title
 	- let  title= 'Личный кабинет'
@@ -35,7 +35,7 @@ block pagecontent
 				+e.slide.swiper-slide
 					+e.btn(href="#") Мои мероприятия
 				+e.slide.swiper-slide
-					+e.btn.active(href="#") Электронный билет Участника ВСКС
+					+e.btn.active(href="#") Электронный билет члена ВСКС
 	+sTicketRequest()
 		+e.alert-row.row
 			.col-auto

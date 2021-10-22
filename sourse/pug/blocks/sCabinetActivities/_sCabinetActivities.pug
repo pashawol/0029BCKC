@@ -5,7 +5,7 @@ mixin sCabinetActivities(data)
 			+e.cards
 				+b.section-title
 					h2 Будущие мероприятия
-				mixin item(btns, btn1, c, t, sc, st, i, ...items)
+				mixin item(btns, btns2, btn1, c, t, sc, st, i, ...items)
 					+e.item
 						a(href="#")
 							span(style=`--color: ${c};`)!= t
@@ -36,6 +36,13 @@ mixin sCabinetActivities(data)
 												+e.btn.btn-outline-warning Отменить
 											.col-lg-auto
 												+e.btn.btn-warning Подтвердить участие
+								else if btns2
+									.col-lg-auto
+										+e.btn-row.row
+											.col-lg-auto
+												+e.btn.btn-outline-warning Удалить
+											.col-lg-auto
+												+e.btn.btn-warning Редактировать заявку
 								else if btn1
 									.col-lg-auto
 										+e.btn-row.row
@@ -43,14 +50,14 @@ mixin sCabinetActivities(data)
 												+e.btn.btn-outline-warning Отменить
 
 
-				+item(``, ``, `#FF995A`, `Региональные`, `#B2A84A`, `Отправлена`, 1, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
-				+item(`btns`, ``, `#FF995A`, `Региональные`, `#25C047`, `Приглашение`, 2, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
-				+item(``, ``, `#009FE2`, `Окружное`, `#E31E24`, `Отклонено`, 3, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
-				+item(``, `btn1`, `#A1D8F6`, `Федеральное`, `#275089`, `Подтверждено`, 4, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(``, ``, ``, `#FF995A`, `Региональные`, `#B2A84A`, `Отправлена`, 1, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(`btns`, ``, ``, `#FF995A`, `Региональные`, `#25C047`, `Приглашение`, 2, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(``, `btns2`, ``, `#009FE2`, `Окружное`, `#E31E24`, `Отклонено`, 3, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(``, ``, `btn1`, `#A1D8F6`, `Федеральное`, `#275089`, `Подтверждено`, 4, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
 
 			+e.cards--past
 				+b.section-title
 					h2 Прошедшие мероприятия
-				+item(``, ``, `#FF995A`, `Региональные`, `#275089`, `Подтверждено`, 1, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(``, ``, ``, `#FF995A`, `Региональные`, `#275089`, `Подтверждено`, 1, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
 
 				// end sCabinetActivities

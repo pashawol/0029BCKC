@@ -71,8 +71,10 @@ mixin sCabinetForm(data)
 							.col-sm-6
 								+e.BUTTON.btn Отправить
 							.col-auto.col-sm-6
-								+e.polite Отправляя, вы даёте согласие на 
-									a(href="#") обработку персональных данных.
+								+e.polite 
+									+in-c()(checked)
+										span Я согласен с условиями 
+										a(href="#") Политики обработки персональных данных
 
 
 	// end sCabinetForm

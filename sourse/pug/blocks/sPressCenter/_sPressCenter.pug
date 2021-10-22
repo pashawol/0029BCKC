@@ -182,3 +182,45 @@ mixin sPressCenterSmi(data)
 					+item(1,'Коммерсант')
 				a.show-more(href="#") Показать еще
 	// end sPressCenter
+	
+//- mixin sPressCenterSmi(data)
+//- 	// start sPressCenter
+//- 	+b.SECTION.sPressCenter.section&attributes(attributes)
+//- 		.news-content
+//- 			mixin item(i,p)
+//- 				.day-news__item
+//- 					a(href="#")
+//- 						+pic(`news-${i}.png`,'',0).news-img
+//- 					.day-news__item-body
+//- 						.date.date--publ
+//- 							p 19.08.21
+//- 							a.publ(href="#")!=p
+//- 						.caption
+//- 							a(href="#").text-body  Главное управление сообщает о&nbsp;лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели, тест тест
+//- 						a.detailed(href="#") Подробнее
+//- 			h2 СМИ о нас
+//- 			.row
+//- 				.input-wrapper.col-lg-6.col-12
+//- 					p Даты
+//- 					+input('Выберите период').input-date-picker-js(autocomplete="off")
+//- 				.day-news.col-12
+//- 					.day-news__head
+//- 						p 21 сентября
+//- 						.day-news__head-line
+//- 							hr
+//- 					+item(1,'Известия')
+//- 					+item(2,'Россия 1')
+//- 				.day-news.col-12
+//- 					.day-news__head
+//- 						p 20 сентября
+//- 						.day-news__head-line
+//- 							hr
+//- 					+item(3,'Коммерсант')
+//- 				.day-news.col-12
+//- 					.day-news__head
+//- 						p 19 сентября
+//- 						.day-news__head-line
+//- 							hr
+//- 					+item(2,'Forbes')
+//- 					+item(1,'Коммерсант')
+//- 				a.show-more(href="#") Показать еще

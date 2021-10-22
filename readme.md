@@ -33,6 +33,7 @@
 1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-3.html>
 1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-4.html>
 1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-5.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-6.html>
 
 # ?. Новости
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center.html>

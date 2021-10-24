@@ -2,10 +2,9 @@
 .sPressCenter {
 	--sPT: #{rem(0)};
 	--sPB: #{rem(39)};
- 
+
 	// --bs-gutter-y: calc(var(--bs-gutter-x) / 2);
 	&__menu {
-
 	}
 	&__caption {
 		.active {
@@ -41,7 +40,7 @@
 				background-color: $white !important;
 				cursor: pointer;
 				position: relative;
-				border-radius: 4px;
+				border-radius: $border-radius;
 				cursor: pointer;
 				font-size: rem(16);
 				border: 1px solid #238ece;
@@ -74,7 +73,7 @@
 			}
 			.input-location-modal {
 				box-shadow: 0px 23px 38px rgba(0, 0, 0, 0.15);
-				border-radius: 4px;
+				border-radius: $border-radius;
 			}
 			.list-wrap {
 				padding: rem(16);
@@ -189,7 +188,7 @@
 						min-width: 115px;
 					}
 					img {
-						border-radius: 4px;
+						border-radius: $border-radius;
 					}
 				}
 				&-body {
@@ -297,6 +296,22 @@
 			}
 		}
 	}
+	&--smi {
+		.news-content {
+			.day-news__item {
+				height: auto;
+				.day-news__item-body {
+					padding-left: 0;
+					@include media-breakpoint-down(sm) {
+						padding-left: 10px;
+					}
+					.date--publ {
+						justify-content: center;
+					}
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -317,7 +332,7 @@
 	padding-top: rem(18);
 	padding-bottom: rem(29);
 	&__item {
-		background: #ecf8ff;
+		background: $light-blue;
 		border-radius: $border-radius;
 		margin-bottom: rem(32);
 		padding: 5vw;
@@ -367,8 +382,8 @@
 			margin-bottom: 0;
 		}
 	}
-	.toggle-content{
-		p{
+	.toggle-content {
+		p {
 			display: -webkit-box;
 			-webkit-box-orient: vertical;
 			-moz-box-orient: vertical;

@@ -25,8 +25,42 @@ mixin sNews(data)
 				+sNewsSlide(4, 'Президент Российской Федерации, главы зарубежных стран, государственные деятели, коллеги и друзья выразил')
 	// end sNews
 
+mixin sNews-region(data)
+	// start sNews-region
+	+b.SECTION.sNews--region.section#sNews&attributes(attributes)
+		.container
+			+e.title-row.row
+				.col
+					+b.section-title
+						h2 Новости региона
+				.col-sm-auto
+					+e.all-btn(href="#") Все новости региона
+			+e.slide-wrap
+				.swiper.sNews-slider-js
+					.swiper-wrapper
+						+sNewsSlide-region(1, 'Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края')
+						+sNewsSlide-region(2, 'В МЧС России простились с Министром МЧС России Евгением Зиничевым')
+						+sNewsSlide-region(3, 'Главное управление сообщает о лесопожарной обстановке на территории')
+						+sNewsSlide-region(4, 'Президент Российской Федерации, главы зарубежных стран, государственные деятели, коллеги и друзья выразил')
+						+sNewsSlide-region(1, 'Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края')
+						+sNewsSlide-region(2, 'В МЧС России простились с Министром МЧС России Евгением Зиничевым')
+						+sNewsSlide-region(3, 'Главное управление сообщает о лесопожарной обстановке на территории')
+						+sNewsSlide-region(4, 'Президент Российской Федерации, главы зарубежных стран, государственные деятели, коллеги и друзья выразил')
+	// end sNews-region
+
 mixin sNewsSlide(imgNum, txt)
 	.col-sm-6.col-lg-3
+		+e.img(href="#")
+			img(loading="lazy" src=`img/@2x/sNews-slide-${imgNum}.png` alt="")
+		+e.date-row.row.align-items-center
+			.col
+				+e.date 19.08.21
+			.col-auto
+				+e.location Республика Удмуртия
+		+e.title(href="#")=txt
+
+mixin sNewsSlide-region(imgNum, txt)
+	.swiper-slide
 		+e.img(href="#")
 			img(loading="lazy" src=`img/@2x/sNews-slide-${imgNum}.png` alt="")
 		+e.date-row.row.align-items-center

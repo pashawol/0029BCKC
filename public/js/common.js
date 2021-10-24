@@ -229,6 +229,22 @@ const JSCCommon = {
 				lang: 'ru-RU',
 				format: "DD.MM.YYYY",
 			})
+		});
+		let pickerSingle = document.querySelectorAll(".input-date-picker-single-js")
+		pickerSingle.forEach(el => {
+			new Litepicker({
+				element: el,
+				singleMode: true,
+				showTooltip: false,
+				dropdowns: true,
+				resetButton: true,
+				// tooltipText: {
+				// 	one: 'night',
+				// 	other: 'nights'
+				// },
+				lang: 'ru-RU',
+				format: "DD.MM.YYYY",
+			})
 		})
 
 	}
@@ -241,7 +257,7 @@ function eventHandler() {
 	JSCCommon.datepicker();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	// JSCCommon.animateScroll();
@@ -411,6 +427,54 @@ function eventHandler() {
 			},
 		},
 	});
+
+	let sEventsSliderRegion = new Swiper('.sEvents--region .sEvents-slider--js', {
+		slidesPerView: "auto",
+		// loop: true,
+		watchOverflow: true,
+
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+		},
+	});
+
+	let sNewsSlider = new Swiper('.sNews-slider-js', {
+		slidesPerView: "auto",
+		// loop: true,
+		watchOverflow: true,
+
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+		},
+	});
+
+	let pageHeadSlider = new Swiper('.page-head__slider--js', {
+		slidesPerView: "auto",
+		watchOverflow: true,
+		freeMode: true,
+		touchRatio: 0.3,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		// spaceBetween: 20,
+		breakpoints: {
+			0: {
+				spaceBetween: 5,
+			},
+			576: {
+				spaceBetween: 20,
+			},
+		},
+	});
 	//
 	// import * as FilePond from 'filepond';
 	// const pond = FilePond.create({
@@ -418,20 +482,73 @@ function eventHandler() {
 	// 	name: 'filepond'
 	// });
 	// document.body.appendChild(pond.element);
-	
-	$('.load-photo').filepond({
-		labelIdle: `Добавить фото&nbsp;профиля`,
-		imagePreviewHeight: 170,
-		imageCropAspectRatio: '1:1',
-		imageResizeTargetWidth: 200,
-		imageResizeTargetHeight: 200,
-		// stylePanelLayout: 'compact circle',
-		// styleLoadIndicatorPosition: 'center bottom',
-		// styleProgressIndicatorPosition: 'right bottom',
-		// styleButtonRemoveItemPosition: 'left bottom',
-		// styleButtonProcessItemPosition: 'right bottom',
-	});
-	
+	FilePond.registerPlugin(
+		FilePondPluginImagePreview,
+		FilePondPluginImageCrop,
+		FilePondPluginImageResize,
+		FilePondPluginImageTransform,
+		FilePondPluginImageEdit
+		// FilePondPluginImageExifOrientation,
+		// FilePondPluginFileValidateSize,
+		// FilePondPluginImageEdit
+	);
+
+	FilePond.create(
+		document.querySelector('.load-photo input'),
+		{
+			labelIdle: `Добавить фото&nbsp;профиля`,
+			imagePreviewHeight: 300,
+			imageCropAspectRatio: '1:1',
+			imageResizeTargetWidth: 280,
+			imageResizeTargetHeight: 297,
+			styleLoadIndicatorPosition: 'center bottom',
+			styleProgressIndicatorPosition: 'left bottom',
+			styleButtonRemoveItemPosition: 'left bottom',
+			styleButtonProcessItemPosition: 'left bottom',
+		}
+	);
+	FilePond.create(
+		document.querySelector('.load-photo--edit input'),
+		{
+			labelIdle: `Изменить фото&nbsp;профиля`,
+			imagePreviewHeight: 300,
+			imageCropAspectRatio: '1:1',
+			imageResizeTargetWidth: 280,
+			imageResizeTargetHeight: 297,
+			styleLoadIndicatorPosition: 'center bottom',
+			styleProgressIndicatorPosition: 'left bottom',
+			styleButtonRemoveItemPosition: 'left bottom',
+			styleButtonProcessItemPosition: 'left bottom',
+		}
+	);
+	FilePond.create(
+		document.querySelector('.load-photo-ticket input'),
+		{
+			labelIdle: `Добавить фото&nbsp;для&nbsp;билета`,
+			imagePreviewHeight: 300,
+			imageCropAspectRatio: '1:1',
+			imageResizeTargetWidth: 280,
+			imageResizeTargetHeight: 297,
+			styleLoadIndicatorPosition: 'center bottom',
+			styleProgressIndicatorPosition: 'left bottom',
+			styleButtonRemoveItemPosition: 'left bottom',
+			styleButtonProcessItemPosition: 'left bottom',
+		}
+	);
+
+	// $('.load-photo').filepond({
+	// 	labelIdle: `Добавить фото&nbsp;профиля`,
+	// 	imagePreviewHeight: 170,
+	// 	imageCropAspectRatio: '1:1',
+	// 	imageResizeTargetWidth: 200,
+	// 	imageResizeTargetHeight: 200,
+	// 	// stylePanelLayout: 'compact circle',
+	// 	// styleLoadIndicatorPosition: 'center bottom',
+	// 	// styleProgressIndicatorPosition: 'right bottom',
+	// 	// styleButtonRemoveItemPosition: 'left bottom',
+	// 	// styleButtonProcessItemPosition: 'right bottom',
+	// });
+
 	let sHeroSlider = new Swiper('.sHero-slider-js', {
 		slidesPerView: "auto",
 		loop: true,

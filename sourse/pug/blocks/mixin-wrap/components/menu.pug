@@ -2,24 +2,15 @@
 mixin mnu()
 	-
 		var nav= { 
+			"О ВСКС":"#",
 			"Пресс-центр":"#",
 			"Мероприятия":"#",
 			"Контакты":"#",
-			"Набор на ЧС":"#",
 			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		li.menu-item.menu-item-has-children
-			a(href="#" itemprop="url") О ВСКС
-			ul.sub-menu
-				-
-					var subnav= { 
-						"Об организации":"#",
-						"Документы":"#",
-						"Пресс-кит":"#",
-						}
-				each sublinkPatch, sublinkName in subnav
-					li.menu-item(itemprop="item" ): a(href= sublinkPatch itemprop="url")= sublinkName
 		each linkPatch, linkName in nav
 			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
+		li.menu-item
+			a.closed(href="#" itemprop="url") Набор на ЧС
 
 //- menu

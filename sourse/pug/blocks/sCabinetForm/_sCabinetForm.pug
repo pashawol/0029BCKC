@@ -1,0 +1,80 @@
+mixin sCabinetForm(data)
+	// start sCabinetForm
+	+b.SECTION.sCabinetForm.section#sCabinetForm&attributes(attributes)
+		.container
+			+b.section-title--back
+				.row.align-items-start
+					.col-auto
+						+e.link-back(href="#")
+							+icon('chevron-back')
+					.col
+						h2 Заявка на получение электронного билета 
+			+form-wrap
+				.row
+					+e.col.col-lg-auto.col-xxl-auto.order-lg-last
+						+e.LABEL.input-title Фото
+						+b.load-photo-ticket
+							input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
+							+e.requirements
+								p Формат фотографии 3:4. Описание требования фотографии для билета в несколько строк
+								p Lorem ipsum dolor sit amet consectetur adipisicing.
+					.col.col-lg-8.col-xl-7.col-xxl-6
+						+e.item
+							h3 Личные данные
+							.row
+								.col-sm-6
+									+input('Введите','text','Фамилия')
+								.col-sm-6
+									+input('Введите','text','Фамилия на английском')
+								.col-sm-6
+									+input('Введите','text','Имя')
+								.col-sm-6
+									+input('Введите','text','Имя на английском')
+								.col-sm-6
+									+input('Введите','text','Отчество')
+								.col-sm-6
+									+input('ДД.ММ.ГГГГ','text','Дата рождения').input-date-picker-single-js(autocomplete="off")
+								.col
+									+input('Введите','text','Учебное заведение')
+
+						+e.item
+							h3 Паспортные данные
+							.row
+								.col-sm-6
+									+input('__ __ ___ ___','text','Серия и номер паспорта')
+								.col-sm-6
+									+input('ДД.ММ.ГГГГ','text','Дата выдачи').input-date-picker-single-js(autocomplete="off")
+								.col
+									+input('Введите','text','Кем выдан')
+
+						+e.item
+							h3 Контакты
+							.row
+								.col-sm-6
+									+input('Республика Удмуртия','select','Мой регион')
+								.col-sm-6.d-none.d-sm-block
+								.col-sm-6
+									+input('__ __ ___ ___','email','E-mail')
+								.col
+									+input('+7 ___ ___ __ __','tel','Телефон')
+
+						+e.item
+							h3 Ссылки на аккаунты в социальных сетях
+							.row
+								// .row.mt-3.mt-sm-0 классы для строк 2-й и последующих соц. сетей
+								.col-sm-6
+									+input('VK', 'select', 'Соц. сеть')
+								.col-sm-6
+									+input('http://','url','Ссылка на профиль')
+							+e.BUTTON.btn-soc + Добавить
+						+e.btn-row.row
+							.col-sm-6
+								+e.BUTTON.btn Отправить
+							.col-auto.col-sm-6
+								+e.polite 
+									+in-c()(checked)
+										span Я согласен с условиями 
+										a(href="#") Политики обработки персональных данных
+
+
+	// end sCabinetForm

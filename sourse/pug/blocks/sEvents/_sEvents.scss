@@ -5,62 +5,63 @@
 
 	--sPT: #{rem(30)};
 	--sPB: #{rem(35)};
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(69)};
 		--sPB: #{rem(60)};
 	}
 
-	&__title-row{
+	&__title-row {
 		--bs-gutter-x: #{rem(16)};
 		--bs-gutter-y: #{rem(8)};
 		padding-bottom: rem(24);
 	}
-	&__btn{
+	&__btn {
 		@extend .btn;
 		@extend .btn-warning;
 	}
-	&__nav-row{
+	&__nav-row {
 		--bs-gutter-x: #{rem(16)};
 		--bs-gutter-y: #{rem(8)};
 
 		padding-bottom: rem(35);
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			padding-bottom: rem(56);
 		}
 	}
 
-	&__input{
-		@include media-breakpoint-up(xl){
+	&__input {
+		@include media-breakpoint-up(xl) {
 			min-width: rem(216);
 		}
 	}
-	&__slide-wrap{
-		.swiper{
-			overflow: visible!important;
+	&__slide-wrap {
+		.swiper {
+			overflow: visible !important;
 		}
-		.swiper-wrapper{}
-		.swiper-slide{
+		.swiper-wrapper {
+		}
+		.swiper-slide {
 			height: auto;
 			display: flex;
 			flex-direction: column;
 
 			width: 90%;
-			@include media-breakpoint-up(sm){
-				width: calc(100%/2 - 20px*1/2);
+			@include media-breakpoint-up(sm) {
+				width: calc(100% / 2 - 20px * 1 / 2);
 			}
-			@include media-breakpoint-up(lg){
-				width: calc(100%/3 - 20px*2/3);
+			@include media-breakpoint-up(lg) {
+				width: calc(100% / 3 - 20px * 2 / 3);
 			}
-			@include media-breakpoint-up(xl){
-				width: calc(100%/3 - 40px*2/3);
+			@include media-breakpoint-up(xl) {
+				width: calc(100% / 3 - 40px * 2 / 3);
 			}
 		}
 	}
 
-	&__card{
+	&__card {
 		flex-grow: 1;
 		background: $light-blue;
-		border-radius: 4px;
+		border-radius: $border-radius;
 		overflow: hidden;
 
 		display: flex;
@@ -70,11 +71,11 @@
 		z-index: 1;
 		padding-top: rem(247);
 
-		&:before{
+		&:before {
 			@include mt();
 			opacity: 0;
 
-			content: '';
+			content: "";
 			position: absolute;
 			z-index: 1;
 			left: 0;
@@ -84,17 +85,17 @@
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 		}
 
-		&:hover{
+		&:hover {
 			--card-col: #{$white};
 			--card-td: underline;
 			--card-bg: transparent;
 			--card-bg-scale: 0;
-			&:before{
+			&:before {
 				opacity: 1;
 			}
 		}
 	}
-	&__c-img{
+	&__c-img {
 		@include mt();
 		position: absolute;
 		top: 0;
@@ -102,13 +103,13 @@
 		width: 100%;
 		height: 100%;
 
-		img{
+		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
 	}
-	&__txt-box{
+	&__txt-box {
 		//@include mt();
 		background: var(--card-bg, #{$light-blue});
 		flex-grow: 1;
@@ -118,13 +119,13 @@
 
 		position: relative;
 		z-index: 3;
-		&:before{
+		&:before {
 			@include mt();
 			transform-origin: bottom;
 			transform: scaleY(var(--card-bg-scale, 1));
 			background: var(--card-bg, #{$light-blue});
 
-			content: '';
+			content: "";
 			position: absolute;
 			z-index: -1;
 			top: 0;
@@ -133,13 +134,12 @@
 			height: 100%;
 		}
 
-
 		padding: rem(24) rem(20) rem(30);
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			padding: rem(28) rem(31.5) rem(22);
 		}
 	}
-	&__c-title{
+	&__c-title {
 		//@include mt();
 		font-weight: bold;
 		font-size: rem(20);
@@ -150,13 +150,13 @@
 		min-height: rem(150);
 		margin-bottom: rem(23);
 	}
-	&__c-date{
+	&__c-date {
 		@include mt();
 		font-size: rem(13);
 		margin-bottom: rem(9);
 		color: var(--card-col, #{$black});
 	}
-	&__c-location{
+	&__c-location {
 		@include mt();
 		@extend .loc-txt;
 		color: var(--card-col, #{$black}) !important;
@@ -164,24 +164,23 @@
 	}
 
 	//-
-	&__empty{
-
+	&__empty {
 	}
-	&__e-img{
+	&__e-img {
 		width: rem(146);
 		height: auto;
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		img{
+		img {
 			width: auto;
 			max-width: 100%;
 		}
 
 		margin: 0 auto rem(40);
 	}
-	&__e-txt{
+	&__e-txt {
 		max-width: rem(600);
 		margin: 0 auto;
 
@@ -189,22 +188,43 @@
 		font-size: rem(20);
 		color: $blue2;
 	}
-	&__{}
-	&__{}
+	&--region {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(60)};
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(60)};
+			--sPB: #{rem(88)};
+		}
+		.swiper {
+			overflow: hidden !important;
+		}
+		// .swiper-slide {
+		// 	@include media-breakpoint-up(xl) {
+		// 		width: calc(100% / 3 - 40px * 2 / 3);
+		// 	}
+		// }
+		.sEvents__title-row {
+			--bs-gutter-y: #{rem(12)};
+			padding-bottom: rem(35);
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(50);
+			}
+		}
+	}
 	//-
 } // end.sEvents
 
-
 //-
-.btn-chb{
-	display: flex!important;
+.btn-chb {
+	display: flex !important;
 	align-items: center;
 	padding: rem(8) rem(18);
 	position: relative;
 	z-index: 1;
+	cursor: pointer;
 
-	&:after{
-		content: '';
+	&:after {
+		content: "";
 		position: absolute;
 		z-index: -1;
 		top: 0;
@@ -213,27 +233,27 @@
 		height: 100%;
 
 		background-color: var(--btn-chb-color);
-		opacity: .1;
-		border-radius: 4px;
+		opacity: 0.1;
+		border-radius: $border-radius;
 	}
 
 	//
-	&.red{
-		--btn-chb-color: #E31E24;
+	&.red {
+		--btn-chb-color: #e31e24;
 	}
-	&.blue{
-		--btn-chb-color: #238ECE;
+	&.blue {
+		--btn-chb-color: #238ece;
 	}
 	color: var(--btn-chb-color);
 
-	input:checked + .bar{
+	input:checked + .bar {
 		background-color: var(--btn-chb-color);
-		&:before{
+		&:before {
 			margin-left: rem(16);
 			background-color: $white;
 		}
 	}
-	.bar{
+	.bar {
 		@include mt();
 		background-color: transparent;
 		flex-shrink: 0;
@@ -247,9 +267,9 @@
 
 		display: flex;
 		align-items: center;
-		&:before{
+		&:before {
 			@include mt();
-			content: '';
+			content: "";
 			width: rem(12);
 			height: rem(12);
 			border-radius: 50%;

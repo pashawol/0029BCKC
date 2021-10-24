@@ -405,7 +405,7 @@ $line-height-lg: 2 !default;
 
 $h1-font-size: rem(40);
 $h2-font-size: rem(32);
-$h3-font-size: $font-size-base * 1.75 !default;
+$h3-font-size: rem(24) !default;
 $h4-font-size: rem(20);
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
@@ -1252,9 +1252,9 @@ $modal-scale-transform: scale(1.02) !default;
 // Define alert colors, border radius, and padding.
 
 // scss-docs-start alert-variables
-$alert-padding-y: $spacer !default;
-$alert-padding-x: $spacer !default;
-$alert-margin-bottom: 1rem !default;
+$alert-padding-y: $input-btn-padding-y !default;
+$alert-padding-x: $input-btn-padding-x !default;
+$alert-margin-bottom: 0 !default;
 $alert-border-radius: $border-radius !default;
 $alert-link-font-weight: $font-weight-bold !default;
 $alert-border-width: $border-width !default;

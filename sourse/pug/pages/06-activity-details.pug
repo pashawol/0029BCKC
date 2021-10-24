@@ -1,0 +1,63 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sDetailedNews/_sDetailedNews.pug
+//- include ../blocks/sPromo/_sPromo.pug
+//- include ../blocks/sMap/_sMap.pug
+//- include ../blocks/sStat/_sStat.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sBecome/_sBecome.pug
+//- include ../blocks/sHero/_sHero.pug
+//- include ../blocks/sPartners/_sPartners.pug
+
+block variables
+	- let  mainPage= 'activity-details' 
+	- let  bg= null
+
+block title
+	- let  title= 'Мероприятие'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+b.page-head.section
+		.container
+			.row
+				.col
+					+b.date-n-location--head
+						p 19&nbsp;августа&nbsp;&mdash; 21&nbsp;августа
+						p.loc Республика Удмуртия
+					+e.features
+						+feature(`Регистрация открыта`, `#FFFFFF`, `#238ECE`)
+						+feature(`Только для членов ВСКС`, `#FFFFFF`, `#238ECE`)
+						+feature(`Окружное`, `#009FE2`, `rgba(0, 0, 0, 0.8)`)
+						+feature(`ЧС`, `#FFFFFF`, `#E31E24`)
+					h1 Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;
+					+e.btn-row.row
+						.col-auto
+							+e.btn.btn.btn-warning(href="#") Принять участие
+						.col-auto
+							+score-item(`256`, `Максимально баллов за мероприятие`)
+				.col-lg-2.order-first
+					+e.link-back(href="#" title="Назад")
+						+icon('arrow-left')
+	+sContent()
+		+pic(`activity-details.jpg`,'', '')
+		p Всероссийский студенческий корпус спасателей&nbsp;&mdash; одна из&nbsp;крупнейших студенческих добровольческих организаций в&nbsp;Российской Федерации. Образована в&nbsp;2001&nbsp;году. В&nbsp;состав ВСКС входит свыше 8000 добровольцев из&nbsp;67&nbsp;субъектов Российской Федерации. Все студенты-спасатели проходят специальную подготовку для оказания квалифицированной помощи специальным службам при возникновении
+		p Образована в&nbsp;2001&nbsp;году. В&nbsp;состав ВСКС входит свыше 8000 добровольцев из&nbsp;67&nbsp;субъектов Российской Федерации. Все студенты-спасатели проходят специальную подготовку для оказания квалифицированной помощи специальным службам при возникновении...
+	//- +sPromo()
+	//- +sMap()
+	//- +sStat()
+	//- +sEvents()
+	//- +sEvents2()
+	//- +sBecome()
+	//- +sHero()
+	//- +sPartners()
+	//- +sForm()
+	//- +sContact()
+	+footer()

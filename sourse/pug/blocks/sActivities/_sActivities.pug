@@ -1,0 +1,52 @@
+mixin sActivities(data)
+	// start sActivities
+	+b.sActivities.section#sActivities&attributes(attributes)
+		.container
+			+e.filter
+				+e.nav-row.row
+					.col-sm-6.col-md-4.col-xl-auto
+						+input('Региональные', 'select', 'Тип мероприятия')
+					.col-sm-6.col-md-4.col-xl-auto
+						+input('Новосибирск', 'select', 'Города проведения')
+					.col-sm-6.col-md-4.col-xl-auto
+						+input('Даты проведения', 'text', 'Даты').input-date-picker-js(autocomplete="off")
+				+e.btn-row.row
+					.col-sm-6.col-md-auto
+						+sEventsChb('ЧС', 'red')
+					.col-sm-6.col-md-auto
+						+sEventsChb('Регистрация открыта', 'blue')
+					.col-sm-6.col-md-auto
+						+sEventsChb('Только для членов ВСКС', 'blue')
+			+e.cards-heading
+				a(href="#").active Текущие
+				a(href="#") Прошедшие
+			+e.cards-content
+				mixin item(i, ...items)
+					+e.item
+						a(href="#")
+							span Окружное
+							span Регистрация открыта
+							// span(style="--color: #009FE2; --bg-color: rgba(0, 0, 0, 0.8);") Окружное !!переменные управляют цветом текста и фона
+							// span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта !!переменные управляют цветом текста и фона
+							+pic(`sActivities-${i}.png`,'bg').bg-wrap
+						+e.caption
+							+e.points Максимально баллов за участие: 
+								span.text-primary 500
+							a(href="#")
+								each item in items
+									p!= item
+							.date-n-location
+								p 19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00
+								p.loc Республика Удмуртия
+				+item(1, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(2, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`, `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, recusandae!`, `Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nulla deleniti.`)
+				+item(3, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(4, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(1, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(2, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(3, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo; Lorem ipsum dolor sit amet consectetur adipisicing.`)
+				+item(1, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+			.text-center
+				+e.btn(href="#") Показать еще
+
+	// end sActivities

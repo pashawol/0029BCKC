@@ -1,0 +1,42 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sActivities/_sActivities.pug
+//- include ../blocks/sPromo/_sPromo.pug
+//- include ../blocks/sMap/_sMap.pug
+//- include ../blocks/sStat/_sStat.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sBecome/_sBecome.pug
+//- include ../blocks/sHero/_sHero.pug
+//- include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg= null
+
+block title
+	- let  title= 'Контакты'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+pageHead(`Контакты`)
+	+sContact
+	//- +sMap()
+	//- +sActivities()
+	//- +sPromo()
+	//- +sStat()
+	//- +sEvents()
+	//- +sEvents2()
+	//- +sBecome()
+	//- +sHero()
+	//- +sPartners()
+	//- +sForm()
+	//- +sContact()
+	+footer()

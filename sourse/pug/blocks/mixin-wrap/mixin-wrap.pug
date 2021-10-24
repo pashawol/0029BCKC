@@ -45,6 +45,19 @@ mixin pageHead(h1, back)
 					.col-lg-2.order-first
 						+e.link-back(href="#" title="Назад")
 							+icon('arrow-left')
+
+mixin pageHead-cabinet()
+	+b.page-head--cabinet.section
+		.container
+			+e.row-title.row
+				.col
+					h1 Личный кабинет
+				.col-md-auto
+					+e.btn(href="#") Редактировать профиль
+			if block
+				block
+
+
 mixin pageBody(about,type)
 	main.container.container--main 
 		.row.row--main
@@ -102,4 +115,16 @@ mixin document-item(title,doc,caption)
 		+e.type!=`${doc}, 12 mb`
 		+e.caption!=caption
 
+mixin sEventsChb(txt, addClasses='')
+	+b.LABEL.btn-chb(class=addClasses)
+		input(type="checkbox" class='invisible' name=txt)&attributes(attributes)
+		span.bar
+		span.txt=txt
 
+mixin feature(t, c, bg)
+	.feature-item(style=`--color: ${c}; --bg-color: ${bg};`)!= t
+
+mixin score-item(c, t)
+	+b.score-item
+		span.text-primary!= c
+		span!= t

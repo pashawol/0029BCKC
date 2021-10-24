@@ -1,0 +1,205 @@
+// start .sCabinetActivities
+.sCabinetActivities {
+	--sPT: #{rem(42)};
+	--sPB: #{rem(65)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(42)};
+		--sPB: #{rem(93)};
+		--sTPB: #{rem(42)};
+	}
+	&__cards {
+		margin-bottom: rem(42);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(60);
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&--past {
+			picture {
+				opacity: 0.5;
+			}
+			.sCabinetActivities__item {
+				background-color: $white;
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				& > a {
+					span {
+						&:nth-child(1) {
+							background-color: rgba(0, 0, 0, 0.5);
+						}
+					}
+				}
+			}
+		}
+	}
+	&__btn {
+		@extend .btn;
+		width: 100%;
+	}
+	&__btn-row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(15)};
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(20)};
+		}
+		@include media-breakpoint-down(lg) {
+			margin-top: 0;
+		}
+	}
+	&__item {
+		background: $light-blue;
+		border-radius: $border-radius;
+		margin-bottom: rem(20);
+		padding: 4vw;
+		@include media-breakpoint-up(sm) {
+			padding: 3vw;
+		}
+		@include media-breakpoint-up(md) {
+			padding: 0;
+			display: flex;
+			// align-items: center;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(25);
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		& > a {
+			--pos: 5%;
+			// --pos: #{rem(20)};
+			position: relative;
+			display: block;
+			span {
+				position: absolute;
+				top: rem(16);
+				// top: rem(16);
+				padding: rem(3) rem(8);
+				font-weight: bold;
+				font-size: rem(12);
+				border-radius: $border-radius;
+				z-index: 2;
+				&:nth-child(1) {
+					color: var(--color, #009fe2);
+					background-color: rgba(0, 0, 0, 0.8);
+					left: var(--pos);
+				}
+				&:nth-child(2) {
+					color: var(--color, #ffffff);
+					background-color: var(--bg-color, #238ece);
+					right: var(--pos);
+				}
+			}
+		}
+		picture {
+			@include block(376, 207);
+			// height: 100%;
+			border-radius: $border-radius;
+			overflow: hidden;
+			// height: auto;
+			flex: 0 0 auto;
+			z-index: 1;
+			@include media-breakpoint-up(md) {
+				width: rem(330);
+			}
+			@include media-breakpoint-up(lg) {
+				width: rem(376);
+			}
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+				// border-radius: $border-radius;
+			}
+		}
+	}
+	&__caption {
+		display: flex;
+		flex-direction: column;
+		padding-top: rem(20);
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			padding: rem(20) rem(24);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(20) rem(24) rem(20) rem(40);
+		}
+		a {
+			display: block;
+			flex-grow: 1;
+			margin-bottom: 1rem;
+			p {
+				@extend .h4;
+				line-height: 150%;
+				margin-bottom: 0.2rem;
+				@include media-breakpoint-up(xl) {
+					max-width: 32.2em;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			&:not(:hover) {
+				color: $black;
+			}
+		}
+		.date-n-location {
+			margin-bottom: 0;
+			margin-top: rem(-10);
+			@include media-breakpoint-up(md) {
+				flex-direction: column;
+			}
+			p {
+				color: $black;
+				margin-top: rem(10);
+				&:first-of-type {
+					margin-right: rem(20);
+					@include media-breakpoint-up(md) {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	&__points,
+	&__status {
+		font-size: rem(13);
+		color: rgba($color: #000000, $alpha: 0.5);
+		display: flex;
+		margin-bottom: rem(8);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(16);
+		}
+
+		span {
+			margin-right: rem(10);
+			white-space: nowrap;
+			&:last-child {
+				font-weight: bold;
+				margin-right: 0;
+			}
+		}
+	}
+	&__status {
+		span {
+			&:last-child {
+				color: var(--statColor);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCabinetActivities

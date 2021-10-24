@@ -1,16 +1,16 @@
 mixin modal()
 	//  start modals
-	+b.modal-win(id="modal-login" style="display: none")
+	+b.modal-win--login(id="modal-login" style="display: none")
 		+e.logo-wrap
 			h2!=`Вход в&nbsp;личный кабинет`
 			+pic('logo-white.png','',0)
 		+e.form
 			+form-wrap()
 				p Введите данные которые вы указывали при регистрации
-				+input('Sample@sample.com','text','E-mail')
+				+input('Sample@sample.com','email','E-mail')
 				+input('******','password','Пароль')
 				+e.btns-wrap
-					+e.btn Войти
+					+e.BUTTON.btn Войти
 					a(href="#") Восстановить пароль
 				+e.reg-link='Впервые на сайте? '
 					a(href="#") Зарегистрируйтесь!
@@ -25,13 +25,13 @@ mixin modal()
 				.col-md-6.col-12
 					+input('Иванов','text','Фамилия')
 					+input('Иван','text','Имя')
-					+input('Sample@sample.com','text','E-mail')
+					+input('Sample@sample.com','email','E-mail')
 					+input('+7(999)000-00-00','tel','Телефон')
 					+input('******','password','Пароль')
 				.col-md-6.col-12
 					+e.LABEL.input-title Фото профиля
 					.load-photo
-						//- input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
+						input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
 			.row.align-items-md-end
 				.col-md-6.col-12
 					+e.btn-reg(href="#") Зарегистрироваться
@@ -51,4 +51,73 @@ mixin modal()
 				+input('******','password','Подтвердите пароль')
 				+e.btn-activation(href="#") Зарегистрироваться
 	// #modal-activation
+
+	// #modal-edit-profile
+	+b.modal-win--edit-profile(id="modal-edit-profile" style="display: none")
+		+e.head-wrap
+			h2 Редактирование профля
+		+form-wrap()
+			.row
+				.col-md-6.col-12
+					+input('Иванов','text','Фамилия')
+					+input('Иван','text','Имя')
+					+input('Sample@sample.com','email','E-mail')
+					+input('+7(999)000-00-00','tel','Телефон')
+					+input('******','password','Пароль')
+				.col-md-6.col-12
+					+e.LABEL.input-title Фото профиля
+					+b.load-photo--edit
+						input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
+			.row.align-items-md-end
+				.col-md-6.col-12
+					+e.btn-reg(href="#") Сохранить
+				.col-md-6.col-12
+					+e.accept!=`Нажимая кнопку &laquo;Сохранить&raquo;, вы соглашаетесь с `
+						a(href="#") правилами пользования сайтом
+						span!=' и даёте согласие на '
+						a(href="#") обработку персональных данных.
+
+	// #modal-reg-event
+	+b.modal-win--reg-event(id="modal-reg-event" style="display: none")
+		+e.heading
+			h3 Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;
+			.date-n-location
+				p 19&nbsp;августа&nbsp;&mdash; 21&nbsp;августа
+				p.loc Республика Удмуртия
+		+form-wrap()
+			h2 Регистрация на&nbsp;мероприятие
+			+input('45456489749','text','Номер членского билета ВСКС')
+			+input('Викторовский','text','Фамилия')
+			+input('Олег','text','Имя')
+			+input('Викторович','text','Отчество')
+			+input('ДД.ММ.ГГГГ','text','Дата рождения').input-date-picker-single-js(autocomplete="off")
+			+input('__ __ ___ ___','text','Серия и номер паспорта')
+			+input('Введите','text','Регион')
+			+input('Введите','text','Город')
+			+input('+_(___)___-__-__','tel','Телефон')
+			+input('Sample@sample.com','email','E-mail')
+			+input('Введите','text','Учебное заведение')
+			+e.BUTTON.btn-reg Зарегистрироваться
+		
+		// #modal-restore-pass
+		+b.modal-win--restore-pass(id="modal-restore-pass" style="display: none")
+			+e.logo-wrap
+				h2 Восстановить пароль
+				+pic('logo-white.png','',0)
+			+e.form
+				+form-wrap()
+					p Введите данные которые вы указывали при регистрации
+					+input('Sample@sample.com','email','E-mail')
+					+e.btns-wrap
+						+e.btn(href="#") Продолжить
+
+		// #modal-add-ticket
+		+b.modal-win--add-ticket(id="modal-add-ticket" style="display: none")
+			+e.form
+				h2 Добавить билет
+				+form-wrap()
+					+input('Введите','text','Номер билета')
+					+e.btns-wrap
+						+e.btn(href="#") Продолжить
+
 	// end modals

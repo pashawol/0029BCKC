@@ -10,9 +10,11 @@
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
-		<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="04-detailed-news.jpg">
+	<body>
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -21,17 +23,11 @@
 					<a class="menu-mobile__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
 					</a>
 					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О ВСКС</a>
-							<ul class="sub-menu">
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Об организации</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Документы</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-кит</a></li>
-							</ul>
-						</li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О ВСКС</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Набор на ЧС</a></li>
+						<li class="menu-item"><a class="closed" href="#" itemprop="url">Набор на ЧС</a></li>
 					</ul>
 					<a class="login-bl mb-4" href="#">
 						<div class="login-bl__img"><img loading="lazy" src="img/svg/user.svg" alt=""/>
@@ -66,17 +62,11 @@
 									</div>
 									<div class="col-auto d-none d-lg-block">
 										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О ВСКС</a>
-												<ul class="sub-menu">
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Об организации</a></li>
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Документы</a></li>
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-кит</a></li>
-												</ul>
-											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О ВСКС</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Набор на ЧС</a></li>
+											<li class="menu-item"><a class="closed" href="#" itemprop="url">Набор на ЧС</a></li>
 										</ul>
 									</div>
 									<div class="top-nav__col top-nav__col--profile col-auto ms-auto">
@@ -137,8 +127,8 @@
 									<source type="image/webp" srcset="img/@2x/webp/detailed-news.webp"/><img src="img/@2x/detailed-news.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<p>Всероссийский студенческий корпус спасателей – одна из крупнейших студенческих добровольческих организаций в Российской Федерации. Образована в 2001 году. В состав ВСКС входит свыше 8000 добровольцев из 67 субъектов Российской Федерации. Все студенты-спасатели проходят специальную подготовку для оказания квалифицированной помощи специальным службам при возникновении</p>
-								<p>Образована в 2001 году. В состав ВСКС входит свыше 8000 добровольцев из 67 субъектов Российской Федерации. Все студенты-спасатели проходят специальную подготовку для оказания квалифицированной помощи специальным службам при возникновении...</p>
+								<p>Всероссийский студенческий корпус спасателей&nbsp;&mdash; одна из&nbsp;крупнейших студенческих добровольческих организаций в&nbsp;Российской Федерации. Образована в&nbsp;2001&nbsp;году. В&nbsp;состав ВСКС входит свыше 8000 добровольцев из&nbsp;67&nbsp;субъектов Российской Федерации. Все студенты-спасатели проходят специальную подготовку для оказания квалифицированной помощи специальным службам при возникновении</p>
+								<p>Образована в&nbsp;2001&nbsp;году. В&nbsp;состав ВСКС входит свыше 8000 добровольцев из&nbsp;67&nbsp;субъектов Российской Федерации. Все студенты-спасатели проходят специальную подготовку для оказания квалифицированной помощи специальным службам при возникновении...</p>
 							</div>
 						</div>
 					</div>
@@ -182,8 +172,8 @@
 					</div>
 					<div class="footer__soc-row row align-items-center gy-4">
 						<div class="col-sm">
-							<div class="footer__s-txt">© 2006-<span class="set-curr-year-js">2021</span>
-								Всероссийская Общественная Молодежная Организация
+							<div class="footer__s-txt">© 2001-<span class="set-curr-year-js">2021</span>
+								всероссийская общественная молодежная организация
 								«Всероссийский студенческий корпус спасателей»
 							</div>
 						</div>
@@ -218,7 +208,7 @@
 			</footer>
 		</div>
 		<!--  start modals-->
-		<div class="modal-win" id="modal-login" style="display: none">
+		<div class="modal-win modal-win--login" id="modal-login" style="display: none">
 			<div class="modal-win__logo-wrap">
 				<h2>Вход в&nbsp;личный кабинет</h2>
 				<!-- picture-->
@@ -232,7 +222,7 @@
 					<form>
 						<p>Введите данные которые вы указывали при регистрации</p>
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
@@ -242,8 +232,8 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__btns-wrap">
-							<div class="form-wrap__btn">Войти
-							</div><a href="#">Восстановить пароль</a>
+							<button class="form-wrap__btn">Войти
+							</button><a href="#">Восстановить пароль</a>
 						</div>
 						<div class="form-wrap__reg-link">Впервые на сайте? <a href="#">Зарегистрируйтесь!</a>
 						</div>
@@ -273,7 +263,7 @@
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
@@ -291,7 +281,9 @@
 						<div class="col-md-6 col-12">
 							<label class="form-wrap__input-title">Фото профиля
 							</label>
-							<div class="load-photo"></div>
+							<div class="load-photo">
+								<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
+							</div>
 						</div>
 					</div>
 					<div class="row align-items-md-end">
@@ -307,6 +299,7 @@
 				</form>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="modal-win" id="modal-activation" style="display: none">
 			<div class="modal-win__logo-wrap">
 				<h2>Вход в&nbsp;личный кабинет</h2>
@@ -337,6 +330,182 @@
 			</div>
 		</div>
 		<!-- #modal-activation-->
+=======
+		<!-- #modal-edit-profile-->
+		<div class="modal-win modal-win--edit-profile" id="modal-edit-profile" style="display: none">
+			<div class="modal-win__head-wrap">
+				<h2>Редактирование профля</h2>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="row">
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иванов"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иван"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7(999)000-00-00"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-md-6 col-12">
+							<label class="form-wrap__input-title">Фото профиля
+							</label>
+							<div class="load-photo load-photo--edit">
+								<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-md-end">
+						<div class="col-md-6 col-12">
+							<a class="form-wrap__btn-reg" href="#">Сохранить
+							</a>
+						</div>
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__accept">Нажимая кнопку &laquo;Сохранить&raquo;, вы соглашаетесь с <a href="#">правилами пользования сайтом</a><span> и даёте согласие на </span><a href="#">обработку персональных данных.</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-reg-event-->
+		<div class="modal-win modal-win--reg-event" id="modal-reg-event" style="display: none">
+			<div class="modal-win__heading">
+				<h3>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;</h3>
+				<div class="date-n-location">
+					<p>19&nbsp;августа&nbsp;&mdash; 21&nbsp;августа</p>
+					<p class="loc">Республика Удмуртия</p>
+				</div>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<h2>Регистрация на&nbsp;мероприятие</h2>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Номер членского билета ВСКС</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="45456489749"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Викторовский"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Олег"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Отчество</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Викторович"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Дата рождения</span><input class="form-wrap__input form-control input-date-picker-single-js" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Серия и номер паспорта</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="__ __ ___ ___"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Регион</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Город</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+_(___)___-__-__"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Учебное заведение</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn-reg">Зарегистрироваться
+					</button>
+				</form>
+			</div>
+			<!-- #modal-restore-pass-->
+			<div class="modal-win modal-win--restore-pass" id="modal-restore-pass" style="display: none">
+				<div class="modal-win__logo-wrap">
+					<h2>Восстановить пароль</h2>
+					<!-- picture-->
+					<picture> 
+						<source type="image/webp" srcset="img/@2x/webp/logo-white.webp"/><img src="img/@2x/logo-white.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+				</div>
+				<div class="modal-win__form">
+					<div class="form-wrap">
+						<form>
+							<p>Введите данные которые вы указывали при регистрации</p>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__btns-wrap">
+								<a class="form-wrap__btn" href="#">Продолжить
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- #modal-add-ticket-->
+			<div class="modal-win modal-win--add-ticket" id="modal-add-ticket" style="display: none">
+				<div class="modal-win__form">
+					<h2>Добавить билет</h2>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Номер билета</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__btns-wrap">
+								<a class="form-wrap__btn" href="#">Продолжить
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+>>>>>>> baec53bb2769a29d9b33c6fc409b53efba2b99e1
 		<!-- end modals-->
 		<link href="libs/litepicker/css/litepicker.css" rel="stylesheet"/>
 		<script src="libs/jquery/jquery.min.js"></script>
@@ -345,8 +514,12 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
-		<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
-		<script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
+		<script src="libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js"> </script>
+		<script src="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js"> </script>
+		<script src="libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js"> </script>
+		<script src="libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js"> </script>
+		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/litepicker/nocss/litepicker.js"> </script>
 		<script src="js/common.js"></script>
 	</body>

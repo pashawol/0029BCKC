@@ -1,0 +1,56 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sActivities/_sActivities.pug
+//- include ../blocks/sPromo/_sPromo.pug
+//- include ../blocks/sMap/_sMap.pug
+//- include ../blocks/sStat/_sStat.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sBecome/_sBecome.pug
+//- include ../blocks/sHero/_sHero.pug
+include ../blocks/sCabinetActivities/_sCabinetActivities.pug
+//- include ../blocks/sCabinetProfile/_sCabinetProfile.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= 'cabinet'
+	- let  bg= null
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+pageHead-cabinet()
+		+e.slider--js.swiper
+			.swiper-wrapper
+				+e.slide.swiper-slide
+					+e.btn(href="#") Профиль
+				+e.slide.swiper-slide
+					+e.btn.active(href="#") Мои мероприятия
+				+e.slide.swiper-slide
+					+e.btn.notification(href="#") Электронный билет члена ВСКС
+	+sCabinetActivities()
+	//- +sCabinetProfile()
+	//- +sContact-region
+	//- +sNews-region()
+	//- +sEvents-region()
+	//- +sMap()
+	//- +sActivities()
+	//- +sPromo()
+	//- +sStat()
+	//- +sEvents()
+	//- +sEvents2()
+	//- +sBecome()
+	//- +sHero()
+	//- +sPartners()
+	//- +sForm()
+	//- +sContact()
+	+footer()

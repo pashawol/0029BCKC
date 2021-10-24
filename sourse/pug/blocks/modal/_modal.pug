@@ -40,4 +40,15 @@ mixin modal()
 						a(href="#") правилами пользования сайтом
 						span!=' и даёте согласие на '
 						a(href="#") обработку персональных данных.
+	+b.modal-win(id="modal-activation" style="display: none")
+		+e.logo-wrap
+			h2!=`Вход в&nbsp;личный кабинет`
+			+pic('logo-white.png','',0)
+		+e.form
+			+form-wrap()
+				p Создайте пароль
+				+input('******','password','Пароль')
+				+input('******','password','Подтвердите пароль')
+				+e.btn-activation(href="#") Зарегистрироваться
+	// #modal-activation
 	// end modals

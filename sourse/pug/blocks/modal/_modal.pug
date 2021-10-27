@@ -44,14 +44,19 @@ mixin modal()
 	// #modal-edit-profile
 	+b.modal-win--edit-profile(id="modal-edit-profile" style="display: none")
 		+e.head-wrap
-			h2 Редактирование профля
+			h2 Редактирование профиля
 		+form-wrap()
 			.row
 				.col-md-6.col-12
 					+input('Иванов','text','Фамилия')
 					+input('Иван','text','Имя')
+					+input('ДД.ММ.ГГГГ','text','Дата рождения').input-date-picker-single-js(autocomplete="off")
+					+input('Республика Удмуртия','select','Мой регион')
+					+input('Введите','text','Учебное заведение')
 					+input('Sample@sample.com','email','E-mail')
 					+input('+7(999)000-00-00','tel','Телефон')
+					+input('VK', 'select', 'Соц. сеть')
+					+input('http://','url','Ссылка на профиль')
 					+input('******','password','Пароль')
 				.col-md-6.col-12
 					+e.LABEL.input-title Фото профиля

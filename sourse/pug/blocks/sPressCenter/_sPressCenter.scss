@@ -301,12 +301,17 @@
 			.day-news__item {
 				height: auto;
 				.day-news__item-body {
+					display: flex;
+					flex-direction: column;
 					padding-left: 0;
 					@include media-breakpoint-down(sm) {
 						padding-left: 10px;
 					}
-					.date--publ {
-						justify-content: center;
+					// .date--publ {
+					// 	justify-content: center;
+					// }
+					.detailed {
+						align-self: flex-end;
 					}
 				}
 			}

@@ -33,7 +33,7 @@ mixin sCabinetForm(data)
 								.col-sm-6
 									+input('Введите','text','Отчество')
 								.col-sm-6
-									+input('ДД.ММ.ГГГГ','text','Дата рождения').input-date-picker-single-js(autocomplete="off")
+									+input('ДД.ММ.ГГГГ','text','Дата рождения').masked-date(autocomplete="off")
 								.col-12
 									+input('Введите','text','Учебное заведение')
 								.col-12
@@ -47,7 +47,7 @@ mixin sCabinetForm(data)
 								.col-sm-6
 									+input('__ __ ___ ___','text','Серия и номер паспорта')
 								.col-sm-6
-									+input('ДД.ММ.ГГГГ','text','Дата выдачи').input-date-picker-single-js(autocomplete="off")
+									+input('ДД.ММ.ГГГГ','text','Дата выдачи').masked-date(autocomplete="off")
 								.col
 									+input('Введите','text','Кем выдан')
 

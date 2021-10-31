@@ -23,17 +23,11 @@
 					<a class="menu-mobile__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
 					</a>
 					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О ВСКС</a>
-							<ul class="sub-menu">
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Об организации</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Документы</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-кит</a></li>
-							</ul>
-						</li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О ВСКС</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Набор на ЧС</a></li>
+						<li class="menu-item"><a class="closed" href="#" itemprop="url">Набор на ЧС</a></li>
 					</ul>
 					<a class="login-bl mb-4" href="#">
 						<div class="login-bl__img"><img loading="lazy" src="img/svg/user.svg" alt=""/>
@@ -68,17 +62,11 @@
 									</div>
 									<div class="col-auto d-none d-lg-block">
 										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О ВСКС</a>
-												<ul class="sub-menu">
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Об организации</a></li>
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Документы</a></li>
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-кит</a></li>
-												</ul>
-											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О ВСКС</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Набор на ЧС</a></li>
+											<li class="menu-item"><a class="closed" href="#" itemprop="url">Набор на ЧС</a></li>
 										</ul>
 									</div>
 									<div class="top-nav__col top-nav__col--profile col-auto ms-auto">
@@ -199,8 +187,8 @@
 					</div>
 					<div class="footer__soc-row row align-items-center gy-4">
 						<div class="col-sm">
-							<div class="footer__s-txt">© 2006-<span class="set-curr-year-js">2021</span>
-								Всероссийская Общественная Молодежная Организация
+							<div class="footer__s-txt">© 2001-<span class="set-curr-year-js">2021</span>
+								всероссийская общественная молодежная организация
 								«Всероссийский студенческий корпус спасателей»
 							</div>
 						</div>
@@ -235,7 +223,7 @@
 			</footer>
 		</div>
 		<!--  start modals-->
-		<div class="modal-win" id="modal-login" style="display: none">
+		<div class="modal-win modal-win--login" id="modal-login" style="display: none">
 			<div class="modal-win__logo-wrap">
 				<h2>Вход в&nbsp;личный кабинет</h2>
 				<!-- picture-->
@@ -249,7 +237,7 @@
 					<form>
 						<p>Введите данные которые вы указывали при регистрации</p>
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
@@ -259,8 +247,8 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__btns-wrap">
-							<div class="form-wrap__btn">Войти
-							</div><a href="#">Восстановить пароль</a>
+							<button class="form-wrap__btn">Войти
+							</button><a href="#">Восстановить пароль</a>
 						</div>
 						<div class="form-wrap__reg-link">Впервые на сайте? <a href="#">Зарегистрируйтесь!</a>
 						</div>
@@ -290,7 +278,7 @@
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
@@ -326,7 +314,6 @@
 				</form>
 			</div>
 		</div>
-<<<<<<< HEAD
 		<div class="modal-win" id="modal-activation" style="display: none">
 			<div class="modal-win__logo-wrap">
 				<h2>Вход в&nbsp;личный кабинет</h2>
@@ -357,7 +344,101 @@
 			</div>
 		</div>
 		<!-- #modal-activation-->
-=======
+		<!-- #modal-edit-profile-->
+		<div class="modal-win modal-win--edit-profile" id="modal-edit-profile" style="display: none">
+			<div class="modal-win__head-wrap">
+				<h2>Редактирование профиля</h2>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="row">
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иванов"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иван"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Дата рождения</span><input class="form-wrap__input form-control input-date-picker-single-js" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Мой регион</span>
+									<select class="form-wrap__input form-select" name="select">
+										<option value="Республика Удмуртия">Республика Удмуртия</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Учебное заведение</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7(999)000-00-00"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Соц. сеть</span>
+									<select class="form-wrap__input form-select" name="select">
+										<option value="VK">VK</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Ссылка на профиль</span><input class="form-wrap__input form-control" name="url" type="url" placeholder="http://"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-md-6 col-12">
+							<label class="form-wrap__input-title">Фото профиля
+							</label>
+							<div class="load-photo load-photo--edit">
+								<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-md-end">
+						<div class="col-md-6 col-12">
+							<a class="form-wrap__btn-reg" href="#">Сохранить
+							</a>
+						</div>
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__accept">Нажимая кнопку &laquo;Сохранить&raquo;, вы соглашаетесь с <a href="#">правилами пользования сайтом</a><span> и даёте согласие на </span><a href="#">обработку персональных данных.</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 		<!-- #modal-reg-event-->
 		<div class="modal-win modal-win--reg-event" id="modal-reg-event" style="display: none">
 			<div class="modal-win__heading">
@@ -391,7 +472,7 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__input-title">Дата рождения</span><input class="form-wrap__input form-control input-date-picker-js" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
+						<label><span class="form-wrap__input-title">Дата рождения</span><input class="form-wrap__input form-control input-date-picker-single-js" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
@@ -416,7 +497,7 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+						<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
@@ -425,8 +506,8 @@
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
-					<a class="form-wrap__btn-reg" href="#">Зарегистрироваться
-					</a>
+					<button class="form-wrap__btn-reg">Зарегистрироваться
+					</button>
 				</form>
 			</div>
 			<!-- #modal-restore-pass-->
@@ -444,20 +525,38 @@
 						<form>
 							<p>Введите данные которые вы указывали при регистрации</p>
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Sample@sample.com"/>
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__btns-wrap">
-								<div class="form-wrap__btn">Продолжить
-								</div>
+								<a class="form-wrap__btn" href="#">Продолжить
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- #modal-add-ticket-->
+			<div class="modal-win modal-win--add-ticket" id="modal-add-ticket" style="display: none">
+				<div class="modal-win__form">
+					<h2>Добавить билет</h2>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Номер билета</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__btns-wrap">
+								<a class="form-wrap__btn" href="#">Продолжить
+								</a>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
->>>>>>> baec53bb2769a29d9b33c6fc409b53efba2b99e1
 		<!-- end modals-->
 		<link href="libs/litepicker/css/litepicker.css" rel="stylesheet"/>
 		<script src="libs/jquery/jquery.min.js"></script>

@@ -1,0 +1,75 @@
+// start .sGallery
+.sGallery {
+	--sPT: 0;
+	// --sPB: ;
+	// --sTPB: ;
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(77)};
+
+	}
+	& > .row {
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(40)};
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		picture {
+			@include block(376, 279);
+			border-radius: $border-radius;
+			margin-bottom: rem(19.5);
+			overflow: hidden;
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+	&__date-row {
+		--bs-gutter-x: #{rem(30)};
+		color: rgba($color: #000000, $alpha: 0.5);
+		font-size: 13px;
+		line-height: 1;
+		margin-bottom: rem(14.5);
+	}
+	
+	&__quantity {
+		display: flex;
+		align-items: center;
+		.icon {
+			font-size: rem(16);
+		}
+		span {
+			display: inline-block;
+			margin-left: 1em;
+		}
+	}
+	&__title {
+		flex-grow: 1;
+		font-weight: bold;
+	}
+
+	&__btn {
+		@extend .btn, .btn-outline-primary;
+		margin-top: rem(55);
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sGallery

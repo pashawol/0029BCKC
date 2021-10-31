@@ -1,0 +1,27 @@
+mixin sGallery(data)
+	// start sGallery
+	+b.SECTION.sGallery.section#sGallery&attributes(attributes)
+		+b.section-title
+			h2 Галерея
+		.row
+			mixin item(i, t)
+				.col-sm-6
+					+e.item(href="#")
+						+pic(`sGallery-${i}.png`,'bg')
+						+e.date-row.row.align-items-center
+							.col-auto
+								+e.date 19.08.21
+							.col-auto
+								+e.quantity
+									+icon('gallery')
+									span 150
+						+e.title!= t
+			+item(1, `Название фотоальбома в&nbsp;несколько строк для&nbsp;наглядности отображения`)
+			+item(2, `Название фотоальбома в&nbsp;несколько строк для&nbsp;наглядности отображения`)
+			+item(3, `Название фотоальбома в&nbsp;несколько строк для&nbsp;наглядности отображения`)
+			+item(4, `Название фотоальбома в&nbsp;несколько строк для&nbsp;наглядности отображения`)
+			+item(1, `Название фотоальбома в&nbsp;несколько строк для&nbsp;наглядности отображения`)
+			+item(5, `Название фотоальбома в&nbsp;несколько строк для&nbsp;наглядности отображения`)
+		+e.btn Показать еще
+
+	// end sGallery

@@ -1,0 +1,93 @@
+// start .sEventRegister
+.sEventRegister {
+	--sPT: #{rem(28.5)};
+	--sPB: #{rem(55)};
+	// --sTPB: ;
+	margin-top: rem(28);
+	&__main-row {
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(40)};
+		}
+	}
+	&__aside {
+		position: relative;
+		color: $white;
+		padding-bottom: var(--sPT);
+		@include media-breakpoint-up(lg) {
+			padding-right: var(--bs-gutter-x);
+			padding-bottom: 0;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			height: calc(100% + var(--sPT));
+			width: 100vw;
+			top: calc(-1 * var(--sPT));
+			left: calc(-1 * (100vw - 100%) / 2);
+			background-color: $primary;
+			z-index: -1;
+			@include media-breakpoint-up(lg) {
+				height: calc(100% + var(--sPT) + var(--sPB));
+				width: 40vw;
+				left: auto;
+				right: calc(var(--bs-gutter-x) / 2);
+			}
+		}
+		.link-back {
+			color: $white;
+			padding: rem(5);
+			margin-left: rem(-5);
+			margin-top: rem(-5);
+			margin-bottom: rem(22);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(30);
+			}
+			&:hover {
+				color: shift-color($white, $link-shade-percentage);
+			}
+		}
+	}
+	h3 {
+		margin-bottom: rem(13);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(23);
+		}
+	}
+	.date-n-location {
+		@extend .row;
+		margin-bottom: 0;
+		--bs-gutter-y: #{rem(10)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: #{rem(16)};
+		}
+		p {
+			@extend .col-auto;
+			color: $white;
+			&.loc {
+				padding-left: calc(var(--bs-gutter-x) / 2 + #{rem(24)});
+				&::after {
+					left: calc(var(--bs-gutter-x) / 2);
+				}
+			}
+			&:first-of-type {
+				font-size: rem(16);
+				margin-right: 0;
+				color: rgba($color: $white, $alpha: 0.5);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sEventRegister

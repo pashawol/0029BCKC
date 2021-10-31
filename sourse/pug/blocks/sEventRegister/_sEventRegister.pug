@@ -1,0 +1,17 @@
+mixin sEventRegister(data)
+	// start sEventRegister
+	+b.SECTION.sEventRegister.section#sEventRegister&attributes(attributes)
+		.container
+			+e.main-row.row
+				+e.aside.col-lg-4.col-xl-3
+					+b.link-back(href="#" title="Назад")
+						+icon('arrow-left')
+					h3 Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;
+					.date-n-location
+						p 19&nbsp;августа&nbsp;&mdash; 21&nbsp;августа
+						p.loc Республика Удмуртия
+				.col
+					+b.section-title
+						h1 Регистрация на мероприятие
+
+	// end sEventRegister

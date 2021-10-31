@@ -4,6 +4,7 @@
 # 1. Мероприятия, стр. мероприятия, форма регистрации на мероприятие 
 1. <https://pashawol.github.io/0029BCKC/public/05-activities.html>
 1. <https://pashawol.github.io/0029BCKC/public/06-activity-details.html>
+1. <https://pashawol.github.io/0029BCKC/public/06-activity-register.html>
 1. <https://pashawol.github.io/0029BCKC/public/00-modal.html>
 # 2. Контакты, Стр. регион. представительства
 1. <https://pashawol.github.io/0029BCKC/public/07-contacts.html>

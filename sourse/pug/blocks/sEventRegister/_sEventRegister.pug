@@ -13,5 +13,135 @@ mixin sEventRegister(data)
 				.col
 					+b.section-title
 						h1 Регистрация на мероприятие
+					+form-wrap
+						+e.item
+							h3 Информация для регистрации
+							.row
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Фамилия')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Имя')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Отчество')
+								.col-sm-6.col-xl-4
+									+input('ДД.ММ.ГГГГ','text','Дата рождения').masked-date(autocomplete="off")
+								.col-sm-6.col-xl-4
+									+input('Введите','text','ЗАГЛУШКА')
+								.col-sm-6.col-xl-4.d-none.d-xl-block
+								.col-sm-6.col-xl-4
+									+input('Республика Удмуртия','select','Регион (фактическое нахождение)')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Населенный пункт')
+								.col-sm-6.col-xl-4.d-none.d-xl-block
+								.col-sm-6.col-xl-4
+									+input('+7 ___ ___ __ __','tel','Телефон')
+								.col-sm-6.col-xl-4
+									+input('__ __ ___ ___','email','E-mail')
+
+						+e.item--sm
+							h3 Личные данные
+							.row
+								.col-sm-6.col-xl-4
+									+input('Высшее','select','Образование')
+								.col-xl-8
+									+input('Введите','text','Учебное заведение')
+								.col-12
+									+input('Введите','text','ЗАГЛУШКА')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Номер членского билета')
+						+e.item--sm
+							h4 Паспорт
+							.row
+								.col-sm-6.col-xl-4
+									+input('__ __ ___ ___','text','Серия и номер паспорта')
+								.col-xl-8
+									+input('Введите','text','Кем выдан')
+								.col-sm-6.col-xl-4
+									+input('ДД.ММ.ГГГГ','text','Дата выдачи').masked-date(autocomplete="off")
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Код подразделения')
+								.col-xl-4
+									+input('Введите','text','Место рождения')
+						+e.item
+							h4 Адрес постоянной регистрации
+							.row
+								.col-sm-6.col-xl-4
+									+input('Республика Удмуртия','select','Регион (фактическое нахождение)')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Населенный пункт')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Улица, дом, корпус')
+								.col-sm-6.col-xl-4
+									+input('___ - ___ - ___ - __','text','Снилс')
+								//- .col-sm-6
+								//- 	+input('__ __ ___ ___','text','Серия и номер паспорта')
+								//- .col-sm-6
+								//- 	+input('ДД.ММ.ГГГГ','text','Дата выдачи').masked-date(autocomplete="off")
+								//- .col
+								//- 	+input('Введите','text','Кем выдан')
+
+						+e.item
+							h3 Информация, необходимая для участия в&nbsp;ликвидации последствий&nbsp;ЧС
+							.row
+								.col-12
+									+input('ЗАГЛУШКА','text','Проходили ли Вы курсы по оказанию первой помощи?')
+								.col-xl-4
+									+input('Введите','text','В какой организации')
+								.col-xl-8
+									+input('ЗАГЛУШКА','text','Прикрепите файл подтверждающий участие')
+							hr
+							.row
+								.col-12
+									+input('ЗАГЛУШКА','text','Являетесь ли Вы аттестованным спасателем?')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Личный номер')
+								.col-xl-8
+									+input('Введите','text','Виды работ')
+							hr
+							.row
+								.col-12
+									+input('Введите','text','Имеется ли у Вас водительское удостоверение?')
+							hr
+							.row
+								.col-12
+									+input('Введите','text','Вид ЧС')
+								.col-sm-6.col-xl-4
+									+input('Введите','select','Регион')
+								.col-sm-6.col-xl-4
+									+input('Введите','select','Год участия')
+								.col-sm-6.col-xl-4
+									+input('Введите','select','Функционал')
+							+e.BUTTON.btn-add Добавить еще одно мероприятие
+							hr
+							.row
+								.col-12
+									+input('ЗАГЛУШКА','text','Проходили ли вы иные курсы по спасательной тематике?')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Вид курсов')
+								.col-sm-6.col-xl-4
+										+input('ДД.ММ.ГГГГ','text','Дата прохождения').masked-date(autocomplete="off")
+							+e.BUTTON.btn-add Добавить еще
+							hr
+							.row
+								.col-md-6.col-xl-4
+									+e.BUTTON.btn Зарегистрироваться
+						//- +e.item
+						//- 	h3 Ссылки на аккаунты в социальных сетях
+						//- 	.row
+						//- 		// .row.mt-3.mt-sm-0 классы для строк 2-й и последующих соц. сетей
+						//- 		.col-sm-6
+						//- 			+input('VK', 'select', 'Соц. сеть')
+						//- 		.col-sm-6
+						//- 			+input('http://','url','Ссылка на профиль')
+						//- 	+e.BUTTON.btn-soc + Добавить
+						//- +e.btn-row.row
+						//- 	.col-sm-6
+						//- 		+e.BUTTON.btn Отправить
+						//- 	.col-auto.col-sm-6
+						//- 		+e.polite 
+						//- 			+in-c()(checked)
+						//- 				span Я согласен с условиями 
+						//- 				a(href="#") Политики обработки персональных данных
+
 
 	// end sEventRegister

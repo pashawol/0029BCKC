@@ -1,12 +1,26 @@
 // start .sEventRegister
 .sEventRegister {
-	--sPT: #{rem(28.5)};
+	--sPT: #{rem(27)};
 	--sPB: #{rem(55)};
 	// --sTPB: ;
-	margin-top: rem(28);
+	margin-top: rem(26);
+	.section-title {
+		h1 {
+			font-weight: 900;
+			line-height: calc(44 / 40);
+		}
+	}
 	&__main-row {
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: var(--sTPB);
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(30)};
+		}
 		@include media-breakpoint-up(xxl) {
 			--bs-gutter-x: #{rem(40)};
+		}
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(24)};
 		}
 	}
 	&__aside {
@@ -46,36 +60,165 @@
 				color: shift-color($white, $link-shade-percentage);
 			}
 		}
-	}
-	h3 {
-		margin-bottom: rem(13);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(23);
+		h3 {
+			margin-bottom: rem(13);
+			line-height: calc(28 / 24);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(23);
+			}
+			@include media-breakpoint-down(lg) {
+				font-size: $h2-font-size;
+			}
 		}
-	}
-	.date-n-location {
-		@extend .row;
-		margin-bottom: 0;
-		--bs-gutter-y: #{rem(10)};
-		@include media-breakpoint-up(lg) {
-			--bs-gutter-y: #{rem(16)};
-		}
-		p {
-			@extend .col-auto;
-			color: $white;
-			&.loc {
-				padding-left: calc(var(--bs-gutter-x) / 2 + #{rem(24)});
-				&::after {
-					left: calc(var(--bs-gutter-x) / 2);
+		.date-n-location {
+			@extend .row;
+			margin-bottom: 0;
+			--bs-gutter-y: #{rem(10)};
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-y: #{rem(16)};
+			}
+			p {
+				@extend .col-auto;
+				color: $white;
+				&.loc {
+					padding-left: calc(var(--bs-gutter-x) / 2 + #{rem(24)});
+					&::after {
+						left: calc(var(--bs-gutter-x) / 2);
+					}
+				}
+				&:first-of-type {
+					font-size: rem(16);
+					margin-right: 0;
+					color: rgba($color: $white, $alpha: 0.5);
 				}
 			}
-			&:first-of-type {
-				font-size: rem(16);
-				margin-right: 0;
-				color: rgba($color: $white, $alpha: 0.5);
+		}
+	}
+
+	.form-wrap {
+		&__input-title {
+			display: block;
+			font-size: 13px;
+			margin-bottom: 5px;
+		}
+
+		.row {
+			--bs-gutter-x: #{rem(24)};
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(30)};
+			}
+			@include media-breakpoint-up(xxl) {
+				--bs-gutter-x: #{rem(40)};
+			}
+			@include media-breakpoint-down(sm) {
+				--bs-gutter-x: #{rem(24)};
+			}
+		}
+		&__item {
+			margin-bottom: rem(35);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(40);
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			h3 {
+				color: $primary;
+				margin-bottom: rem(20);
+				@include media-breakpoint-up(lg) {
+					margin-bottom: rem(24);
+				}
+			}
+			h4 {
+				color: rgba($color: #000000, $alpha: 0.5);
+				margin-bottom: rem(18);
+			}
+			.row {
+				--bs-gutter-y: #{rem(16)};
+				& + .row {
+					margin-top: 0;
+				}
+				// &:not(:first-of-type) {
+				// 	margin-top: 0;
+				// }
+			}
+			hr {
+				color: #a1d8f6;
+				opacity: 1;
+				margin: rem(32) 0;
+			}
+			&--sm {
+				margin-bottom: rem(20);
+				@include media-breakpoint-up(lg) {
+					margin-bottom: rem(25);
+				}
+			}
+		}
+		&__btn {
+			@extend .btn, .btn-warning;
+			display: block;
+			width: 100%;
+			padding: 7px 15px;
+			@include media-breakpoint-down(md) {
+				max-width: 272px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 0;
+			}
+		}
+		&__btn-add {
+			@include mt;
+			display: inline-flex;
+			align-items: center;
+			position: relative;
+			border: none;
+			outline: none;
+			padding: 0;
+			background-color: transparent;
+			color: $primary;
+			margin-top: rem(25);
+			font-size: rem(17);
+			// height: rem(24);
+			line-height: calc(24 / 17);
+			padding-left: 2em;
+			text-align: left;
+			@include media-breakpoint-up(lg) {
+				margin-top: rem(32);
+			}
+			// .icon {
+			// 	font-size: rem(17);
+			// 	fill: none;
+			// 	stroke: currentColor;
+			// }
+			// span {
+			// 	display: inline-block;
+			// 	margin-left: 1em;
+			// }
+			&::after {
+				content: "";
+				@include a-cent(y);
+				width: rem(17);
+				height: 2px;
+				left: 0;
+				background-color: currentColor;
+			}
+			&::before {
+				content: "";
+				@include a-cent(y);
+				width: rem(17);
+				height: 2px;
+				left: 0;
+				background-color: currentColor;
+				transform: rotate(90deg);
+			}
+			&:hover,
+			&:focus,
+			&:active {
+				color: $link-hover-color;
 			}
 		}
 	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

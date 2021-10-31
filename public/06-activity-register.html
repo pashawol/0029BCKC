@@ -14,7 +14,7 @@
 		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
-	<body>
+	<body data-bg="06-activity-register.png">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -115,6 +115,354 @@
 						<div class="col">
 							<div class="section-title">
 								<h1>Регистрация на мероприятие</h1>
+							</div>
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__item">
+										<h3>Информация для регистрации</h3>
+										<div class="row">
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Отчество</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Дата рождения</span><input class="form-wrap__input form-control masked-date" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">ЗАГЛУШКА</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4 d-none d-xl-block"></div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Регион (фактическое нахождение)</span>
+														<select class="form-wrap__input form-select" name="select">
+															<option value="Республика Удмуртия">Республика Удмуртия</option>
+															<option value=" placeholder 1">placeholder 1</option>
+															<option value=" placeholder 2">placeholder 2</option>
+															<option value=" placeholder 3">placeholder 3</option>
+															<option value=" placeholder 4">placeholder 4</option>
+														</select>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Населенный пункт</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4 d-none d-xl-block"></div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 ___ ___ __ __"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="__ __ ___ ___"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__item form-wrap__item--sm">
+										<h3>Личные данные</h3>
+										<div class="row">
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Образование</span>
+														<select class="form-wrap__input form-select" name="select">
+															<option value="Высшее">Высшее</option>
+															<option value=" placeholder 1">placeholder 1</option>
+															<option value=" placeholder 2">placeholder 2</option>
+															<option value=" placeholder 3">placeholder 3</option>
+															<option value=" placeholder 4">placeholder 4</option>
+														</select>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-xl-8">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Учебное заведение</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">ЗАГЛУШКА</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Номер членского билета</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__item form-wrap__item--sm">
+										<h4>Паспорт</h4>
+										<div class="row">
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Серия и номер паспорта</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="__ __ ___ ___"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-xl-8">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Кем выдан</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Дата выдачи</span><input class="form-wrap__input form-control masked-date" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Код подразделения</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Место рождения</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__item">
+										<h4>Адрес постоянной регистрации</h4>
+										<div class="row">
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Регион (фактическое нахождение)</span>
+														<select class="form-wrap__input form-select" name="select">
+															<option value="Республика Удмуртия">Республика Удмуртия</option>
+															<option value=" placeholder 1">placeholder 1</option>
+															<option value=" placeholder 2">placeholder 2</option>
+															<option value=" placeholder 3">placeholder 3</option>
+															<option value=" placeholder 4">placeholder 4</option>
+														</select>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Населенный пункт</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Улица, дом, корпус</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Снилс</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="___ - ___ - ___ - __"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__item">
+										<h3>Информация, необходимая для участия в&nbsp;ликвидации последствий&nbsp;ЧС</h3>
+										<div class="row">
+											<div class="col-12">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Проходили ли Вы курсы по оказанию первой помощи?</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="ЗАГЛУШКА"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">В какой организации</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-xl-8">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Прикрепите файл подтверждающий участие</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="ЗАГЛУШКА"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+										<hr/>
+										<div class="row">
+											<div class="col-12">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Являетесь ли Вы аттестованным спасателем?</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="ЗАГЛУШКА"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Личный номер</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-xl-8">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Виды работ</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+										<hr/>
+										<div class="row">
+											<div class="col-12">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Имеется ли у Вас водительское удостоверение?</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+										<hr/>
+										<div class="row">
+											<div class="col-12">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Вид ЧС</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Регион</span>
+														<select class="form-wrap__input form-select" name="select">
+															<option value="Введите">Введите</option>
+															<option value=" placeholder 1">placeholder 1</option>
+															<option value=" placeholder 2">placeholder 2</option>
+															<option value=" placeholder 3">placeholder 3</option>
+															<option value=" placeholder 4">placeholder 4</option>
+														</select>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Год участия</span>
+														<select class="form-wrap__input form-select" name="select">
+															<option value="Введите">Введите</option>
+															<option value=" placeholder 1">placeholder 1</option>
+															<option value=" placeholder 2">placeholder 2</option>
+															<option value=" placeholder 3">placeholder 3</option>
+															<option value=" placeholder 4">placeholder 4</option>
+														</select>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Функционал</span>
+														<select class="form-wrap__input form-select" name="select">
+															<option value="Введите">Введите</option>
+															<option value=" placeholder 1">placeholder 1</option>
+															<option value=" placeholder 2">placeholder 2</option>
+															<option value=" placeholder 3">placeholder 3</option>
+															<option value=" placeholder 4">placeholder 4</option>
+														</select>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+										<button class="form-wrap__btn-add">Добавить еще одно мероприятие
+										</button>
+										<hr/>
+										<div class="row">
+											<div class="col-12">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Проходили ли вы иные курсы по спасательной тематике?</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="ЗАГЛУШКА"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Вид курсов</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6 col-xl-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Дата прохождения</span><input class="form-wrap__input form-control masked-date" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+										<button class="form-wrap__btn-add">Добавить еще
+										</button>
+										<hr/>
+										<div class="row">
+											<div class="col-md-6 col-xl-4">
+												<button class="form-wrap__btn">Зарегистрироваться
+												</button>
+											</div>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>

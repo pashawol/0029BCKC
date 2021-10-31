@@ -29,7 +29,7 @@
 		color: rgba($color: #000000, $alpha: 0.5);
 		font-size: 13px;
 		line-height: 1;
-		margin-bottom: calc(var(--bs-gutter-x));
+		margin-bottom: calc(var(--bs-gutter-x) * 0.7);
 		@include media-breakpoint-up(lg) {
 		margin-bottom: calc(var(--bs-gutter-x) * 1.33);
 		}

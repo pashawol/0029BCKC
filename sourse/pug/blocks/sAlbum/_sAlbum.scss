@@ -1,8 +1,8 @@
 // start .sAlbum
 .sAlbum {
 	// --sPT: ;
-	--sPB: #{rem(45)};
 	--sTPB: #{rem(28)};
+	--sPB: #{rem(45)};
 	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(65)};
 	}

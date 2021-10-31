@@ -1,8 +1,8 @@
 // start .sGallery
 .sGallery {
 	--sPT: 0;
-	// --sPB: ;
 	// --sTPB: ;
+	--sPB: #{rem(45)};
 	@include media-breakpoint-up(lg){
 		--sPB: #{rem(77)};
 
@@ -57,7 +57,10 @@
 
 	&__btn {
 		@extend .btn, .btn-outline-primary;
-		margin-top: rem(55);
+		margin-top: rem(30);
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(55);
+		}
 	}
 	@include media-breakpoint-up(xl) {
 	}

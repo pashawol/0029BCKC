@@ -1,0 +1,42 @@
+mixin sAlbum(data)
+	// start sAlbum
+	+b.SECTION.sAlbum.section#sAlbum&attributes(attributes)
+		.container
+			+b.link-back(href="#" title="Назад")
+				+icon('arrow-left')
+			+b.section-title
+				h1 Название фотоальбома в несколько строк для наглядности отображения
+			+e.date-row.row.align-items-center
+				.col-auto
+					+e.date 19 августа 2021 в 21:00
+				.col-auto
+					+e.quantity
+						+icon('gallery')
+						span 150
+			+e.main-row.row
+				mixin item(i)
+					.col-sm-6.col-lg-4.col-xl-3
+						+e.A.item(data-fancybox="gallery-1" data-type="image" href=`img/@2x/sAlbum-${i}.png`)
+							+pic(`sAlbum-${i}.png`,'bg')
+				+item(1)
+				+item(2)
+				+item(3)
+				+item(4)
+
+				+item(1)
+				+item(3)
+				+item(4)
+				+item(2)
+
+				+item(3)
+				+item(1)
+				+item(2)
+				+item(4)
+
+				+item(1)
+				+item(4)
+				+item(2)
+				+item(3)
+				
+
+	// end sAlbum

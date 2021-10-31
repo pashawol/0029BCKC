@@ -32,6 +32,7 @@
 	}
 	&__date-row {
 		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: calc(var(--bs-gutter-x) / 2);
 		color: rgba($color: #000000, $alpha: 0.5);
 		font-size: 13px;
 		line-height: 1;

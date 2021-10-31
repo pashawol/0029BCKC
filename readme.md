@@ -41,4 +41,5 @@
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-heroes.html>
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-smi.html>
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-gallery.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-album.html>
 1. <https://pashawol.github.io/0029BCKC/public/04-detailed-news.html>

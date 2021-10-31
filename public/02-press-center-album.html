@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Галерея</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
+	</head>
+	<body data-bg="02-press-center-album.png">
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<a class="menu-mobile__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
+					</a>
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О ВСКС</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+						<li class="menu-item"><a class="closed" href="#" itemprop="url">Набор на ЧС</a></li>
+					</ul>
+					<a class="login-bl mb-4" href="#">
+						<div class="login-bl__img"><img loading="lazy" src="img/svg/user.svg" alt=""/>
+						</div>
+						<div class="login-bl__txt">Анастасия В.
+						</div>
+					</a>
+					<a class="exit-btn" href="#">
+						<svg class="icon icon-exit ">
+							<use xlink:href="img/svg/sprite.svg#exit"></use>
+						</svg>
+						<p>Выйти</p>
+					</a>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header header--js" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="top-nav__main-row row align-items-center">
+							<div class="col-lg-auto d-none d-lg-block">
+								<a class="top-nav__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
+								</a>
+							</div>
+							<div class="top-nav__col top-nav__col--content col">
+								<div class="top-nav__sub-row row align-items-center">
+									<div class="col col-sm-auto d-lg-none">
+										<a class="top-nav__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
+										</a>
+									</div>
+									<div class="col-auto d-none d-lg-block">
+										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О ВСКС</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+											<li class="menu-item"><a class="closed" href="#" itemprop="url">Набор на ЧС</a></li>
+										</ul>
+									</div>
+									<div class="top-nav__col top-nav__col--profile col-auto ms-auto">
+										<a class="login-bl" href="#">
+											<div class="login-bl__img"><img loading="lazy" src="img/svg/user.svg" alt=""/>
+											</div>
+											<div class="login-bl__txt d-none d-sm-inline">Анастасия В.
+											</div>
+										</a>
+									</div>
+									<div class="col-auto">
+										<a class="exit-btn" href="#">
+											<svg class="icon icon-exit ">
+												<use xlink:href="img/svg/sprite.svg#exit"></use>
+											</svg>
+										</a>
+									</div>
+									<div class="col-auto d-lg-none">
+										<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<!-- start sAlbum-->
+			<section class="sAlbum section" id="sAlbum">
+				<div class="container">
+					<a class="link-back" href="#" title="Назад">
+						<svg class="icon icon-arrow-left ">
+							<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+						</svg>
+					</a>
+					<div class="section-title">
+						<h1>Название фотоальбома в несколько строк для наглядности отображения</h1>
+					</div>
+					<div class="sAlbum__date-row row align-items-center">
+						<div class="col-auto">
+							<div class="sAlbum__date">19 августа 2021 в 21:00
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="sAlbum__quantity">
+								<svg class="icon icon-gallery ">
+									<use xlink:href="img/svg/sprite.svg#gallery"></use>
+								</svg><span>150</span>
+							</div>
+						</div>
+					</div>
+					<div class="sAlbum__main-row row">
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-1.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-1.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-1.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-1.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-1.png"/><img class="object-fit-js" src="img/@2x/sAlbum-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-2.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-2.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-2.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-2.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-2.png"/><img class="object-fit-js" src="img/@2x/sAlbum-2.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-3.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-3.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-3.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-3.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-3.png"/><img class="object-fit-js" src="img/@2x/sAlbum-3.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-4.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-4.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-4.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-4.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-4.png"/><img class="object-fit-js" src="img/@2x/sAlbum-4.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-1.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-1.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-1.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-1.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-1.png"/><img class="object-fit-js" src="img/@2x/sAlbum-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-3.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-3.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-3.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-3.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-3.png"/><img class="object-fit-js" src="img/@2x/sAlbum-3.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-4.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-4.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-4.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-4.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-4.png"/><img class="object-fit-js" src="img/@2x/sAlbum-4.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-2.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-2.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-2.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-2.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-2.png"/><img class="object-fit-js" src="img/@2x/sAlbum-2.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-3.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-3.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-3.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-3.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-3.png"/><img class="object-fit-js" src="img/@2x/sAlbum-3.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-1.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-1.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-1.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-1.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-1.png"/><img class="object-fit-js" src="img/@2x/sAlbum-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-2.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-2.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-2.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-2.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-2.png"/><img class="object-fit-js" src="img/@2x/sAlbum-2.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-4.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-4.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-4.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-4.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-4.png"/><img class="object-fit-js" src="img/@2x/sAlbum-4.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-1.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-1.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-1.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-1.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-1.png"/><img class="object-fit-js" src="img/@2x/sAlbum-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-4.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-4.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-4.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-4.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-4.png"/><img class="object-fit-js" src="img/@2x/sAlbum-4.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-2.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-2.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-2.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-2.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-2.png"/><img class="object-fit-js" src="img/@2x/sAlbum-2.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-4 col-xl-3">
+							<a class="sAlbum__item" data-fancybox="gallery-1" data-type="image" href="img/@2x/sAlbum-3.png">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/sAlbum-3.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sAlbum-3.webp"/>
+									<source type="image/png" srcset="img/@2x/sAlbum-3.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sAlbum-3.png"/><img class="object-fit-js" src="img/@2x/sAlbum-3.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sAlbum-->
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col-6 col-md-3 col-xl-2">
+							<a class="footer__menu-title" href="#">О ВСКС
+							</a>
+							<div class="footer__menu">
+								<ul>
+									<li><a href="#">Документы</a></li>
+									<li><a href="#">Пресс-кит</a></li>
+									<li><a href="#">Об организации</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-6 col-md-3 col-xl-2">
+							<a class="footer__menu-title" href="#">Пресс-центр
+							</a>
+							<div class="footer__menu">
+								<ul>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">Герои</a></li>
+									<li><a href="#">Региональные новости</a></li>
+									<li><a href="#">СМИ о нас</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col text-md-end">
+							<a class="footer__tel" href="tel:+74953690573">+7(495) 369-05-73
+							</a>
+							<div>
+								<a class="footer__mail" href="mailto:info@911mail.ru">info@911mail.ru
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__soc-row row align-items-center gy-4">
+						<div class="col-sm">
+							<div class="footer__s-txt">© 2001-<span class="set-curr-year-js">2021</span>
+								всероссийская общественная молодежная организация
+								«Всероссийский студенческий корпус спасателей»
+							</div>
+						</div>
+						<div class="col-sm-auto">
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-vk.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-in.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-yt.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-fb.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-tw.svg" alt=""/>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bot-box">
+						<div class="footer__b-row row">
+							<div class="col-lg">
+								<div class="footer__b-txt">Все права на любые материалы, опубликованные на сайте, защищены в соответствии с российским и международным законодательством об авторском праве и смежных правах.При любом использовании текстовых, аудио-, фото- и видеоматериалов ссылка на www.vsks.ru обязательна.
+								</div>
+							</div>
+							<div class="col-lg-auto">
+								<a class="footer__policy" href="#" target="_blank">Политика конфидецнальности
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win modal-win--login" id="modal-login" style="display: none">
+			<div class="modal-win__logo-wrap">
+				<h2>Вход в&nbsp;личный кабинет</h2>
+				<!-- picture-->
+				<picture> 
+					<source type="image/webp" srcset="img/@2x/webp/logo-white.webp"/><img src="img/@2x/logo-white.png" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+			</div>
+			<div class="modal-win__form">
+				<div class="form-wrap">
+					<form>
+						<p>Введите данные которые вы указывали при регистрации</p>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__btns-wrap">
+							<button class="form-wrap__btn">Войти
+							</button><a href="#">Восстановить пароль</a>
+						</div>
+						<div class="form-wrap__reg-link">Впервые на сайте? <a href="#">Зарегистрируйтесь!</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-login-->
+		<div class="modal-win modal-win--reg" id="modal-reg" style="display: none">
+			<div class="modal-win__head-wrap">
+				<h2>Регистрация</h2>
+				<div class="modal-win__head-login">Есть аккаунт? <a href="#">Войти</a>
+				</div>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="row">
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иванов"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иван"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7(999)000-00-00"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-md-6 col-12">
+							<label class="form-wrap__input-title">Фото профиля
+							</label>
+							<div class="load-photo">
+								<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-md-end">
+						<div class="col-md-6 col-12">
+							<a class="form-wrap__btn-reg" href="#">Зарегистрироваться
+							</a>
+						</div>
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__accept">Регистрируясь, вы соглашаетесь с <a href="#">правилами пользования сайтом</a><span> и даёте согласие на </span><a href="#">обработку персональных данных.</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-activation" style="display: none">
+			<div class="modal-win__logo-wrap">
+				<h2>Вход в&nbsp;личный кабинет</h2>
+				<!-- picture-->
+				<picture> 
+					<source type="image/webp" srcset="img/@2x/webp/logo-white.webp"/><img src="img/@2x/logo-white.png" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+			</div>
+			<div class="modal-win__form">
+				<div class="form-wrap">
+					<form>
+						<p>Создайте пароль</p>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Подтвердите пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<a class="form-wrap__btn-activation" href="#">Зарегистрироваться
+						</a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-activation-->
+		<!-- #modal-edit-profile-->
+		<div class="modal-win modal-win--edit-profile" id="modal-edit-profile" style="display: none">
+			<div class="modal-win__head-wrap">
+				<h2>Редактирование профиля</h2>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="row">
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иванов"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иван"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Дата рождения</span><input class="form-wrap__input form-control input-date-picker-single-js" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Мой регион</span>
+									<select class="form-wrap__input form-select" name="select">
+										<option value="Республика Удмуртия">Республика Удмуртия</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Учебное заведение</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7(999)000-00-00"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Соц. сеть</span>
+									<select class="form-wrap__input form-select" name="select">
+										<option value="VK">VK</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Ссылка на профиль</span><input class="form-wrap__input form-control" name="url" type="url" placeholder="http://"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-md-6 col-12">
+							<label class="form-wrap__input-title">Фото профиля
+							</label>
+							<div class="load-photo load-photo--edit">
+								<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-md-end">
+						<div class="col-md-6 col-12">
+							<a class="form-wrap__btn-reg" href="#">Сохранить
+							</a>
+						</div>
+						<div class="col-md-6 col-12">
+							<div class="form-wrap__accept">Нажимая кнопку &laquo;Сохранить&raquo;, вы соглашаетесь с <a href="#">правилами пользования сайтом</a><span> и даёте согласие на </span><a href="#">обработку персональных данных.</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-reg-event-->
+		<div class="modal-win modal-win--reg-event" id="modal-reg-event" style="display: none">
+			<div class="modal-win__heading">
+				<h3>Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;</h3>
+				<div class="date-n-location">
+					<p>19&nbsp;августа&nbsp;&mdash; 21&nbsp;августа</p>
+					<p class="loc">Республика Удмуртия</p>
+				</div>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<h2>Регистрация на&nbsp;мероприятие</h2>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Номер членского билета ВСКС</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="45456489749"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Викторовский"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Олег"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Отчество</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Викторович"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Дата рождения</span><input class="form-wrap__input form-control input-date-picker-single-js" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Серия и номер паспорта</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="__ __ ___ ___"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Регион</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Город</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+_(___)___-__-__"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Учебное заведение</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn-reg">Зарегистрироваться
+					</button>
+				</form>
+			</div>
+			<!-- #modal-restore-pass-->
+			<div class="modal-win modal-win--restore-pass" id="modal-restore-pass" style="display: none">
+				<div class="modal-win__logo-wrap">
+					<h2>Восстановить пароль</h2>
+					<!-- picture-->
+					<picture> 
+						<source type="image/webp" srcset="img/@2x/webp/logo-white.webp"/><img src="img/@2x/logo-white.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+				</div>
+				<div class="modal-win__form">
+					<div class="form-wrap">
+						<form>
+							<p>Введите данные которые вы указывали при регистрации</p>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__btns-wrap">
+								<a class="form-wrap__btn" href="#">Продолжить
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- #modal-add-ticket-->
+			<div class="modal-win modal-win--add-ticket" id="modal-add-ticket" style="display: none">
+				<div class="modal-win__form">
+					<h2>Добавить билет</h2>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Номер билета</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__btns-wrap">
+								<a class="form-wrap__btn" href="#">Продолжить
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end modals-->
+		<link href="libs/litepicker/css/litepicker.css" rel="stylesheet"/>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/jquery-asPieProgress/jquery-asPieProgress.min.js"></script>
+		<script src="js/jquery.spincrement.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
+		<script src="libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js"> </script>
+		<script src="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js"> </script>
+		<script src="libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js"> </script>
+		<script src="libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js"> </script>
+		<script src="libs/filepond/filepond.min.js"> </script>
+		<script src="libs/litepicker/nocss/litepicker.js"> </script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

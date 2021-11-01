@@ -26,7 +26,9 @@ mixin sEventRegister(data)
 								.col-sm-6.col-xl-4
 									+input('ДД.ММ.ГГГГ','text','Дата рождения').masked-date(autocomplete="off")
 								.col-sm-6.col-xl-4
-									+input('Введите','text','ЗАГЛУШКА')
+									+check-block(`Пол`)
+										+in-c('radio','Мужской', `1`)(checked)
+										+in-c('radio','Женский', `1`)
 								.col-sm-6.col-xl-4.d-none.d-xl-block
 								.col-sm-6.col-xl-4
 									+input('Республика Удмуртия','select','Регион (фактическое нахождение)')
@@ -46,7 +48,10 @@ mixin sEventRegister(data)
 								.col-xl-8
 									+input('Введите','text','Учебное заведение')
 								.col-12
-									+input('Введите','text','ЗАГЛУШКА')
+									+check-block(`Волонтерская организация`)
+										+in-c('radio','Состою в ВСКС', `2`)(checked)
+										+in-c('radio','Не состою', `2`)
+										+in-c('radio','Иное', `2`)
 								.col-sm-6.col-xl-4
 									+input('Введите','text','Номер членского билета')
 						+e.item--sm
@@ -73,18 +78,14 @@ mixin sEventRegister(data)
 									+input('Введите','text','Улица, дом, корпус')
 								.col-sm-6.col-xl-4
 									+input('___ - ___ - ___ - __','text','Снилс')
-								//- .col-sm-6
-								//- 	+input('__ __ ___ ___','text','Серия и номер паспорта')
-								//- .col-sm-6
-								//- 	+input('ДД.ММ.ГГГГ','text','Дата выдачи').masked-date(autocomplete="off")
-								//- .col
-								//- 	+input('Введите','text','Кем выдан')
 
 						+e.item
 							h3 Информация, необходимая для участия в&nbsp;ликвидации последствий&nbsp;ЧС
 							.row
 								.col-12
-									+input('ЗАГЛУШКА','text','Проходили ли Вы курсы по оказанию первой помощи?')
+									+check-block(`Проходили ли Вы курсы по оказанию первой помощи?`)
+										+in-c('radio','Да')(checked)
+										+in-c('radio','Нет')
 								.col-xl-4
 									+input('Введите','text','В какой организации')
 								.col-xl-8
@@ -92,7 +93,13 @@ mixin sEventRegister(data)
 							hr
 							.row
 								.col-12
-									+input('ЗАГЛУШКА','text','Являетесь ли Вы аттестованным спасателем?')
+									+check-block(`Являетесь ли Вы аттестованным спасателем?`)
+										+in-c('radio','Нет', `3`)(checked)
+										+in-c('radio','БК', `3`)
+										+in-c('radio','3кл', `3`)
+										+in-c('radio','2кл', `3`)
+										+in-c('radio','1кл', `3`)
+										+in-c('radio','МК', `3`)
 								.col-sm-6.col-xl-4
 									+input('Введите','text','Личный номер')
 								.col-xl-8
@@ -100,9 +107,19 @@ mixin sEventRegister(data)
 							hr
 							.row
 								.col-12
-									+input('Введите','text','Имеется ли у Вас водительское удостоверение?')
+									+check-block(`Имеется ли у Вас водительское удостоверение?`)
+										+in-c('checkbox','Нет', `4`)(checked)
+										+in-c('checkbox','БК', `4`)
+										+in-c('checkbox','3кл', `4`)
+										+in-c('checkbox','2кл', `4`)
+										+in-c('checkbox','1кл', `4`)
+										+in-c('checkbox','МК', `4`)
 							hr
 							.row
+								.col-12
+									+check-block(`Участвовали ли Вы ранее в ликвидации ЧС или их последствий?`)
+										+in-c('radio','Да', `5`)(checked)
+										+in-c('radio','Нет', `5`)
 								.col-12
 									+input('Введите','text','Вид ЧС')
 								.col-sm-6.col-xl-4
@@ -115,7 +132,9 @@ mixin sEventRegister(data)
 							hr
 							.row
 								.col-12
-									+input('ЗАГЛУШКА','text','Проходили ли вы иные курсы по спасательной тематике?')
+									+check-block(`Проходили ли вы иные курсы по спасательной тематике?`)
+										+in-c('radio','Да', `6`)(checked)
+										+in-c('radio','Нет', `6`)
 								.col-sm-6.col-xl-4
 									+input('Введите','text','Вид курсов')
 								.col-sm-6.col-xl-4
@@ -125,23 +144,12 @@ mixin sEventRegister(data)
 							.row
 								.col-md-6.col-xl-4
 									+e.BUTTON.btn Зарегистрироваться
-						//- +e.item
-						//- 	h3 Ссылки на аккаунты в социальных сетях
-						//- 	.row
-						//- 		// .row.mt-3.mt-sm-0 классы для строк 2-й и последующих соц. сетей
-						//- 		.col-sm-6
-						//- 			+input('VK', 'select', 'Соц. сеть')
-						//- 		.col-sm-6
-						//- 			+input('http://','url','Ссылка на профиль')
-						//- 	+e.BUTTON.btn-soc + Добавить
-						//- +e.btn-row.row
-						//- 	.col-sm-6
-						//- 		+e.BUTTON.btn Отправить
-						//- 	.col-auto.col-sm-6
-						//- 		+e.polite 
-						//- 			+in-c()(checked)
-						//- 				span Я согласен с условиями 
-						//- 				a(href="#") Политики обработки персональных данных
 
 
 	// end sEventRegister
+
+mixin check-block(t)
+	+e.input-wrap.form-group
+		+e.input-title!= t
+		+e.check-row
+			block

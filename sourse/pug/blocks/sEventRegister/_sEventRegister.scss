@@ -1,9 +1,12 @@
 // start .sEventRegister
 .sEventRegister {
-	--sPT: #{rem(27)};
+	--sPT: #{rem(35)};
 	--sPB: #{rem(55)};
 	// --sTPB: ;
 	margin-top: rem(26);
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(27)};
+	}
 	.section-title {
 		h1 {
 			font-weight: 900;
@@ -52,7 +55,7 @@
 			padding: rem(5);
 			margin-left: rem(-5);
 			margin-top: rem(-5);
-			margin-bottom: rem(22);
+			margin-bottom: rem(20);
 			@include media-breakpoint-up(lg) {
 				margin-bottom: rem(30);
 			}
@@ -113,6 +116,36 @@
 			@include media-breakpoint-down(sm) {
 				--bs-gutter-x: #{rem(24)};
 			}
+		}
+		&__input-wrap {
+			.form-wrap__check-row {
+				@include roww(24px, m);
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				min-height: rem(40);
+				.custom-input {
+					width: auto;
+					padding-left: 1.95em;
+					&__input {
+						margin-left: -1.95em;
+					}
+				}
+			}
+		}
+		.form-check-input {
+			background-color: $white;
+			border-color: $primary;
+			margin-top: rem(3);
+			@include media-breakpoint-up(md) {
+			margin-top: rem(4);
+			}
+		}
+		.form-check-input:checked[type="radio"] {
+			background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='#238ECE'/%3E%3C/svg%3E");
+		}
+		.form-check-input:checked[type="checkbox"] {
+			background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='#238ECE' stroke-linecap='round' stroke-linejoin='round' stroke-width='3.5' d='m6 10 3 3 6-6'/%3E%3C/svg%3E");
 		}
 		&__item {
 			margin-bottom: rem(35);

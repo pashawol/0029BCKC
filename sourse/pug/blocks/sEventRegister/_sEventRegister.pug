@@ -89,7 +89,7 @@ mixin sEventRegister(data)
 								.col-xl-4
 									+input('Введите','text','В какой организации')
 								.col-xl-8
-									+input('ЗАГЛУШКА','text','Прикрепите файл подтверждающий участие')
+									+input('','file', 'Прикрепите файл подтверждающий участие')
 							hr
 							.row
 								.col-12
@@ -151,5 +151,6 @@ mixin sEventRegister(data)
 mixin check-block(t)
 	+e.input-wrap.form-group
 		+e.input-title!= t
-		+e.check-row
+		+e.check-row&attributes(attributes)
 			block
+

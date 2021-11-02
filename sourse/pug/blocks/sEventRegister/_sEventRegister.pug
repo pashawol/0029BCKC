@@ -84,8 +84,8 @@ mixin sEventRegister(data)
 							.row
 								.col-12
 									+check-block(`Проходили ли Вы курсы по оказанию первой помощи?`)
-										+in-c('radio','Да')(checked)
-										+in-c('radio','Нет')
+										+in-c('radio','Да', `7`)(checked)
+										+in-c('radio','Нет', `7`)
 								.col-xl-4
 									+input('Введите','text','В какой организации')
 								.col-xl-8

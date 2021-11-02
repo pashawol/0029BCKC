@@ -44,3 +44,8 @@
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-gallery.html>
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-album.html>
 1. <https://pashawol.github.io/0029BCKC/public/04-detailed-news.html>
+
+# Последние страницы
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-gallery.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-album.html>
+1. <https://pashawol.github.io/0029BCKC/public/06-activity-register.html>

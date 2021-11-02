@@ -31,20 +31,20 @@ mixin sEventRegister(data)
 										+in-c('radio','Женский', `1`)
 								.col-sm-6.col-xl-4.d-none.d-xl-block
 								.col-sm-6.col-xl-4
-									+input('Республика Удмуртия','select','Регион (фактическое нахождение)')
+									+input('Введите','select','Регион (фактическое нахождение)')
 								.col-sm-6.col-xl-4
 									+input('Введите','text','Населенный пункт')
 								.col-sm-6.col-xl-4.d-none.d-xl-block
 								.col-sm-6.col-xl-4
-									+input('+7 ___ ___ __ __','tel','Телефон')
+									+input('+7 ___ ___ __ __','tel','Контактный телефон')
 								.col-sm-6.col-xl-4
-									+input('__ __ ___ ___','email','E-mail')
+									+input('Введите','email','E-mail')
 
 						+e.item--sm
 							h3 Личные данные
 							.row
 								.col-sm-6.col-xl-4
-									+input('Высшее','select','Образование')
+									+input('Введите','select','Образование')
 								.col-xl-8
 									+input('Введите','text','Учебное заведение')
 								.col-12
@@ -71,7 +71,7 @@ mixin sEventRegister(data)
 							h4 Адрес постоянной регистрации
 							.row
 								.col-sm-6.col-xl-4
-									+input('Республика Удмуртия','select','Регион (фактическое нахождение)')
+									+input('Введите','select','Регион (фактическое нахождение)')
 								.col-sm-6.col-xl-4
 									+input('Введите','text','Населенный пункт')
 								.col-sm-6.col-xl-4
@@ -108,12 +108,12 @@ mixin sEventRegister(data)
 							.row
 								.col-12
 									+check-block(`Имеется ли у Вас водительское удостоверение?`)
-										+in-c('checkbox','Нет', `4`)(checked)
-										+in-c('checkbox','БК', `4`)
-										+in-c('checkbox','3кл', `4`)
-										+in-c('checkbox','2кл', `4`)
-										+in-c('checkbox','1кл', `4`)
-										+in-c('checkbox','МК', `4`)
+										+in-c('checkbox','Нет', `4`)
+										+in-c('checkbox','A', `4`)
+										+in-c('checkbox','B', `4`)
+										+in-c('checkbox','C', `4`)
+										+in-c('checkbox','D', `4`)
+										+in-c('checkbox','М', `4`)(checked)
 							hr
 							.row
 								.col-12

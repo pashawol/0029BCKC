@@ -48,7 +48,8 @@
 		}
 	}
 	&__item {
-		background: $light-blue;
+		// background: $light-blue;
+		background-color: var(--item-bg-color);
 		border-radius: $border-radius;
 		margin-bottom: rem(20);
 		padding: 4vw;

@@ -99,7 +99,7 @@
 				font-size: rem(13);
 				line-height: 150%;
 			}
-			&__btn-activation{
+			&__btn-activation {
 				@extend .btn, .btn-warning;
 				margin-top: rem(16);
 				max-width: 100%;
@@ -372,7 +372,8 @@
 			font-size: rem(16) !important;
 		}
 	}
-	&--add-ticket {
+	&--add-ticket,
+	&--cancel {
 		position: relative;
 		@include media-breakpoint-up(md) {
 			max-width: 450px;
@@ -402,6 +403,15 @@
 				width: 100%;
 				font-size: rem(16) !important;
 			}
+		}
+	}
+	&--cancel {
+		.row {
+			--bs-gutter-y: #{rem(15)};
+		}
+		button {
+			width: 100%;
+			box-shadow: none !important;
 		}
 	}
 	&__head-wrap {

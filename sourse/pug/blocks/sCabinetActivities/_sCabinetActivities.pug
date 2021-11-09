@@ -21,7 +21,7 @@ mixin sCabinetActivities(data)
 									+e.points 
 										span Максимально баллов за участие: 
 										span.text-primary 500
-							a(href="#")
+							+e.title(href="#")
 								each item in items
 									p!= item
 							.row.align-items-center
@@ -33,7 +33,7 @@ mixin sCabinetActivities(data)
 									.col-lg-auto
 										+e.btn-row.row
 											.col-lg-auto
-												+e.btn.btn-outline-warning Отменить
+												+e.btn.btn-outline-warning.link-modal-js(href ="#modal-cancel") Отменить
 											.col-lg-auto
 												+e.btn.btn-warning Подтвердить участие
 								else if btns2
@@ -47,7 +47,7 @@ mixin sCabinetActivities(data)
 									.col-lg-auto
 										+e.btn-row.row
 											.col-lg-auto
-												+e.btn.btn-outline-warning Отменить
+												+e.btn.btn-outline-warning.link-modal-js(href ="#modal-cancel") Отменить
 								else if btn2
 									.col-lg-auto
 										+e.btn-row.row

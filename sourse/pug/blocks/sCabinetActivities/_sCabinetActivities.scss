@@ -126,25 +126,7 @@
 		@include media-breakpoint-up(xl) {
 			padding: rem(20) rem(24) rem(20) rem(40);
 		}
-		a {
-			display: block;
-			flex-grow: 1;
-			margin-bottom: 1rem;
-			p {
-				@extend .h4;
-				line-height: 150%;
-				margin-bottom: 0.2rem;
-				@include media-breakpoint-up(xl) {
-					max-width: 32.2em;
-				}
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-			&:not(:hover) {
-				color: $black;
-			}
-		}
+		
 		.date-n-location {
 			margin-bottom: 0;
 			margin-top: rem(-10);
@@ -160,6 +142,23 @@
 						margin-right: 0;
 					}
 				}
+			}
+		}
+	}
+	&__title {
+		color: $black;
+		display: block;
+		flex-grow: 1;
+		margin-bottom: 1rem;
+		p {
+			@extend .h4;
+			line-height: 150%;
+			margin-bottom: 0.2rem;
+			@include media-breakpoint-up(xl) {
+				max-width: 32.2em;
+			}
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 	}

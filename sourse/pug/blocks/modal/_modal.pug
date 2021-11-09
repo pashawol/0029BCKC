@@ -125,4 +125,15 @@ mixin modal()
 					+e.btns-wrap
 						+e.btn(href="#") Продолжить
 
+		// #modal-сancel
+		+b.modal-win--cancel(id="modal-cancel" style="display: none")
+			+e.form
+				h2 Вы действительно хотите отменить заявку на участие в мероприятии?
+				+form-wrap()
+					.row
+						.col-12
+							+e.BUTTON.btn-confirm.btn.btn-outline-warning Да
+						.col-12
+							+e.BUTTON.btn-cancel.btn.btn-warning Нет
+
 	// end modals

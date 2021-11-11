@@ -406,6 +406,9 @@
 		}
 	}
 	&--cancel {
+		h2 {
+			font-weight: 400;
+		}
 		.row {
 			--bs-gutter-y: #{rem(15)};
 		}

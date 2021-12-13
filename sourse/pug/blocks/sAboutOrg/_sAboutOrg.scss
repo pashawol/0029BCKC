@@ -135,6 +135,19 @@
 		--bs-gutter-x: #{rem(40)};
 		--bs-gutter-y: #{rem(32)};
 	}
+		.col-md-3.col-6 {
+		picture {
+			height: rem(224);
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			img{
+				flex:  0 0 auto;
+				max-height: 100%;
+			}
+		}
+
+	}
 	&__name {
 		font-weight: bold;
 		font-size: 15px;
@@ -162,6 +175,7 @@
 		--bs-gutter-x: #{rem(40)};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
+
 	&__item {
 		background-color: $light-blue;
 		padding-left: rem(36);

@@ -374,9 +374,19 @@ function eventHandler() {
 		},
 		on: {
 			slideChange: function () {
-				let thisFract = this.el.querySelector('.fract-js');
+				let realCount = 0;
 
-				thisFract.innerHTML = this.realIndex + 1 + ' / ' + (this.slides.length - 2);
+				for (let slide of this.slides) {
+					if (!slide.classList.contains('swiper-slide-duplicate')) {
+						realCount++;
+					}
+				}
+
+				// let thisFract = document.querySelector('.sHero--js .fract-js');
+				let thisFract = this.el.querySelector('.fract-js');
+				// thisFract.innerHTML = this.realIndex + 1 + ' / ' + realCount;
+
+				thisFract.innerHTML = this.realIndex + 1 + ' / ' + realCount;
 			},
 		},
 	});

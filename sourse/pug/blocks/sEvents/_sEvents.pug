@@ -89,3 +89,34 @@ mixin sEventsSlide(data)
 //- 		input(type="checkbox" class='invisible' name=txt)&attributes(attributes)
 //- 		span.bar
 //- 		span.txt=txt
+
+mixin sEvents-region(data)
+	// start sEvents-region
+	+b.SECTION.sEvents--region.section&attributes(attributes)
+		.container
+			+e.title-row.row
+				.col
+					+b.section-title
+						h2 Мероприятия региона
+				.col-sm-auto
+					+e.btn(href="#") Все мероприятия региона
+			+e.slide-wrap
+				.swiper.sEvents-slider--js
+					.swiper-wrapper
+						-for(let i =0; i < 2; i++)
+							+sEventsSlide({
+								tagBlue: true,
+								imgNum: 1,
+								title: 'Добровольцы ресурсного центра ЧС организовали демонстрационную точку',
+							})
+							+sEventsSlide({
+								tagRed: true,
+								imgNum: 1,
+								title: 'Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"',
+							})
+							+sEventsSlide({
+								tagBlue: true,
+								imgNum: 1,
+								title: 'Тренировка поисково-спасательных собак',
+							})
+	// end sEvents-region

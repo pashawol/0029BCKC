@@ -177,7 +177,7 @@
 	//
 	--or-box-pl: #{rem(78)};
 	&__orange-box{
-		border-radius: 4px;
+		border-radius: $border-radius;
 		margin-left: auto;
 		max-width: 500px;
 

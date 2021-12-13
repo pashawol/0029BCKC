@@ -128,3 +128,53 @@ mixin sContact()
 										span https://vk.com/mgovsks
 
 	// end sContact
+
+mixin sContact-region()
+	// start sContact-region
+	+b.sContact--region.section#sContact-region&attributes(attributes)
+		.container
+			+e.heading
+				+e.row-title.row.align-items-start
+					.col-auto
+						+b.link-back(href="#" title="Назад")
+							+icon('arrow-left')
+					.col
+						h3 Архангельская область
+				.row
+					.col-lg-5
+						+e.title Архангельск, ул.Кутузова, д.8
+						+e.position Председатель отделения
+						+e.name Порохина Надежда Анатольевнa
+						+e.participants
+							.row
+								.col
+									span Количество участников ВСКС
+								.col-auto
+									span 456
+							.row
+								.col
+									span Количество отрядов ВСКС
+								.col-auto
+									span 12
+					.col
+						+b.UL.communications
+							li
+								a(href="tel:+74953690573")
+									+icon('call')
+									span +7(495) 369-05-73
+							li
+								a(href="mailto:info@911mail.ru")
+									+icon('mail')
+									span info@911mail.ru
+							li
+								a(href="https://vk.com/mgovsks" target="_blank") 
+									+icon('vk-logo')
+									span https://vk.com/mgovsks
+					.col-lg-auto
+						+pic('sContact','bg', '')
+
+			+e.map-wrap
+				h3 Наши представительства в регионах
+				+e.map#map
+
+	// end sContact-region

@@ -1,0 +1,156 @@
+mixin sEventRegister(data)
+	// start sEventRegister
+	+b.SECTION.sEventRegister.section#sEventRegister&attributes(attributes)
+		.container
+			+e.main-row.row
+				+e.aside.col-lg-4.col-xl-3
+					+b.link-back(href="#" title="Назад")
+						+icon('arrow-left')
+					h3 Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;
+					.date-n-location
+						p 19&nbsp;августа&nbsp;&mdash; 21&nbsp;августа
+						p.loc Республика Удмуртия
+				.col
+					+b.section-title
+						h1 Регистрация на мероприятие
+					+form-wrap
+						+e.item
+							h3 Информация для регистрации
+							.row
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Фамилия')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Имя')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Отчество')
+								.col-sm-6.col-xl-4
+									+input('ДД.ММ.ГГГГ','text','Дата рождения').masked-date(autocomplete="off")
+								.col-sm-6.col-xl-4
+									+check-block(`Пол`)
+										+in-c('radio','Мужской', `1`)(checked)
+										+in-c('radio','Женский', `1`)
+								.col-sm-6.col-xl-4.d-none.d-xl-block
+								.col-sm-6.col-xl-4
+									+input('Введите','select','Регион (фактическое нахождение)')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Населенный пункт')
+								.col-sm-6.col-xl-4.d-none.d-xl-block
+								.col-sm-6.col-xl-4
+									+input('+7 ___ ___ __ __','tel','Контактный телефон')
+								.col-sm-6.col-xl-4
+									+input('Введите','email','E-mail')
+
+						+e.item--sm
+							h3 Личные данные
+							.row
+								.col-sm-6.col-xl-4
+									+input('Введите','select','Образование')
+								.col-xl-8
+									+input('Введите','text','Учебное заведение')
+								.col-12
+									+check-block(`Волонтерская организация`)
+										+in-c('radio','Состою в ВСКС', `2`)(checked)
+										+in-c('radio','Не состою', `2`)
+										+in-c('radio','Иное', `2`)
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Номер членского билета')
+						+e.item--sm
+							h4 Паспорт
+							.row
+								.col-sm-6.col-xl-4
+									+input('__ __ ___ ___','text','Серия и номер паспорта')
+								.col-xl-8
+									+input('Введите','text','Кем выдан')
+								.col-sm-6.col-xl-4
+									+input('ДД.ММ.ГГГГ','text','Дата выдачи').masked-date(autocomplete="off")
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Код подразделения')
+								.col-xl-4
+									+input('Введите','text','Место рождения')
+						+e.item
+							h4 Адрес постоянной регистрации
+							.row
+								.col-sm-6.col-xl-4
+									+input('Введите','select','Регион (фактическое нахождение)')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Населенный пункт')
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Улица, дом, корпус')
+								.col-sm-6.col-xl-4
+									+input('___ - ___ - ___ - __','text','Снилс')
+
+						+e.item
+							h3 Информация, необходимая для участия в&nbsp;ликвидации последствий&nbsp;ЧС
+							.row
+								.col-12
+									+check-block(`Проходили ли Вы курсы по оказанию первой помощи?`)
+										+in-c('radio','Да', `7`)(checked)
+										+in-c('radio','Нет', `7`)
+								.col-xl-4
+									+input('Введите','text','В какой организации')
+								.col-xl-8
+									+input('','file', 'Прикрепите файл подтверждающий участие')
+							hr
+							.row
+								.col-12
+									+check-block(`Являетесь ли Вы аттестованным спасателем?`)
+										+in-c('radio','Нет', `3`)(checked)
+										+in-c('radio','БК', `3`)
+										+in-c('radio','3кл', `3`)
+										+in-c('radio','2кл', `3`)
+										+in-c('radio','1кл', `3`)
+										+in-c('radio','МК', `3`)
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Личный номер')
+								.col-xl-8
+									+input('Введите','text','Виды работ')
+							hr
+							.row
+								.col-12
+									+check-block(`Имеется ли у Вас водительское удостоверение?`)
+										+in-c('checkbox','Нет', `4`)
+										+in-c('checkbox','A', `4`)
+										+in-c('checkbox','B', `4`)
+										+in-c('checkbox','C', `4`)
+										+in-c('checkbox','D', `4`)
+										+in-c('checkbox','М', `4`)(checked)
+							hr
+							.row
+								.col-12
+									+check-block(`Участвовали ли Вы ранее в ликвидации ЧС или их последствий?`)
+										+in-c('radio','Да', `5`)(checked)
+										+in-c('radio','Нет', `5`)
+								.col-12
+									+input('Введите','text','Вид ЧС')
+								.col-sm-6.col-xl-4
+									+input('Введите','select','Регион')
+								.col-sm-6.col-xl-4
+									+input('Введите','select','Год участия')
+								.col-sm-6.col-xl-4
+									+input('Введите','select','Функционал')
+							+e.BUTTON.btn-add Добавить еще одно мероприятие
+							hr
+							.row
+								.col-12
+									+check-block(`Проходили ли вы иные курсы по спасательной тематике?`)
+										+in-c('radio','Да', `6`)(checked)
+										+in-c('radio','Нет', `6`)
+								.col-sm-6.col-xl-4
+									+input('Введите','text','Вид курсов')
+								.col-sm-6.col-xl-4
+										+input('ДД.ММ.ГГГГ','text','Дата прохождения').masked-date(autocomplete="off")
+							+e.BUTTON.btn-add Добавить еще
+							hr
+							.row
+								.col-md-6.col-xl-4
+									+e.BUTTON.btn Зарегистрироваться
+
+
+	// end sEventRegister
+
+mixin check-block(t)
+	+e.input-wrap.form-group
+		+e.input-title!= t
+		+e.check-row&attributes(attributes)
+			block
+

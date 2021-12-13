@@ -1,0 +1,201 @@
+// start .sCabinetForm
+.sCabinetForm {
+	--sPT: #{rem(38)};
+	--sPB: #{rem(55)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(75)};
+		--sTPB: #{rem(33)};
+	}
+
+	.form-wrap {
+		&__btn-row {
+			align-items: center;
+			--bs-gutter-y: #{rem(16)};
+			@include media-breakpoint-down(sm) {
+			}
+		}
+		&__btn {
+			@extend .btn, .btn-warning;
+			width: 100%;
+			@include media-breakpoint-down(sm) {
+				max-width: 375px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		&__polite {
+			font-size: 12px;
+			@include media-breakpoint-up(sm) {
+				max-width: 19em;
+			}
+			.form-check {
+				margin-bottom: 0;
+				padding-left: 22px;
+				.form-check-input {
+					margin-left: -22px;
+				}
+			}
+			a {
+				&:not(:hover) {
+					color: $black;
+					text-decoration: underline;
+				}
+			}
+			
+			a {
+				@media (max-width: 420px) {
+					display: block;
+				}
+			}
+		}
+		&__btn-soc {
+			@include mt;
+			margin-top: rem(14);
+			border: none;
+			outline: none;
+			background-color: $white;
+			color: $primary;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $link-hover-color;
+			}
+		}
+		&__input-title {
+			display: block;
+			font-size: 13px;
+			margin-bottom: 5px;
+		}
+		&__col {
+			.form-wrap__input-title {
+				@extend .h3;
+				margin-bottom: rem(20);
+				@include media-breakpoint-up(lg) {
+					font-weight: normal;
+					font-size: 13px !important;
+					line-height: 150% !important;
+					margin-bottom: 5px;
+				}
+			}
+		}
+		.row {
+			--bs-gutter-x: #{rem(25)};
+			@include media-breakpoint-up(md) {
+				--bs-gutter-x: #{rem(30)};
+			}
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(40)};
+			}
+		}
+		&__item {
+			margin-bottom: rem(35);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(40);
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			h3 {
+				margin-bottom: rem(20);
+				@include media-breakpoint-up(lg) {
+					margin-bottom: rem(24);
+				}
+			}
+			.row {
+				--bs-gutter-y: #{rem(16)};
+			}
+		}
+		.load-photo-ticket {
+			width: 272px;
+			max-width: 272px;
+			&__requirements {
+				p {
+					font-size: 12px;
+					line-height: 150%;
+					margin-bottom: 1em;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			label {
+				display: block;
+			}
+			.filepond--root {
+				height: 299px;
+				min-height: 299px;
+				background-color: $white;
+				border-radius: $border-radius;
+				border: 1px dashed $primary;
+			}
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(40);
+			}
+			.filepond--drop-label {
+				label {
+					max-width: 9em;
+				}
+			}
+			// overflow: hidden;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCabinetForm
+
+.section-title--back {
+	.row {
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(20)};
+		}
+	}
+	h2 {
+		@extend .h1;
+		font-weight: 900;
+		line-height: calc(44 / 40);
+		margin-bottom: 0;
+	}
+	.section-title__link-back {
+		display: inline-block;
+		padding: rem(3) rem(5);
+		&:not(:hover) {
+			color: $black;
+		}
+		margin: 0 rem(-5);
+		@include media-breakpoint-up(sm) {
+			padding: rem(6.5) rem(5);
+		}
+		@include media-breakpoint-up(md) {
+			padding: rem(8.5) rem(5);
+		}
+		@include media-breakpoint-up(lg) {
+			padding: rem(9.5) rem(5);
+		}
+		// @include media-breakpoint-up(xl) {
+		// 	padding: rem(10) rem(5);
+		// }
+		.icon {
+			font-size: 22px;
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 3px;
+		}
+	}
+}

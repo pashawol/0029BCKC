@@ -1,0 +1,66 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sActivities/_sActivities.pug
+//- include ../blocks/sPromo/_sPromo.pug
+//- include ../blocks/sMap/_sMap.pug
+//- include ../blocks/sStat/_sStat.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sBecome/_sBecome.pug
+//- include ../blocks/sHero/_sHero.pug
+include ../blocks/sTicketRequest/_sTicketRequest.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= 'cabinet'
+	- let  bg= null
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+pageHead-cabinet()
+		+e.slider--js.swiper
+			.swiper-wrapper
+				+e.slide.swiper-slide
+					+e.btn(href="#") Профиль
+				+e.slide.swiper-slide
+					+e.btn(href="#") Мои мероприятия
+				+e.slide.swiper-slide
+					+e.btn.active.notification(href="#") Электронный билет члена ВСКС
+	+sTicketRequest()
+		+e.alert-row.row
+			.col-auto
+				+e.alert.alert-danger(role='alert') Необходима доработка заявки на вступление в ВСКС
+			.col-lg
+				p Пожалуйста внесите правки в заявку на вступление для получения одобрения или обратитесь в Представительство ВСКС в вашем регионе.
+			.col-12
+				ul
+					li Укажите регион вашего фактического местонахождения.
+					li Измените название вашего учебного заведения.
+		+e.alert-row.row
+			.col-auto
+				+e.btn.btn-outline-warning(href="#") Редактировать заявку
+	//- +sContact-region
+	//- +sNews-region()
+	//- +sEvents-region()
+	//- +sMap()
+	//- +sActivities()
+	//- +sPromo()
+	//- +sStat()
+	//- +sEvents()
+	//- +sEvents2()
+	//- +sBecome()
+	//- +sHero()
+	//- +sPartners()
+	//- +sForm()
+	//- +sContact()
+	+footer()

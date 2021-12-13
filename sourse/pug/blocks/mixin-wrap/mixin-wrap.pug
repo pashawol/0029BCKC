@@ -45,6 +45,19 @@ mixin pageHead(h1, back)
 					.col-lg-2.order-first
 						+e.link-back(href="#" title="Назад")
 							+icon('arrow-left')
+
+mixin pageHead-cabinet()
+	+b.page-head--cabinet.section
+		.container
+			+e.row-title.row
+				.col
+					h1 Личный кабинет
+				.col-md-auto
+					+e.btn(href="#") Редактировать профиль
+			if block
+				block
+
+
 mixin pageBody(about,type)
 	main.container.container--main 
 		.row.row--main
@@ -93,6 +106,8 @@ mixin pageBody(about,type)
 								a(href="#") Наши герои
 							li
 								a(href="#") СМИ о нас
+							li
+								a(href="#") Галерея
 			.col-lg-8
 				block
 

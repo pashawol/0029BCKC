@@ -1,9 +1,9 @@
 extends layout/main.pug
 
 
-include ../blocks/sContent/_sContent.pug
-include ../blocks/sContact/_sContact.pug
-include ../blocks/sDetailedNews/_sDetailedNews.pug
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sEventRegister/_sEventRegister.pug
 //- include ../blocks/sPromo/_sPromo.pug
 //- include ../blocks/sMap/_sMap.pug
 //- include ../blocks/sStat/_sStat.pug
@@ -13,11 +13,11 @@ include ../blocks/sDetailedNews/_sDetailedNews.pug
 //- include ../blocks/sPartners/_sPartners.pug
 
 block variables
-	- let  mainPage= '' 
-	- let  bg="04-detailed-news.jpg"
+	- let  mainPage= null 
+	- let  bg= '06-activity-register.png'
 
 block title
-	- let  title= 'Новость'
+	- let  title= 'Регистрация на мероприятие'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -25,11 +25,8 @@ block pagecontent
 		+top-nav()
 		//-+topLine()
 	//- +headerBlock()
-	+pageHead(`Главное управление сообщает о&nbsp;лесопожарной обстановке на&nbsp;территории Краснодарского края Президент Российской Федерации`,'back')
-		.date-n-location
-			p 19&nbsp;августа 2021&nbsp;в 21:00
-			p.loc Республика Удмуртия
-	+sContent()
+	+sEventRegister()
+
 	//- +sPromo()
 	//- +sMap()
 	//- +sStat()

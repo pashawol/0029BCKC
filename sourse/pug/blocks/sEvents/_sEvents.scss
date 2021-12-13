@@ -61,7 +61,7 @@
 	&__card {
 		flex-grow: 1;
 		background: $light-blue;
-		border-radius: 4px;
+		border-radius: $border-radius;
 		overflow: hidden;
 
 		display: flex;
@@ -188,7 +188,29 @@
 		font-size: rem(20);
 		color: $blue2;
 	}
-	
+	&--region {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(60)};
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(60)};
+			--sPB: #{rem(88)};
+		}
+		.swiper {
+			overflow: hidden !important;
+		}
+		// .swiper-slide {
+		// 	@include media-breakpoint-up(xl) {
+		// 		width: calc(100% / 3 - 40px * 2 / 3);
+		// 	}
+		// }
+		.sEvents__title-row {
+			--bs-gutter-y: #{rem(12)};
+			padding-bottom: rem(35);
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(50);
+			}
+		}
+	}
 	//-
 } // end.sEvents
 
@@ -212,7 +234,7 @@
 
 		background-color: var(--btn-chb-color);
 		opacity: 0.1;
-		border-radius: 4px;
+		border-radius: $border-radius;
 	}
 
 	//

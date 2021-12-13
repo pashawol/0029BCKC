@@ -59,6 +59,14 @@
 			}
 		}
 	}
+	&__participants {
+		max-width: 380px;
+		margin-top: rem(20);
+		.row {
+			margin-top: rem(10);
+			--bs-gutter-y: 0;
+		}
+	}
 	&__region-item {
 		border-bottom: 1px solid;
 		border-color: rgba($color: #000000, $alpha: 0.1);
@@ -95,8 +103,8 @@
 			}
 		}
 		&--heading {
-			background: #ecf8ff;
-			border-radius: 4px;
+			background: $light-blue;
+			border-radius: $border-radius;
 			border-bottom: none;
 			padding-left: rem(25);
 			padding-right: rem(25);
@@ -144,7 +152,47 @@
 			}
 		}
 	}
+	&--region {
+		.sContact__row-title {
+			--bs-gutter-x: #{rem(16)};
+			--bs-gutter-y: #{rem(16)};
+			margin-bottom: rem(28);
+			h3 {
+				margin-bottom: 0;
+			}
+		}
+		.sContact__map-wrap {
+			// margin-bottom: 0;
+		}
+		.sContact__map {
+			margin-bottom: 0;
+		}
+		.link-back {
+		height: rem(26);
+		}
+		.sContact__title {
+			margin-bottom: rem(24);
+		}
+		.sContact__name {
+			margin-bottom: rem(20);
+		}
+		picture {
+			width: 168px;
+			height: 216px;
+		}
+	}
 } // end.sContact
+
+.link-back {
+	display: inline-flex;
+	align-items: center;
+	color: $black;
+	.icon {
+		font-size: rem(16);
+		fill: none;
+		stroke: currentColor;
+	}
+}
 
 .communications {
 	list-style: none;

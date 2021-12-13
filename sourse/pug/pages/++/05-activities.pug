@@ -3,7 +3,7 @@ extends layout/main.pug
 
 //- include ../blocks/sContent/_sContent.pug
 //- include ../blocks/sContact/_sContact.pug
-//- include ../blocks/sActivities/_sActivities.pug
+include ../blocks/sActivities/_sActivities.pug
 //- include ../blocks/sPromo/_sPromo.pug
 //- include ../blocks/sMap/_sMap.pug
 //- include ../blocks/sStat/_sStat.pug
@@ -11,14 +11,13 @@ extends layout/main.pug
 //- include ../blocks/sBecome/_sBecome.pug
 //- include ../blocks/sHero/_sHero.pug
 //- include ../blocks/sPartners/_sPartners.pug
-include ../blocks/sContact/_sContact.pug
 
 block variables
 	- let  mainPage= ''
-	- let  bg="05-activities.jpg"
+	- let  bg= null
 
 block title
-	- let  title= 'Контакты'
+	- let  title= 'Мероприятия'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -26,11 +25,11 @@ block pagecontent
 		+top-nav()
 		//-+topLine()
 	//- +headerBlock()
-	+pageHead(`Контакты`)
-	+sContact
-	//- +sMap()
-	//- +sActivities()
+	+pageHead(`Мероприятия`)
+		
+	+sActivities()
 	//- +sPromo()
+	//- +sMap()
 	//- +sStat()
 	//- +sEvents()
 	//- +sEvents2()

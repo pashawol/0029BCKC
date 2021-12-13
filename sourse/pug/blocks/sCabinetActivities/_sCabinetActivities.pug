@@ -1,0 +1,68 @@
+mixin sCabinetActivities(data)
+	// start sCabinetActivities
+	+b.SECTION.sCabinetActivities.section#sCabinetActivities&attributes(attributes)
+		.container
+			+e.cards
+				+b.section-title
+					h2 Будущие мероприятия
+				mixin item(btns, btns2, btn1, btn2, ibg, c, t, sc, st, i, ...items)
+					+e.item(style=`--item-bg-color: ${ibg};`)
+						a(href="#")
+							span(style=`--color: ${c};`)!= t
+							span(style="--color: #ffffff; --bg-color: #238ECE;") Регистрация открыта
+							+pic(`sCabinetActivities-${i}.png`,'bg').bg-wrap
+						+e.caption
+							.row
+								.col
+									+e.status 
+										span Статус заявки:
+										span(style=`--statColor: ${sc};`)!= st
+								.col-auto
+									+e.points 
+										span Максимально баллов за участие: 
+										span.text-primary 500
+							+e.title(href="#")
+								each item in items
+									p!= item
+							.row.align-items-center
+								.col
+									.date-n-location
+										p 19&nbsp;августа, с&nbsp;18:00 до&nbsp;20:00
+										p.loc Республика Удмуртия
+								if btns
+									.col-lg-auto
+										+e.btn-row.row
+											.col-lg-auto
+												+e.btn.btn-outline-warning.link-modal-js(href ="#modal-cancel") Отменить
+											.col-lg-auto
+												+e.btn.btn-warning Подтвердить участие
+								else if btns2
+									.col-lg-auto
+										+e.btn-row.row
+											.col-lg-auto
+												+e.btn.btn-outline-warning Удалить
+											.col-lg-auto
+												+e.btn.btn-warning Редактировать заявку
+								else if btn1
+									.col-lg-auto
+										+e.btn-row.row
+											.col-lg-auto
+												+e.btn.btn-outline-warning.link-modal-js(href ="#modal-cancel") Отменить
+								else if btn2
+									.col-lg-auto
+										+e.btn-row.row
+											.col-lg-auto
+												+e.btn.btn-outline-warning Удалить
+
+
+				+item(``, `btns2`, ``, ``, `#ECF8FF`, `#FF995A`, `Региональные`, `#B2A84A`, `Отправлена`, 1, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(`btns`, ``, ``, ``, `#ECF8FF`, `#FF995A`, `Региональные`, `#25C047`, `Приглашение`, 2, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(``, ``, ``, `btn2`, `#ECF8FF`, `#009FE2`, `Окружное`, `#E31E24`, `Отклонено`, 3, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+				+item(``, ``, `btn1`, ``, `#C6FFD2`, `#A1D8F6`, `Федеральное`, `#275089`, `Подтверждено`, 4, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+
+			+e.cards--past
+				+b.section-title
+					h2 Прошедшие мероприятия
+				+item(``, ``, ``, ``, `#ECF8FF`, `#FF995A`, `Региональные`, `#275089`, `Подтверждено`, 1, `Добровольцы оказывают помощь в&nbsp;реализации проекта &laquo;Первая помощь: от&nbsp;Мала до&nbsp;Велика&raquo;`)
+
+				// end sCabinetActivities

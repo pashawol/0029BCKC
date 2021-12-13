@@ -124,8 +124,11 @@ const JSCCommon = {
 	inputMask() {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
+		let maskedDate = [].slice.call(document.querySelectorAll('.masked-date'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
+		maskedDate.forEach(element => element.setAttribute("pattern", "(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"));
 		Inputmask("+9(999)999-99-99").mask(InputTel);
+		Inputmask("99.99.9999").mask(maskedDate);
 	},
 	//pure js
 	ifie() {
@@ -219,6 +222,22 @@ const JSCCommon = {
 			new Litepicker({
 				element: el,
 				singleMode: false,
+				showTooltip: false,
+				dropdowns: true,
+				resetButton: true,
+				// tooltipText: {
+				// 	one: 'night',
+				// 	other: 'nights'
+				// },
+				lang: 'ru-RU',
+				format: "DD.MM.YYYY",
+			})
+		});
+		let pickerSingle = document.querySelectorAll(".input-date-picker-single-js")
+		pickerSingle.forEach(el => {
+			new Litepicker({
+				element: el,
+				singleMode: true,
 				showTooltip: false,
 				dropdowns: true,
 				resetButton: true,
@@ -421,6 +440,54 @@ function eventHandler() {
 			},
 		},
 	});
+
+	let sEventsSliderRegion = new Swiper('.sEvents--region .sEvents-slider--js', {
+		slidesPerView: "auto",
+		// loop: true,
+		watchOverflow: true,
+
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+		},
+	});
+
+	let sNewsSlider = new Swiper('.sNews-slider-js', {
+		slidesPerView: "auto",
+		// loop: true,
+		watchOverflow: true,
+
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+		},
+	});
+
+	let pageHeadSlider = new Swiper('.page-head__slider--js', {
+		slidesPerView: "auto",
+		watchOverflow: true,
+		freeMode: true,
+		touchRatio: 0.3,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		// spaceBetween: 20,
+		breakpoints: {
+			0: {
+				spaceBetween: 5,
+			},
+			576: {
+				spaceBetween: 20,
+			},
+		},
+	});
 	//
 	// import * as FilePond from 'filepond';
 	// const pond = FilePond.create({
@@ -429,7 +496,7 @@ function eventHandler() {
 	// });
 	// document.body.appendChild(pond.element);
 	FilePond.registerPlugin(
-		FilePondPluginImagePreview, 
+		FilePondPluginImagePreview,
 		FilePondPluginImageCrop,
 		FilePondPluginImageResize,
 		FilePondPluginImageTransform,
@@ -453,6 +520,34 @@ function eventHandler() {
 			styleButtonProcessItemPosition: 'left bottom',
 		}
 	);
+	FilePond.create(
+		document.querySelector('.load-photo--edit input'),
+		{
+			labelIdle: `Изменить фото&nbsp;профиля`,
+			imagePreviewHeight: 300,
+			imageCropAspectRatio: '1:1',
+			imageResizeTargetWidth: 280,
+			imageResizeTargetHeight: 297,
+			styleLoadIndicatorPosition: 'center bottom',
+			styleProgressIndicatorPosition: 'left bottom',
+			styleButtonRemoveItemPosition: 'left bottom',
+			styleButtonProcessItemPosition: 'left bottom',
+		}
+	);
+	FilePond.create(
+		document.querySelector('.load-photo-ticket input'),
+		{
+			labelIdle: `Добавить фото&nbsp;для&nbsp;билета`,
+			imagePreviewHeight: 300,
+			imageCropAspectRatio: '1:1',
+			imageResizeTargetWidth: 280,
+			imageResizeTargetHeight: 297,
+			styleLoadIndicatorPosition: 'center bottom',
+			styleProgressIndicatorPosition: 'left bottom',
+			styleButtonRemoveItemPosition: 'left bottom',
+			styleButtonProcessItemPosition: 'left bottom',
+		}
+	);
 
 	// $('.load-photo').filepond({
 	// 	labelIdle: `Добавить фото&nbsp;профиля`,
@@ -466,7 +561,7 @@ function eventHandler() {
 	// 	// styleButtonRemoveItemPosition: 'left bottom',
 	// 	// styleButtonProcessItemPosition: 'right bottom',
 	// });
-	
+
 	let sHeroSlider = new Swiper('.sHero-slider-js', {
 		slidesPerView: "auto",
 		loop: true,

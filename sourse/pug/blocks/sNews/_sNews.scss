@@ -3,104 +3,143 @@
 	background-color: $light-blue;
 
 	--sTPB: 0;
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(25)};
 		--sPB: #{rem(60)};
 	}
 
-	&__title-row{
+	&__title-row {
 		padding-bottom: rem(27);
 	}
 
 	//-
-	.section-title{
-		h2{
-
+	.section-title {
+		h2 {
 		}
 	}
-	&__all-btn{
+	&__all-btn {
 		@extend .btn;
 		@extend .btn-warning;
 	}
 
 	//
-	&__nav-row{
+	&__nav-row {
 		padding-bottom: rem(32);
 
-		--bs-gutter-x: #{rem(16)}!important;
-		--bs-gutter-y: #{rem(10)}!important;
+		--bs-gutter-x: #{rem(16)} !important;
+		--bs-gutter-y: #{rem(10)} !important;
 	}
-	&__btns-box{
+	&__btns-box {
 		min-height: 100%;
 		padding: rem(4);
-		@include media-breakpoint-up(sm){
+		@include media-breakpoint-up(sm) {
 			padding: rem(4) rem(11) rem(4) rem(4);
 		}
 		background-color: $white;
 	}
-	&__b-row{
+	&__b-row {
 		--bs-gutter-x: #{rem(4)} !important;
-		@include media-breakpoint-up(sm){
+		@include media-breakpoint-up(sm) {
 			--bs-gutter-x: #{rem(11)} !important;
 		}
 		--bs-gutter-y: #{rem(4)} !important;
 	}
-	&__radio{
-		input:checked + .radio-btn{
-			background-color: $primary!important;
-			color: $white!important;
+	&__radio {
+		input:checked + .radio-btn {
+			background-color: $primary !important;
+			color: $white !important;
 		}
-		.radio-btn{
+		.radio-btn {
 			@extend .btn;
-			border: none!important;
-			box-shadow: none!important;
+			border: none !important;
+			box-shadow: none !important;
 
-			background-color: transparent!important;
-			color: $primary!important;
+			background-color: transparent !important;
+			color: $primary !important;
 			padding: rem(4) rem(12);
 		}
 	}
 
 	//-
-	&__input-wrap{
-
+	&__input-wrap {
 	}
-	&__input{
+	&__input {
 		min-width: 216px;
 	}
 
 	//-
-	&__cards-row{
+	&__cards-row {
 		--bs-gutter-y: #{rem(30)};
 	}
-	&__img{
+	&__img {
 		@extend .accept-ratio-frame;
-		padding-top: calc(197/272 * 100%);
-		border-radius: 4px;
+		padding-top: calc(197 / 272 * 100%);
+		border-radius: $border-radius;
 		margin-bottom: 18px;
 	}
-	&__date-row{
+	&__date-row {
 		font-size: rem(13);
 		--bs-gutter-x: #{rem(20)} !important;
 		--bs-gutter-y: #{rem(12)} !important;
 
 		padding-bottom: rem(17);
 	}
-	&__date{
-
+	&__date {
 	}
-	&__location{
+	&__location {
 		@extend .loc-txt;
 	}
-	&__title{
+	&__title {
 		font-weight: bold;
 		color: $black;
-		&:hover{
+		&:hover {
 			color: $primary;
 		}
 	}
+	&__slide-wrap {
+		.swiper {
+			overflow: visible !important;
+		}
+		.swiper-slide {
+			height: auto;
+			display: flex;
+			flex-direction: column;
 
-	//-
-	&__{}
-	&__{}
-} // end.sNews
+			width: 90%;
+			@include media-breakpoint-up(sm) {
+				width: calc(100% / 2 - 20px * 1 / 2);
+			}
+			@include media-breakpoint-up(lg) {
+				width: calc(100% / 3 - 20px * 2 / 3);
+			}
+			@include media-breakpoint-up(xl) {
+				width: calc(100% / 3 - 40px * 2 / 3);
+			}
+		}
+	}
+	&--region {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(60)};
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(60)};
+			--sPB: #{rem(88)};
+		}
+		.swiper {
+			overflow: hidden !important;
+		}
+		.swiper-slide {
+			@include media-breakpoint-up(xl) {
+				width: calc(100% / 4 - 60px * 2 / 4);
+			}
+		}
+		.sNews__title-row {
+			--bs-gutter-x: #{rem(16)};
+			--bs-gutter-y: #{rem(12)};
+			padding-bottom: rem(35);
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(50);
+			}
+		}
+	}
+}
+// end.sNews

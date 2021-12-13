@@ -1,16 +1,16 @@
 mixin modal()
 	//  start modals
-	+b.modal-win(id="modal-login" style="display: none")
+	+b.modal-win--login(id="modal-login" style="display: none")
 		+e.logo-wrap
 			h2!=`Вход в&nbsp;личный кабинет`
 			+pic('logo-white.png','',0)
 		+e.form
 			+form-wrap()
 				p Введите данные которые вы указывали при регистрации
-				+input('Sample@sample.com','text','E-mail')
+				+input('Sample@sample.com','email','E-mail')
 				+input('******','password','Пароль')
 				+e.btns-wrap
-					+e.btn Войти
+					+e.BUTTON.btn Войти
 					a(href="#") Восстановить пароль
 				+e.reg-link='Впервые на сайте? '
 					a(href="#") Зарегистрируйтесь!
@@ -25,7 +25,7 @@ mixin modal()
 				.col-md-6.col-12
 					+input('Иванов','text','Фамилия')
 					+input('Иван','text','Имя')
-					+input('Sample@sample.com','text','E-mail')
+					+input('Sample@sample.com','email','E-mail')
 					+input('+7(999)000-00-00','tel','Телефон')
 					+input('******','password','Пароль')
 				.col-md-6.col-12
@@ -37,6 +37,47 @@ mixin modal()
 					+e.btn-reg(href="#") Зарегистрироваться
 				.col-md-6.col-12
 					+e.accept!='Регистрируясь, вы соглашаетесь с '
+						a(href="#") правилами пользования сайтом
+						span!=' и даёте согласие на '
+						a(href="#") обработку персональных данных.
+	+b.modal-win(id="modal-activation" style="display: none")
+		+e.logo-wrap
+			h2!=`Вход в&nbsp;личный кабинет`
+			+pic('logo-white.png','',0)
+		+e.form
+			+form-wrap()
+				p Создайте пароль
+				+input('******','password','Пароль')
+				+input('******','password','Подтвердите пароль')
+				+e.btn-activation(href="#") Зарегистрироваться
+	// #modal-activation
+
+	// #modal-edit-profile
+	+b.modal-win--edit-profile(id="modal-edit-profile" style="display: none")
+		+e.head-wrap
+			h2 Редактирование профиля
+		+form-wrap()
+			.row
+				.col-md-6.col-12
+					+input('Иванов','text','Фамилия')
+					+input('Иван','text','Имя')
+					+input('ДД.ММ.ГГГГ','text','Дата рождения').input-date-picker-single-js(autocomplete="off")
+					+input('Республика Удмуртия','select','Мой регион')
+					+input('Введите','text','Учебное заведение')
+					+input('Sample@sample.com','email','E-mail')
+					+input('+7(999)000-00-00','tel','Телефон')
+					+input('VK', 'select', 'Соц. сеть')
+					+input('http://','url','Ссылка на профиль')
+					+input('******','password','Пароль')
+				.col-md-6.col-12
+					+e.LABEL.input-title Фото профиля
+					+b.load-photo--edit
+						input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
+			.row.align-items-md-end
+				.col-md-6.col-12
+					+e.btn-reg(href="#") Сохранить
+				.col-md-6.col-12
+					+e.accept!=`Нажимая кнопку &laquo;Сохранить&raquo;, вы соглашаетесь с `
 						a(href="#") правилами пользования сайтом
 						span!=' и даёте согласие на '
 						a(href="#") обработку персональных данных.
@@ -54,14 +95,14 @@ mixin modal()
 			+input('Викторовский','text','Фамилия')
 			+input('Олег','text','Имя')
 			+input('Викторович','text','Отчество')
-			+input('ДД.ММ.ГГГГ','text','Дата рождения').input-date-picker-js(autocomplete="off")
+			+input('ДД.ММ.ГГГГ','text','Дата рождения').input-date-picker-single-js(autocomplete="off")
 			+input('__ __ ___ ___','text','Серия и номер паспорта')
 			+input('Введите','text','Регион')
 			+input('Введите','text','Город')
 			+input('+_(___)___-__-__','tel','Телефон')
-			+input('Sample@sample.com','text','E-mail')
+			+input('Sample@sample.com','email','E-mail')
 			+input('Введите','text','Учебное заведение')
-			+e.btn-reg(href="#") Зарегистрироваться
+			+e.BUTTON.btn-reg Зарегистрироваться
 		
 		// #modal-restore-pass
 		+b.modal-win--restore-pass(id="modal-restore-pass" style="display: none")
@@ -71,8 +112,28 @@ mixin modal()
 			+e.form
 				+form-wrap()
 					p Введите данные которые вы указывали при регистрации
-					+input('Sample@sample.com','text','E-mail')
+					+input('Sample@sample.com','email','E-mail')
 					+e.btns-wrap
-						+e.btn Продолжить
+						+e.btn(href="#") Продолжить
+
+		// #modal-add-ticket
+		+b.modal-win--add-ticket(id="modal-add-ticket" style="display: none")
+			+e.form
+				h2 Добавить билет
+				+form-wrap()
+					+input('Введите','text','Номер билета')
+					+e.btns-wrap
+						+e.btn(href="#") Продолжить
+
+		// #modal-сancel
+		+b.modal-win--cancel(id="modal-cancel" style="display: none")
+			+e.form
+				h2 Вы действительно хотите отменить заявку на участие в мероприятии?
+				+form-wrap()
+					.row
+						.col-12
+							+e.BUTTON.btn-confirm.btn.btn-outline-warning Да
+						.col-12
+							+e.BUTTON.btn-cancel.btn.btn-warning Нет
 
 	// end modals

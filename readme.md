@@ -4,9 +4,11 @@
 # 1. Мероприятия, стр. мероприятия, форма регистрации на мероприятие 
 1. <https://pashawol.github.io/0029BCKC/public/05-activities.html>
 1. <https://pashawol.github.io/0029BCKC/public/06-activity-details.html>
+1. <https://pashawol.github.io/0029BCKC/public/06-activity-register.html>
 1. <https://pashawol.github.io/0029BCKC/public/00-modal.html>
 # 2. Контакты, Стр. регион. представительства
 1. <https://pashawol.github.io/0029BCKC/public/07-contacts.html>
+1. <https://pashawol.github.io/0029BCKC/public/08-contacts-region.html>
 
 # 3. Айдентика, Отчеты о деятельности, Логотипы, Видеогалерея, Документы 
 1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-identity.html>
@@ -24,9 +26,27 @@
 # 5. Регистрация, Авторизация, Восстановлние пароля
 1. <https://pashawol.github.io/0029BCKC/public/00-modal.html>
 
+# 6. Личный кабинет
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-profile.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-activities.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-1.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-2.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-3.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-4.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-5.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-6.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-7.html>
+
 # ?. Новости
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center.html>
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-region.html>
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-heroes.html>
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-smi.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-gallery.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-album.html>
 1. <https://pashawol.github.io/0029BCKC/public/04-detailed-news.html>
+
+# Последние страницы
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-gallery.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-album.html>
+1. <https://pashawol.github.io/0029BCKC/public/06-activity-register.html>

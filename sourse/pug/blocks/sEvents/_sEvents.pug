@@ -22,6 +22,9 @@ mixin sEvents(data)
 					+sEventsChb('Регистрация открыта', 'blue')
 			+e.slide-wrap
 				.swiper.sEvents-slider-js
+					+b.arrow-wrap
+						+arrow
+						.swiper-pagination
 					.swiper-wrapper
 						-for(let i =0; i < 2; i++)
 							+sEventsSlide({

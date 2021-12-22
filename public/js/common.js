@@ -423,14 +423,23 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
-
-
-
+	
+	
+	
 	//
 	let sEventsSlider = new Swiper('.sEvents-slider-js', {
 		slidesPerView: "auto",
 		loop: true,
-
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
 		breakpoints: {
 			0: {
 				spaceBetween: 20,

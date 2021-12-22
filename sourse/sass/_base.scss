@@ -662,3 +662,22 @@ iframe {
 		background-color: $light-blue;
 	}
 }
+
+.arrow-wrap{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+	.swiper-button-hand{
+		@extend .btn, .btn-outline-primary;
+		box-shadow: none !important;
+		.icon{
+			font-size: 20px;
+			fill:none;
+			stroke: currentColor;
+			stroke-width: 2px;
+		}
+	}
+	.swiper-button-hand-next{
+		order: 2;
+	}
+}

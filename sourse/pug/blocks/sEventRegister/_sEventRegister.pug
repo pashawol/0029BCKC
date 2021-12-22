@@ -54,6 +54,8 @@ mixin sEventRegister(data)
 										+in-c('radio','Иное', `2`)
 								.col-sm-6.col-xl-4
 									+input('Введите','text','Номер членского билета')
+							.load-photo
+								input.filepond(name='filepond', type='file', accept='image/png, image/jpeg, image/gif')
 						+e.item--sm
 							h4 Паспорт
 							.row

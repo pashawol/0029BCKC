@@ -1,6 +1,12 @@
 // start .sPromo
 .sPromo {
 	background: $light-blue;
+	.section-title{
+			@include media-breakpoint-down(sm){
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+	}
 	--sTPB: 0;
 
 	--sPT: #{rem(40)};

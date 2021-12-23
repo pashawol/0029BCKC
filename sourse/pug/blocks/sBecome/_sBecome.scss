@@ -8,6 +8,13 @@
 		--sPB: #{rem(60)};
 		--sTPB: #{rem(24)};
 	}
+	.sBecome__sub-title,
+	.section-title{
+			@include media-breakpoint-down(sm){
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+	}
 
 	&__box{
 		background: $orange;

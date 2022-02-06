@@ -1,0 +1,64 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sActivities/_sActivities.pug
+//- include ../blocks/sPromo/_sPromo.pug
+//- include ../blocks/sMap/_sMap.pug
+//- include ../blocks/sStat/_sStat.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sBecome/_sBecome.pug
+//- include ../blocks/sHero/_sHero.pug
+include ../blocks/sTicketRequest/_sTicketRequest.pug
+include ../blocks/sCabinetBody/_sCabinetBody.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= 'cabinet'
+	- let  bg= null
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+pageHead-cabinet()
+		+nav-cabinet()
+	+sCabinetBody
+		+b.btn-add(type="button").btn-outline-primary 
+			+icon("plus")
+			| Добавить отчет
+		+b.table-list
+			table
+				thead
+					tr 
+						th Название
+						th Дата
+						th Статус
+				tbody
+					tr 
+						td Название отчета для нагляности отображение
+						td 18.08.2022
+						td
+							div(style="color: #25C047") Принят
+							
+					tr 
+						td Название отчета для нагляности отобраГлавное управление сообщает о лесопожарной  обстановке на территории Краснодарского края Президент Российской Федерации, г лавы зарубежных стран, государственные деятели,жение
+						td 18.08.2022
+						td
+							.text-danger Отклонен
+					tr 
+						td Название отчета для нагляности отображение
+						td 18.08.2022
+						td
+							div(style="color: #25C047") Принят
+
+
+
+	+footer()

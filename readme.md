@@ -48,5 +48,10 @@
 
 # Последние страницы
 1. <https://pashawol.github.io/0029BCKC/public/02-press-center-gallery.html>
-1. <https://pashawol.github.io/0029BCKC/public/02-press-center-album.html>
-1. <https://pashawol.github.io/0029BCKC/public/06-activity-register.html>
+2. <https://pashawol.github.io/0029BCKC/public/02-press-center-album.html>
+3. <https://pashawol.github.io/0029BCKC/public/06-activity-register.html>
+
+# Последние страницы
+1. <https://pashawol.github.io/0029BCKC/public/10-cabinet-add-newst.html>
+2. <https://pashawol.github.io/0029BCKC/public/10-cabinet-list.html>
+3. <https://pashawol.github.io/0029BCKC/public/10-cabinet-list-2.html>

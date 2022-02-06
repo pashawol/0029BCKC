@@ -130,3 +130,22 @@ mixin score-item(c, t)
 	+b.score-item
 		span.text-primary!= c
 		span!= t
+
+
+mixin nav-cabinet()
+	+e.slider--js.swiper
+			.swiper-wrapper
+				+e.slide.swiper-slide
+					+e.btn(href="#") Профиль
+				+e.slide.swiper-slide
+					+e.btn(href="#") Мои мероприятия
+				+e.slide.swiper-slide
+					+e.btn.active.notification(href="#") Электронный билет члена ВСКС
+				+e.slide.swiper-slide
+					+e.btn(href="#") Созданные мероприятия
+				+e.slide.swiper-slide
+					+e.btn(href="#") Создать новость
+				+e.slide.swiper-slide
+					+e.btn(href="#") Отчеты
+
+

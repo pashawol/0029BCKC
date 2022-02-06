@@ -1,0 +1,71 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sActivities/_sActivities.pug
+//- include ../blocks/sPromo/_sPromo.pug
+//- include ../blocks/sMap/_sMap.pug
+//- include ../blocks/sStat/_sStat.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sBecome/_sBecome.pug
+//- include ../blocks/sHero/_sHero.pug
+include ../blocks/sTicketRequest/_sTicketRequest.pug
+include ../blocks/sCabinetBody/_sCabinetBody.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= 'cabinet'
+	- let  bg= null
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+pageHead-cabinet()
+		+nav-cabinet()
+	+sCabinetBody
+		+b.btn-add(type="button").btn-outline-primary 
+			+icon("plus")
+			| Создать мероприятие
+		mixin newscard()
+			+b.cabinetCard--event
+				+e.row.row
+					.col-lg-auto
+						+e.img-wrap
+							+e.labels
+								.row
+									.col
+										+e.label(style="--label-bg:rgba(0, 0, 0, 0.8); --label-color:#FF995A") Региональные
+									.col-auto
+										+e.label Регистрация открыта
+							a(href="#") 
+								+pic("about-videos-2.jpg",'bg',0)
+					.col
+						+e.caption
+							+e.title.mb-4
+								a.text-body.strong(href="#")  Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"
+							.row.gx-3.gy-2
+								.col-xl
+									.small.mb-2 19 августа, с 18:00 до 20:00
+									+e.place.small
+										+icon('mark')
+										| 19 августа, с 18:00 до 20:00 
+								.col-auto
+									a.btn.btn-outline-warning(href="#") Удалить 
+								.col-auto
+									a.btn.btn-outline-primary(href="#") Участники (46) 
+								.col-auto
+									a.btn.btn-warning(href="#") Редактировать
+
+		+newscard()
+		+newscard()
+
+
+	+footer()

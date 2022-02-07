@@ -441,19 +441,23 @@ function eventHandler() {
 	});
 
 	let pageHeadSlider = new Swiper('.page-head__slider--js', {
-		slidesPerView: "auto",
-		watchOverflow: true,
+		slidesPerView: 'auto',
 		freeMode: true,
-		touchRatio: 0.3,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
+		// freeMode: true,
+		// touchRatio: 0.3,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
 		// spaceBetween: 20,
 		breakpoints: {
 			0: {
 				spaceBetween: 5,
 			},
 			576: {
-				spaceBetween: 20,
+				spaceBetween: 10,
 			},
 		},
 	});

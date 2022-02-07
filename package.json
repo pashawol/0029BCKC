@@ -57,6 +57,7 @@
     "jquery-filepond": "^1.0.0",
     "litepicker": "^2.0.11",
     "moment": "^2.29.1",
-    "swiper": "^7.4.1"
+    "swiper": "^7.4.1",
+    "tinymce": "^5.10.2"
   }
 }

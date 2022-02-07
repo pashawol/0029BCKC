@@ -55,3 +55,5 @@
 1. <https://pashawol.github.io/0029BCKC/public/10-cabinet-add-newst.html>
 2. <https://pashawol.github.io/0029BCKC/public/10-cabinet-list.html>
 3. <https://pashawol.github.io/0029BCKC/public/10-cabinet-list-2.html>
+4. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news.html>
+5. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news-event.html>

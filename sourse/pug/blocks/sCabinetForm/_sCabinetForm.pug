@@ -13,7 +13,7 @@ mixin sCabinetForm(data)
 				.row
 					+e.col.col-lg-auto.col-xxl-auto.order-lg-last
 						+e.LABEL.input-title Фото
-						+b.load-photo-ticket
+						+b.load-photo-ticket--js
 							input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
 							+e.requirements
 								p Формат фотографии 3:4. Описание требования фотографии для билета в несколько строк
@@ -82,3 +82,156 @@ mixin sCabinetForm(data)
 
 
 	// end sCabinetForm
+
+
+	
+mixin sCabinetForm10(data)
+	// start sCabinetForm
+	+b.SECTION.sCabinetForm.section#sCabinetForm&attributes(attributes)
+		script(src="libs/tinymce/tinymce.min.js") 
+		script.
+			tinymce.init({
+				selector: 'textarea',  // change this value according to your HTML
+				language: 'ru_RU',
+				language_url: 'js/langs/ru_RU.js',
+				images_upload_url: 'postAcceptor.php',
+				images_upload_base_path: '/some/basepath',
+				images_upload_credentials: true
+			});
+		.container
+			+b.section-title--back
+				.row.align-items-start
+					.col-auto
+						+e.link-back(href="#")
+							+icon('chevron-back')
+					.col
+						h2 Новая новость
+			+form-wrap
+				.row
+					+e.col.col-lg-auto.col-xxl-auto.order-lg-last
+						.mb-4
+							+e.LABEL.input-title Картинка для анонса новости
+							+b.load-photo-ticket--js-2
+								input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
+								+e.requirements
+									p Размер изображения 238*176
+						.mb-4
+							+e.LABEL.input-title Подробная картинка новости
+							+b.load-photo-ticket--js-3
+								input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
+								+e.requirements
+									p Размер изображения не более 1,5 mb
+					.col.col-lg-8.col-xl-7.col-xxl-6.mb-5
+						+e.item
+							.row
+								.col-12
+									+input('Введите','text','Название')
+								.col-sm-6
+									+input('ДД.ММ.ГГГГ','text','Начало активности').input-date-picker-single-js
+								.col-12
+									+input('Введите','textarea','Описание для анонса')
+								.col-12
+									+input('Введите','textarea','Детальное описание')
+						+e.btn-row.row.gx-2
+							.col-auto
+								button.btn.btn-outline-warning Отмена
+							.col-auto
+								button.btn.btn-primary Применить
+							.col-auto
+								button.btn.btn-warning Отправить
+	// end sCabinetForm
+
+
+	
+mixin sCabinetForm11(data)
+	// start sCabinetForm
+	+b.SECTION.sCabinetForm.section#sCabinetForm&attributes(attributes)
+		//- script(src="libs/tinymce/tinymce.min.js") 
+		//- script.
+		//- 	tinymce.init({
+		//- 		selector: 'textarea',  // change this value according to your HTML
+		//- 		language: 'ru_RU',
+		//- 		language_url: 'js/langs/ru_RU.js',
+		//- 		images_upload_url: 'postAcceptor.php',
+		//- 		images_upload_base_path: '/some/basepath',
+		//- 		images_upload_credentials: true
+		//- 	});
+		.container
+			+b.section-title--back
+				.row.align-items-start
+					.col-auto
+						+e.link-back(href="#")
+							+icon('chevron-back')
+					.col
+						h2 Новое мероприятие
+			+form-wrap
+				.row
+					+e.col.col-lg-auto.col-xxl-auto.order-lg-last
+						.mb-4
+							+e.LABEL.input-title Картинка для анонса мероприятия
+							+b.load-photo-ticket--js-2
+								input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
+								+e.requirements
+									p Размер изображения 792 * 436
+					.col.col-lg-8.col-xl-7.col-xxl-6.mb-5
+						+e.item
+							.row
+								.col-12
+									+input('Введите','text','Название')
+								//- .col-sm-6
+								//- 	+input('ДД.ММ.ГГГГ','text','Начало активности').input-date-picker-single-js
+								.col-12
+									+input('Введите','textarea','Описание для анонса')
+								.col-sm-6
+									+input('Выбрать','select','Регион')
+								.col-12
+								.col-sm-6
+									+input('Выбрать','select','Тип мероприятия*')
+								.col-12
+									+switch('Только для членов ВСКС')
+								.col-12
+									+switch('ЧС')
+								.col-sm-6
+									+input('Введите','text','Максимально баллов за участие')
+								.col-sm-12
+								.col-sm-6
+									+input('ДД.ММ.ГГГГ','text','Дата начала').input-date-picker-single-js
+								.col-sm-6
+									+input('ДД.ММ.ГГГГ','text','Дата окончания').input-date-picker-single-js
+								-
+									var sw= [
+											'Запрашивать имя в форме регистрации',
+											'Запрашивать отчество в форме регистрации',
+											'Запрашивать фимилию в форме регистрации',
+											'Запрашивать пол в форме регистрации',
+											'Запрашивать день рождения в форме регистрации',
+											'Запрашивать Населенный пункт в форме регистрации',
+											'Запрашивать адрес постоянной регистрации в форме регистрации',
+											'Запрашивать регион в форме регистрации',
+											'Запрашивать телефон в форме регистрации',
+											'Запрашивать паспорт в форме регистрации',
+											'Запрашивать номер членского билета в форме регистрации',
+											'Запрашивать ВУ в форме регистрации',
+											'Запрашивать email в форме регистрации',
+											'Запрашивать образование в форме регистрации',
+											'Запрашивать место образование в форме регистрации',
+											'Запрашивать курсы в форме регистрации',
+											'Запрашивать информацию курсы по оказанию первой помощи постоянной регистрации в форме регистрации',
+											'Запрашивать информацию про аттестацию спасателя в форме регистрации',
+											'Запрашивать ЧС в форме регистрации',
+									]
+								each linkName in sw
+									.col-12
+										+switch(linkName)
+								//- 	+input('Введите','textarea','Описание для анонса')
+						+e.btn-row.row.gx-2
+							.col-auto
+								button.btn.btn-outline-warning Отмена
+							.col-auto
+								button.btn.btn-primary Применить
+							.col-auto
+								button.btn.btn-warning Отправить
+
+	// end sCabinetForm
+
+

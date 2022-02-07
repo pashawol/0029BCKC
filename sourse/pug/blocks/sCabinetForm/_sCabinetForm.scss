@@ -13,6 +13,9 @@
 		&__btn-row {
 			align-items: center;
 			--bs-gutter-y: #{rem(16)};
+			&.gx-2{
+				--bs-gutter-x:  #{rem(16)} !important;
+			}
 			@include media-breakpoint-down(sm) {
 			}
 		}
@@ -110,6 +113,8 @@
 		.load-photo-ticket {
 			width: 272px;
 			max-width: 272px;
+		
+
 			&__requirements {
 				p {
 					font-size: 12px;
@@ -139,6 +144,26 @@
 				}
 			}
 			// overflow: hidden;
+
+			&--js-2{
+				width: 238px;
+				max-width: 238px;
+				.filepond--drop-label{
+					
+					min-height: 176px;
+				}
+			}
+			
+			&--js-3{
+				width: 376px;
+				max-width: 376px;
+				.filepond--drop-label{
+					min-height: 207px;
+				}
+				.filepond--drop-label label{
+					max-width: 100%;
+				}
+			}
 		}
 	}
 
@@ -198,4 +223,20 @@
 			stroke-width: 3px;
 		}
 	}
+}
+.tox .tox-toolbar__primary{
+	background: none;
+}
+.tox:not(.tox-tinymce-inline) .tox-editor-header{
+	border-bottom: 1px solid $primary;
+}
+.tox .tox-edit-area,
+.tox .tox-statusbar,
+.tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type),
+.tox .tox-menubar+.tox-toolbar, .tox .tox-menubar+.tox-toolbar-overlord .tox-toolbar__primary ,
+.tox-tinymce{
+	border-color: $primary !important;
+}
+.tox-statusbar__branding{
+	display: none !important;
 }

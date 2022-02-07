@@ -62,6 +62,14 @@ mixin in-c(typ="checkbox", text, name= typ )
 		else
 			+e.SPAN.text.form-check-label= text
  
+mixin switch(text)
+	+b.LABEL.custom-input.form-check.form-switch
+		+e.INPUT.input.form-check-input(name=name, type='checkbox')&attributes(attributes)
+		if block
+			block 
+		else
+			+e.SPAN.text.form-check-label= text
+ 
 mixin add-file(n)
 	+b.add-file
 		label

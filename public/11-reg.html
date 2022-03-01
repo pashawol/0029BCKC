@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Личный кабинет</title>
+		<title>Регистрация</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -14,7 +14,7 @@
 		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
-	<body class="cabinet">
+	<body>
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -96,243 +96,70 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<div class="page-head page-head--cabinet section">
-				<div class="container">
-					<div class="page-head__row-title row">
+			<div class="page-head section">
+				<div class="container"> 
+					<div class="row">
 						<div class="col">
-							<h1>Личный кабинет</h1>
-						</div>
-						<div class="col-md-auto">
-							<a class="page-head__btn" href="#">Редактировать профиль
-							</a>
+							<h1>Регистрация</h1>
 						</div>
 					</div>
-					<div class="page-head__slider page-head__slider--js swiper">
-						<div class="swiper-wrapper">
-							<div class="page-head__slide swiper-slide">
-								<a class="page-head__btn" href="#">Профиль
-								</a>
+				</div>
+			</div>
+			<div class="sReg section pt-0">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg">
+							<div class="form-wrap">
+								<form>
+									<div class="row">
+										<div class="col-md-6 col-12">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иванов"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Иван"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Sample@sample.com"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7(999)000-00-00"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="******"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<button class="btn btn-warning w-100 mb-3 mt-3">Зарегистрироваться</button>
+											<div class="form-wrap__accept">Регистрируясь, вы соглашаетесь с <a href="#">правилами пользования сайтом</a><span> и даёте согласие на </span><a href="#">обработку персональных данных.</a>
+											</div>
+										</div>
+										<div class="col-md-6 col-12">
+											<label class="form-wrap__input-title">Фото профиля
+											</label>
+											<div class="load-photo">
+												<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif">
+											</div>
+										</div>
+									</div>
+								</form>
 							</div>
-							<div class="page-head__slide swiper-slide">
-								<a class="page-head__btn" href="#">Мои мероприятия
-								</a>
-							</div>
-							<div class="page-head__slide swiper-slide">
-								<a class="page-head__btn active" href="#">Электронный билет члена ВСКС
-								</a>
+						</div>
+						<div class="col-lg-auto">
+							<div class="sReg__aside small">Вы уже регистрировались на сайте? Воспользуйтесь <a href="#">формой входа</a>  в личный кабинет. 
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- start sCabinetForm-->
-			<section class="sCabinetForm section" id="sCabinetForm">
-				<div class="container">
-					<div class="section-title section-title--back">
-						<div class="row align-items-start">
-							<div class="col-auto">
-								<a class="section-title__link-back" href="#">
-									<svg class="icon icon-chevron-back ">
-										<use xlink:href="img/svg/sprite.svg#chevron-back"></use>
-									</svg>
-								</a>
-							</div>
-							<div class="col">
-								<h2>Заявка на получение электронного билета </h2>
-							</div>
-						</div>
-					</div>
-					<div class="form-wrap">
-						<form>
-							<div class="row">
-								<div class="form-wrap__col col-lg-auto col-xxl-auto order-lg-last">
-									<label class="form-wrap__input-title">Фото
-									</label>
-									<div class="load-photo-ticket load-photo-ticket--js">
-										<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
-										<div class="load-photo-ticket__requirements">
-											<p>Формат фотографии 3:4. Описание требования фотографии для билета в несколько строк</p>
-											<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-										</div>
-									</div>
-								</div>
-								<div class="col col-lg-8 col-xl-7 col-xxl-6">
-									<div class="form-wrap__item">
-										<h3>Личные данные</h3>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Фамилия на английском</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Имя на английском</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Отчество</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Дата рождения</span><input class="form-wrap__input form-control masked-date" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Учебное заведение</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Место рождения</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Место работы</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-										</div>
-									</div>
-									<div class="form-wrap__item">
-										<h3>Паспортные данные</h3>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Серия и номер паспорта</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="__ __ ___ ___"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Дата выдачи</span><input class="form-wrap__input form-control masked-date" name="text" type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="off"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Кем выдан</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-										</div>
-									</div>
-									<div class="form-wrap__item">
-										<h3>Контакты</h3>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Мой регион</span>
-														<select class="form-wrap__input form-select" name="select">
-															<option value="Республика Удмуртия">Республика Удмуртия</option>
-															<option value=" placeholder 1">placeholder 1</option>
-															<option value=" placeholder 2">placeholder 2</option>
-															<option value=" placeholder 3">placeholder 3</option>
-															<option value=" placeholder 4">placeholder 4</option>
-														</select>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-6 d-none d-sm-block"></div>
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="__ __ ___ ___"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 ___ ___ __ __"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-										</div>
-									</div>
-									<div class="form-wrap__item">
-										<h3>Ссылки на аккаунты в социальных сетях</h3>
-										<div class="row">
-											<!-- .row.mt-3.mt-sm-0 классы для строк 2-й и последующих соц. сетей-->
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Соц. сеть</span>
-														<select class="form-wrap__input form-select" name="select">
-															<option value="VK">VK</option>
-															<option value=" placeholder 1">placeholder 1</option>
-															<option value=" placeholder 2">placeholder 2</option>
-															<option value=" placeholder 3">placeholder 3</option>
-															<option value=" placeholder 4">placeholder 4</option>
-														</select>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Ссылка на профиль</span><input class="form-wrap__input form-control" name="url" type="url" placeholder="http://"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-										</div>
-										<button class="form-wrap__btn-soc">+ Добавить
-										</button>
-									</div>
-									<div class="form-wrap__btn-row row">
-										<div class="col-sm-6">
-											<button class="form-wrap__btn">Отправить
-											</button>
-										</div>
-										<div class="col-auto col-sm-6">
-											<div class="form-wrap__polite"> 
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span>Я согласен с условиями </span><a href="#">Политики обработки персональных данных</a>
-												</label>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</section>
-			<!-- end sCabinetForm-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">

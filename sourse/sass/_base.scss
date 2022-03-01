@@ -841,3 +841,26 @@ iframe {
 .form-switch .form-check-input{
 	border-color: $primary;
 }
+.sReg{
+	.form-wrap{
+		max-width: calc(272px *2 + 40px);
+		margin-bottom: 40px;
+		&__input-wrap{
+			margin-bottom: 16px;
+		}
+		&__accept{
+			font-size: 12px;
+			a{
+				@extend .text-body;
+				border-bottom: 1px solid;
+				&:hover{
+					border-color: transparent;
+				}
+			}
+		}
+	}
+	&__aside{
+		max-width: 245px;
+		padding-top: rem(20);
+	}
+}

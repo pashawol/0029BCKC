@@ -1,0 +1,77 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sActivities/_sActivities.pug
+//- include ../blocks/sPromo/_sPromo.pug
+//- include ../blocks/sMap/_sMap.pug
+//- include ../blocks/sStat/_sStat.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sBecome/_sBecome.pug
+//- include ../blocks/sHero/_sHero.pug
+include ../blocks/sCabinetForm/_sCabinetForm.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg= null
+
+block title
+	- let  title= 'Регистрация'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	//- +pageHead-cabinet()
+	//- 	+e.slider--js.swiper
+	//- 		.swiper-wrapper
+	//- 			+e.slide.swiper-slide
+	//- 				+e.btn(href="#") Профиль
+	//- 			+e.slide.swiper-slide
+	//- 				+e.btn(href="#") Мои мероприятия
+	//- 			+e.slide.swiper-slide
+	//- 				+e.btn.active(href="#") Электронный билет члена ВСКС
+	+pageHead(title)
+	+b.sReg.section.pt-0
+		.container
+			.row
+				.col-lg
+					+form-wrap()
+						.row
+							.col-md-6.col-12
+								+input('Иванов','text','Фамилия')
+								+input('Иван','text','Имя')
+								+input('Sample@sample.com','email','E-mail')
+								+input('+7(999)000-00-00','tel','Телефон')
+								+input('******','password','Пароль')
+								button.btn.btn-warning.w-100.mb-3.mt-3 Зарегистрироваться
+								+e.accept!='Регистрируясь, вы соглашаетесь с '
+									a(href="#") правилами пользования сайтом
+									span!=' и даёте согласие на '
+									a(href="#") обработку персональных данных.
+							.col-md-6.col-12
+								+e.LABEL.input-title Фото профиля
+								.load-photo
+									input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
+				.col-lg-auto
+					+e.aside.small Вы уже регистрировались на сайте? Воспользуйтесь #[a(href="#") формой входа]  в личный кабинет. 
+	//- +sContact-region
+	//- +sNews-region()
+	//- +sEvents-region()
+	//- +sMap()
+	//- +sActivities()
+	//- +sPromo()
+	//- +sStat()
+	//- +sEvents()
+	//- +sEvents2()
+	//- +sBecome()
+	//- +sHero()
+	//- +sPartners()
+	//- +sForm()
+	//- +sContact()
+	+footer()

@@ -57,3 +57,4 @@
 3. <https://pashawol.github.io/0029BCKC/public/10-cabinet-list-2.html>
 4. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news.html>
 5. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news-event.html>
+6. <https://pashawol.github.io/0029BCKC/public/11-reg.html>

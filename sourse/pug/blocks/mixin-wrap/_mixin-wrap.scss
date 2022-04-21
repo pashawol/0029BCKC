@@ -87,7 +87,7 @@
 			--bs-gutter-y: calc(var(--bs-gutter-x) * 0.75);
 			padding-bottom: rem(30);
 			@include media-breakpoint-up(md) {
-			padding-bottom: rem(38);
+				padding-bottom: rem(38);
 			}
 			.page-head__btn {
 				@extend .btn;
@@ -98,7 +98,6 @@
 			overflow: visible;
 			.page-head__slide {
 				width: auto;
-				
 			}
 			.page-head__btn {
 				@extend .btn;
@@ -146,7 +145,7 @@
 		font-weight: bold;
 		font-size: rem(20);
 		line-height: 150%;
-		color: black;
+		color: $body-color;
 		&:hover,
 		&.active {
 			color: $orange;
@@ -164,7 +163,7 @@
 					margin-bottom: rem(14);
 					a {
 						font-weight: normal;
-						color: rgba(black, 0.5);
+						color: rgba($body-color, 0.5);
 					}
 				}
 			}
@@ -243,7 +242,8 @@
 		.loc {
 			margin-right: calc(var(--bs-gutter-x) / 2);
 		}
-		span, a {
+		span,
+		a {
 			display: inline-block;
 			margin-top: calc(var(--bs-gutter-x) / 4);
 		}

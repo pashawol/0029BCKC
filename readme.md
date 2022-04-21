@@ -58,3 +58,4 @@
 4. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news.html>
 5. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news-event.html>
 6. <https://pashawol.github.io/0029BCKC/public/11-reg.html>
+6. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-structure.html>

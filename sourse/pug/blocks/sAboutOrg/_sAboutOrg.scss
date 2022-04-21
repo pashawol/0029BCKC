@@ -9,9 +9,9 @@
 	}
 	&__aboutSwiper {
 		@include media-breakpoint-up(lg) {
-			width: calc(100% + var(--witdh-slider));
-			--witdh-slider: calc(100vw - 150%);
-			margin-right: calc(-1 * var(--witdh-slider));
+			// width: calc(100% + var(--witdh-slider));
+			// --witdh-slider: calc(100vw - 150%);
+			// margin-right: calc(-1 * var(--witdh-slider));
 		}
 		@include media-breakpoint-down(lg) {
 			overflow: visible;

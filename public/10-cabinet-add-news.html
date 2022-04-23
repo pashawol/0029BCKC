@@ -139,59 +139,160 @@
 			</div>
 			<!-- start sCabinetBody-->
 			<div class="sCabinetBody section">
-				<div class="container">
-					<button class="btn-add btn-outline-primary" type="button"> 
-						<svg class="icon icon-plus ">
-							<use xlink:href="img/svg/sprite.svg#plus"></use>
-						</svg>Создать новость
-					</button>
-					<div class="cabinetCard cabinetCard--news">
-						<div class="cabinetCard__row row">
-							<div class="col-lg-auto"><a href="#"> 
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a></div>
-							<div class="col">
-								<div class="row small gx-3 gy-2 mb-3">
-									<div class="col-auto text-secondary">19.08.21</div>
-									<div class="col-auto strong" style="color: #25C047">Опубликована</div>
-								</div>
-								<div class="mb-4"><a class="text-body strong" href="#"> Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели,</a></div>
-								<div class="row g-3">
-									<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить</a></div>
-									<div class="col-auto"><a class="btn btn-outline-warning" href="#">Снять с публикации</a></div>
-									<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
-								</div>
+				<div class="tabs">
+					<div class="tabs__caption">
+						<div class="container">
+							<div class="tabs__caption-wrap">
+								<div class="tabs__btn active">Все</div>
+								<div class="tabs__btn">На модерации</div>
+								<div class="tabs__btn">Созданные ЦП</div>
 							</div>
 						</div>
 					</div>
-					<div class="cabinetCard cabinetCard--news">
-						<div class="cabinetCard__row row">
-							<div class="col-lg-auto"><a href="#"> 
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a></div>
-							<div class="col">
-								<div class="row small gx-3 gy-2 mb-3">
-									<div class="col-auto text-secondary">19.08.21</div>
-									<div class="col-auto strong" style="color: #E31E24">Неопубликована</div>
+					<div class="container">
+						<div class="tabs__wrap">
+							<div class="tabs__content active">
+								<button class="btn-add btn-outline-primary" type="button"> 
+									<svg class="icon icon-plus ">
+										<use xlink:href="img/svg/sprite.svg#plus"></use>
+									</svg>Создать новость
+								</button>
+								<div class="cabinetCard cabinetCard--news">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a></div>
+										<div class="col">
+											<div class="row small gx-3 gy-2 mb-3">
+												<div class="col-auto text-secondary">19.08.21</div>
+												<div class="col-auto strong" style="color: #25C047">Опубликована
+												</div>
+											</div>
+											<div class="mb-4"><a class="text-body strong" href="#"> Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели,</a></div>
+											<div class="row g-3">
+												<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить</a></div>
+												<div class="col-auto"><a class="btn btn-outline-warning" href="#">Снять с публикации</a></div>
+												<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="mb-4"><a class="text-body strong" href="#"> Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели,</a></div>
-								<div class="row g-3">
-									<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить</a></div>
-									<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
-									<div class="col-auto"><a class="btn btn-primary" href="#">Опубликовать</a></div>
+								<div class="cabinetCard cabinetCard--news">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a></div>
+										<div class="col">
+											<div class="row small gx-3 gy-2 mb-3">
+												<div class="col-auto text-secondary">19.08.21</div>
+												<div class="col-auto strong" style="color: #E31E24">Неопубликована
+												</div>
+											</div>
+											<div class="mb-4"><a class="text-body strong" href="#"> Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели,</a></div>
+											<div class="row g-3">
+												<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить</a></div>
+												<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+												<div class="col-auto"><a class="btn btn-primary" href="#">Опубликовать</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cabinetCard cabinetCard--news">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a></div>
+										<div class="col">
+											<div class="row small gx-3 gy-2 mb-3">
+												<div class="col-auto text-secondary">19.08.21</div>
+												<div class="col-auto strong" style="color: #EB7329">На модерации
+													<p class="loc">Владимирская область</p>
+												</div>
+											</div>
+											<div class="mb-4"><a class="text-body strong" href="#"> Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели,</a></div>
+											<div class="row g-3">
+												<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить</a></div>
+												<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+												<div class="col-auto"><a class="btn btn-primary" href="#">Опубликовать</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<button class="btn-add btn-outline-primary" type="button"> 
+									<svg class="icon icon-plus ">
+										<use xlink:href="img/svg/sprite.svg#plus"></use>
+									</svg>Создать новость
+								</button>
+								<div class="cabinetCard cabinetCard--news">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a></div>
+										<div class="col">
+											<div class="row small gx-3 gy-2 mb-3">
+												<div class="col-auto text-secondary">19.08.21</div>
+												<div class="col-auto strong" style="color: #EB7329">На модерации
+													<p class="loc">Владимирская область</p>
+												</div>
+											</div>
+											<div class="mb-4"><a class="text-body strong" href="#"> Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели,</a></div>
+											<div class="row g-3">
+												<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить</a></div>
+												<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+												<div class="col-auto"><a class="btn btn-primary" href="#">Опубликовать</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<button class="btn-add btn-outline-primary" type="button"> 
+									<svg class="icon icon-plus ">
+										<use xlink:href="img/svg/sprite.svg#plus"></use>
+									</svg>Создать новость
+								</button>
+								<div class="cabinetCard cabinetCard--news">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a></div>
+										<div class="col">
+											<div class="row small gx-3 gy-2 mb-3">
+												<div class="col-auto text-secondary">19.08.21</div>
+												<div class="col-auto strong" style="color: #25C047">Опубликована
+												</div>
+											</div>
+											<div class="mb-4"><a class="text-body strong" href="#"> Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели,</a></div>
+											<div class="row g-3">
+												<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить</a></div>
+												<div class="col-auto"><a class="btn btn-outline-warning" href="#">Снять с публикации</a></div>
+												<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end sCabinetBody-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">

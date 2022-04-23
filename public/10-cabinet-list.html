@@ -139,95 +139,300 @@
 			</div>
 			<!-- start sCabinetBody-->
 			<div class="sCabinetBody section">
-				<div class="container">
-					<button class="btn-add btn-outline-primary" type="button"> 
-						<svg class="icon icon-plus ">
-							<use xlink:href="img/svg/sprite.svg#plus"></use>
-						</svg>Создать мероприятие
-					</button>
-					<div class="cabinetCard cabinetCard--event">
-						<div class="cabinetCard__row row">
-							<div class="col-lg-auto">
-								<div class="cabinetCard__img-wrap">
-									<div class="cabinetCard__labels">
-										<div class="row">
-											<div class="col">
-												<div class="cabinetCard__label" style="--label-bg:rgba(0, 0, 0, 0.8); --label-color:#FF995A">Региональные
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="cabinetCard__label">Регистрация открыта
-												</div>
-											</div>
-										</div>
-									</div><a href="#"> 
-										<!-- picture-->
-										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
-										</picture>
-										<!-- /picture--></a>
-								</div>
-							</div>
-							<div class="col">
-								<div class="cabinetCard__caption">
-									<div class="cabinetCard__title mb-4"><a class="text-body strong" href="#"> Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"</a>
-									</div>
-									<div class="row gx-3 gy-2">
-										<div class="col-xl">
-											<div class="small mb-2">19 августа, с 18:00 до 20:00</div>
-											<div class="cabinetCard__place small">
-												<svg class="icon icon-mark ">
-													<use xlink:href="img/svg/sprite.svg#mark"></use>
-												</svg>19 августа, с 18:00 до 20:00 
-											</div>
-										</div>
-										<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить </a></div>
-										<div class="col-auto"><a class="btn btn-outline-primary" href="#">Участники (46) </a></div>
-										<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
-									</div>
-								</div>
+				<div class="tabs">
+					<div class="tabs__caption">
+						<div class="container">
+							<div class="tabs__caption-wrap">
+								<div class="tabs__btn active">Все</div>
+								<div class="tabs__btn">Региональные мероприятия</div>
+								<div class="tabs__btn">Созданные ЦП</div>
 							</div>
 						</div>
 					</div>
-					<div class="cabinetCard cabinetCard--event">
-						<div class="cabinetCard__row row">
-							<div class="col-lg-auto">
-								<div class="cabinetCard__img-wrap">
-									<div class="cabinetCard__labels">
-										<div class="row">
-											<div class="col">
-												<div class="cabinetCard__label" style="--label-bg:rgba(0, 0, 0, 0.8); --label-color:#FF995A">Региональные
-												</div>
+					<div class="container">
+						<div class="tabs__wrap">
+							<div class="tabs__content active">
+								<button class="btn-add btn-outline-primary" type="button"> 
+									<svg class="icon icon-plus ">
+										<use xlink:href="img/svg/sprite.svg#plus"></use>
+									</svg>Создать мероприятие
+								</button>
+								<div class="cabinetCard cabinetCard--event">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto">
+											<div class="cabinetCard__img-wrap">
+												<div class="cabinetCard__labels">
+													<div class="row">
+														<div class="col">
+															<div class="cabinetCard__label" style="--label-bg:rgba(0, 0, 0, 0.8); --label-color:#FF995A">Региональные
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="cabinetCard__label">Регистрация открыта
+															</div>
+														</div>
+													</div>
+												</div><a href="#"> 
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
 											</div>
-											<div class="col-auto">
-												<div class="cabinetCard__label">Регистрация открыта
+										</div>
+										<div class="col">
+											<div class="cabinetCard__caption">
+												<div class="cabinetCard__title mb-4"><a class="text-body strong" href="#"> Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"</a>
+												</div>
+												<div class="row gx-3 gy-2">
+													<div class="col-xl">
+														<div class="small mb-2">19 августа, с 18:00 до 20:00</div>
+														<div class="cabinetCard__place small">
+															<svg class="icon icon-mark ">
+																<use xlink:href="img/svg/sprite.svg#mark"></use>
+															</svg>Республика Удмуртия
+														</div>
+													</div>
+													<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить </a></div>
+													<div class="col-auto"><a class="btn btn-outline-primary" href="#">Участники (46) </a></div>
+													<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
 												</div>
 											</div>
 										</div>
-									</div><a href="#"> 
-										<!-- picture-->
-										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
-										</picture>
-										<!-- /picture--></a>
+									</div>
+								</div>
+								<div class="cabinetCard cabinetCard--event">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto">
+											<div class="cabinetCard__img-wrap">
+												<div class="cabinetCard__labels">
+													<div class="row">
+														<div class="col">
+															<div class="cabinetCard__label" style="--label-bg:rgba(0, 0, 0, 0.8); --label-color:#FF995A">Региональные
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="cabinetCard__label">Регистрация открыта
+															</div>
+														</div>
+													</div>
+												</div><a href="#"> 
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+											</div>
+										</div>
+										<div class="col">
+											<div class="cabinetCard__caption">
+												<div class="cabinetCard__title mb-4"><a class="text-body strong" href="#"> Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"</a>
+												</div>
+												<div class="row gx-3 gy-2">
+													<div class="col-xl">
+														<div class="small mb-2">19 августа, с 18:00 до 20:00</div>
+														<div class="cabinetCard__place small">
+															<svg class="icon icon-mark ">
+																<use xlink:href="img/svg/sprite.svg#mark"></use>
+															</svg>Республика Удмуртия
+														</div>
+													</div>
+													<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить </a></div>
+													<div class="col-auto"><a class="btn btn-outline-primary" href="#">Участники (46) </a></div>
+													<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cabinetCard cabinetCard--event">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto">
+											<div class="cabinetCard__img-wrap">
+												<div class="cabinetCard__labels">
+													<div class="row">
+														<div class="col">
+															<div class="cabinetCard__label" style="--label-bg:rgba(0, 0, 0, 0.8); --label-color:#FF995A">Региональные
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="cabinetCard__label">Регистрация открыта
+															</div>
+														</div>
+													</div>
+												</div><a href="#"> 
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+											</div>
+										</div>
+										<div class="col">
+											<div class="cabinetCard__caption">
+												<div class="cabinetCard__title mb-4"><a class="text-body strong" href="#"> Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"</a>
+												</div>
+												<div class="row gx-3 gy-2">
+													<div class="col-xl">
+														<div class="small mb-2">19 августа, с 18:00 до 20:00</div>
+														<div class="cabinetCard__place small">
+															<svg class="icon icon-mark ">
+																<use xlink:href="img/svg/sprite.svg#mark"></use>
+															</svg>Республика Удмуртия
+														</div>
+													</div>
+													<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить </a></div>
+													<div class="col-auto"><a class="btn btn-outline-primary" href="#">Участники (46) </a></div>
+													<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="col">
-								<div class="cabinetCard__caption">
-									<div class="cabinetCard__title mb-4"><a class="text-body strong" href="#"> Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"</a>
-									</div>
-									<div class="row gx-3 gy-2">
-										<div class="col-xl">
-											<div class="small mb-2">19 августа, с 18:00 до 20:00</div>
-											<div class="cabinetCard__place small">
-												<svg class="icon icon-mark ">
-													<use xlink:href="img/svg/sprite.svg#mark"></use>
-												</svg>19 августа, с 18:00 до 20:00 
+							<div class="tabs__content">
+								<button class="btn-add btn-outline-primary" type="button"> 
+									<svg class="icon icon-plus ">
+										<use xlink:href="img/svg/sprite.svg#plus"></use>
+									</svg>Создать мероприятие
+								</button>
+								<div class="cabinetCard cabinetCard--event">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto">
+											<div class="cabinetCard__img-wrap">
+												<div class="cabinetCard__labels">
+													<div class="row">
+														<div class="col">
+															<div class="cabinetCard__label" style="--label-bg:rgba(0, 0, 0, 0.8); --label-color:#FF995A">Региональные
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="cabinetCard__label">Регистрация открыта
+															</div>
+														</div>
+													</div>
+												</div><a href="#"> 
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
 											</div>
 										</div>
-										<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить </a></div>
-										<div class="col-auto"><a class="btn btn-outline-primary" href="#">Участники (46) </a></div>
-										<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+										<div class="col">
+											<div class="cabinetCard__caption">
+												<div class="cabinetCard__title mb-4"><a class="text-body strong" href="#"> Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"</a>
+												</div>
+												<div class="row gx-3 gy-2">
+													<div class="col-xl">
+														<div class="small mb-2">19 августа, с 18:00 до 20:00</div>
+														<div class="cabinetCard__place small">
+															<svg class="icon icon-mark ">
+																<use xlink:href="img/svg/sprite.svg#mark"></use>
+															</svg>Республика Удмуртия
+														</div>
+													</div>
+													<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить </a></div>
+													<div class="col-auto"><a class="btn btn-outline-primary" href="#">Участники (46) </a></div>
+													<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<button class="btn-add btn-outline-primary" type="button"> 
+									<svg class="icon icon-plus ">
+										<use xlink:href="img/svg/sprite.svg#plus"></use>
+									</svg>Создать мероприятие
+								</button>
+								<div class="cabinetCard cabinetCard--event">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto">
+											<div class="cabinetCard__img-wrap">
+												<div class="cabinetCard__labels">
+													<div class="row">
+														<div class="col">
+															<div class="cabinetCard__label" style="--label-bg:rgba(0, 0, 0, 0.8); --label-color:#FF995A">Региональные
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="cabinetCard__label">Регистрация открыта
+															</div>
+														</div>
+													</div>
+												</div><a href="#"> 
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+											</div>
+										</div>
+										<div class="col">
+											<div class="cabinetCard__caption">
+												<div class="cabinetCard__title mb-4"><a class="text-body strong" href="#"> Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"</a>
+												</div>
+												<div class="row gx-3 gy-2">
+													<div class="col-xl">
+														<div class="small mb-2">19 августа, с 18:00 до 20:00</div>
+														<div class="cabinetCard__place small">
+															<svg class="icon icon-mark ">
+																<use xlink:href="img/svg/sprite.svg#mark"></use>
+															</svg>Республика Удмуртия
+														</div>
+													</div>
+													<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить </a></div>
+													<div class="col-auto"><a class="btn btn-outline-primary" href="#">Участники (46) </a></div>
+													<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cabinetCard cabinetCard--event">
+									<div class="cabinetCard__row row">
+										<div class="col-lg-auto">
+											<div class="cabinetCard__img-wrap">
+												<div class="cabinetCard__labels">
+													<div class="row">
+														<div class="col">
+															<div class="cabinetCard__label" style="--label-bg:rgba(0, 0, 0, 0.8); --label-color:#FF995A">Региональные
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="cabinetCard__label">Регистрация открыта
+															</div>
+														</div>
+													</div>
+												</div><a href="#"> 
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/about-videos-2.webp"/><img class="object-fit-js" src="img/@2x/about-videos-2.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+											</div>
+										</div>
+										<div class="col">
+											<div class="cabinetCard__caption">
+												<div class="cabinetCard__title mb-4"><a class="text-body strong" href="#"> Добровольцы оказывают помощь в реализации проекта "Первая помощь: от Мала до Велика"</a>
+												</div>
+												<div class="row gx-3 gy-2">
+													<div class="col-xl">
+														<div class="small mb-2">19 августа, с 18:00 до 20:00</div>
+														<div class="cabinetCard__place small">
+															<svg class="icon icon-mark ">
+																<use xlink:href="img/svg/sprite.svg#mark"></use>
+															</svg>Республика Удмуртия
+														</div>
+													</div>
+													<div class="col-auto"><a class="btn btn-outline-warning" href="#">Удалить </a></div>
+													<div class="col-auto"><a class="btn btn-outline-primary" href="#">Участники (46) </a></div>
+													<div class="col-auto"><a class="btn btn-warning" href="#">Редактировать</a></div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

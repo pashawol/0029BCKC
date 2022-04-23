@@ -30,10 +30,7 @@ block pagecontent
 	//- +headerBlock()
 	+pageHead-cabinet()
 		+nav-cabinet()
-	+sCabinetBody
-		+b.btn-add(type="button").btn-outline-primary 
-			+icon("plus")
-			| Создать мероприятие
+	+sCabinetBodyTabsEvents
 		mixin newscard()
 			+b.cabinetCard--event
 				+e.row.row
@@ -56,16 +53,39 @@ block pagecontent
 									.small.mb-2 19 августа, с 18:00 до 20:00
 									+e.place.small
 										+icon('mark')
-										| 19 августа, с 18:00 до 20:00 
+										| Республика Удмуртия
 								.col-auto
 									a.btn.btn-outline-warning(href="#") Удалить 
 								.col-auto
 									a.btn.btn-outline-primary(href="#") Участники (46) 
 								.col-auto
 									a.btn.btn-warning(href="#") Редактировать
+		.tabs__wrap
+			.tabs__content.active
+				+b.btn-add(type="button").btn-outline-primary 
+					+icon("plus")
+					| Создать мероприятие
+				
 
-		+newscard()
-		+newscard()
+				+newscard()
+				+newscard()
+				+newscard()
 
+			.tabs__content
+				+b.btn-add(type="button").btn-outline-primary 
+					+icon("plus")
+					| Создать мероприятие
+				
+
+				+newscard()
+				//- +newscard()
+			.tabs__content
+				+b.btn-add(type="button").btn-outline-primary 
+					+icon("plus")
+					| Создать мероприятие
+				
+
+				+newscard()
+				+newscard()
 
 	+footer()

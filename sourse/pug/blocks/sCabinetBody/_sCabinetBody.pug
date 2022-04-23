@@ -4,3 +4,29 @@ mixin sCabinetBody(data)
 		.container
 			block
 	// end sCabinetBody
+
+mixin sCabinetBodyTabsNews(data)
+	// start sCabinetBody
+	+b.sCabinetBody.section&attributes(attributes)
+		.tabs
+			.tabs__caption
+				.container
+					.tabs__caption-wrap
+						.tabs__btn.active Все
+						.tabs__btn На модерации
+						.tabs__btn Созданные ЦП
+			.container
+				block
+mixin sCabinetBodyTabsEvents(data)
+	// start sCabinetBody
+	+b.sCabinetBody.section&attributes(attributes)
+		.tabs
+			.tabs__caption
+				.container
+					.tabs__caption-wrap
+						.tabs__btn.active Все
+						.tabs__btn Региональные мероприятия
+						.tabs__btn Созданные ЦП
+			.container
+				block
+	// end sCabinetBody

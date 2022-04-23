@@ -1,14 +1,68 @@
 // start .sCabinetBody
 .sCabinetBody {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+	.tabs__caption {
+		margin-bottom: 32px;
+		border-bottom: 1px solid #a1d8f6;
+	}
+	.tabs__caption-wrap {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+		flex-direction: column;
+	}
+	.tabs__btn {
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		transition-duration: 0.4s;
+		background-color: $white;
+		color: $body-color;
+		font-weight: 700;
+		@include media-breakpoint-up(lg) {
+			border-radius: 4px 4px 0px 0px;
+		}
+		&.active {
+			color: $white;
+			background-color: #238ece;
+		}
+	}
+	.loc {
+		color: #000000;
+		font-size: rem(13);
+		line-height: 150%;
+		font-weight: 400;
+		margin-top: 3px;
+		margin-bottom: 0;
+		position: relative;
+		&::before {
+			content: "";
+			background-image: url(../img/svg/loc-point.svg);
+			height: 14px;
+			left: -1.5rem;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 12px;
+		}
+	}
 } // end.sCabinetBody

@@ -30,11 +30,8 @@ block pagecontent
 	//- +headerBlock()
 	+pageHead-cabinet()
 		+nav-cabinet()
-	+sCabinetBody
-		+b.btn-add(type="button").btn-outline-primary 
-			+icon("plus")
-			| Создать новость
-		mixin newscard(t,c)
+	+sCabinetBodyTabsNews
+		mixin newscard(t,c,moderation)
 			+b.cabinetCard--news
 				+e.row.row
 					.col-lg-auto
@@ -44,23 +41,87 @@ block pagecontent
 						.row.small.gx-3.gy-2.mb-3
 							.col-auto.text-secondary 19.08.21
 							.col-auto.strong(style=`color: ${c}`)= t
+								if moderation
+									p.loc Владимирская область
 						.mb-4
 							a.text-body.strong(href="#")  Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели,
 						.row.g-3
 							.col-auto
 								a.btn.btn-outline-warning(href="#") Удалить
 							block
+		.tabs__wrap
+			.tabs__content.active
+				+b.btn-add(type="button").btn-outline-primary 
+					+icon("plus")
+					| Создать новость
+				
 
-		+newscard('Опубликована', '#25C047')
-			.col-auto
-				a.btn.btn-outline-warning(href="#") Снять с публикации
-			.col-auto
-				a.btn.btn-warning(href="#") Редактировать
-		+newscard('Неопубликована','#E31E24')
-			.col-auto
-				a.btn.btn-warning(href="#") Редактировать
-			.col-auto
-				a.btn.btn-primary(href="#") Опубликовать
+				+newscard('Опубликована', '#25C047')
+					.col-auto
+						a.btn.btn-outline-warning(href="#") Снять с публикации
+					.col-auto
+						a.btn.btn-warning(href="#") Редактировать
+				+newscard('Неопубликована','#E31E24')
+					.col-auto
+						a.btn.btn-warning(href="#") Редактировать
+					.col-auto
+						a.btn.btn-primary(href="#") Опубликовать
+				+newscard('На модерации','#EB7329',`moderation`)
+					.col-auto
+						a.btn.btn-warning(href="#") Редактировать
+					.col-auto
+						a.btn.btn-primary(href="#") Опубликовать
+
+			.tabs__content
+				+b.btn-add(type="button").btn-outline-primary 
+					+icon("plus")
+					| Создать новость
+				
+
+				+newscard('На модерации','#EB7329',`moderation`)
+					.col-auto
+						a.btn.btn-warning(href="#") Редактировать
+					.col-auto
+						a.btn.btn-primary(href="#") Опубликовать
+			.tabs__content
+				+b.btn-add(type="button").btn-outline-primary 
+					+icon("plus")
+					| Создать новость
+				+newscard('Опубликована', '#25C047')
+					.col-auto
+						a.btn.btn-outline-warning(href="#") Снять с публикации
+					.col-auto
+						a.btn.btn-warning(href="#") Редактировать
+		//- +b.btn-add(type="button").btn-outline-primary 
+		//- 	+icon("plus")
+		//- 	| Создать новость
+		//- mixin newscard(t,c)
+		//- 	+b.cabinetCard--news
+		//- 		+e.row.row
+		//- 			.col-lg-auto
+		//- 				a(href="#") 
+		//- 					+pic("about-videos-2.jpg",'bg',0)
+		//- 			.col
+		//- 				.row.small.gx-3.gy-2.mb-3
+		//- 					.col-auto.text-secondary 19.08.21
+		//- 					.col-auto.strong(style=`color: ${c}`)= t
+		//- 				.mb-4
+		//- 					a.text-body.strong(href="#")  Главное управление сообщает о лесопожарной обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели,
+		//- 				.row.g-3
+		//- 					.col-auto
+		//- 						a.btn.btn-outline-warning(href="#") Удалить
+		//- 					block
+
+		//- +newscard('Опубликована', '#25C047')
+		//- 	.col-auto
+		//- 		a.btn.btn-outline-warning(href="#") Снять с публикации
+		//- 	.col-auto
+		//- 		a.btn.btn-warning(href="#") Редактировать
+		//- +newscard('Неопубликована','#E31E24')
+		//- 	.col-auto
+		//- 		a.btn.btn-warning(href="#") Редактировать
+		//- 	.col-auto
+		//- 		a.btn.btn-primary(href="#") Опубликовать
 
 
 	+footer()

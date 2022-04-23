@@ -7,23 +7,23 @@ mixin sTicket(data)
 					span 4564893_НТ
 		+e.card-wrapper.container
 			+b.ticket-card
-				+e.title
-					img(loading="lazy" src="img/@2x/logo.png" alt="")
-					h3 Всероссийский студенческий корпус спасателей
-				+e.content.row
-					.col
-						ul
-							li Имя / Name
-							li Виктор
-							li Фамилия / Surname
-							li Victorovskiy
-							li Дата рождения / Born
-							li 18.08.1988
-							li ID / идентификационный номер
-							li 77MK/45889
-					.col-auto
-						+pic('sCabinetProfile.png','bg', '')
-				+e.footer Moscow&gt;Region&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;77MK&gt;45889&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+				+e.info
+					+e.title
+						//- img(loading="lazy" src="img/@2x/logo.png" alt="")
+						h3 <strong>Спасатель-доброволец</strong><br>emergency volunteer
+					+e.content.row
+						.col
+							ul
+								li ИГОРЬ/<br>IGOR
+								li BEZUGLOV/<br>БЕЗУГЛОВ
+								li 13.08.1992
+								li 77КС/00100
+						.col-auto
+							+pic('sCabinetProfile.png','bg', '')
+							+e.date 13.08.2018
+							+e.stamp
+								img(src="img/svg/ticket-image.svg", alt="")
+					+e.footer &gt;&gt;&gt;&gt;&gt;&gt;Moscow&gt;Region&gt;&gt;&gt;77MK&gt;45889&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
 		.container
 			+e.btn(href="#" download) Скачать билет в pdf
 

@@ -58,4 +58,9 @@
 4. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news.html>
 5. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news-event.html>
 6. <https://pashawol.github.io/0029BCKC/public/11-reg.html>
-6. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-structure.html>
+
+# 21.04
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-structure.html>
+2. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-ispolkom.html>
+3. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-history.html>
+4. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-6.html>

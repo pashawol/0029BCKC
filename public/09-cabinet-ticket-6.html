@@ -134,31 +134,33 @@
 				</div>
 				<div class="sTicket__card-wrapper container">
 					<div class="ticket-card">
-						<div class="ticket-card__title"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
-							<h3>Всероссийский студенческий корпус спасателей</h3>
-						</div>
-						<div class="ticket-card__content row">
-							<div class="col">
-								<ul>
-									<li>Имя / Name</li>
-									<li>Виктор</li>
-									<li>Фамилия / Surname</li>
-									<li>Victorovskiy</li>
-									<li>Дата рождения / Born</li>
-									<li>18.08.1988</li>
-									<li>ID / идентификационный номер</li>
-									<li>77MK/45889</li>
-								</ul>
+						<div class="ticket-card__info">
+							<div class="ticket-card__title">
+								<h3><strong>Спасатель-доброволец</strong><br>emergency volunteer</h3>
 							</div>
-							<div class="col-auto">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/sCabinetProfile.webp"/><img class="object-fit-js" src="img/@2x/sCabinetProfile.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
+							<div class="ticket-card__content row">
+								<div class="col">
+									<ul>
+										<li>ИГОРЬ/<br>IGOR</li>
+										<li>BEZUGLOV/<br>БЕЗУГЛОВ</li>
+										<li>13.08.1992</li>
+										<li>77КС/00100</li>
+									</ul>
+								</div>
+								<div class="col-auto">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/sCabinetProfile.webp"/><img class="object-fit-js" src="img/@2x/sCabinetProfile.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<div class="ticket-card__date">13.08.2018
+									</div>
+									<div class="ticket-card__stamp"><img src="img/svg/ticket-image.svg" alt=""/>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="ticket-card__footer">Moscow&gt;Region&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;77MK&gt;45889&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+							<div class="ticket-card__footer">&gt;&gt;&gt;&gt;&gt;&gt;Moscow&gt;Region&gt;&gt;&gt;77MK&gt;45889&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+							</div>
 						</div>
 					</div>
 				</div>
@@ -569,6 +571,26 @@
 							<div class="form-wrap__btns-wrap">
 								<a class="form-wrap__btn" href="#">Продолжить
 								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- #modal-сancel-->
+			<div class="modal-win modal-win--cancel" id="modal-cancel" style="display: none">
+				<div class="modal-win__form">
+					<h2>Вы действительно хотите отменить заявку на участие в мероприятии?</h2>
+					<div class="form-wrap">
+						<form>
+							<div class="row">
+								<div class="col-12">
+									<button class="form-wrap__btn-confirm btn btn-outline-warning">Да
+									</button>
+								</div>
+								<div class="col-12">
+									<button class="form-wrap__btn-cancel btn btn-warning">Нет
+									</button>
+								</div>
 							</div>
 						</form>
 					</div>

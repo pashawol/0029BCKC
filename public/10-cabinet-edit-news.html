@@ -167,7 +167,7 @@
 					</div>
 					<div class="form-wrap">
 						<form>
-							<div class="row">
+							<div class="row sCabinetForm__main-info-block">
 								<div class="form-wrap__col col-lg-auto col-xxl-auto order-lg-last">
 									<div class="mb-4">
 										<label class="form-wrap__input-title">Картинка для анонса новости
@@ -223,17 +223,40 @@
 											</div>
 										</div>
 									</div>
-									<div class="form-wrap__btn-row row gx-2">
-										<div class="col-auto">
-											<button class="btn btn-outline-warning">Отмена</button>
-										</div>
-										<div class="col-auto">
-											<button class="btn btn-primary">Применить</button>
-										</div>
-										<div class="col-auto">
-											<button class="btn btn-warning">Отправить</button>
-										</div>
+								</div>
+							</div>
+							<div class="sCabinetForm__select-wrap">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Изменить статус новости</span>
+										<select class="form-wrap__input form-select" name="select">
+											<option value="На доработку">На доработку</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="sCabinetForm__textarea-wrap">
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title">Комментарий</span>
+											<textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите" aria-hidden="true" style="display: none;"></textarea>
+										</label>
 									</div>
+								</div>
+							</div>
+							<div class="form-wrap__btn-row row gx-2">
+								<div class="col-auto">
+									<button class="btn btn-outline-warning">Отмена</button>
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-primary">Сохранить</button>
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-warning">Опубликовать</button>
 								</div>
 							</div>
 						</form>

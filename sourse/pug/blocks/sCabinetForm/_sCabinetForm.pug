@@ -107,7 +107,7 @@ mixin sCabinetForm10(data)
 					.col
 						h2 Новая новость
 			+form-wrap
-				.row
+				.row.sCabinetForm__main-info-block
 					+e.col.col-lg-auto.col-xxl-auto.order-lg-last
 						.mb-4
 							+e.LABEL.input-title Картинка для анонса новости
@@ -132,13 +132,21 @@ mixin sCabinetForm10(data)
 									+input('Введите','textarea','Описание для анонса')
 								.col-12
 									+input('Введите','textarea','Детальное описание')
-						+e.btn-row.row.gx-2
-							.col-auto
-								button.btn.btn-outline-warning Отмена
-							.col-auto
-								button.btn.btn-primary Применить
-							.col-auto
-								button.btn.btn-warning Отправить
+				.sCabinetForm__select-wrap
+					+input(`На доработку`,`select`,`Изменить статус новости`)
+				.col-lg-6
+					.sCabinetForm__textarea-wrap
+						.form-wrap__input-wrap.form-group
+							label
+								span.form-wrap__input-title Комментарий
+								textarea.form-wrap__input.form-control(name='textarea' placeholder='Введите' aria-hidden='true' style='display: none;')
+				+e.btn-row.row.gx-2
+					.col-auto
+						button.btn.btn-outline-warning Отмена
+					.col-auto
+						button.btn.btn-primary Сохранить
+					.col-auto
+						button.btn.btn-warning Опубликовать
 	// end sCabinetForm
 
 

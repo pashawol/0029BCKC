@@ -196,9 +196,14 @@ mixin sCabinetForm11(data)
 								.col-sm-6
 									+input('Выбрать','select','Тип мероприятия*')
 								.col-12
+									+in-c(`checkbox`,`Опубликовано`)
+								.col-12
 									+switch('Только для членов ВСКС')
 								.col-12
 									+switch('ЧС')
+								.col-sm-6
+									+input('Выбрать','select','Статус мероприятия*')
+								.col-12
 								.col-sm-6
 									+input('Введите','text','Максимально баллов за участие')
 								.col-sm-12
@@ -238,7 +243,7 @@ mixin sCabinetForm11(data)
 							.col-auto
 								button.btn.btn-primary Применить
 							.col-auto
-								button.btn.btn-warning Отправить
+								button.btn.btn-warning Сохранить
 
 	// end sCabinetForm
 

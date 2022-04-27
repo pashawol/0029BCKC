@@ -1,10 +1,10 @@
 // start .sCabinetForm
 .sCabinetForm {
-	--sPT: #{rem(38)};
+	--sPT: #{rem(18)};
 	--sPB: #{rem(55)};
 	--sTPB: #{rem(30)};
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(50)};
+		--sPT: #{rem(20)};
 		--sPB: #{rem(75)};
 		--sTPB: #{rem(33)};
 	}

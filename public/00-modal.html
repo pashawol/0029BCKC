@@ -96,7 +96,7 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<div class="container mt-5"><a class="btn btn-primary m-2 link-modal-js" href="#modal-login">Авторизация</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-reg">Регистрация</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-edit-profile">Редактирование профиля</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-reg-event">Регистрация на мероприятие</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-restore-pass">Восстановить пароль</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-add-ticket">Добавить билет</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-cancel">Отменить заявку</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-activation">Активация ЛК</a>
+			<div class="container mt-5"><a class="btn btn-primary m-2 link-modal-js" href="#modal-login">Авторизация</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-reg">Регистрация</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-edit-profile">Редактирование профиля</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-reg-event">Регистрация на мероприятие</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-restore-pass">Восстановить пароль</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-add-ticket">Добавить билет</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-cancel">Отменить заявку</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-activation">Активация ЛК</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-event-person">Профиль участника</a>
 			</div>
 			<footer class="footer">
 				<div class="container">
@@ -522,6 +522,24 @@
 							</div>
 						</form>
 					</div>
+				</div>
+			</div>
+			<div class="modal-win modal-win--event-person" id="modal-event-person" style="display: none">
+				<h2>Начислить баллы</h2>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Количество баллов</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Комментарий</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите"></textarea>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="modal-win__points-btn btn btn-warning">Начислить</button>
+					</form>
 				</div>
 			</div>
 		</div>

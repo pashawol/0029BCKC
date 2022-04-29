@@ -135,5 +135,12 @@ mixin modal()
 							+e.BUTTON.btn-confirm.btn.btn-outline-warning Да
 						.col-12
 							+e.BUTTON.btn-cancel.btn.btn-warning Нет
+		
+		+b.modal-win--event-person(id="modal-event-person" style="display: none")
+			h2 Начислить баллы
+			+form-wrap()
+				+input(`Введите`,`text`,`Количество баллов`)
+				+input(`Введите`,`textarea`,`Комментарий`)
+				button.modal-win__points-btn.btn.btn-warning Начислить
 
 	// end modals

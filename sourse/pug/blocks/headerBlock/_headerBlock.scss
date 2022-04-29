@@ -233,6 +233,27 @@
 
 	&__{}
 	&__{}
+	&__footer{
+		margin-top: auto;
+		// @include mt;
+	}
 }
 
 // end.headerBlock
+
+
+.text-down {
+	&.swiper-slide-active{
+
+	}
+	.headerBlock__footer{
+		margin-top: 15px;
+	}
+	.headerBlock__img-box{
+		justify-content: flex-end;
+	}
+	.headerBlock__title{
+		@include  rfs(32px);
+		max-width: rem(675);
+	}
+}

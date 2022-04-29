@@ -67,5 +67,6 @@
 5. <https://pashawol.github.io/0029BCKC/public/10-cabinet-add-news.html>
 6. <https://pashawol.github.io/0029BCKC/public/10-cabinet-list.html>
 7. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news.html>
-7. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news-event.html>
-7. <https://pashawol.github.io/0029BCKC/public/12-event-people.html>
+8. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news-event.html>
+9. <https://pashawol.github.io/0029BCKC/public/12-event-people.html>
+10. <https://pashawol.github.io/0029BCKC/public/13-participant-app.html>

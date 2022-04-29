@@ -443,3 +443,43 @@
 		line-height: 150%;
 	}
 }
+
+.participant-app {
+	.row {
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(40)};
+			--bs-gutter-y: #{rem(16)};
+			margin-bottom: rem(16);
+		}
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(12)};
+		margin-bottom: rem(12);
+	}
+	.form-control {
+		background-color: #ecf8ff;
+	}
+	.form-select {
+		color: #000000;
+		font-weight: 400;
+	}
+	&__btn-wrap {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+		flex-direction: column;
+	}
+	&__cancel,
+	&__save {
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+	}
+	&__cancel {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+			margin-right: rem(16);
+		}
+		margin-bottom: rem(16);
+	}
+}

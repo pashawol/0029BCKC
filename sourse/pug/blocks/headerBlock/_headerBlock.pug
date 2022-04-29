@@ -5,7 +5,7 @@ mixin headerBlock()
 			+e.slider-wrap.d-none.d-lg-block
 				.swiper.headerBlock-slider-js.fract-siwper-js 
 					.swiper-wrapper
-						+headerBlockSlide()
+						+headerBlockSlide().text-down
 						-for(let i=0; i < 4; i++)
 							+headerBlockSlide(i)
 					.d-none.d-lg-block
@@ -22,11 +22,11 @@ mixin headerBlock()
 	// end headerBlock
 
 mixin headerBlockSlide(mod='')
-	.swiper-slide 
+	.swiper-slide&attributes(attributes) 
 		+e.img-box(href="#")
 			img(loading="lazy" src="img/@2x/headerBlock-slide-1.png" alt="")
 			+e.title=`Встреча молодых спасателей с руководителями корпуса в г. Оренбург${mod}`
-			div.mt-auto
+			+e.footer
 				+e.bot-row.row.align-items-center
 					+e.col-date.col
 						+e.date.text-white 19.06.2022

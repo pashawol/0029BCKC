@@ -5,6 +5,13 @@ mixin item-sos(icon, a='#')
 		else
 			//-+icon(icon)
 			img(loading="lazy" src=`img/svg/soc-${icon}.svg` alt="")
+mixin item-sos2(icon, a='#')
+	+e.A.item(href= a target="_blank")
+		if block
+			block
+		else
+			//-+icon(icon)
+			img(loading="lazy" src=`img/svg/soc2-${icon}.svg` alt="")
 //- social buttons
 mixin soc()
 	+b.soc
@@ -16,5 +23,13 @@ mixin soc()
 			+item-sos('yt')
 			+item-sos('fb')
 			+item-sos('tw')
+mixin soc2()
+	+b.soc
+		if block
+			block
+		else
+			+item-sos2('vk')
+			+item-sos2('fb')
+			+item-sos2('inst')
 
 //- /social buttons 

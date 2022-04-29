@@ -328,3 +328,43 @@ mixin sCabinetForm13(data)
 							.participant-app__btn-wrap
 								.participant-app__cancel.btn.btn-outline-warning(href="#") Отмена
 								.participant-app__save.btn.btn-warning(href="#") Сохранить
+
+mixin sCabinetForm14(data)
+	// start sCabinetForm
+	+b.SECTION.sCabinetForm.section#sCabinetForm&attributes(attributes)
+		.container
+			+b.section-title--back
+				.row.align-items-start
+					.col-auto
+						+e.link-back(href="#")
+							+icon('chevron-back')
+					.col
+						h2 Ольгина Виктория Семеновна
+			+b.event-account
+				+e.wrap
+					+e.info-wrap
+						+pic(`event-account.jpg`,``,0)
+						+e.info-block
+							+e.strings
+								+e.info-string
+									+e.info-title Дата рождения
+									+e.date 18.08.1988
+								+e.info-string
+									+e.info-title Регион
+									+e.loc Краснодарский край
+								+e.info-string
+									+e.info-title Телефон
+									+e.tel(href="tel:+79859560033") +7 985 956 00 33
+								+e.info-string
+									+e.info-title E-mail
+									+e.mail(href="mailto:skfoundation@sk.ru") skfoundation@sk.ru
+								+e.info-string
+									+e.info-title ВУЗ
+									+e.study(href="#") Кубанский Государственный Аграрный Университет
+								+e.info-string
+									+e.info-title Соц сети
+									+soc2
+							+e.BUTTON.points-btn.btn.btn-warning Начислить баллы
+					+e.points
+						+e.points-count 256
+						span баллов

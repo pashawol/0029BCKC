@@ -484,3 +484,138 @@
 		margin-bottom: rem(16);
 	}
 }
+.event-account {
+	&__wrap {
+		display: flex;
+		@include media-breakpoint-up(xl) {
+			justify-content: space-between;
+			flex-direction: row;
+		}
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__info-wrap {
+		display: flex;
+		@include media-breakpoint-up(xl) {
+			flex-direction: row;
+			padding-right: rem(24);
+			padding-bottom: 0;
+			width: auto;
+		}
+		width: 100%;
+		padding-bottom: rem(24);
+		flex-direction: column;
+	}
+	picture {
+		width: rem(168);
+		min-width: rem(168);
+		height: rem(184);
+		border-radius: 4px;
+		overflow: hidden;
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(40);
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(24);
+	}
+	&__info {
+	}
+	&__points {
+		min-width: rem(80);
+		height: rem(80);
+		background-color: #ecf8ff;
+		border-radius: 4px;
+		text-align: center;
+		padding: rem(13);
+		span {
+			font-size: rem(13);
+			line-height: 150%;
+			color: #000000;
+		}
+	}
+	&__points-count {
+		font-weight: 700;
+		font-size: rem(32);
+		color: $primary;
+		line-height: calc(37 / 32);
+	}
+	&__info-string {
+		display: flex;
+		padding-top: rem(12);
+		padding-bottom: rem(12);
+		border-bottom: 1px solid #a1d8f6;
+		flex-direction: column;
+		width: 100%;
+		@include media-breakpoint-up(xl) {
+			width: rem(688);
+			max-width: 100%;
+			flex-direction: row;
+		}
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			border-color: transparent;
+		}
+	}
+	&__info-title {
+		@include media-breakpoint-up(xl) {
+			width: rem(190);
+			padding-right: rem(12);
+			padding-bottom: 0;
+		}
+		padding-bottom: rem(16);
+		font-size: rem(13);
+		line-height: 150%;
+	}
+	&__date {
+		font-size: rem(13);
+		line-height: 150%;
+	}
+	&__points-btn {
+		margin-top: rem(20);
+	}
+	&__loc,
+	&__tel,
+	&__mail {
+		padding-left: rem(24);
+		font-size: rem(13);
+		line-height: 150%;
+		margin-bottom: 0;
+		position: relative;
+		&::before {
+			content: "";
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: rem(16);
+			left: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: rem(16);
+		}
+	}
+	&__loc {
+		&::before {
+			background-image: url("../img/svg/loc-point.svg");
+		}
+	}
+	&__tel {
+		color: $body-color;
+		&::before {
+			background-image: url("../img/svg/tel-icon.svg");
+		}
+	}
+	&__mail {
+		&::before {
+			background-image: url("../img/svg/mail-icon.svg");
+		}
+	}
+	&__study {
+		font-size: rem(13);
+		line-height: 150%;
+	}
+	.soc{
+
+	}
+}

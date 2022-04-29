@@ -142,26 +142,17 @@
 					<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Личный кабинет</span>
 								<meta itemprop="position" content="1"/></a></li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Новости</span>
+						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Мероприятия</span>
 								<meta itemprop="position" content="2"/></a></li>
-						<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Новая новость</span>
+						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Название мероприятия</span>
 								<meta itemprop="position" content="3"/></a></li>
+						<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Участники</span>
+								<meta itemprop="position" content="4"/></a></li>
 					</ol>
 				</nav>
 			</div>
 			<!-- start sCabinetForm-->
 			<section class="sCabinetForm section" id="sCabinetForm">
-				<script src="libs/tinymce/tinymce.min.js"> </script>
-				<script>
-					tinymce.init({
-						selector: 'textarea',  // change this value according to your HTML
-						language: 'ru_RU',
-						language_url: 'js/langs/ru_RU.js',
-						images_upload_url: 'postAcceptor.php',
-						images_upload_base_path: '/some/basepath',
-						images_upload_credentials: true
-					});
-				</script>
 				<div class="container">
 					<div class="section-title section-title--back">
 						<div class="row align-items-start">
@@ -173,109 +164,268 @@
 								</a>
 							</div>
 							<div class="col">
-								<h2>Новая новость</h2>
+								<h2>Участники</h2>
 							</div>
 						</div>
 					</div>
-					<div class="form-wrap">
-						<form>
-							<div class="row sCabinetForm__main-info-block">
-								<div class="form-wrap__col col-lg-auto col-xxl-auto order-lg-last">
-									<div class="mb-4">
-										<label class="form-wrap__input-title">Картинка для анонса новости
-										</label>
-										<div class="load-photo-ticket load-photo-ticket--js-2">
-											<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
-											<div class="load-photo-ticket__requirements">
-												<p>Размер изображения 238*176</p>
-											</div>
-										</div>
-									</div>
-									<div class="mb-4">
-										<label class="form-wrap__input-title">Подробная картинка новости
-										</label>
-										<div class="load-photo-ticket load-photo-ticket--js-3">
-											<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
-											<div class="load-photo-ticket__requirements">
-												<p>Размер изображения не более 1,5 mb</p>
-											</div>
-										</div>
-									</div>
+					<div class="participants-table">
+						<div class="participants-table__info-wrap">
+							<div class="participants-table__count">Всего заявок - 354
+							</div>
+							<a class="participants-table__file" href="#">
+								<svg class="icon icon-file ">
+									<use xlink:href="img/svg/sprite.svg#file"></use>
+								</svg><span>Сформировать Excel</span>
+							</a>
+						</div>
+						<div class="participants-table__head">
+							<div class="participants-table__head-title participants-table__head-title--number">#
+								<svg class="icon icon-arrow-up ">
+									<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+								</svg>
+							</div>
+							<div class="participants-table__head-title participants-table__head-title--participant">Участник
+								<svg class="icon icon-arrow-up ">
+									<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+								</svg>
+							</div>
+							<div class="participants-table__head-title participants-table__head-title--status">Статус заявки
+								<svg class="icon icon-arrow-up ">
+									<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">1
 								</div>
-								<div class="col col-lg-8 col-xl-7 col-xxl-6 mb-5">
-									<div class="form-wrap__item">
-										<div class="row">
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Название</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-6">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Начало активности</span><input class="form-wrap__input form-control input-date-picker-single-js" name="text" type="text" placeholder="ДД.ММ.ГГГГ"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Описание для анонса</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите"></textarea>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__input-title">Детальное описание</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите"></textarea>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-										</div>
-									</div>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Ольгина Виктория Семеновна
+									</a>
 								</div>
 							</div>
-							<div class="sCabinetForm__select-wrap">
-								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">Изменить статус новости</span>
-										<select class="form-wrap__input form-select" name="select">
-											<option value="На доработку">На доработку</option>
-											<option value=" placeholder 1">placeholder 1</option>
-											<option value=" placeholder 2">placeholder 2</option>
-											<option value=" placeholder 3">placeholder 3</option>
-											<option value=" placeholder 4">placeholder 4</option>
-										</select>
-									</label>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--received">Получена
 								</div>
-								<!-- +e.input-wrap-->
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
 							</div>
-							<div class="col-lg-6">
-								<div class="sCabinetForm__textarea-wrap">
-									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__input-title">Комментарий</span>
-											<textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите" aria-hidden="true" style="display: none;"></textarea>
-										</label>
-									</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">2
+								</div>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Стоянов Кирилл Викторович
+									</a>
 								</div>
 							</div>
-							<div class="form-wrap__btn-row row gx-2">
-								<div class="col-auto">
-									<button class="btn btn-outline-warning">Отмена</button>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--confirmed">Подтверждена
 								</div>
-								<div class="col-auto">
-									<button class="btn btn-primary">Сохранить</button>
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
+							</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">3
 								</div>
-								<div class="col-auto">
-									<button class="btn btn-warning">Опубликовать</button>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Константинопольский Виниамин Кондратеевич
+									</a>
 								</div>
 							</div>
-						</form>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--cancel">Отклонена
+								</div>
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
+							</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">4
+								</div>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Игоревский Анатолий Викторович
+									</a>
+								</div>
+							</div>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--approved">Одобрена
+								</div>
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
+							</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">5
+								</div>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Викторовский Олег Викторович
+									</a>
+								</div>
+							</div>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--approved">Одобрена
+								</div>
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
+							</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">6
+								</div>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Ольгина Виктория Семеновна
+									</a>
+								</div>
+							</div>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--received">Получена
+								</div>
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
+							</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">7
+								</div>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Стоянов Кирилл Викторович
+									</a>
+								</div>
+							</div>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--confirmed">Подтверждена
+								</div>
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
+							</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">8
+								</div>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Константинопольский Виниамин Кондратеевич
+									</a>
+								</div>
+							</div>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--cancel">Отклонена
+								</div>
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
+							</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">9
+								</div>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Игоревский Анатолий Викторович
+									</a>
+								</div>
+							</div>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--approved">Одобрена
+								</div>
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
+							</div>
+						</div>
+						<div class="participants-table__item">
+							<div class="participants-table__name-wrap">
+								<div class="participants-table__number">10
+								</div>
+								<div class="participants-table__name">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/participant-pic.webp"/><img src="img/@2x/participant-pic.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<a class="participants-table__name-title" href="#">Викторовский Олег Викторович
+									</a>
+								</div>
+							</div>
+							<div class="participants-table__status-wrap">
+								<div class="participants-table__status participants-table__status--approved">Одобрена
+								</div>
+								<a class="participants-table__show-link" href="#">Посмотреть заявку
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="pagination-wrapper">
+						<ul class="page-numbers">
+									<li><a class="prev page-numbers" href="#"><img src="img/svg/prev.svg" alt=""/></a>
+									</li>
+									<li><a class="page-numbers" href="#">1</a>
+									</li>
+									<li><a class="page-numbers" href="#">2</a>
+									</li>
+									<li><span class="page-numbers current"> 4</span>
+									</li>
+									<li><span class="page-numbers page-middle">...</span>
+									</li>
+									<li><a class="page-numbers" href="#">23</a>
+									</li>
+									<li><a class="next page-numbers" href="#"><img src="img/svg/next.svg" alt=""/></a>
+									</li>
+						</ul>
 					</div>
 				</div>
 			</section>
-			<!-- end sCabinetForm-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">

@@ -248,3 +248,48 @@ mixin sCabinetForm11(data)
 	// end sCabinetForm
 
 
+mixin sCabinetForm12(data)
+	// start sCabinetForm
+	+b.SECTION.sCabinetForm.section#sCabinetForm&attributes(attributes)
+		.container
+			+b.section-title--back
+				.row.align-items-start
+					.col-auto
+						+e.link-back(href="#")
+							+icon('chevron-back')
+					.col
+						h2 Участники
+			+b.participants-table
+				+e.info-wrap
+					+e.count Всего заявок - 354
+					+e.file(href="#")
+						+icon(`file`)
+						span Сформировать Excel
+				+e.head
+					+e.head-title--number #
+						+icon(`arrow-up`)
+					+e.head-title--participant Участник
+						+icon(`arrow-up`)
+					+e.head-title--status Статус заявки
+						+icon(`arrow-up`)
+				mixin item(number,name,status,statusClass)
+					+e.item
+						+e.name-wrap
+							+e.number!=number
+							+e.name
+								+pic('participant-pic.jpg',``,0)
+								+e.name-title(href="#")!=name
+						+e.status-wrap
+							+e.status(class=`--${statusClass}`)!=status
+							+e.show-link(href="#") Посмотреть заявку
+				+item(`1`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+				+item(`2`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+				+item(`3`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+				+item(`4`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+				+item(`5`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+				+item(`6`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+				+item(`7`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+				+item(`8`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+				+item(`9`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+				+item(`10`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+			+pugin

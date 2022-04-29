@@ -32,19 +32,22 @@ mixin pugin()
 						a.page-numbers(href='#')= n 
 					else
 						block
+			//- +li()
+			//- 	span.prev.page-numbers( )
+			//- 		img(src="img/svg/prev.svg", alt="")
 			+li()
-				span.prev.page-numbers( )
+				a.prev.page-numbers(href='#')
 					img(src="img/svg/prev.svg", alt="")
-			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev-double.svg", alt="")
-			+li()
-				span.page-numbers.current  1
-			- for (var x = 1; x < 5; x++)
+			- for (var x = 1; x < 3; x++)
 				+li(x)
+			+li()
+				span.page-numbers.current  4
+			+li()
+				span.page-numbers.page-middle ...
+			+li(23)
 			+li()
 				a.next.page-numbers(href='#')
 					img(src="img/svg/next.svg", alt="")
-			+li()
-				a.next.page-numbers(href='#')
-					img(src="img/svg/next-double.svg", alt="")
+			//- +li()
+			//- 	a.next.page-numbers(href='#')
+			//- 		img(src="img/svg/next-double.svg", alt="")

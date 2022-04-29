@@ -445,6 +445,7 @@
 }
 
 .participant-app {
+	max-width: 900px;
 	.row {
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(40)};

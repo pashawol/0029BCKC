@@ -329,6 +329,19 @@
 			max-width: calc(100% - rem(64) - rem(258));
 			color: rgba(#000000, 0.5);
 		}
+		&--name {
+			max-width: calc(100% - rem(184) - rem(184) - rem(130));
+			flex-grow: 1;
+			padding-right: rem(24);
+		}
+		&--date{
+			width: rem(184);
+			cursor: pointer;
+		}
+		&--region{
+			width: rem(184);
+			cursor: pointer;
+		}
 		.icon {
 			font-size: 8px;
 			color: transparent;

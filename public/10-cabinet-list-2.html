@@ -140,39 +140,65 @@
 			<!-- start sCabinetBody-->
 			<div class="sCabinetBody section">
 				<div class="container">
-					<button class="btn-add btn-outline-primary" type="button"> 
-						<svg class="icon icon-plus ">
-							<use xlink:href="img/svg/sprite.svg#plus"></use>
-						</svg>Добавить отчет
-					</button>
+					<div class="sCabinetBody__btn-wrap">
+						<div class="status-btns">
+							<button class="status-btns__btn">Квартальные отчеты
+							</button>
+							<button class="status-btns__btn active"> Отчеты по мероприятиям
+							</button>
+						</div>
+						<button class="btn-add btn-outline-primary" type="button"> 
+							<svg class="icon icon-plus ">
+								<use xlink:href="img/svg/sprite.svg#plus"></use>
+							</svg>Добавить отчет
+						</button>
+					</div>
 					<div class="table-list">
+						<div class="table-list__select-wrap">
+							<select class="form-wrap__input form-select" name="select">
+								<option value="Выберите" hidden>Выберите</option>
+								<option value="value1">Принят</option>
+								<option value="value2">На доработку</option>
+								<option value="value3">На проверки</option>
+							</select>
+						</div>
+						<div class="participants-table__head">
+							<div class="participants-table__head-title participants-table__head-title--name">Название</div>
+							<div class="participants-table__head-title participants-table__head-title--region">Регион
+								<svg class="icon icon-arrow-up ">
+									<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+								</svg>
+							</div>
+							<div class="participants-table__head-title participants-table__head-title--date">Дата
+								<svg class="icon icon-arrow-up ">
+									<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+								</svg>
+							</div>
+							<div class="participants-table__head-title participants-table__head-title--status">Статус</div>
+						</div>
 						<table>
-							<thead>
-								<tr> 
-									<th>Название</th>
-									<th>Дата</th>
-									<th>Статус</th>
-								</tr>
-							</thead>
 							<tbody>
 								<tr> 
-									<td>Название отчета для нагляности отображение</td>
-									<td>18.08.2022</td>
-									<td>
+									<td class="name">Название отчета для нагляности отображение</td>
+									<td class="region">Краснодарский край</td>
+									<td class="date">18.08.2022</td>
+									<td class="status">
 										<div style="color: #25C047">Принят</div>
 									</td>
 								</tr>
 								<tr> 
-									<td>Название отчета для нагляности отобраГлавное управление сообщает о лесопожарной  обстановке на территории Краснодарского края Президент Российской Федерации, г лавы зарубежных стран, государственные деятели,жение</td>
-									<td>18.08.2022</td>
-									<td>
+									<td class="name">Название отчета для нагляности отобраГлавное управление сообщает о лесопожарной  обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели</td>
+									<td class="region">Республика Татарстан</td>
+									<td class="date">18.08.2022</td>
+									<td class="status">
 										<div class="text-danger">Отклонен</div>
 									</td>
 								</tr>
 								<tr> 
-									<td>Название отчета для нагляности отображение</td>
-									<td>18.08.2022</td>
-									<td>
+									<td class="name">Название отчета для нагляности отображение</td>
+									<td class="region">Ставропольский край</td>
+									<td class="date">18.08.2022</td>
+									<td class="status">
 										<div style="color: #25C047">Принят</div>
 									</td>
 								</tr>

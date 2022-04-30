@@ -71,3 +71,4 @@
 9. <https://pashawol.github.io/0029BCKC/public/12-event-people.html>
 10. <https://pashawol.github.io/0029BCKC/public/13-participant-app.html>
 11. <https://pashawol.github.io/0029BCKC/public/14-event-account.html>
+12. <https://pashawol.github.io/0029BCKC/public/10-cabinet-list-2.html>

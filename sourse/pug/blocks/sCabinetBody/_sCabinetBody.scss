@@ -18,6 +18,21 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
+	&__btn-wrap{
+		display: flex;
+		@include media-breakpoint-up(lg){
+			flex-direction: row;
+		}
+		flex-direction: column;
+		margin-bottom: rem(32);
+		.status-btns{
+			@include media-breakpoint-up(lg){
+				margin-right: rem(24);
+				margin-bottom: 0;
+			}
+			margin-bottom: rem(24);
+		}
+	}
 	.tabs__caption {
 		margin-bottom: 32px;
 		border-bottom: 1px solid #a1d8f6;

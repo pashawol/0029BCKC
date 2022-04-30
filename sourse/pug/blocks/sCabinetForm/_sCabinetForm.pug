@@ -402,3 +402,35 @@ mixin sCabinetForm14(data)
 					+e.points
 						+e.points-count 256
 						span баллов
+
+mixin sCabinetForm15(data)
+	// start sCabinetForm
+	+b.SECTION.sCabinetForm.section#sCabinetForm&attributes(attributes)
+		.container
+			+b.section-title--back
+				.row.align-items-start
+					.col-auto
+						+e.link-back(href="#")
+							+icon('chevron-back')
+					.col
+						h2 Отчет
+			+b.report-block
+				+form-wrap
+					.report-block__info-wrap
+						.row
+							.col-12
+								+input(`Введите`,`text`,`Наименование`)
+							.col-lg-4
+								+input(`Введите`,`text`,`Регион`)
+							.col-lg-4
+								+input(`Введите`,`text`,`Поле для отчета`)
+					hr
+					.report-block__edit-wrap
+						.row
+							.col-lg-4
+								+input(`Выберите`,`select`,`Изменить статус отчета`)
+							.col-12
+								+input(`Введите`,`textarea`,`Комментарий о том что нужно поправить`)
+					.report-block__btn-wrap
+						button.report-block__cancel.btn.btn-outline-warning Отмена
+						button.report-block__save.btn.btn-warning Сохранить

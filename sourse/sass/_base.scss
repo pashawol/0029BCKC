@@ -790,6 +790,9 @@ iframe {
 		.participants-table__head-title--name{
 			max-width: calc(100% - rem(184) - rem(180) - rem(130)) !important;
 		}
+		.table-list__select-wrap{
+			padding-right: rem(180);
+		}
 	}
 	&__select-wrap {
 		display: flex;

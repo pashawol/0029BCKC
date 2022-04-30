@@ -1,0 +1,85 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sActivities/_sActivities.pug
+//- include ../blocks/sPromo/_sPromo.pug
+//- include ../blocks/sMap/_sMap.pug
+//- include ../blocks/sStat/_sStat.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sBecome/_sBecome.pug
+//- include ../blocks/sHero/_sHero.pug
+include ../blocks/sTicketRequest/_sTicketRequest.pug
+include ../blocks/sCabinetBody/_sCabinetBody.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= 'cabinet'
+	- let  bg= null
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+		//-+topLine()
+	//- +headerBlock()
+	+pageHead-cabinet()
+		+nav-cabinet()
+	+sCabinetBody
+		+e.btn-wrap
+			+b.status-btns
+				+e.BUTTON.btn Квартальные отчеты
+				+e.BUTTON.btn.active  Отчеты по мероприятиям
+			+b.btn-add(type="button").btn-outline-primary 
+				+icon("plus")
+				| Добавить отчет
+		+b.table-list--answer
+				//- +e.select-wrap
+				//- 	select.form-wrap__input.form-select(name='select')
+				//- 		option(value='Выберите' hidden) Выберите
+				//- 		option(value='value1') Принят
+				//- 		option(value='value2') На доработку
+				//- 		option(value='value3') На проверки
+				.participants-table__head
+					.participants-table__head-title.participants-table__head-title--name Название
+					.participants-table__head-title.participants-table__head-title--date Дата
+						+icon(`arrow-up`)
+					.participants-table__head-title.participants-table__head-title--status Статус
+				table
+					//- thead
+					//- 	tr 
+					//- 		th Название
+					//- 		th Дата
+					//- 		th Статус
+					tbody
+						tr 
+							td.name Название отчета для нагляности отображение
+							td.date 18.08.2022
+							td.status
+								div(style="color: #25C047") Принят
+							td.edit
+								+e.BUTTON.edit.btn.btn-outline-primary Редактировать
+								
+						tr 
+							td.name Название отчета для нагляности отобраГлавное управление сообщает о лесопожарной  обстановке на территории Краснодарского края Президент Российской Федерации, главы зарубежных стран, государственные деятели
+							td.date 18.08.2022
+							td.status
+								.text-danger Отклонен
+							td.edit
+								+e.BUTTON.edit.btn.btn-outline-primary Редактировать
+						tr 
+							td.name Название отчета для нагляности отображение
+							td.date 18.08.2022
+							td.status
+								div(style="color: #25C047") Принят
+							td.edit
+								+e.BUTTON.edit.btn.btn-outline-primary Редактировать
+
+
+
+	+footer()

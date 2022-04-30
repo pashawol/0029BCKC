@@ -783,6 +783,14 @@ iframe {
 }
 
 .table-list {
+	&--answer{
+		.name{
+			max-width: calc(100% - rem(184) - rem(180) - rem(130)) !important;
+		}
+		.participants-table__head-title--name{
+			max-width: calc(100% - rem(184) - rem(180) - rem(130)) !important;
+		}
+	}
 	&__select-wrap {
 		display: flex;
 		min-width: 800px;
@@ -828,6 +836,9 @@ iframe {
 	.region,
 	.date {
 		width: rem(184);
+	}
+	.edit{
+		width: rem(180);
 	}
 	.region {
 		font-weight: 400;

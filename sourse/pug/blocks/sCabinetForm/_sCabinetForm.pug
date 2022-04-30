@@ -434,3 +434,57 @@ mixin sCabinetForm15(data)
 					.report-block__btn-wrap
 						button.report-block__cancel.btn.btn-outline-warning Отмена
 						button.report-block__save.btn.btn-warning Сохранить
+
+
+mixin sCabinetForm16(data)
+	// start sCabinetForm
+	+b.SECTION.sCabinetForm.section#sCabinetForm&attributes(attributes)
+		.container
+			+b.participants-table--list
+				+e.select-wrap
+					.form-wrap__input-wrap.form-group
+						label
+							span.form-wrap__input-title Статус
+							select.form-wrap__input.form-select(name='select')
+								option(value='Выберите') Выберите
+								option(value=' placeholder 1') placeholder 1
+								option(value=' placeholder 2') placeholder 2
+								option(value=' placeholder 3') placeholder 3
+								option(value=' placeholder 4') placeholder 4
+				+e.head
+					+e.head-title--number #
+						+icon(`arrow-up`)
+					+e.head-title--participant Участник
+						+icon(`arrow-up`)
+					+e.head-title--region Регион
+						+icon(`arrow-up`)
+					+e.head-title--study ВУЗ
+						+icon(`arrow-up`)
+					+e.head-title--status Статус заявки
+						+icon(`arrow-up`)
+				table
+					mixin item(number,name,status,statusClass)
+						tr
+							+e.TD.number-td
+								+e.number!=number
+							+e.TD.name
+								+pic('participant-pic.jpg',``,0)
+								+e.name-title(href="#")!=name
+							+e.TD.date 18.08.1988
+							+e.TD.region Краснодарский край
+							+e.TD.study Кубанский Государственный Аграрный Университет
+							+e.TD.status-td
+								+e.status(class=`--${statusClass}`)!=status
+							+e.TD.show-link-td
+								+e.show-link(href="#") Посмотреть заявку
+					+item(`1`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+					+item(`2`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+					+item(`3`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+					+item(`4`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+					+item(`5`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+					+item(`6`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+					+item(`7`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+					+item(`8`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+					+item(`9`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+					+item(`10`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+			+pugin

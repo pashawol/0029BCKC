@@ -307,9 +307,7 @@
 	}
 	&__head {
 		display: flex;
-		@include media-breakpoint-down(lg) {
-			width: 800px;
-		}
+		width: 1000px;
 		padding-bottom: 7px;
 		border-bottom: 1px solid #a1d8f6;
 	}
@@ -325,8 +323,8 @@
 			color: rgba(#000000, 0.5);
 		}
 		&--participant {
-			flex-grow: 1;
-			max-width: calc(100% - rem(64) - rem(258));
+			width: rem(664);
+			max-width: 66.4%;
 			color: rgba(#000000, 0.5);
 		}
 		&--name {
@@ -340,6 +338,11 @@
 		}
 		&--region {
 			width: rem(184);
+			cursor: pointer;
+		}
+		&--study {
+			width: rem(270);
+			max-width: 22.5%;
 			cursor: pointer;
 		}
 		.icon {
@@ -382,8 +385,8 @@
 		// }
 	}
 	table {
-		width: 100%;
-		min-width: 800px;
+		width: 1000px;
+		// max-width: 1207px;
 	}
 	// &__name-wrap {
 	// 	display: flex;
@@ -417,9 +420,11 @@
 	&__name {
 		display: flex;
 		align-items: center;
-		max-width: calc(100% - rem(64));
-		flex-grow: 1;
-		max-width: calc(100% - rem(64) - rem(258));
+		// max-width: calc(100% - rem(64));
+		// flex-grow: 1;
+		width: rem(664);
+		max-width: 66.4%;
+		// max-width: calc(100% - rem(64) - rem(258));
 		padding-right: rem(16);
 		picture {
 			width: 40px;
@@ -456,8 +461,10 @@
 	// 	}
 	// }
 	&__name-title {
-		@include media-breakpoint-up(lg) {
-		}
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		max-width: 100%;
 		font-weight: 700;
 		font-size: rem(16);
 		line-height: 150%;
@@ -536,6 +543,52 @@
 		text-align: right;
 	}
 	&__show-link-td {
+		width: rem(130);
+	}
+	overflow-x: auto;
+	&--list {
+		table {
+			width: 1200px;
+		}
+		.participants-table__head {
+			width: 1200px;
+		}
+		.participants-table__name {
+			max-width: 29%;
+			width: rem(348);
+		}
+		.participants-table__head-title--participant {
+			max-width: 37.5%;
+			width: rem(450);
+		}
+		.participants-table__head-title--region {
+			width: rem(144);
+			max-width: 12%;
+		}
+	}
+
+	&__select-wrap {
+		margin-bottom: rem(24);
+		label {
+			@include media-breakpoint-up(lg) {
+				width: rem(200);
+			}
+			width: 100%;
+		}
+	}
+	&__date {
+		width: rem(102);
+		font-size: rem(13);
+	}
+	&__region {
+		width: rem(144);
+		max-width: 12%;
+		font-size: rem(13);
+	}
+	&__study {
+		width: rem(270);
+		max-width: 22.5%;
+		font-size: rem(13);
 	}
 }
 

@@ -265,40 +265,6 @@ mixin sCabinetForm12(data)
 					+e.file(href="#")
 						+icon(`file`)
 						span Сформировать Excel
-				+e.head
-					+e.head-title--number #
-						+icon(`arrow-up`)
-					+e.head-title--participant Участник
-						+icon(`arrow-up`)
-					+e.head-title--status Статус заявки
-						+icon(`arrow-up`)
-				table
-					mixin item(number,name,status,statusClass)
-						tr
-							+e.TD.number-td
-								+e.number!=number
-							+e.TD.name
-								+pic('participant-pic.jpg',``,0)
-								+e.name-title(href="#")!=name
-							+e.TD.status-td
-								+e.status(class=`--${statusClass}`)!=status
-							+e.TD.show-link-td
-								+e.show-link(href="#") Посмотреть заявку
-					+item(`1`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
-					+item(`2`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
-					+item(`3`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
-					+item(`4`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
-					+item(`5`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
-					+item(`6`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
-					+item(`7`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
-					+item(`8`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
-					+item(`9`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
-					+item(`10`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
-				//- +e.info-wrap
-				//- 	+e.count Всего заявок - 354
-				//- 	+e.file(href="#")
-				//- 		+icon(`file`)
-				//- 		span Сформировать Excel
 				//- +e.head
 				//- 	+e.head-title--number #
 				//- 		+icon(`arrow-up`)
@@ -306,27 +272,98 @@ mixin sCabinetForm12(data)
 				//- 		+icon(`arrow-up`)
 				//- 	+e.head-title--status Статус заявки
 				//- 		+icon(`arrow-up`)
-				//- mixin item(number,name,status,statusClass)
-				//- 	+e.item
-				//- 		+e.name-wrap
-				//- 			+e.number!=number
-				//- 			+e.name
-				//- 				+pic('participant-pic.jpg',``,0)
-				//- 				+e.name-title(href="#")!=name
-				//- 		+e.status-wrap
-				//- 			+e.status(class=`--${statusClass}`)!=status
-				//- 			+e.show-link(href="#") Посмотреть заявку
-				//- +item(`1`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
-				//- +item(`2`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
-				//- +item(`3`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
-				//- +item(`4`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
-				//- +item(`5`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
-				//- +item(`6`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
-				//- +item(`7`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
-				//- +item(`8`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
-				//- +item(`9`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
-				//- +item(`10`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
-			+pugin
+				table.event-people-table
+					thead
+						tr
+							+e.TH.head-title--number #
+								+icon(`arrow-up`)
+							+e.TH.head-title--participant Участник
+								+icon(`arrow-up`)
+							+e.TH.head-title--status Статус заявки
+								+icon(`arrow-up`)
+							+e.TH.head-title--void
+					tbody
+						mixin item(number,name,status,statusClass)
+							tr
+								+e.TD.number-td
+									+e.number!=number
+								+e.TD.name
+									+pic('participant-pic.jpg',``,0)
+									+e.name-title(href="#")!=name
+								+e.TD.status-td
+									+e.status(class=`--${statusClass}`)!=status
+								+e.TD.show-link-td
+									+e.show-link(href="#") Посмотреть заявку
+						- for(var x = 0; x <10;x++)
+							+item(`1`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+							+item(`2`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+							+item(`3`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+							+item(`4`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+							+item(`5`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+							+item(`6`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+							+item(`7`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+							+item(`8`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+							+item(`9`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+							+item(`10`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+							+item(`11`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+							+item(`12`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+							+item(`13`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+							+item(`14`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+							+item(`15`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+							+item(`16`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+							+item(`17`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+							+item(`18`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+							+item(`19`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+							+item(`20`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+
+			//- +pugin
+//- mixin sCabinetForm12(data)
+//- 	// start sCabinetForm
+//- 	+b.SECTION.sCabinetForm.section#sCabinetForm&attributes(attributes)
+//- 		.container
+//- 			+b.section-title--back
+//- 				.row.align-items-start
+//- 					.col-auto
+//- 						+e.link-back(href="#")
+//- 							+icon('chevron-back')
+//- 					.col
+//- 						h2 Участники
+//- 			+b.participants-table
+//- 				+e.info-wrap
+//- 					+e.count Всего заявок - 354
+//- 					+e.file(href="#")
+//- 						+icon(`file`)
+//- 						span Сформировать Excel
+//- 				+e.head
+//- 					+e.head-title--number #
+//- 						+icon(`arrow-up`)
+//- 					+e.head-title--participant Участник
+//- 						+icon(`arrow-up`)
+//- 					+e.head-title--status Статус заявки
+//- 						+icon(`arrow-up`)
+//- 				table
+//- 					mixin item(number,name,status,statusClass)
+//- 						tr
+//- 							+e.TD.number-td
+//- 								+e.number!=number
+//- 							+e.TD.name
+//- 								+pic('participant-pic.jpg',``,0)
+//- 								+e.name-title(href="#")!=name
+//- 							+e.TD.status-td
+//- 								+e.status(class=`--${statusClass}`)!=status
+//- 							+e.TD.show-link-td
+//- 								+e.show-link(href="#") Посмотреть заявку
+//- 					+item(`1`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+//- 					+item(`2`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+//- 					+item(`3`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+//- 					+item(`4`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+//- 					+item(`5`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+//- 					+item(`6`,`Ольгина Виктория Семеновна`,`Получена`,`received`)
+//- 					+item(`7`,`Стоянов Кирилл Викторович`,`Подтверждена`,`confirmed`)
+//- 					+item(`8`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
+//- 					+item(`9`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
+//- 					+item(`10`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
+//- 			+pugin
 
 mixin sCabinetForm13(data)
 	// start sCabinetForm
@@ -451,18 +488,31 @@ mixin sCabinetForm16(data)
 								option(value=' placeholder 2') placeholder 2
 								option(value=' placeholder 3') placeholder 3
 								option(value=' placeholder 4') placeholder 4
-				+e.head
-					+e.head-title--number #
-						+icon(`arrow-up`)
-					+e.head-title--participant Участник
-						+icon(`arrow-up`)
-					+e.head-title--region Регион
-						+icon(`arrow-up`)
-					+e.head-title--study ВУЗ
-						+icon(`arrow-up`)
-					+e.head-title--status Статус заявки
-						+icon(`arrow-up`)
-				table
+				//- +e.head
+				//- 	+e.head-title--number #
+				//- 		+icon(`arrow-up`)
+				//- 	+e.head-title--participant Участник
+				//- 		+icon(`arrow-up`)
+				//- 	+e.head-title--region Регион
+				//- 		+icon(`arrow-up`)
+				//- 	+e.head-title--study ВУЗ
+				//- 		+icon(`arrow-up`)
+				//- 	+e.head-title--status Статус заявки
+				//- 		+icon(`arrow-up`)
+				table.app-list-table
+					thead
+						+e.TH.head-title--number #
+							+icon(`arrow-up`)
+						+e.TH.head-title--participant Участник
+							+icon(`arrow-up`)
+						+e.TH.head-title--void
+						+e.TH.head-title--region Регион
+							+icon(`arrow-up`)
+						+e.TH.head-title--study ВУЗ
+							+icon(`arrow-up`)
+						+e.TH.head-title--status Статус заявки
+							+icon(`arrow-up`)
+						+e.TH.head-title--void
 					mixin item(number,name,status,statusClass)
 						tr
 							+e.TD.number-td
@@ -487,4 +537,3 @@ mixin sCabinetForm16(data)
 					+item(`8`,`Константинопольский Виниамин Кондратеевич`,`Отклонена`,`cancel`)
 					+item(`9`,`Игоревский Анатолий Викторович`,`Одобрена`,`approved`)
 					+item(`10`,`Викторовский Олег Викторович`,`Одобрена`,`approved`)
-			+pugin

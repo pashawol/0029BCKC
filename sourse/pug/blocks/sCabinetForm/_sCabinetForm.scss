@@ -212,7 +212,7 @@
 		}
 	}
 	.participants-table {
-		margin-bottom: rem(32);
+		// margin-bottom: rem(32);
 	}
 } // end.sCabinetForm
 
@@ -275,7 +275,20 @@
 	display: none !important;
 }
 
+.event-people-table {
+	width: 1000px;
+	.participants-table__head-title--void {
+		width: 130px !important;
+	}
+}
+
 .participants-table {
+	padding-bottom: rem(32);
+	.dataTables_length,
+	.dataTables_filter,
+	.dataTables_info {
+		display: none;
+	}
 	&__info-wrap {
 		display: flex;
 		flex-wrap: wrap;
@@ -305,45 +318,57 @@
 			line-height: 150%;
 		}
 	}
-	&__head {
-		display: flex;
-		width: 1000px;
-		padding-bottom: 7px;
-		border-bottom: 1px solid #a1d8f6;
+	// &__head {
+	// 	display: flex;
+	// 	// width: 1000px;
+	// 	padding-bottom: 7px;
+	// 	border-bottom: 1px solid #a1d8f6;
+	// }
+	thead {
+		tr {
+			padding-bottom: 7px;
+			border-bottom: 1px solid #a1d8f6;
+		}
 	}
 	&__head-title {
 		font-size: 12px;
 		line-height: 150%;
 		&--number {
-			width: rem(64);
+			width: rem(64) !important;
 			color: #238ece;
+			cursor: pointer;
 		}
 		&--status {
-			width: rem(258);
+			width: rem(128) !important;
 			color: rgba(#000000, 0.5);
+			cursor: pointer;
 		}
 		&--participant {
-			width: rem(664);
+			width: rem(664) !important;
 			max-width: 66.4%;
 			color: rgba(#000000, 0.5);
+			cursor: pointer;
 		}
 		&--name {
-			max-width: calc(100% - rem(184) - rem(184) - rem(130));
+			max-width: calc(100% - rem(184) - rem(184) - rem(130)) !important;
 			flex-grow: 1;
 			padding-right: rem(24);
 		}
 		&--date {
-			width: rem(184);
+			width: rem(184) !important;
 			cursor: pointer;
 		}
 		&--region {
-			width: rem(184);
+			width: rem(184) !important;
 			cursor: pointer;
 		}
 		&--study {
-			width: rem(270);
+			width: rem(270) !important;
 			max-width: 22.5%;
 			cursor: pointer;
+		}
+		&__void {
+			pointer-events: none;
 		}
 		.icon {
 			font-size: 8px;
@@ -354,7 +379,7 @@
 			border-radius: 2px;
 			stroke-width: 2px;
 		}
-		&.active {
+		&.sorting_desc {
 			.icon {
 				transform: scaleY(-1);
 			}
@@ -385,7 +410,7 @@
 		// }
 	}
 	table {
-		width: 1000px;
+		// width: 1000px;
 		// max-width: 1207px;
 	}
 	// &__name-wrap {
@@ -546,23 +571,24 @@
 		width: rem(130);
 	}
 	overflow-x: auto;
+	overflow-y: hidden;
 	&--list {
 		table {
-			width: 1200px;
+			width: rem(1207) !important;
 		}
-		.participants-table__head {
-			width: 1200px;
-		}
+		// .participants-table__head {
+		// 	width: 1207px;
+		// }
 		.participants-table__name {
 			max-width: 29%;
 			width: rem(348);
 		}
 		.participants-table__head-title--participant {
 			max-width: 37.5%;
-			width: rem(450);
+			width: rem(457) !important;
 		}
 		.participants-table__head-title--region {
-			width: rem(144);
+			width: rem(144) !important;
 			max-width: 12%;
 		}
 	}

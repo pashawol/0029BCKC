@@ -137,7 +137,7 @@ const JSCCommon = {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
-	
+
 	//pure js
 	heightwindow() {
 		let vh = window.innerHeight * 0.01;
@@ -383,9 +383,9 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
-	
-	
-	
+
+
+
 	//
 	let sEventsSlider = new Swiper('.sEvents-slider-js', {
 		slidesPerView: "auto",
@@ -394,7 +394,7 @@ function eventHandler() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-		
+
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
@@ -586,6 +586,15 @@ function eventHandler() {
 				thisFract.innerHTML = this.realIndex + 1 + ' / ' + realCount;
 			},
 		},
+	});
+	$('.event-people-table').DataTable({
+		// "order": [[3, "desc"]]
+	});
+	$('.table-list-js').DataTable({
+	});
+	$('.table-list-js--answer').DataTable({
+	});
+	$('.app-list-table').DataTable({
 	});
 	$('.set-curr-year-js').each(function () {
 		this.innerHTML = new Date().getFullYear();

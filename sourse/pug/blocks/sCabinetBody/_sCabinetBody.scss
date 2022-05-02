@@ -25,6 +25,9 @@
 		@include media-breakpoint-up(lg){
 			flex-direction: row;
 		}
+		.btn-add{
+			margin-bottom: 0;
+		}
 		flex-direction: column;
 		margin-bottom: rem(32);
 		.status-btns{

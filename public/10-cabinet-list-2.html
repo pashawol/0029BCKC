@@ -12,6 +12,7 @@
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
+		<link href="libs/datatables.net-dt/css/jquery.dataTables.min.css"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
 	<body class="cabinet">
@@ -162,21 +163,23 @@
 								<option value="value3">На проверки</option>
 							</select>
 						</div>
-						<div class="participants-table__head">
-							<div class="participants-table__head-title participants-table__head-title--name">Название</div>
-							<div class="participants-table__head-title participants-table__head-title--region">Регион
-								<svg class="icon icon-arrow-up ">
-									<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
-								</svg>
-							</div>
-							<div class="participants-table__head-title participants-table__head-title--date">Дата
-								<svg class="icon icon-arrow-up ">
-									<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
-								</svg>
-							</div>
-							<div class="participants-table__head-title participants-table__head-title--status">Статус</div>
-						</div>
-						<table>
+						<table class="table-list-js">
+							<thead>
+								<tr> 
+									<th class="participants-table__head-title participants-table__head-title--name">Название</th>
+									<th class="participants-table__head-title participants-table__head-title--region">Регион
+										<svg class="icon icon-arrow-up ">
+											<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+										</svg>
+									</th>
+									<th class="participants-table__head-title participants-table__head-title--date">Дата
+										<svg class="icon icon-arrow-up ">
+											<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+										</svg>
+									</th>
+									<th class="participants-table__head-title participants-table__head-title--status">Статус</th>
+								</tr>
+							</thead>
 							<tbody>
 								<tr> 
 									<td class="name">Название отчета для нагляности отображение</td>
@@ -661,6 +664,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/datatables.net/js/jquery.dataTables.min.js" rel="stylesheet"></script>
 		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
 		<script src="libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js"> </script>
 		<script src="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js"> </script>

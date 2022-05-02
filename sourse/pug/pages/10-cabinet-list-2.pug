@@ -45,19 +45,16 @@ block pagecontent
 						option(value='value1') Принят
 						option(value='value2') На доработку
 						option(value='value3') На проверки
-				.participants-table__head
-					.participants-table__head-title.participants-table__head-title--name Название
-					.participants-table__head-title.participants-table__head-title--region Регион
-						+icon(`arrow-up`)
-					.participants-table__head-title.participants-table__head-title--date Дата
-						+icon(`arrow-up`)
-					.participants-table__head-title.participants-table__head-title--status Статус
-				table
-					//- thead
-					//- 	tr 
-					//- 		th Название
-					//- 		th Дата
-					//- 		th Статус
+				table.table-list-js
+					thead
+						tr 
+							th.participants-table__head-title.participants-table__head-title--name Название
+							th.participants-table__head-title.participants-table__head-title--region Регион
+								+icon(`arrow-up`)
+							th.participants-table__head-title.participants-table__head-title--date Дата
+								+icon(`arrow-up`)
+							th.participants-table__head-title.participants-table__head-title--status Статус
+							
 					tbody
 						tr 
 							td.name Название отчета для нагляности отображение

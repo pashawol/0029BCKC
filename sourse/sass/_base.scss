@@ -783,25 +783,57 @@ iframe {
 }
 
 .table-list {
-	&--answer{
-		.name{
+	.dataTables_length,
+	.dataTables_filter,
+	.dataTables_info {
+		display: none;
+	}
+	padding-bottom: rem(32);
+	overflow-y: hidden;
+	.participants-table__head-title--status {
+		pointer-events: none;
+	}
+	.participants-table__head-title--name {
+		pointer-events: none;
+	}
+	&--answer {
+		.name {
 			max-width: calc(100% - rem(184) - rem(180) - rem(130)) !important;
 		}
-		.participants-table__head-title--name{
+		.participants-table__head-title--name {
 			max-width: calc(100% - rem(184) - rem(180) - rem(130)) !important;
 		}
-		.table-list__select-wrap{
+		.table-list__select-wrap {
 			padding-right: rem(180);
+		}
+	}
+	.table-list__select-wrap {
+		margin-right: 0;
+		min-width: 800px;
+		margin-bottom: rem(24);
+		justify-content: flex-end;
+		@include media-breakpoint-down(lg) {
+			.form-select {
+				width: rem(130);
+			}
 		}
 	}
 	&__select-wrap {
 		display: flex;
-		min-width: 800px;
-		justify-content: flex-end;
-		margin-bottom: rem(24);
+		// min-width: 800px;
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(24);
+			width: 100%;
+			.form-select {
+				width: 100%;
+			}
+		}
+		// justify-content: flex-end;
+		// margin-bottom: rem(24);
 		.form-select {
 			width: rem(130);
 		}
+		margin-right: rem(16);
 	}
 	@include media-breakpoint-down(lg) {
 		overflow-x: auto;
@@ -840,7 +872,7 @@ iframe {
 	.date {
 		width: rem(184);
 	}
-	.edit{
+	.edit {
 		width: rem(180);
 	}
 	.region {
@@ -1022,6 +1054,41 @@ iframe {
 		}
 	}
 }
+
+.paginate_button {
+	height: rem(40);
+	min-width: rem(40);
+	display: block;
+	border-color: $primary;
+	border-radius: 4px;
+	transition-duration: 0.4s;
+	position: relative;
+	padding-left: rem(10);
+	padding-right: rem(10);
+	text-align: center;
+	font-weight: 700;
+	font-size: rem(16);
+	color: $primary;
+	line-height: calc(40 / 16);
+	border: 1px solid $primary;
+	display: inline-block;
+	margin-right: rem(16);
+	&:hover,
+	&.current {
+		background-color: $primary;
+		color: $white;
+	}
+}
+
+.dataTables_paginate {
+	margin-top: rem(32);
+	.ellipsis {
+		font-weight: 600;
+		margin-right: rem(16);
+		color: $primary;
+	}
+}
+
 .status-btns {
 	display: flex;
 	border-radius: 4px;

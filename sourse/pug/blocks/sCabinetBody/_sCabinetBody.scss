@@ -3,7 +3,9 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-
+	.btn-add{
+		margin-bottom: rem(32);
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

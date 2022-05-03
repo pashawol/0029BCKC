@@ -788,6 +788,9 @@ iframe {
 	.dataTables_info {
 		display: none;
 	}
+	table {
+		width: rem(1207) !important;
+	}
 	padding-bottom: rem(32);
 	overflow-y: hidden;
 	.participants-table__head-title--status {
@@ -884,7 +887,8 @@ iframe {
 		width: rem(130);
 	}
 	.name {
-		max-width: calc(100% - rem(184) - rem(184) - rem(130));
+		// max-width: calc(100% - rem(184) - rem(184) - rem(130));
+		width: rem(700) !important;
 		flex-grow: 1;
 		padding-right: rem(24);
 	}
@@ -1078,6 +1082,22 @@ iframe {
 		background-color: $primary;
 		color: $white;
 	}
+	cursor: pointer;
+	&.previous,
+	&.next {
+		text-indent: -9999px;
+		background-color: $primary;
+		color: $white;
+		background-size: 6px 10px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&.previous{
+		background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDggMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02LjUgMTFMMS41IDZMNi41IDEiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K');
+	}
+	&.next {
+		background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDggMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xLjUgMUw2LjUgNkwxLjUgMTEiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K');
+	}
 }
 
 .dataTables_paginate {
@@ -1086,6 +1106,9 @@ iframe {
 		font-weight: 600;
 		margin-right: rem(16);
 		color: $primary;
+	}
+	&.disable{
+		display: none;
 	}
 }
 
@@ -1112,6 +1135,15 @@ iframe {
 		&.active {
 			color: $white;
 			background-color: $primary;
+		}
+	}
+}
+
+.dataTables_scrollBody {
+	thead {
+		tr {
+			padding: 0 !important;
+			border: none !important;
 		}
 	}
 }

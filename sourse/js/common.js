@@ -589,13 +589,20 @@ function eventHandler() {
 	});
 	$('.event-people-table').DataTable({
 		// "order": [[3, "desc"]]
+		"scrollX": true
 	});
 	$('.table-list-js').DataTable({
+		"scrollX": true
 	});
 	$('.table-list-js--answer').DataTable({
+		"scrollX": true
 	});
 	$('.app-list-table').DataTable({
+		"scrollX": true
 	});
+	if ($('.dataTables_paginate span a').length < 2) {
+		$('.dataTables_paginate').toggleClass('disable');
+	}
 	$('.set-curr-year-js').each(function () {
 		this.innerHTML = new Date().getFullYear();
 	});

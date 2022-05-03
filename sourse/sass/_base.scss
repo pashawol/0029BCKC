@@ -812,7 +812,7 @@ iframe {
 	}
 	.table-list__select-wrap {
 		margin-right: 0;
-		min-width: 800px;
+		// min-width: 800px;
 		margin-bottom: rem(24);
 		justify-content: flex-end;
 		@include media-breakpoint-down(lg) {

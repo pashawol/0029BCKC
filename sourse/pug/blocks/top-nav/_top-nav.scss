@@ -180,6 +180,7 @@
 
 		h1 {
 			font-weight: 900;
+			margin-left: -3px;
 
 			@include media-breakpoint-up(xxl) {
 				font-size: rem(52);

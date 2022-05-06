@@ -35,7 +35,7 @@
 		@include media-breakpoint-up(sm) {
 			padding: rem(4) rem(11) rem(4) rem(4);
 		}
-		background-color: $white;
+		// background-color: $white;
 	}
 	&__b-row {
 		--bs-gutter-x: #{rem(4)} !important;
@@ -71,6 +71,10 @@
 	&__cards-row {
 		--bs-gutter-y: #{rem(30)};
 	}
+	&__cards-info-wrap {
+		position: relative;
+		padding-top: 36px;
+	}
 	&__img {
 		@extend .accept-ratio-frame;
 		padding-top: calc(197 / 272 * 100%);
@@ -82,7 +86,12 @@
 		--bs-gutter-x: #{rem(20)} !important;
 		--bs-gutter-y: #{rem(12)} !important;
 
-		padding-bottom: rem(17);
+		// padding-bottom: rem(17);
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0px;
+		height: 32px;
 	}
 	&__date {
 	}
@@ -92,6 +101,10 @@
 	&__title {
 		font-weight: bold;
 		color: $black;
+		// position: absolute;
+		// width: 100%;
+		// left: 0;
+		// top: 48px;
 		&:hover {
 			color: $primary;
 		}

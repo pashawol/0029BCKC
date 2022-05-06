@@ -52,12 +52,13 @@ mixin sNewsSlide(imgNum, txt)
 	.col-sm-6.col-lg-3
 		+e.img(href="#")
 			img(loading="lazy" src=`img/@2x/sNews-slide-${imgNum}.png` alt="")
-		+e.date-row.row.align-items-center
-			.col
-				+e.date 19.08.21
-			.col-auto
-				+e.location Республика Удмуртия
-		+e.title(href="#")=txt
+		+e.cards-info-wrap
+			+e.date-row.row.align-items-center
+				.col
+					+e.date 19.08.21
+				.col-auto
+					+e.location Республика Удмуртия
+			+e.title(href="#")=txt
 
 mixin sNewsSlide-region(imgNum, txt)
 	.swiper-slide

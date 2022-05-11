@@ -543,7 +543,8 @@ iframe {
 		width: rem(16);
 		height: rem(16);
 		margin-right: rem(8);
-
+		background-repeat: no-repeat;
+		background-size: contain;
 		background-image: url(../img/svg/location.svg);
 	}
 }
@@ -671,7 +672,7 @@ iframe {
 		@extend .btn, .btn-outline-primary;
 		box-shadow: none !important;
 		.icon {
-			font-size: 20px;
+			font-size: rem(20);
 			fill: none;
 			stroke: currentColor;
 			stroke-width: 2px;

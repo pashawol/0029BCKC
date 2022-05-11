@@ -18,7 +18,7 @@
 
 	&__box{
 		background: $orange;
-		box-shadow: 0px 23px 38px rgba(220, 220, 220, 0.15);
+		box-shadow: 0px rem(23) rem(38) rgba(220, 220, 220, 0.15);
 		color: $white;
 		border-radius: $border-radius;
 	}
@@ -82,7 +82,7 @@
 		display: flex;
 		align-items: flex-end;
 		@include media-breakpoint-up(lg){
-			height: calc(100% + 65px);
+			height: calc(100% + rem(65));
 			margin-left: rem(-162);
 			margin-top: rem(-65);
 			margin-right: rem(32);

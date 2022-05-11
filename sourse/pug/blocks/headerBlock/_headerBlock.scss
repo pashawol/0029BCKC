@@ -158,7 +158,8 @@
 			margin-bottom: rem(40);
 		}
 		@include media-breakpoint-up(xl){
-			padding: 45px 61px 56px 61px;
+			// padding: 45px 61px 56px 61px;
+			padding: rem(45) rem(61) rem(56) rem(61);
 			min-height: rem(504);
 		}
 

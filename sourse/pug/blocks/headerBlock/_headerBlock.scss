@@ -138,6 +138,7 @@
 		.headerBlock__btn{
 			transform: scale(1.6);
 			transform-origin: right bottom;
+			margin-top: 1.5rem ;
 		}
 		 
 		img{
@@ -256,5 +257,7 @@
 	.headerBlock__title{
 		@include  rfs(32px);
 		max-width: rem(675);
+		
 	}
 }
+

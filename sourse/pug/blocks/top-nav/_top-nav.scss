@@ -68,53 +68,7 @@
 		}
 	}
 
-	.menu {
-		padding: 0;
-		margin: 0;
-		display: flex;
-		align-items: center;
-		list-style: none;
 
-		& > .menu-item {
-			margin-right: rem(20);
-			@include media-breakpoint-up(xl) {
-				margin-right: rem(38);
-			}
-			&:last-child {
-				margin-right: 0;
-			}
-
-			& > a {
-				font-weight: bold;
-
-				color: $body-color;
-				&:hover {
-					color: $blue;
-				}
-			}
-
-			.closed {
-				@extend .btn, .btn-danger;
-				padding: 1px rem(7);
-			}
-
-			// &:last-child {
-			// 	& > a {
-			// 		@extend .btn;
-			// 		@extend .btn-danger;
-			// 		padding: 1px rem(7);
-			// 	}
-			// }
-		}
-		.menu-item-has-children {
-			position: relative;
-
-			&:hover {
-				--sb-o: 1;
-				--sb-scale: 1;
-			}
-		}
-	}
 
 	.sub-menu {
 		transform-origin: top left;
@@ -244,4 +198,55 @@
 		position: relative;
 		top: -2px;
 	// }
+}
+
+.menu {
+	padding: 0;
+	margin: 0;
+	@include media-breakpoint-up(lg){
+
+		display: flex;
+		align-items: center;
+		list-style: none;
+	}
+
+	& > .menu-item {
+		margin-right: rem(20);
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(38);
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+
+		& > a {
+			font-weight: bold;
+
+			color: $body-color;
+			&:hover {
+				color: $blue;
+			}
+		}
+
+		.closed {
+			@extend .btn, .btn-danger;
+			padding: 1px rem(7);
+		}
+
+		// &:last-child {
+		// 	& > a {
+		// 		@extend .btn;
+		// 		@extend .btn-danger;
+		// 		padding: 1px rem(7);
+		// 	}
+		// }
+	}
+	.menu-item-has-children {
+		position: relative;
+
+		&:hover {
+			--sb-o: 1;
+			--sb-scale: 1;
+		}
+	}
 }

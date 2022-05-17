@@ -170,9 +170,10 @@ $h: em(2);
 				font-weight: bold;
 				font-size: 18px;
 
-				color: $black;
+				// color: $black;
+				
 				&:hover {
-					color: $primary;
+					// color: $primary;
 				}
 			}
 
@@ -187,7 +188,12 @@ $h: em(2);
 			justify-content: space-between;
 			flex-wrap: wrap;
 			align-items: center;
-
+			a{
+				color: #00086a;
+				&:hover{
+					color: #238ece;
+				}
+			}
 			&.active {
 				&:after {
 					--chevron-rot: 180deg;

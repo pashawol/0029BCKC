@@ -1148,3 +1148,8 @@ iframe {
 		}
 	}
 }
+
+
+.menu-item-has-children> a{
+	pointer-events: none;
+}

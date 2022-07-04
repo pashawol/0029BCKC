@@ -587,79 +587,84 @@ function eventHandler() {
 			},
 		},
 	});
-	$('.event-people-table').DataTable({
-		// "order": [[3, "desc"]]
-		"scrollX": true
-	});
-	$('.table-list-js').DataTable({
-		"scrollX": true
-	});
-	$('.table-list-js--answer').DataTable({
-		"scrollX": true
-	});
-	$('.app-list-table').DataTable({
-		"scrollX": true
-	});
-	if ($('.dataTables_paginate span a').length < 2) {
-		$('.dataTables_paginate').toggleClass('disable');
+
+	let table = $('.event-people-table');
+	if (table) {
+
+		table.DataTable({
+			// "order": [[3, "desc"]]
+			"scrollX": true
+		});
+		$('.table-list-js').DataTable({
+			"scrollX": true
+		});
+		$('.table-list-js--answer').DataTable({
+			"scrollX": true
+		});
+		$('.app-list-table').DataTable({
+			"scrollX": true
+		});
+		if ($('.dataTables_paginate span a').length < 2) {
+			$('.dataTables_paginate').toggleClass('disable');
+		}
+		$('.set-curr-year-js').each(function () {
+			this.innerHTML = new Date().getFullYear();
+		});
 	}
-	$('.set-curr-year-js').each(function () {
-		this.innerHTML = new Date().getFullYear();
-	});
 	//yandex lazy
 	//<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98" type="text/javascript"></script>
-	window.setTimeout(function () {
-		let yandexScript = document.createElement('script');
-		yandexScript.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98');
-		yandexScript.setAttribute('type', 'text/javascript');
-		document.body.appendChild(yandexScript);
-		//-console.log(yandexScript);
+	// window.setTimeout(function () {
+	// 	let yandexScript = document.createElement('script');
+	// 	yandexScript.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98');
+	// 	yandexScript.setAttribute('type', 'text/javascript');
+	// 	document.body.appendChild(yandexScript);
+	// 	//-console.log(yandexScript);
 
-		// let yandexJq = document.createElement('script');
-		// yandexJq.setAttribute('src', 'https://yandex.st/jquery/2.2.3/jquery.min.js');
-		// yandexJq.setAttribute('type', 'text/javascript');
-		// document.body.appendChild(yandexJq);
-		//-console.log(yandexJq);
+	// 	// let yandexJq = document.createElement('script');
+	// 	// yandexJq.setAttribute('src', 'https://yandex.st/jquery/2.2.3/jquery.min.js');
+	// 	// yandexJq.setAttribute('type', 'text/javascript');
+	// 	// document.body.appendChild(yandexJq);
+	// 	//-console.log(yandexJq);
 
-		if (document.querySelector("#map")) {
+	// 	if (document.querySelector("#map")) {
 
 
-			window.setTimeout(function () {
-				ymaps.ready(function () {
-					var myMap = new ymaps.Map('map', {
-						center: [63.63, 99.22],
-						zoom: 3,
-					}, {
-						minZoom: 3,
-						maxZoom: 5,
-					}, {
-						searchControlProvider: 'yandex#search'
-					}),
-						objectManager = new ymaps.ObjectManager({
-							// Чтобы метки начали кластеризоваться, выставляем опцию.
-							clusterize: true,
-							// ObjectManager принимает те же опции, что и кластеризатор.
-							gridSize: 32,
-							clusterDisableClickZoom: true
-						});
+	// 		window.setTimeout(function () {
+	// 			ymaps.ready(function () {
+	// 				var myMap = new ymaps.Map('map', {
+	// 					center: [63.63, 99.22],
+	// 					zoom: 3,
+	// 				}, {
+	// 					minZoom: 3,
+	// 					maxZoom: 5,
+	// 				}, {
+	// 					searchControlProvider: 'yandex#search'
+	// 				}),
+	// 					objectManager = new ymaps.ObjectManager({
+	// 						// Чтобы метки начали кластеризоваться, выставляем опцию.
+	// 						clusterize: true,
+	// 						// ObjectManager принимает те же опции, что и кластеризатор.
+	// 						gridSize: 32,
+	// 						clusterDisableClickZoom: true
+	// 					});
 
-					// Чтобы задать опции одиночным объектам и кластерам,
-					// обратимся к дочерним коллекциям ObjectManager.
-					objectManager.objects.options.set('preset', 'islands#circleDotIcon');
-					objectManager.objects.options.set('iconColor', '#E31E24');
-					objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
-					myMap.geoObjects.add(objectManager);
+	// 				// Чтобы задать опции одиночным объектам и кластерам,
+	// 				// обратимся к дочерним коллекциям ObjectManager.
+	// 				objectManager.objects.options.set('preset', 'islands#circleDotIcon');
+	// 				objectManager.objects.options.set('iconColor', '#E31E24');
+	// 				objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
+	// 				myMap.geoObjects.add(objectManager);
 
-					$.ajax({
-						url: "data.json"
-					}).done(function (data) {
-						objectManager.add(data);
-					});
-				});
-			}, 1000);
-		}
+	// 				$.ajax({
+	// 					url: "data.json"
+	// 				}).done(function (data) {
+	// 					objectManager.add(data);
+	// 				});
+	// 			});
+	// 		}, 1000);
+	// 	}
 
-	}, 2000);
+	// }, 2000);
 
 	//
 	let show = true;
@@ -751,6 +756,28 @@ function eventHandler() {
 	})
 	$(".toggle-content-volunteers").each(function () {
 	})
+
+	let logos = document.querySelectorAll(".sPartners__col");
+
+	if (logos.length > 10) {
+		// console.log(logos.length);
+		let btn = document.createElement("button");
+		let div = document.createElement("div");
+		div.classList.add("text-center");
+		btn.classList.add("btn",'btn-primary','mt-4','btn-lg');
+		btn.innerHTML = 'Показать все';
+		div.appendChild(btn);
+		document.querySelector(".sPartners .container").appendChild(div);
+		btn.addEventListener("click", function () {
+			this.remove();
+			for (const logo of logos) {
+				if (window.getComputedStyle(logo).display === "none") {
+					// Do something..
+					$(logo).fadeIn();
+				}
+			}
+		})
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

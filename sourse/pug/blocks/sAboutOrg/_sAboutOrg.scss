@@ -324,13 +324,13 @@
 	background-color: #ecf8ff;
 	picture {
 		@include media-breakpoint-up(lg) {
-			min-width: rem(176);
-			width: rem(176);
+			min-width: rem(110);
+			width: rem(110);
 			margin-right: rem(32);
 			margin-bottom: 0;
 		}
 		width: 100%;
-		max-width: rem(176);
+		max-width: rem(110);
 		margin-bottom: rem(32);
 	}
 	&__name {
@@ -376,4 +376,9 @@
 		flex-direction: column;
 		align-items: flex-start;
 	}
+}
+
+
+body{
+	background: #ecf8ff;
 }

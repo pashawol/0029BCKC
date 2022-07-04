@@ -5,10 +5,10 @@ mixin sPartners(data)
 			+b.section-title
 				h2 Партнеры
 			+e.row.row
-				+sPartnersItem(1)
-				+sPartnersItem(2)
-				+sPartnersItem(3)
-				+sPartnersItem(4)
+				+sPartnersItem(1).bigger-col
+				+sPartnersItem(2).bigger-col
+				+sPartnersItem(3).bigger-col
+				+sPartnersItem(4).bigger-col
 				+sPartnersItem(4)
 				+sPartnersItem(3)
 				-for(let i = 0; i < 2; i++)
@@ -22,7 +22,7 @@ mixin sPartners(data)
 	// end sPartners
 
 mixin sPartnersItem(imgNum)
-	+e.col.col-4.col-sm-4.col-lg-2
+	+e.col.col-4.col-sm-4.col-lg-2&attributes(attributes)
 		+e.item
 			+e.img(href="#")
 				img(loading="lazy" src=`img/@2x/sPartners-${imgNum}.png` alt="")

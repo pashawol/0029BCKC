@@ -461,6 +461,31 @@ function eventHandler() {
 			},
 		},
 	});
+	let sNewsSliderr = new Swiper('.sNews__cards-row--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.sNews__card-row-next',
+			prevEl: '.sNews__card-row-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		autoplay: {
+			delay: 4000,
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 40,
+			},
+		},
+	});
 	//
 	// import * as FilePond from 'filepond';
 	// const pond = FilePond.create({
@@ -764,7 +789,7 @@ function eventHandler() {
 		let btn = document.createElement("button");
 		let div = document.createElement("div");
 		div.classList.add("text-center");
-		btn.classList.add("btn",'btn-primary','mt-4','btn-lg');
+		btn.classList.add("btn", 'btn-primary', 'mt-4', 'btn-lg');
 		btn.innerHTML = 'Показать все';
 		div.appendChild(btn);
 		document.querySelector(".sPartners .container").appendChild(div);

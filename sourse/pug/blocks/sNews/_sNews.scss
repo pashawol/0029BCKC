@@ -177,6 +177,9 @@
 			stroke: #000000;
 		}
 	}
+	.swiper-button-disabled{
+		opacity: 0.1;
+	}
 	&__card-row-prev{
 		top: calc(50% - rem(24));
 		transform: translateY(-50%);

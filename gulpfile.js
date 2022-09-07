@@ -211,13 +211,13 @@ function img() {
                 { pngOptions: { quality: 90, progressive: true }, rename: { dirname: path2 } },
                 { jpegOptions: { quality: 90, progressive: true }, rename: { dirname: path2 } },
                 { format: "webp", webpOptions: { quality: 100, progressive: true }, rename: { dirname: `${path2}webp/` } },
-                { format: "avif", avifOptions: { quality: 100, progressive: true }, rename: { dirname: `${path2}avif/` } },
+                // { format: "avif", avifOptions: { quality: 100, progressive: true }, rename: { dirname: `${path2}avif/` } },
 
                 // 1x
                 { width: w50, pngOptions: { quality: 80, progressive: true }, rename: { dirname: path1 } },
                 { width: w50, jpegOptions: { quality: 80, progressive: true }, rename: { dirname: path1 } },
                 {width: w50, webpOptions: { quality: 100, progressive: true }, format: "webp", rename: { dirname: `${path1}webp/` } },
-                { width: w50, avifOptions: { quality: 100, progressive: true }, format: "avif", rename: { dirname: `${path1}avif/` } },
+                // { width: w50, avifOptions: { quality: 100, progressive: true }, format: "avif", rename: { dirname: `${path1}avif/` } },
                 
             ]
         }))

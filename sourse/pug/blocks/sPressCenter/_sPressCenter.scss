@@ -389,15 +389,15 @@
 	}
 	.toggle-content {
 		p {
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-moz-box-orient: vertical;
-			-ms-box-orient: vertical;
-			box-orient: vertical;
-			-webkit-line-clamp: var(--clamp, 5);
-			-moz-line-clamp: var(--clamp, 5);
-			-ms-line-clamp: var(--clamp, 5);
-			line-clamp: var(--clamp, 5);
+			// display: -webkit-box;
+			// -webkit-box-orient: vertical;
+			// -moz-box-orient: vertical;
+			// -ms-box-orient: vertical;
+			// box-orient: vertical;
+			// -webkit-line-clamp: var(--clamp, 5);
+			// -moz-line-clamp: var(--clamp, 5);
+			// -ms-line-clamp: var(--clamp, 5);
+			// line-clamp: var(--clamp, 5);
 			overflow: hidden;
 			position: relative;
 			overflow: hidden;

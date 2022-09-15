@@ -614,7 +614,7 @@ function eventHandler() {
 	});
 
 	let table = $('.event-people-table');
-	if (table) {
+	if (document.querySelector('.event-people-table')) {
 
 		table.DataTable({
 			// "order": [[3, "desc"]]
@@ -809,3 +809,10 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+
+
+
+
+
+

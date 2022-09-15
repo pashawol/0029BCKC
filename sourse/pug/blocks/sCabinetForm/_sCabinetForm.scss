@@ -848,3 +848,43 @@
 		}
 	}
 }
+
+
+.load-photo-ticket{
+}
+.image_area{
+	&__label{
+		background-color: #fff;
+		border: 1px dashed #238ece;
+		border-radius: 4px;
+		height: 299px;
+		min-height: 359px;
+		display: block;
+		color: #238ece;
+		text-align: center;
+		position: relative;
+		flex-direction: column;
+		display: flex !important;
+		justify-content: flex-end;
+		padding-bottom: 40px;
+		cursor: pointer;
+		&::before,
+		&::after {
+			content: "";
+			height: 1px;
+			width: rem(38);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #7fcff0;
+			z-index: 2;
+		}
+		&::after {
+			transform: translateX(-50%) rotate(90deg);
+		}
+	}
+	.txt{
+
+	}
+}

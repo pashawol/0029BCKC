@@ -159,13 +159,40 @@
 						<form>
 							<div class="row">
 								<div class="form-wrap__col col-lg-auto col-xxl-auto order-lg-last">
-									<label class="form-wrap__input-title">Фото
-									</label>
-									<div class="load-photo-ticket load-photo-ticket--js">
-										<input class="filepond" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
-										<div class="load-photo-ticket__requirements">
+									<div class="form-wrap__input-title">Фото
+									</div>
+									<div class="load-photo-ticket">
+										<div class="image_area">
+											<form method="post">
+												<label class="image_area__label" for="upload_image"><img class="img-responsive d-none" id="uploaded_image" src=""/><span class="txt">Добавить <br> фото для билета</span>
+													<input class="image" id="upload_image" type="file" name="image" style="display: none"/>
+												</label>
+											</form>
+										</div>
+										<div class="load-photo-ticket__requirements pt-3">
 											<p>Формат фотографии 3:4. Описание требования фотографии для билета в несколько строк</p>
 											<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+									</div>
+									<div class="modal-win modal-win--image-upload" id="modal-image-upload" style="display: none">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title">Обрежте фотографию</h5>
+											</div>
+											<div class="modal-body">
+												<div class="img-container">
+													<div class="row">
+														<div class="col-md-8"><img id="sample_image" src=""/></div>
+														<div class="col-md-4">
+															<div class="preview"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer text-end">
+												<button class="btn btn-primary" id="crop" type="button">Crop</button>
+												<button class="btn btn-secondary modal-close-js" type="button" data-dismiss="modal">Cancel</button>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -809,6 +836,196 @@
 		<script src="libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js"> </script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/litepicker/nocss/litepicker.js"> </script>
-		<script src="js/common.js"></script>
+		<script src="js/common.js"></script><link rel="stylesheet" href="https://unpkg.com/dropzone/dist/dropzone.css"/>
+<link href="https://unpkg.com/cropperjs/dist/cropper.css" rel="stylesheet"/>
+<script src="https://unpkg.com/dropzone"></script>
+<script src="https://unpkg.com/cropperjs"></script>
+		<style>
+			#uploaded_image{
+			
+			}
+			
+			.image_area {
+					position: relative;
+			}
+			
+			img {
+					display: block;
+					max-width: 100%;
+			}
+			
+			.preview {
+					overflow: hidden;
+					width: 120px;
+					height: 160px;
+					margin: 10px;
+					border: 1px solid red;
+			}
+			
+			.modal-lg {
+					max-width: 1000px !important;
+			}
+			
+			.text {
+					color: #333;
+					font-size: 20px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+					text-align: center;
+			}
+			
+			
+			.cropper-face.cropper-move, .cropper-view-box, .cropper-crop-box {
+					//- min-height: 40mm;
+					//- min-width: 30mm;
+					min-width: 120px;
+					min-height: 160px;
+			}
+			
+		</style>
+		<script>
+			$(document).ready(function () {
+							
+							var minCroppedWidth = 120;
+										var minCroppedHeight = 160;
+			
+								var clear = true;
+			
+								var $modal = $('#modal');
+								var fancybox;
+			
+								var image = document.getElementById('sample_image');
+			
+								var cropper;
+			
+								var input = $('#upload_image');
+			
+								input.on('click', function (event) {
+										input.val(null);
+								});
+			
+								input.on('change', function (event) {
+			
+										var files = event.target.files;
+			
+										var done = function (url) {
+											image.src = url;
+											//- $modal.modal('show');
+											new Fancybox([{ 
+													src: "#modal-image-upload", 
+													type: "inline",
+													arrows: false,
+													// infobar: false,
+													touch: false,
+													trapFocus: false,
+													placeFocusBack: false,
+													infinite: false,
+													dragToClose: false,
+													type: 'inline',
+													autoFocus: false,
+													groupAll: false,
+													groupAttr: false,
+													// showClass: "fancybox-throwOutUp",
+													// hideClass: "fancybox-throwOutDown",
+													l10n: {
+														Escape: "Закрыть",
+														NEXT: "Вперед",
+														PREV: "Назад",
+													},
+												}],
+												{
+														on:{
+															done: (fancybox, slide) => {
+																cropper = new Cropper(image, {
+																	// aspectRatio: 1,
+																	aspectRatio: minCroppedWidth / minCroppedHeight,
+																	viewMode: 2,
+																	preview: '.preview',
+								
+																	data: {
+																			width: minCroppedWidth * 2,
+																			height: minCroppedHeight * 2,
+																	},
+								
+																	crop: function (event) {
+																			var width = event.detail.width;
+																			var height = event.detail.height;
+								
+																			if (
+																					width < minCroppedWidth
+																					|| height < minCroppedHeight
+																			) {
+																					cropper.setData({
+																							width: minCroppedWidth, //Math.max(minCroppedWidth,  width),
+																							height: minCroppedHeight, //Math.max(minCroppedHeight, height),
+																					});
+																			}
+																	},
+								
+								
+															});
+															},
+															closing: (fancybox, slide) => {
+																	cropper.destroy();
+																		cropper = null;
+			
+																		if (clear) {
+																				$('#upload_image').val(null);
+																		}
+															}
+														}
+												}
+											);
+												
+										};
+			
+										if (files && files.length > 0) {
+												let reader = new FileReader();
+												reader.onload = function (event) {
+														done(reader.result);
+												};
+												reader.readAsDataURL(files[0]);
+										}
+								});
+			
+								//- $modal.on('shown.bs.modal', function () {
+								// 	fancybox.on("done", (fancybox, slide) => {
+								// 		console.log('done')
+										
+								// })
+								// .on('closing', function () {
+								// 		cropper.destroy();
+								// 		cropper = null;
+			
+								// 		if (clear) {
+								// 				$('#upload_image').val(null);
+								// 		}
+								// });
+			
+								$('#crop').click(function () {
+										let canvas = cropper.getCroppedCanvas({
+												width: 300,
+												height: 400
+										});
+			
+										canvas.toBlob(function (blob) {
+												let url = URL.createObjectURL(blob);
+												var reader = new FileReader();
+												reader.readAsDataURL(blob);
+												reader.onloadend = function () {
+														var base64data = reader.result;
+														clear = false;
+														Fancybox.close();
+														$('#uploaded_image').removeClass("d-none").attr('src', base64data)
+												};
+										});
+								});
+			
+						});
+		</script>
 	</body>
 </html>

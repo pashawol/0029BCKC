@@ -12,12 +12,38 @@ mixin sCabinetForm(data)
 			+form-wrap
 				.row
 					+e.col.col-lg-auto.col-xxl-auto.order-lg-last
-						+e.LABEL.input-title Фото
-						+b.load-photo-ticket--js
-							input.filepond(type='file' name='filepond' accept='image/png, image/jpeg, image/gif')
-							+e.requirements
+						+e.input-title Фото
+						+b.load-photo-ticket
+							.image_area
+								form(method='post')
+									label(for='upload_image').image_area__label
+										img#uploaded_image.img-responsive(src='').d-none
+										span.txt Добавить <br> фото для билета
+										input#upload_image.image(type='file' name='image' style='display: none')
+							+e.requirements.pt-3
 								p Формат фотографии 3:4. Описание требования фотографии для билета в несколько строк
 								p Lorem ipsum dolor sit amet consectetur adipisicing.
+						+b.modal-win--image-upload(id="modal-image-upload" style="display: none")
+							.modal-content
+								.modal-header
+									h5.modal-title Обрежте фотографию
+									//- button.close(type='button' data-dismiss='modal' aria-label='Close')
+									//- 	span(aria-hidden='true') ×
+								.modal-body
+									.img-container
+										.row
+											.col-md-8
+												img#sample_image(src='')
+											.col-md-4
+												.preview
+								.modal-footer.text-end
+									button#crop.btn.btn-primary(type='button') Crop
+									button.btn.btn-secondary(type='button' data-dismiss='modal').modal-close-js Cancel
+
+						//- +b.load-photo-ticket--js
+						//- 	label(for='upload_image')
+						//- 		span.txt Добавить фото для билета
+						//- 		input#upload_image.image(type='file' name='image' style='display: none')
 					.col.col-lg-8.col-xl-7.col-xxl-6
 						+e.item
 							h3 Личные данные

@@ -1153,3 +1153,14 @@ iframe {
 .menu-item-has-children> a{
 	pointer-events: none;
 }
+.image_area__label{
+	position: relative;
+}
+#uploaded_image{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+}

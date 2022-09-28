@@ -16,21 +16,79 @@
 			color: $primary;
 		}
 	}
-	&__map{
-		@include media-breakpoint-down(md){
-			position: relative;
-			width: 100vw;
-			left: calc((100vw - 100%) / -2);
+	// &__map{
+	// 	@include media-breakpoint-down(md){
+	// 		position: relative;
+	// 		width: 100vw;
+	// 		left: calc((100vw - 100%) / -2);
+	// 	}
+	// 	height: rem(400);
+	// 	@include media-breakpoint-up(lg){
+	// 		height: rem(582);
+	// 	}
+	// 	background-color: $primary;
+	// }
+	&__{}
+	&__{}
+	&__{}
+
+	&__map {
+		position: relative;
+		display: grid;
+		place-items: center;
+		padding-top: rem(40);
+		padding-bottom: rem(40);
+		background-color: rgba($color: #fff, $alpha: 0.15);
+		margin-bottom: rem(43);
+		border-radius: $border-radius;
+
+		svg {
+			max-height: rem(530);
 		}
-		height: rem(400);
-		@include media-breakpoint-up(lg){
-			height: rem(582);
-		}
-		background-color: $primary;
 	}
-	&__{}
-	&__{}
-	&__{}
+	path{
+		@include mt;
+		&:focus {
+			outline: none;
+		}
+	}
+	polygon, .js-show-area, .area-pink, .area-yellow, .area-red, .area-pink, .area-yellow, .area-red, .area-red, .area-blue {
+		fill: #238ECE;
+		@include mt;
+		outline: none !important;
+
+
+		&:hover, &:focus, &:active {
+			fill: #EB7329;
+		}
+	}
+	mask {
+		&[maskUnits="userSpaceOnUse"] {
+			display: none;
+		}
+	}
+	a{
+		path{
+			cursor: pointer;
+		}
+		position: relative;
+
+	}
+	a:hover{
+		path{
+			fill: #EB7329;
+			opacity: 1;
+			
+		}
+	}
+
+	a.popover-toggle:focus {
+		outline: none;
+	}
+
+	.area-white {
+		fill: #fff;
+	}
 } // end.sMap
 
 .yandex{

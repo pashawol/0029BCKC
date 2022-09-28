@@ -803,6 +803,16 @@ function eventHandler() {
 			}
 		})
 	}
+
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl, {
+			template: 
+				'<div class="popover" role="tooltip"><div class="popover-arrow"></div> <h3 class="popover-header">фывафыафыцва</h3><div class="popover-body"></div></div>',
+			trigger: 'hover',
+			placement: 'auto',
+		})
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

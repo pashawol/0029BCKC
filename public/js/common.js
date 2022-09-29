@@ -834,6 +834,11 @@ function eventHandler() {
 			placement: 'auto',
 		})
 	})
+
+	const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
+		wheel: false,
+		baseScale: 0,
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

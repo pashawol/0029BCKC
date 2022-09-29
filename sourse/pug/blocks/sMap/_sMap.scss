@@ -23,7 +23,9 @@
 	&__{}
 	&__{}
 	&__{}
-
+	.panzoom {
+		overflow: hidden;
+	}
 	// &__map {
 	// 	position: relative;
 	// 	display: grid;

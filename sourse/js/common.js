@@ -806,9 +806,30 @@ function eventHandler() {
 
 	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		let popoverContent = {
+			title: popoverTriggerEl.dataset.title,
+			name: popoverTriggerEl.dataset.name,
+			number: popoverTriggerEl.dataset.number,
+			linknumber: popoverTriggerEl.dataset.linknumber,
+			email: popoverTriggerEl.dataset.email,
+		}
+		let popoverInner = 
+		`
+			<div class="sMap__popover">
+				<div class="sMap__title">${popoverContent.title}</div>
+				<div class="sMap__name">${popoverContent.name}</div>
+				<a href="tel:${popoverContent.linknumber}" class="sMap__number">${popoverContent.number}</a>
+				<a href="mailto:${popoverContent.email}" class="sMap__email">${popoverContent.email}</a>
+			</div>
+		`;
 		return new bootstrap.Popover(popoverTriggerEl, {
 			template: 
-				'<div class="popover" role="tooltip"><div class="popover-arrow"></div> <h3 class="popover-header">фывафыафыцва</h3><div class="popover-body"></div></div>',
+				`
+					<div class="popover" role="tooltip">
+						<div class="popover-arrow"></div> 
+						<h1 class="popover-header"></h1>
+						${popoverInner}
+					</div>`,
 			trigger: 'hover',
 			placement: 'auto',
 		})

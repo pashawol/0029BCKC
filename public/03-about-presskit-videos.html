@@ -12,9 +12,10 @@
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css" rel="stylesheet"/>
+		<link href="libs/datatables.net-dt/css/jquery.dataTables.min.css"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="03-about-presskit-videos.jpg">
+	<body class="page-white-bg" data-bg="03-about-presskit-videos.jpg">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -23,7 +24,13 @@
 					<a class="menu-mobile__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
 					</a>
 					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О ВСКС</a></li>
+						<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">О ВСКС</a>
+							<ul class="sub-menu">
+								<li class="menu-item" itemprop="item"><a href="/about/organization/" itemprop="url">Об организации</a></li>
+								<li class="menu-item" itemprop="item"><a href="/about/docs/" itemprop="url">Документы</a></li>
+								<li class="menu-item" itemprop="item"><a href="/about/presskit/" itemprop="url">Пресс-кит</a></li>
+							</ul>
+						</li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
@@ -62,7 +69,13 @@
 									</div>
 									<div class="col-auto d-none d-lg-block">
 										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О ВСКС</a></li>
+											<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">О ВСКС</a>
+												<ul class="sub-menu">
+													<li class="menu-item" itemprop="item"><a href="/about/organization/" itemprop="url">Об организации</a></li>
+													<li class="menu-item" itemprop="item"><a href="/about/docs/" itemprop="url">Документы</a></li>
+													<li class="menu-item" itemprop="item"><a href="/about/presskit/" itemprop="url">Пресс-кит</a></li>
+												</ul>
+											</li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пресс-центр</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
@@ -218,6 +231,8 @@
 						<div class="col-sm-auto">
 							<div class="soc">
 								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-vk.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-tg.svg" alt=""/>
 								</a>
 								<a class="soc__item" href="#" target="_blank"><img loading="lazy" src="img/svg/soc-in.svg" alt=""/>
 								</a>
@@ -599,8 +614,27 @@
 					</div>
 				</div>
 			</div>
+			<div class="modal-win modal-win--event-person" id="modal-event-person" style="display: none">
+				<h2>Начислить баллы</h2>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Количество баллов</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Комментарий</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите"></textarea>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="modal-win__points-btn btn btn-warning">Начислить</button>
+					</form>
+				</div>
+			</div>
 		</div>
-		<!-- end modals-->
+		<!-- end modals--><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 		<link href="libs/litepicker/css/litepicker.css" rel="stylesheet"/>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/jquery-asPieProgress/jquery-asPieProgress.min.js"></script>
@@ -608,6 +642,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/datatables.net/js/jquery.dataTables.min.js"></script>
 		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
 		<script src="libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js"> </script>
 		<script src="libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js"> </script>

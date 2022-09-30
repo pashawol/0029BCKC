@@ -3,6 +3,7 @@
 	--sPT: #{rem(30)};
 	--sPB: #{rem(50)};
 	--sTPB: #{rem(30)};
+	background-color: #fff;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(59)};
 		--sPB: #{rem(94px)};
@@ -14,13 +15,14 @@
 		}
 	}
 	&__row {
-		align-items: center;
+		// align-items: center;
 		--bs-gutter-y: #{rem(15)};
 		@include media-breakpoint-up(sm) {
 			--bs-gutter-y: #{rem(35)};
 		}
 	}
 	&__col {
+		// height: 100%;
 		@include media-breakpoint-up(xl) {
 
 			&:nth-child(n + 11) {
@@ -45,12 +47,22 @@
 	}
 	&__item {
 		// min-height: 100%;
-		// display: flex;
-		// flex-direction: column;
-		&:hover {
-			.sPartners__img {
-				filter: none !important;
-			}
+		display: flex;
+		flex-direction: column;
+		// &:hover {
+		// 	.sPartners__img {
+		// 		filter: none !important;
+		// 	}
+		// }
+		img {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+		p {
+			margin-bottom: 0;
+			text-align: center;
+			font-size: rem(13);
+
 		}
 	}
 	&__img {
@@ -59,7 +71,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center; 
-		filter: grayscale(100%);
+		// filter: grayscale(100%);
 		transition-duration: 0.4s;
 		img {
 			width: auto;

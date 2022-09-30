@@ -35,7 +35,8 @@
 		@include media-breakpoint-up(sm) {
 			padding: rem(4) rem(11) rem(4) rem(4);
 		}
-		// background-color: $white;
+		background-color: $white;
+		border-radius: 4px;
 	}
 	&__b-row {
 		--bs-gutter-x: #{rem(4)} !important;
@@ -102,13 +103,15 @@
 		height: 32px;
 	}
 	&__date {
+		color: #000;
 	}
 	&__location {
 		@extend .loc-txt;
+		color: #000;
 	}
 	&__title {
 		font-weight: bold;
-		color: $black;
+		color: $body-color;
 		// position: absolute;
 		// width: 100%;
 		// left: 0;

@@ -659,7 +659,8 @@ iframe {
 }
 
 .cabinet {
-	.header {
+	background-color: #fff;
+	.header, footer {
 		background-color: $light-blue;
 	}
 }
@@ -1163,4 +1164,11 @@ iframe {
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+.page-white-bg {
+	background-color: #fff;
+	footer {
+		color: $light-blue;
+	}
 }

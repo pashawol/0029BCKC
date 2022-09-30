@@ -17,7 +17,7 @@
 	&__menu-title {
 		display: inline-block;
 		font-weight: bold;
-		color: $body-color;
+		color: #000;
 		margin-bottom: rem(36);
 	}
 	&__menu {
@@ -81,7 +81,7 @@
 	}
 	&__b-txt {
 		font-size: rem(12);
-		color: rgba($black, 0.5);
+		color: rgba($body-color, 0.5);
 	}
 	&__policy {
 		font-size: rem(12);

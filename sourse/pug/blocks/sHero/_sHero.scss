@@ -5,6 +5,7 @@
 
 	--sPT: #{rem(30)};
 	--sPB: #{rem(35)};
+	background-color: #fff;
 	@include media-breakpoint-up(lg){
 		--sPT: #{rem(50)};
 		--sPB: #{rem(60)};

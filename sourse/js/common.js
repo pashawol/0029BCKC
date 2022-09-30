@@ -839,6 +839,7 @@ function eventHandler() {
 		const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
 			wheel: false,
 			baseScale: 0,
+			click: false,
 		});
 	}
 };

@@ -4,7 +4,7 @@
 	background: $light-blue;
 
 	--sPT: #{rem(30)};
-	--sPB: #{rem(0)};
+	--sPB: #{rem(20)};
 	--sTPB: #{rem(30)};
 	@include media-breakpoint-up(lg){
 		--sPT: #{rem(40)};
@@ -25,6 +25,71 @@
 	&__{}
 	.panzoom {
 		overflow: hidden;
+		position: relative;
+		&__controls {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			@include media-breakpoint-up(sm) {
+				top: 43px;
+				left: 33px;
+				box-shadow: 0px 3px 37px rgba(82, 82, 82, 0.27);
+				padding: rem(16);
+				border-radius: 10px;
+			}
+
+			@include roww('8px', 'm');
+			display: flex;
+			padding: rem(8);
+			background-color: #fff;
+			border-radius: 6px;
+		}
+		&__button {
+			position: relative;
+			border: none;
+			background-color: #A1D8F6;
+			border-radius: 4px;
+			width: 16px;
+			height: 16px;
+			@include media-breakpoint-up(sm) {
+				width: 32px;
+				height: 32px;
+			}
+			svg {
+				display: none;
+			}
+			&:before {
+				@include a-cent();
+				content: '';
+				position: absolute;
+				display: block;
+				width: 8px;
+				height: 2px;
+				background-color: $blue;
+				@include media-breakpoint-up(sm) {
+					width: 16px;
+				}
+			}
+			&--zoomIn {
+				order: 2;
+				&::after {
+					@include a-cent();
+					content: '';
+					position: absolute;
+					display: block;
+					width: 8px;
+					height: 2px;
+					background-color: $blue;
+					transform: rotate(90deg);
+					@include media-breakpoint-up(sm) {
+						width: 16px;
+					}
+				}
+			}
+			&--zoomOut {
+				order: 1;
+			}
+		}
 	}
 	// &__map {
 	// 	position: relative;

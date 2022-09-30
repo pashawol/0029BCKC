@@ -838,8 +838,9 @@ function eventHandler() {
 	if(panzoomClass) {
 		const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
 			wheel: false,
-			baseScale: 0,
+			// baseScale: 0,
 			click: false,
+			zoomInCentered: false,
 		});
 	}
 };

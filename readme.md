@@ -1,4 +1,47 @@
 <!-- https://github.com/luckyone1221/0088BCKC -->
+
+# 30.09
+1. <https://pashawol.github.io/0029BCKC/public/index.html>
+
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-region.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-heroes.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-smi.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-gallery.html>
+1. <https://pashawol.github.io/0029BCKC/public/02-press-center-album.html>
+
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-structure.html>
+2. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-ispolkom.html>
+3. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-history.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-identity.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-reports.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-logos.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-presskit-videos.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-history.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-leader.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-ispolkom.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-progress.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-partners.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-organisation-volunteers.html>
+1. <https://pashawol.github.io/0029BCKC/public/03-about-doc.html>
+
+1. <https://pashawol.github.io/0029BCKC/public/04-detailed-news.html>
+
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-profile.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-activities.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-1.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-2.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-3.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-4.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-5.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-6.html>
+1. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-7.html>
+
+4. <https://pashawol.github.io/0029BCKC/public/09-cabinet-ticket-6.html>
+5. <https://pashawol.github.io/0029BCKC/public/10-cabinet-add-news.html>
+6. <https://pashawol.github.io/0029BCKC/public/10-cabinet-list.html>
+7. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news.html>
+8. <https://pashawol.github.io/0029BCKC/public/10-cabinet-edit-news-event.html>
 # Главная
 1. <https://pashawol.github.io/0029BCKC/public/index.html>
 # 1. Мероприятия, стр. мероприятия, форма регистрации на мероприятие 

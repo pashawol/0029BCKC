@@ -264,6 +264,33 @@
 			top: 75.8%;
 		}
 	}
+
+	&__star-item{
+		position: absolute;
+		display: block;
+		width: 10px;
+		height: 10px;
+		transform: translate(-50%, -50%);
+		svg{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		&--msk{
+			left: 14%;
+			top: 45.2%;
+		}
+		&--spb{
+			left: 15.5%;
+			top: 30%;
+		}
+		&--sev{
+			left: 0.5%;
+			top: 57.4%;
+		}
+	}
 } // end.sMap
 
 .yandex{

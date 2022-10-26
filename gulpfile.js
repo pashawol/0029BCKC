@@ -234,7 +234,9 @@ function startwatch() {
     watch(sourse + '/img', { usePolling: true }, img);
 }
 
-export let imgAll = series(cleanimg, img) 
+// export let imgAll = series(cleanimg, img) 
 export let libs = series(cleanlibs, copyLibs)
 export let sprite = series(svg, svgCopy)
-export default series(common, libs, styles, imgAll, sprite, pugFiles, parallel(browsersync, startwatch))
+export default series(common, libs, styles, 
+    // imgAll, 
+    sprite, pugFiles, parallel(browsersync, startwatch))

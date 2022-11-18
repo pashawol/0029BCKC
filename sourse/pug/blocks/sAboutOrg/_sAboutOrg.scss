@@ -273,20 +273,18 @@
 		}
 		.toggle-content-volunteers {
 			p {
-				// display: -webkit-box;
-				// -webkit-box-orient: vertical;
-				// -moz-box-orient: vertical;
-				// -ms-box-orient: vertical;
-				// box-orient: vertical;
-				// -webkit-line-clamp: var(--clamp, 6);
-				// -moz-line-clamp: var(--clamp, 6);
-				// -ms-line-clamp: var(--clamp, 6);
-				// line-clamp: var(--clamp, 6);
-				overflow: hidden;
-				position: relative;
-				margin-bottom: 0;
 			}
 		}
+	}
+	.toggle-text{
+		display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--clamp, 6);;
+  overflow: hidden;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 0;
+
 	}
 	&__col {
 		picture {

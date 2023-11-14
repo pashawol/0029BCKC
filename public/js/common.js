@@ -325,6 +325,25 @@ function eventHandler() {
 		},
 	});
 	//.headerBlock-slider-js
+	let size;
+	function setPersent() {
+		if (window.matchMedia("(min-width: 1440px)").matches) {
+			size = '59.4%'
+		}
+
+		else if (window.matchMedia("(min-width: 1200px)").matches) {
+			size = '71%'
+		}
+		else {
+			size = '74%'
+
+		} 
+	}
+	setPersent();
+	window.addEventListener("resize", () => {
+		setPersent();
+	})
+	let scale = .5;
 	let headerBlockSlider = new Swiper('.headerBlock-slider-js', {
 		slidesPerView: 'auto',
 		watchOverflow: true,
@@ -338,8 +357,8 @@ function eventHandler() {
 				translate: [0, 0, -400],
 			},
 			next: {
-				translate: ["70%", "30%", 0],
-				scale: .5,
+				scale: scale,
+				translate: [size, "30%", 0],
 			},
 		},
 		navigation: {
@@ -351,23 +370,23 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true,
 		},
-		on: {
-			slideChange: function () {
-				let realCount = 0;
+		// on: {
+		// 	slideChange: function () {
+		// 		let realCount = 0;
 
-				for (let slide of this.slides) {
-					if (!slide.classList.contains('swiper-slide-duplicate')) {
-						realCount++;
-					}
-				}
+		// 		for (let slide of this.slides) {
+		// 			if (!slide.classList.contains('swiper-slide-duplicate')) {
+		// 				realCount++;
+		// 			}
+		// 		}
 
-				// let thisFract = document.querySelector('.sHero--js .fract-js');
-				let thisFract = this.el.querySelector('.fract-js');
-				// thisFract.innerHTML = this.realIndex + 1 + ' / ' + realCount;
+		// 		// let thisFract = document.querySelector('.sHero--js .fract-js');
+		// 		let thisFract = this.el.querySelector('.fract-js');
+		// 		// thisFract.innerHTML = this.realIndex + 1 + ' / ' + realCount;
 
-				thisFract.innerHTML = this.realIndex + 1 + ' / ' + realCount;
-			},
-		},
+		// 		thisFract.innerHTML = this.realIndex + 1 + ' / ' + realCount;
+		// 	},
+		// },
 	});
 
 
@@ -587,15 +606,16 @@ function eventHandler() {
 	// 	// styleButtonRemoveItemPosition: 'left bottom',
 	// 	// styleButtonProcessItemPosition: 'right bottom',
 	// });
+function cardSlider(section='.sHero'){
 
-	let sHeroSlider = new Swiper('.sHero-slider-js', {
+	new Swiper(`${section}-slider-js`, {
 		slidesPerView: "auto",
 		loop: true,
 		spaceBetween: 20,
-
+		
 		navigation: {
-			nextEl: '.sHero--js .swiper-next',
-			prevEl: '.sHero--js .swiper-prev',
+			nextEl: `${section}--js .swiper-next`,
+			prevEl: `${section}--js .swiper-prev`,
 		},
 		on: {
 			slideChange: function () {
@@ -606,12 +626,16 @@ function eventHandler() {
 						realCount++;
 					}
 				}
-
-				let thisFract = document.querySelector('.sHero--js .fract-js');
+				
+				let thisFract = document.querySelector(`${section}--js .fract-js`);
 				thisFract.innerHTML = this.realIndex + 1 + ' / ' + realCount;
 			},
 		},
 	});
+}
+
+cardSlider()
+cardSlider('.sPartners')
 
 	let table = $('.event-people-table');
 	if (document.querySelector('.event-people-table')) {
@@ -813,8 +837,8 @@ function eventHandler() {
 			linknumber: popoverTriggerEl.dataset.linknumber,
 			email: popoverTriggerEl.dataset.email,
 		}
-		let popoverInner = 
-		`
+		let popoverInner =
+			`
 			<div class="sMap__popover">
 				<div class="sMap__title">${popoverContent.title}</div>
 				<div class="sMap__name">${popoverContent.name}</div>
@@ -823,7 +847,7 @@ function eventHandler() {
 			</div>
 		`;
 		return new bootstrap.Popover(popoverTriggerEl, {
-			template: 
+			template:
 				`
 					<div class="popover" role="tooltip">
 						<div class="popover-arrow"></div> 
@@ -835,7 +859,7 @@ function eventHandler() {
 		})
 	})
 	let panzoomClass = document.querySelector('.panzoom');
-	if(panzoomClass) {
+	if (panzoomClass) {
 		const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
 			wheel: false,
 			// baseScale: 0,

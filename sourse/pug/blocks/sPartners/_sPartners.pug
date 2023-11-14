@@ -1,28 +1,34 @@
 mixin sPartners(data)
 	// start sPartners
-	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+	+b.SECTION.sPartners--js.section#sPartners&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Партнеры
-			+e.row.row
-				+sPartnersItem(1, 'МЧС России').bigger-col
-				+sPartnersItem(2, 'Минобрнауки').bigger-col
-				+sPartnersItem(3, 'Министерство просвещения').bigger-col
-				+sPartnersItem(4, 'Росмолодежь').bigger-col
-				+sPartnersItem(4)
-				+sPartnersItem(3)
-				-for(let i = 0; i < 2; i++)
-					+sPartnersItem(5)
-					+sPartnersItem(6)
-					+sPartnersItem(7)
-					+sPartnersItem(8)
-					+sPartnersItem(9)
-					+sPartnersItem(10)
+				.row
+					.col
+						h2 Партнеры
+					.col-auto
+						+arrow2()
+			+e.slider-wrap
+				.swiper.sPartners-slider-js
+					.swiper-wrapper
+						+sPartnersItem(1, 'МЧС России').bigger-col
+						+sPartnersItem(2, 'Минобрнауки').bigger-col
+						+sPartnersItem(3, 'Министерство просвещения').bigger-col
+						+sPartnersItem(4, 'Росмолодежь').bigger-col
+						+sPartnersItem(4)
+						+sPartnersItem(3)
+						-for(let i = 0; i < 2; i++)
+							+sPartnersItem(5)
+							+sPartnersItem(6)
+							+sPartnersItem(7)
+							+sPartnersItem(8)
+							+sPartnersItem(9)
+							+sPartnersItem(10)
 
 	// end sPartners
 
 mixin sPartnersItem(imgNum, text='Партнер')
-	+e.col.col-4.col-sm-4.col-lg-2&attributes(attributes)
+	.swiper-slide
 		+e.item
 			+e.img(href="#")
 				img(loading="lazy" src=`img/@2x/sPartners-${imgNum}.png` alt="")

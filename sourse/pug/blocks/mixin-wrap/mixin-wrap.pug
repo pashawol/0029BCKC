@@ -23,10 +23,16 @@ mixin arrow2()
 			.col-auto
 				.swiper-prev
 					+icon('chevron-left')
-			+e.fract.fract-js.col-auto 3 / 5
+			+e.fract.fract-js.col-auto 0 / 0
 			.col-auto
 				.swiper-next
 					+icon('chevron-right')
+
+mixin arrow3()
+	.swiper-button-hand.swiper-prev
+		+icon('chevron-left')
+	.swiper-button-hand.swiper-next
+		+icon('chevron-right')
 
 mixin ie11()
 	//- modernizer and for ie11

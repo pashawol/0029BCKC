@@ -107,6 +107,7 @@
 
 	
 	&__slider-wrap{
+		position: relative;
 		.swiper{
 			@include media-breakpoint-down(sm){
 				overflow: visible!important;
@@ -118,7 +119,7 @@
 		.swiper-slide{
 			height: auto;
 
-			width: 200px;
+			width: 160px;
 			@include media-breakpoint-up(sm){
 				width: calc(100%/2 - 20px*1/2);
 			}
@@ -129,5 +130,34 @@
 				width: calc(100%/4 - 20px*3/4);
 			}
 		}
+	}
+
+	&__card-row-prev,
+	&__card-row-next {
+		position: absolute;
+		@include media-breakpoint-down(xl){
+			display: none;
+		}
+		.icon {
+			font-size: rem(52);
+			color: transparent;
+			stroke: #000000;
+		}
+	}
+	.swiper-button-disabled{
+		opacity: 0.1;
+	}
+	&__card-row-prev{
+		top: calc(50% - rem(24));
+		transform: translateY(-50%);
+		left: rem(-60);
+	}
+	&__card-row-next{
+		top: calc(50% - rem(24));
+		transform: translateY(-50%);
+		right: rem(-60);
+	}
+	.swiper-pagination{
+		margin-top: rem(16);
 	}
 } // end.sPartners

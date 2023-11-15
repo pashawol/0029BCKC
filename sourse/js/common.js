@@ -623,14 +623,14 @@ function cardSlider(section='.sHero'){
 		on: {
 			slideChange: function () {
 				let realCount = 0;
-
+				let thisFract = document.querySelector(`${section}--js .fract-js`);
+				if (!thisFract) return;
 				for (let slide of this.slides) {
 					if (!slide.classList.contains('swiper-slide-duplicate')) {
 						realCount++;
 					}
 				}
 				
-				let thisFract = document.querySelector(`${section}--js .fract-js`);
 				thisFract.innerHTML = this.realIndex + 1 + ' / ' + realCount;
 			},
 		},

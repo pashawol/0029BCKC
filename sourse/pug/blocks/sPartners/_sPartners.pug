@@ -2,14 +2,11 @@ mixin sPartners(data)
 	// start sPartners
 	+b.SECTION.sPartners--js.section#sPartners&attributes(attributes)
 		.container
-			+b.section-title
-				.row
-					.col
-						h2 Партнеры
-					.col-auto
-						+arrow2()
+			+b.section-title 
+						h2 Партнеры 
 			+e.slider-wrap
 				.swiper.sPartners-slider-js
+
 					.swiper-wrapper
 						+sPartnersItem(1, 'МЧС России').bigger-col
 						+sPartnersItem(2, 'Минобрнауки').bigger-col
@@ -24,7 +21,13 @@ mixin sPartners(data)
 							+sPartnersItem(8)
 							+sPartnersItem(9)
 							+sPartnersItem(10)
-
+					.swiper-pagination
+				+e.card-row-prev.swiper-button-hand.swiper-prev
+					svg.icon.icon-chevron-left
+						use(xlink:href='img/svg/sprite.svg#chevron-left')
+				+e.card-row-next.swiper-button-hand.swiper-next
+					svg.icon.icon-chevron-right
+						use(xlink:href='img/svg/sprite.svg#chevron-right')
 	// end sPartners
 
 mixin sPartnersItem(imgNum, text='Партнер')

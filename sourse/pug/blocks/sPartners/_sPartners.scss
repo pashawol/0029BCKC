@@ -135,6 +135,7 @@
 	&__card-row-prev,
 	&__card-row-next {
 		position: absolute;
+		transform: scale(1 ) !important;
 		@include media-breakpoint-down(xl){
 			display: none;
 		}

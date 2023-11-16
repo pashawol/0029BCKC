@@ -610,7 +610,8 @@ function eventHandler() {
 	// 	// styleButtonProcessItemPosition: 'right bottom',
 	// });
 function cardSlider(section='.sHero'){
-
+	
+	
 	new Swiper(`${section}-slider-js`, {
 		slidesPerView: "auto",
 		loop: true,
@@ -636,9 +637,20 @@ function cardSlider(section='.sHero'){
 		},
 	});
 }
+new Swiper(`.sPartners-slider-js`, {
+	slidesPerView: "auto",
+	loop: true,
+	spaceBetween: 20,
+	autoplay: {
+		delay: 2000,
+	},
+	navigation: {
+		nextEl: `.sPartners--js .swiper-next`,
+		prevEl: `.sPartners--js .swiper-prev`,
+	},
+});
 
-cardSlider()
-cardSlider('.sPartners')
+cardSlider() 
 
 	let table = $('.event-people-table');
 	if (document.querySelector('.event-people-table')) {

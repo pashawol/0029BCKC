@@ -30,7 +30,7 @@
 	&__slider-wrap{
 		.swiper{
 			@include media-breakpoint-down(sm){
-				overflow: visible!important;
+				// overflow: visible!important;
 			}
 		}
 		.swiper-wrapper{

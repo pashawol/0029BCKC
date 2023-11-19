@@ -333,6 +333,9 @@
 		width: 100%;
 		max-width: rem(110);
 		margin-bottom: rem(32);
+		
+		min-width: 10.875rem;
+    width: 10.875rem;
 	}
 	&__name {
 		font-weight: 700;

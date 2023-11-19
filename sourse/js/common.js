@@ -57,6 +57,16 @@ const JSCCommon = {
 				NEXT: "Вперед",
 				PREV: "Назад",
 			},
+			// closeButton: false,
+			on: {
+				ready: () => {
+					setTimeout(()=>{
+						console.log(1);
+						$(".fancybox__slide *").removeAttr("tabindex")
+
+					}, 10)
+				}
+			}
 		});
 		document.querySelectorAll(".modal-close-js").forEach(el => {
 			el.addEventListener("click", () => {

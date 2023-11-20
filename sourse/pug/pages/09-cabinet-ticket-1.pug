@@ -30,12 +30,13 @@ block pagecontent
 	+pageHead-cabinet()
 		+e.slider--js.swiper
 			.swiper-wrapper
-				+e.slide.swiper-slide
-					+e.btn(href="#") Профиль
-				+e.slide.swiper-slide
-					+e.btn(href="#") Мои мероприятия
-				+e.slide.swiper-slide
-					+e.btn.active(href="#") Электронный билет члена ВСКС
+				- for (var x = 0; x < 3; x++)
+					+e.slide.swiper-slide
+						+e.btn(href="#") Профиль
+					+e.slide.swiper-slide
+						+e.btn(href="#") Мои мероприятия
+					+e.slide.swiper-slide
+						+e.btn.active(href="#") Электронный билет члена ВСКС
 	+sCabinetForm()
 	//- +sContact-region
 	//- +sNews-region()

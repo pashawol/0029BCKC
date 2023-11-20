@@ -504,12 +504,12 @@ $output-bourbon-deprecation-warnings: false;
 }
 
 
-.page-head--cabinet .swiper-wrapper {
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: -webkit-box;
-  display: -moz-box;
-}
+// .page-head--cabinet .swiper-wrapper {
+//   overflow-x: auto;
+//   overflow-y: hidden;
+//   display: -webkit-box;
+//   display: -moz-box;
+// }
 
 .page-head--cabinet .page-head__slider .page-head__btn {
   padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);

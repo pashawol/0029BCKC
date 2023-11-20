@@ -44,7 +44,7 @@ mixin top-nav(main)
 							+mnu()
 						if main
 							.col-auto.ms-auto
-								+b.login-bl(href="#modal-login").link-modal-js
+								+b.login-bl(href="#")
 									+e.img
 										img(loading="lazy" src="img/svg/user.svg" alt="")
 									+e.txt.d-none.d-sm-inline Войти
@@ -62,8 +62,7 @@ mixin top-nav(main)
 						.col-auto.d-lg-none
 							+b.toggle-menu-mobile--js
 								span
-				if main
-					.container
+					if main
 						+e.title
 							h1 Всероссийский студенческий корпус спасателей
 	// end top-nav

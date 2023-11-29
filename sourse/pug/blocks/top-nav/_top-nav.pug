@@ -66,3 +66,49 @@ mixin top-nav(main)
 						+e.title
 							h1 Всероссийский студенческий корпус спасателей
 	// end top-nav
+	+b.top-nav--fixed
+		.container
+			+e.main-row.row.align-items-center 
+				.col-lg-auto.d-none.d-lg-block
+					+e.logo(href="/")
+						img(loading="lazy" src="img/@2x/logo.png" alt="")
+				+e.col--content.col
+					+e.sub-row.row.align-items-center
+						.col.col-sm-auto.d-lg-none
+							+e.logo(href="/")
+								img(loading="lazy" src="img/@2x/logo.png" alt="")
+						.col-auto.d-none.d-lg-block
+							+mnu()
+						.col-auto.d-none.d-sm-block
+							a.contact-link(href="tel:+7(495)369-05-73")
+								+icon("call-fix")
+								span.d-none.d-md-block +7(495) 369-05-73
+						.col-auto.d-none.d-sm-block
+							a.contact-link(href="mailto:info@vsks.ru")
+								+icon("mail-fix")
+								span.d-none.d-md-block info@vsks.ru
+						.col-auto
+							+soc()
+								+item-sos('vk')
+								+item-sos('tg')
+
+						if main
+							.col-auto.ms-auto
+								+b.login-bl(href="#")
+									+e.img
+										img(loading="lazy" src="img/svg/user.svg" alt="")
+									+e.txt.d-none.d-sm-inline Войти
+							.col-auto.d-none.d-sm-block
+								+b.reg-btn(href="#") Регистрация
+						else
+							+e.col--profile.col-auto.ms-auto
+								+b.login-bl(href="#")
+									+e.img
+										img(loading="lazy" src="img/svg/user.svg" alt="")
+									+e.txt.d-none.d-sm-inline Анастасия В.
+							.col-auto
+								+b.exit-btn(href="#")
+									+icon('exit')
+						.col-auto.d-lg-none
+							+b.toggle-menu-mobile--js
+								span

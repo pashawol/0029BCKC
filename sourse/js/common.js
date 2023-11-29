@@ -243,7 +243,27 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-	//luckyOne Js
+	function setFixedNav() {
+		let topNav = document.querySelector('.top-nav--fixed  ');
+		if (!topNav) return;
+		window.scrollY > 200
+			? topNav.classList.add('fixed')
+			: topNav.classList.remove('fixed');
+	}
+	
+	function whenResize() {
+		setFixedNav();
+	}
+
+	window.addEventListener('scroll', () => {
+		setFixedNav();
+
+	}, { passive: true })
+	window.addEventListener('resize', () => {
+		whenResize();
+	}, { passive: true });
+
+	whenResize();
 
 	let defaultSl = {
 		spaceBetween: 0,
@@ -419,28 +439,31 @@ function eventHandler() {
 
 
 	//
-	let sEventsSlider = new Swiper('.sEvents-slider-js', {
-		slidesPerView: "auto",
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
+        
+        if ($('.sEvents-slider-js .swiper-slide').length > 0) {
+            let sEventsSlider = new Swiper('.sEvents-slider-js', {
+                    slidesPerView: "auto",
+                    loop: true,
+                    navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                    },
 
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-		breakpoints: {
-			0: {
-				spaceBetween: 20,
-			},
-			1200: {
-				spaceBetween: 40,
-			},
-		},
-	});
+                    pagination: {
+                            el: '.swiper-pagination',
+                            type: 'bullets',
+                            clickable: true,
+                    },
+                    breakpoints: {
+                            0: {
+                                    spaceBetween: 20,
+                            },
+                            1200: {
+                                    spaceBetween: 40,
+                            },
+                    },
+            });
+        }
 
 	let sEventsSliderRegion = new Swiper('.sEvents--region .sEvents-slider--js', {
 		slidesPerView: "auto",
@@ -493,7 +516,7 @@ function eventHandler() {
 			},
 		},
 	});
-	let sNewsSliderr = new Swiper('.sNews__cards-row--js', {
+	window.sNewsSliderr = new Swiper('.sNews__cards-row--js', {
 		slidesPerView: 'auto',
 		spaceBetween: 20,
 		navigation: {
@@ -898,7 +921,6 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
 
 
 

@@ -154,8 +154,8 @@
 		width: 100%;
 		background-color: #fff !important;
 		box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
-		padding-top: rem(9) !important;
-		padding-bottom: rem(9) !important;
+		padding-top: rem(4) !important;
+		padding-bottom: rem(4) !important;
 		@include mt;
 		z-index: 200;
 		&:not(.fixed){

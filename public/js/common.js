@@ -353,6 +353,20 @@ function eventHandler() {
 			el: ".swiper-pagination",
 			clickable: true,
 		},
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                    },
+                    1400: {
+                        slidesPerView: 2,
+                    },
+                },
 	});
 	//.headerBlock-slider-js
 	function setPerсent() { 
@@ -442,26 +456,38 @@ function eventHandler() {
         
         if ($('.sEvents-slider-js .swiper-slide').length > 0) {
             let sEventsSlider = new Swiper('.sEvents-slider-js', {
-                    slidesPerView: "auto",
-                    loop: true,
-                    navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                    },
+                slidesPerView: "auto",
+                loop: false,
+                speed: 700,
+                autoplay: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
 
-                    pagination: {
-                            el: '.swiper-pagination',
-                            type: 'bullets',
-                            clickable: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true,
+                },
+                breakpoints: {
+                    0: {
+                        spaceBetween: 20,
+                        slidesPerView: 1,
                     },
-                    breakpoints: {
-                            0: {
-                                    spaceBetween: 20,
-                            },
-                            1200: {
-                                    spaceBetween: 40,
-                            },
+                    575: {
+                        spaceBetween: 20,
+                        slidesPerView: 2,
                     },
+                    767: {
+                        spaceBetween: 20,
+                        slidesPerView: 3,
+                    },
+                    1400: {
+                        spaceBetween: 40,
+                        slidesPerView: 4,
+                    },
+                },
             });
         }
 
@@ -651,8 +677,22 @@ function cardSlider(section='.sHero'){
 		spaceBetween: 20,
 		
 		navigation: {
-			nextEl: `${section}--js .swiper-next`,
-			prevEl: `${section}--js .swiper-prev`,
+			nextEl: '.sHero__card-row-prev',
+			prevEl: '.sHero__card-row-next',
+		},
+                breakpoints: {
+			400: {
+				slidesPerView: 1,
+			},
+			550: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
 		},
 		on: {
 			slideChange: function () {
@@ -681,6 +721,20 @@ new Swiper(`.sPartners-slider-js`, {
 		nextEl: `.sPartners--js .swiper-next`,
 		prevEl: `.sPartners--js .swiper-prev`,
 	},
+        breakpoints: {
+                400: {
+                        slidesPerView: 1,
+                },
+                550: {
+                        slidesPerView: 2,
+                },
+                768: {
+                        slidesPerView: 3,
+                },
+                1200: {
+                        slidesPerView: 4,
+                },
+        },        
 });
 
 cardSlider() 

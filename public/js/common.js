@@ -543,7 +543,6 @@ function eventHandler() {
 		},
 	});
 	window.sNewsSliderr = new Swiper('.sNews__cards-row--js', {
-		slidesPerView: 'auto',
 		spaceBetween: 20,
 		navigation: {
 			nextEl: '.sNews__card-row-next',
@@ -558,6 +557,9 @@ function eventHandler() {
 			delay: 4000,
 		},
 		breakpoints: {
+                        500: {
+				slidesPerView: 1,
+			},
 			768: {
 				slidesPerView: 2,
 			},

@@ -459,7 +459,12 @@ function eventHandler() {
                 slidesPerView: "auto",
                 loop: false,
                 speed: 700,
-                autoplay: true,
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,                
+				},         
+				
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -555,6 +560,8 @@ function eventHandler() {
 		},
 		autoplay: {
 			delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,                
 		},
 		breakpoints: {
                         500: {
@@ -677,6 +684,11 @@ function cardSlider(section='.sHero'){
 		slidesPerView: "auto",
 		loop: true,
 		spaceBetween: 20,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},	
 		
 		navigation: {
 			nextEl: '.sHero__card-row-prev',
@@ -718,6 +730,8 @@ new Swiper(`.sPartners-slider-js`, {
 	spaceBetween: 20,
 	autoplay: {
 		delay: 2000,
+		disableOnInteraction: false,
+		pauseOnMouseEnter: true,                
 	},
 	navigation: {
 		nextEl: `.sPartners--js .swiper-next`,

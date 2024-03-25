@@ -1,26 +1,26 @@
 :root {
   --animate-delay: 1.2s;
 
-	--sPT: #{rem(30)};
-	--sPB: #{rem(35)};
-	--sTPB: #{rem(30)};
-  @include media-breakpoint-up(lg){
+  --sPT: #{rem(30)};
+  --sPB: #{rem(35)};
+  --sTPB: #{rem(30)};
+  @include media-breakpoint-up(lg) {
     --sPT: #{rem(50)};
     --sPB: #{rem(60)};
     --sTPB: #{rem(40)};
   }
 
-	--bs-body-font-size: 14px;
-	@include media-breakpoint-up(md){
-		--bs-body-font-size: 15px;
-	}
-	@include media-breakpoint-up(lg){
-		--bs-body-font-size: 12px;
-	}
-	@include media-breakpoint-up(xxl){
-		--bs-body-font-size: #{$em-base};
-	}
+  // --bs-body-font-size: 14px;
+  // @include media-breakpoint-up(md){
+  // 	--bs-body-font-size: 15px;
+  // }
+  // @include media-breakpoint-up(lg){
+  //   --bs-body-font-size: 12px;
+  // }
+  // @include media-breakpoint-up(xxl){
+  // }
 
+  --bs-body-font-size: #{$em-base};
 
   --swiperArrowSize: #{rem(68)};
   --swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
@@ -32,10 +32,8 @@
   --swiperColorDefHover: var(--bs-primary);
   --swiperBgDefHover: #ffffff;
 
-
   // --fancybox-bg: rgba(24, 24, 27, 0.98);
 }
-.fancybox__container{
-  
-  --fancybox-bg: rgba(24, 24, 27, .77);
+.fancybox__container {
+  --fancybox-bg: rgba(24, 24, 27, 0.77);
 }

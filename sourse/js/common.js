@@ -1060,11 +1060,13 @@ function eventHandler() {
   });
   let panzoomClass = document.querySelector(".panzoom");
   if (panzoomClass) {
-    panzoomClass.addEventListener("mouselave", function () {
-      popoverTriggerList.map(function (popoverTriggerEl) {
-        $(popoverTriggerEl).popover("hide");
+    panzoomClass
+      .querySelector(".sMap__map")
+      .addEventListener("mouselave", function () {
+        popoverTriggerList.map(function (popoverTriggerEl) {
+          $(popoverTriggerEl).popover("hide");
+        });
       });
-    });
 
     const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
       wheel: false,

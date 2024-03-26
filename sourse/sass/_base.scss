@@ -1173,18 +1173,18 @@ iframe {
   }
 }
 
-// .popover {
-//   --sp: 10px;
-//   &.bs-popover-bottom {
-//     margin-top: var(--sp) !important;
-//   }
-//   &.bs-popover-top {
-//     margin-top: calc(var(--sp) * -1) !important;
-//   }
-//   &.bs-popover-end {
-//     margin-left: var(--sp) !important;
-//   }
-//   &.bs-popover-start {
-//     margin-left: calc(var(--sp) * -1) !important;
-//   }
-// }
+.popover {
+  --sp: -2px;
+  &.bs-popover-bottom {
+    margin-top: var(--sp) !important;
+  }
+  &.bs-popover-top {
+    margin-top: calc(var(--sp) * -1) !important;
+  }
+  &.bs-popover-end {
+    margin-left: var(--sp) !important;
+  }
+  &.bs-popover-start {
+    margin-left: calc(var(--sp) * -1) !important;
+  }
+}

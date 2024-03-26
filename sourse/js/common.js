@@ -1003,35 +1003,37 @@ function eventHandler() {
 
     let currentPopover;
     popoverTriggerEl.addEventListener("mouseover", function () {
-      popoverTriggerList.map(function (popoverTriggerEl) {
-        $(popoverTriggerEl).popover("hide");
-      });
       $(this).popover("show");
-      currentPopover = $(this).attr("aria-describedby");
-      // console.log(currentPopover);
-      document
-        .querySelector(`#${currentPopover}`)
-        .addEventListener("mouseenter", function () {
-          this.classList.add("hovered");
-        });
-      document
-        .querySelector(`#${currentPopover}`)
-        .addEventListener("mouseleave", function () {
-          $(popoverTriggerEl).popover("hide");
-        });
+      // popoverTriggerList.map(function (popoverTriggerEl) {
+      //   setTimeout(() => {
+      //     $(popoverTriggerEl).popover("hide");
+      //   }, 500);
+      // });
+      // currentPopover = $(this).attr("aria-describedby");
+      // // console.log(currentPopover);
+      // document
+      //   .querySelector(`#${currentPopover}`)
+      //   .addEventListener("mouseenter", function () {
+      //     this.classList.add("hovered");
+      //   });
+      // document
+      //   .querySelector(`#${currentPopover}`)
+      //   .addEventListener("mouseleave", function () {
+      //     $(popoverTriggerEl).popover("hide");
+      //   });
     });
 
     popoverTriggerEl.addEventListener("mouseleave", function () {
       setTimeout(() => {
-        if (
-          document.querySelector(`#${currentPopover}`) &&
-          !document
-            .querySelector(`#${currentPopover}`)
-            .classList.contains("hovered")
-        ) {
-          $(this).popover("hide");
-        }
-      }, 500);
+        // if (
+        //   document.querySelector(`#${currentPopover}`) &&
+        //   !document
+        //     .querySelector(`#${currentPopover}`)
+        //     .classList.contains("hovered")
+        // ) {
+        // }
+        $(this).popover("hide");
+      }, 1000);
     });
 
     // $(popoverTriggerEl).hover(

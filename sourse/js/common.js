@@ -72,7 +72,7 @@ const JSCCommon = {
       infinite: false,
       dragToClose: false,
       type: "inline",
-      autoFocus: false,
+      autoFocus: true,
       l10n: {
         Escape: "Закрыть",
         NEXT: "Вперед",
@@ -401,6 +401,20 @@ function eventHandler() {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      575: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 2,
+      },
+      1400: {
+        slidesPerView: 2,
+      },
+    },
   });
   //.headerBlock-slider-js
   function setPerсent() {
@@ -484,7 +498,13 @@ function eventHandler() {
   if ($(".sEvents-slider-js .swiper-slide").length > 0) {
     let sEventsSlider = new Swiper(".sEvents-slider-js", {
       slidesPerView: "auto",
-      loop: true,
+      loop: false,
+      speed: 700,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -498,9 +518,19 @@ function eventHandler() {
       breakpoints: {
         0: {
           spaceBetween: 20,
+          slidesPerView: 1,
         },
-        1200: {
+        575: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+        767: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+        1400: {
           spaceBetween: 40,
+          slidesPerView: 4,
         },
       },
     });
@@ -511,6 +541,11 @@ function eventHandler() {
     // loop: true,
     watchOverflow: true,
 
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
     breakpoints: {
       0: {
         spaceBetween: 20,
@@ -525,7 +560,11 @@ function eventHandler() {
     slidesPerView: "auto",
     // loop: true,
     watchOverflow: true,
-
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
     breakpoints: {
       0: {
         spaceBetween: 20,
@@ -558,7 +597,6 @@ function eventHandler() {
     },
   });
   window.sNewsSliderr = new Swiper(".sNews__cards-row--js", {
-    slidesPerView: "auto",
     spaceBetween: 20,
     navigation: {
       nextEl: ".sNews__card-row-next",
@@ -571,8 +609,13 @@ function eventHandler() {
     },
     autoplay: {
       delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     breakpoints: {
+      500: {
+        slidesPerView: 1,
+      },
       768: {
         slidesPerView: 2,
       },
@@ -673,10 +716,29 @@ function eventHandler() {
       slidesPerView: "auto",
       loop: true,
       spaceBetween: 20,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
 
       navigation: {
-        nextEl: `${section}--js .swiper-next`,
-        prevEl: `${section}--js .swiper-prev`,
+        nextEl: ".sHero__card-row-prev",
+        prevEl: ".sHero__card-row-next",
+      },
+      breakpoints: {
+        400: {
+          slidesPerView: 1,
+        },
+        550: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
       },
       on: {
         slideChange: function () {
@@ -700,10 +762,26 @@ function eventHandler() {
     spaceBetween: 20,
     autoplay: {
       delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: `.sPartners--js .swiper-next`,
       prevEl: `.sPartners--js .swiper-prev`,
+    },
+    breakpoints: {
+      400: {
+        slidesPerView: 1,
+      },
+      550: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
     },
   });
 

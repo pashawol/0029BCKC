@@ -505,6 +505,7 @@ function eventHandler() {
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       },
+
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -540,7 +541,6 @@ function eventHandler() {
     slidesPerView: "auto",
     // loop: true,
     watchOverflow: true,
-
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
@@ -575,27 +575,6 @@ function eventHandler() {
     },
   });
 
-  let pageHeadSlider = new Swiper(".page-head__slider--js", {
-    slidesPerView: "auto",
-    freeMode: true,
-    // loopFillGroupWithBlank: true,
-    // touchRatio: 0.2,
-    // slideToClickedSlide: true,
-    // freeModeMomentum: true,
-    // freeMode: true,
-    // touchRatio: 0.3,
-    // slideToClickedSlide: true,
-    // freeModeMomentum: true,
-    // spaceBetween: 20,
-    breakpoints: {
-      0: {
-        spaceBetween: 5,
-      },
-      576: {
-        spaceBetween: 10,
-      },
-    },
-  });
   window.sNewsSliderr = new Swiper(".sNews__cards-row--js", {
     spaceBetween: 20,
     navigation: {
@@ -989,35 +968,16 @@ function eventHandler() {
 				<a href="mailto:${popoverContent.email}" class="sMap__email">${popoverContent.email}</a>
 			</div>
 		`;
-    new bootstrap.Popover(popoverTriggerEl, {
+    return new bootstrap.Popover(popoverTriggerEl, {
       template: `
 					<div class="popover" role="tooltip">
 						<div class="popover-arrow"></div> 
 						<h1 class="popover-header"></h1>
 						${popoverInner}
 					</div>`,
-      trigger: "manual",
+      trigger: "hover",
       placement: "auto",
     });
-    let currentPopover;
-    $(popoverTriggerEl).hover(
-      function () {
-        $(this).popover("show");
-        currentPopover = $(".popover")[0].getAttribute("id");
-      },
-      function () {
-        // setTimeout(() => {
-        if (!$(`#${currentPopover}`).is(":hover")) {
-          $(this).popover("hide");
-        }
-        document
-          .querySelector(`#${currentPopover}`)
-          .addEventListener("mouseleave", function () {
-            $(popoverTriggerEl).popover("hide");
-          });
-        // }, 700);
-      }
-    );
   });
   let panzoomClass = document.querySelector(".panzoom");
   if (panzoomClass) {

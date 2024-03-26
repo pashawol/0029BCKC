@@ -973,6 +973,7 @@ function eventHandler() {
   var popoverTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="popover"]')
   );
+
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     let popoverContent = {
       title: popoverTriggerEl.dataset.title,
@@ -999,8 +1000,9 @@ function eventHandler() {
       trigger: "manual",
       placement: "auto",
     });
+
     let currentPopover;
-    popoverTriggerEl.addEventListener("mouseenter", function () {
+    popoverTriggerEl.addEventListener("mouseover", function () {
       popoverTriggerList.map(function (popoverTriggerEl) {
         $(popoverTriggerEl).popover("hide");
       });

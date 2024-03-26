@@ -1000,27 +1000,72 @@ function eventHandler() {
       placement: "auto",
     });
     let currentPopover;
-    $(popoverTriggerEl).hover(
-      function () {
-        $(this).popover("show");
-        currentPopover = $(".popover")[0].getAttribute("id");
-      },
-      function () {
-        // setTimeout(() => {
-        if (!$(`#${currentPopover}`).is(":hover")) {
+    popoverTriggerEl.addEventListener("mouseenter", function () {
+      popoverTriggerList.map(function (popoverTriggerEl) {
+        $(popoverTriggerEl).popover("hide");
+      });
+      $(this).popover("show");
+      currentPopover = $(this).attr("aria-describedby");
+      // console.log(currentPopover);
+      document
+        .querySelector(`#${currentPopover}`)
+        .addEventListener("mouseenter", function () {
+          this.classList.add("hovered");
+        });
+      document
+        .querySelector(`#${currentPopover}`)
+        .addEventListener("mouseleave", function () {
+          $(popoverTriggerEl).popover("hide");
+        });
+    });
+
+    popoverTriggerEl.addEventListener("mouseleave", function () {
+      setTimeout(() => {
+        if (
+          document.querySelector(`#${currentPopover}`) &&
+          !document
+            .querySelector(`#${currentPopover}`)
+            .classList.contains("hovered")
+        ) {
           $(this).popover("hide");
         }
-        document
-          .querySelector(`#${currentPopover}`)
-          .addEventListener("mouseleave", function () {
-            $(popoverTriggerEl).popover("hide");
-          });
-        // }, 700);
-      }
-    );
+      }, 500);
+    });
+
+    // $(popoverTriggerEl).hover(
+    //   function () {},
+    //   function () {
+    //     document
+    //       .querySelector(`#${currentPopover}`)
+    //       .addEventListener("mouseenter", function () {
+    //         this.classList.add("hovered");
+    //       });
+    //     setTimeout(() => {
+    //       if (
+    //         document
+    //           .querySelector(`#${currentPopover}`)
+    //           .classList.contains("hovered")
+    //       ) {
+    //         $(this).popover("hide");
+    //       }
+    //     }, 500);
+    //     document
+    //       .querySelector(`#${currentPopover}`)
+    //       .addEventListener("mouseleave", function () {
+    //         $(popoverTriggerEl).popover("hide");
+    //       });
+    //     // }, 700);
+    //   }
+    // );
   });
   let panzoomClass = document.querySelector(".panzoom");
   if (panzoomClass) {
+    panzoomClass.addEventListener("mouselave", function () {
+      popoverTriggerList.map(function (popoverTriggerEl) {
+        $(popoverTriggerEl).popover("hide");
+      });
+    });
+
     const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
       wheel: false,
       // baseScale: 0,

@@ -1174,17 +1174,47 @@ iframe {
 }
 
 .popover {
-  --sp: -2px;
+  --sp: 2px;
   &.bs-popover-bottom {
     margin-top: var(--sp) !important;
+    &::before {
+      top: -25px;
+    }
   }
   &.bs-popover-top {
     margin-top: calc(var(--sp) * -1) !important;
+    &::before {
+      top: 25px;
+    }
   }
   &.bs-popover-end {
     margin-left: var(--sp) !important;
+    &::before {
+      left: 0px;
+    }
   }
   &.bs-popover-start {
     margin-left: calc(var(--sp) * -1) !important;
+    &::before {
+      left: -25px;
+    }
+  }
+}
+
+.popover {
+  &::before {
+    content: "";
+    // z-index: -1;
+    left: -15px;
+    top: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    border-radius: rem(10);
+    // background-color: #238ece;
+    position: absolute;
+  }
+  & > .sMap__popover {
+    position: relative;
+    z-index: 2;
   }
 }

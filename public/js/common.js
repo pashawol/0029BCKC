@@ -990,7 +990,7 @@ function eventHandler() {
 				<a href="mailto:${popoverContent.email}" class="sMap__email">${popoverContent.email}</a>
 			</div>
 		`;
-    new bootstrap.Popover(popoverTriggerEl, {
+    const popover = new bootstrap.Popover(popoverTriggerEl, {
       template: `
 					<div class="popover" role="tooltip">
 						<div class="popover-arrow"></div> 
@@ -999,77 +999,73 @@ function eventHandler() {
 					</div>`,
       trigger: "manual",
       placement: "auto",
+      popperConfig: {},
+      // container: popoverTriggerEl,
     });
 
+    let path = popoverTriggerEl.querySelectorAll('[class^="st"]');
     let currentPopover;
     popoverTriggerEl.addEventListener("mouseover", function () {
-      $(this).popover("show");
-      // popoverTriggerList.map(function (popoverTriggerEl) {
-      //   setTimeout(() => {
-      //     $(popoverTriggerEl).popover("hide");
-      //   }, 500);
+      hideAllPopovers();
+      popover.show();
+      // console.log(popover.tip.attributes[2].value);
+      currentPopover = popover.tip.attributes[2].value;
+      if (path) {
+        path.forEach((el) => el.classList.add("hovered"));
+      }
       // });
-      // currentPopover = $(this).attr("aria-describedby");
-      // // console.log(currentPopover);
-      // document
-      //   .querySelector(`#${currentPopover}`)
-      //   .addEventListener("mouseenter", function () {
-      //     this.classList.add("hovered");
-      //   });
-      // document
-      //   .querySelector(`#${currentPopover}`)
-      //   .addEventListener("mouseleave", function () {
-      //     $(popoverTriggerEl).popover("hide");
-      //   });
+
+      // popoverTriggerEl.addEventListener("shown.bs.popover", function () {
+      // console.log(currentPopover);
+      // if (document.querySelector(`#${currentPopover}`)) return;
+      document
+        .querySelector(`#${currentPopover}`)
+        .addEventListener("mouseenter", function () {
+          this.classList.add("hovered");
+        });
+      document
+        .querySelector(`#${currentPopover}`)
+        .addEventListener("mouseleave", function () {
+          popover.hide();
+          if (path) {
+            path.forEach((el) => el.classList.remove("hovered"));
+          }
+        });
     });
 
     popoverTriggerEl.addEventListener("mouseleave", function () {
       setTimeout(() => {
-        // if (
-        //   document.querySelector(`#${currentPopover}`) &&
-        //   !document
-        //     .querySelector(`#${currentPopover}`)
-        //     .classList.contains("hovered")
-        // ) {
-        // }
-        $(this).popover("hide");
-      }, 1000);
+        if (
+          document.querySelector(`#${currentPopover}`) &&
+          document
+            .querySelector(`#${currentPopover}`)
+            .classList.contains("hovered") == false
+        ) {
+          document
+            .querySelector(`#${currentPopover}`)
+            .classList.remove("hovered");
+          popover.hide();
+          if (path) {
+            path.forEach((el) => el.classList.remove("hovered"));
+          }
+        }
+      }, 500);
     });
-
-    // $(popoverTriggerEl).hover(
-    //   function () {},
-    //   function () {
-    //     document
-    //       .querySelector(`#${currentPopover}`)
-    //       .addEventListener("mouseenter", function () {
-    //         this.classList.add("hovered");
-    //       });
-    //     setTimeout(() => {
-    //       if (
-    //         document
-    //           .querySelector(`#${currentPopover}`)
-    //           .classList.contains("hovered")
-    //       ) {
-    //         $(this).popover("hide");
-    //       }
-    //     }, 500);
-    //     document
-    //       .querySelector(`#${currentPopover}`)
-    //       .addEventListener("mouseleave", function () {
-    //         $(popoverTriggerEl).popover("hide");
-    //       });
-    //     // }, 700);
-    //   }
-    // );
   });
   let panzoomClass = document.querySelector(".panzoom");
+  function hideAllPopovers() {
+    popoverTriggerList.map(function (popoverTriggerEl) {
+      $(popoverTriggerEl).popover("hide");
+      popoverTriggerEl
+        .querySelectorAll('[class^="st"]')
+        .forEach((el) => el.classList.remove("hovered"));
+    });
+  }
   if (panzoomClass) {
     panzoomClass
       .querySelector(".sMap__map")
       .addEventListener("mouselave", function () {
-        popoverTriggerList.map(function (popoverTriggerEl) {
-          $(popoverTriggerEl).popover("hide");
-        });
+        hideAllPopovers();
       });
 
     const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {

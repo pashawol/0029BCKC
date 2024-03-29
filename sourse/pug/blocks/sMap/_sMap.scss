@@ -184,6 +184,7 @@
     padding: rem(8) rem(18) rem(8) rem(8);
     border: none;
     box-shadow: 0px 23px 38px rgba(0, 0, 0, 0.15);
+    z-index: 2;
   }
   &__title {
     font-size: rem(14);

@@ -163,6 +163,7 @@
     }
     position: relative;
   }
+  a.hovered,
   a:hover {
     &[data-title] {
       path {

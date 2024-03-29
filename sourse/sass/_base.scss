@@ -1172,6 +1172,23 @@ iframe {
     color: $light-blue;
   }
 }
+.popover {
+  &::before {
+    content: "";
+    // z-index: -1;
+    left: -15px;
+    top: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    border-radius: rem(10);
+    // background-color: #238ece;
+    position: absolute;
+  }
+  & > .sMap__popover {
+    position: relative;
+    z-index: 2;
+  }
+}
 
 .popover {
   --sp: 2px;
@@ -1196,25 +1213,7 @@ iframe {
   &.bs-popover-start {
     margin-left: calc(var(--sp) * -1) !important;
     &::before {
-      left: -25px;
+      left: 25px;
     }
-  }
-}
-
-.popover {
-  &::before {
-    content: "";
-    // z-index: -1;
-    left: -15px;
-    top: -15px;
-    width: calc(100% + 30px);
-    height: calc(100% + 30px);
-    border-radius: rem(10);
-    // background-color: #238ece;
-    position: absolute;
-  }
-  & > .sMap__popover {
-    position: relative;
-    z-index: 2;
   }
 }

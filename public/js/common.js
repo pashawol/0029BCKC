@@ -1003,21 +1003,16 @@ function eventHandler() {
       // container: popoverTriggerEl,
     });
 
-    let path = popoverTriggerEl.querySelectorAll('[class^="st"]');
     let currentPopover;
     popoverTriggerEl.addEventListener("mouseover", function () {
-      hideAllPopovers();
-      popover.show();
-      // console.log(popover.tip.attributes[2].value);
-      currentPopover = popover.tip.attributes[2].value;
-      if (path) {
-        path.forEach((el) => el.classList.add("hovered"));
-      }
+      // popoverTriggerEl.addEventListener("hidden.bs.popover", () => {
+      //   popoverTriggerEl.classList.remove("active", "hovered");
+      //   popover.show();
       // });
-
-      // popoverTriggerEl.addEventListener("shown.bs.popover", function () {
-      // console.log(currentPopover);
-      // if (document.querySelector(`#${currentPopover}`)) return;
+      this.classList.add("hovered");
+      this.classList.add("active");
+      popover.show();
+      currentPopover = popover.tip.attributes[2].value;
       document
         .querySelector(`#${currentPopover}`)
         .addEventListener("mouseenter", function () {
@@ -1026,28 +1021,34 @@ function eventHandler() {
       document
         .querySelector(`#${currentPopover}`)
         .addEventListener("mouseleave", function () {
-          popover.hide();
-          if (path) {
-            path.forEach((el) => el.classList.remove("hovered"));
-          }
+          this.classList.remove("hovered");
+          setTimeout(() => {
+            if (
+              this.classList.contains("hovered") == false &&
+              popoverTriggerEl.classList.contains("active") == false
+            ) {
+              popoverTriggerEl.classList.remove("hovered");
+              popover.hide();
+            }
+          }, 100);
         });
     });
 
     popoverTriggerEl.addEventListener("mouseleave", function () {
+      popoverTriggerEl.classList.remove("active");
       setTimeout(() => {
         if (
+          this.classList.contains("active") == false &&
           document.querySelector(`#${currentPopover}`) &&
           document
             .querySelector(`#${currentPopover}`)
             .classList.contains("hovered") == false
         ) {
+          popoverTriggerEl.classList.remove("hovered");
           document
             .querySelector(`#${currentPopover}`)
             .classList.remove("hovered");
           popover.hide();
-          if (path) {
-            path.forEach((el) => el.classList.remove("hovered"));
-          }
         }
       }, 500);
     });

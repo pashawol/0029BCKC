@@ -1018,40 +1018,40 @@ function eventHandler() {
         .addEventListener("mouseenter", function () {
           this.classList.add("hovered");
         });
-      //   document
-      //     .querySelector(`#${currentPopover}`)
-      //     .addEventListener("mouseleave", function () {
-      //       this.classList.remove("hovered");
-      //       setTimeout(() => {
-      //         if (
-      //           this.classList.contains("hovered") == false &&
-      //           popoverTriggerEl.classList.contains("active") == false
-      //         ) {
-      //           popoverTriggerEl.classList.remove("hovered");
-      //           popover.hide();
-      //         }
-      //       }, 100);
-      //     });
+      document
+        .querySelector(`#${currentPopover}`)
+        .addEventListener("mouseleave", function () {
+          this.classList.remove("hovered");
+          setTimeout(() => {
+            if (
+              this.classList.contains("hovered") == false &&
+              popoverTriggerEl.classList.contains("active") == false
+            ) {
+              popoverTriggerEl.classList.remove("hovered");
+              popover.hide();
+            }
+          }, 100);
+        });
     });
 
-    // popoverTriggerEl.addEventListener("mouseleave", function () {
-    //   popoverTriggerEl.classList.remove("active");
-    //   setTimeout(() => {
-    //     if (
-    //       this.classList.contains("active") == false &&
-    //       document.querySelector(`#${currentPopover}`) &&
-    //       document
-    //         .querySelector(`#${currentPopover}`)
-    //         .classList.contains("hovered") == false
-    //     ) {
-    //       popoverTriggerEl.classList.remove("hovered");
-    //       document
-    //         .querySelector(`#${currentPopover}`)
-    //         .classList.remove("hovered");
-    //       popover.hide();
-    //     }
-    //   }, 500);
-    // });
+    popoverTriggerEl.addEventListener("mouseleave", function () {
+      popoverTriggerEl.classList.remove("active");
+      setTimeout(() => {
+        if (
+          this.classList.contains("active") == false &&
+          document.querySelector(`#${currentPopover}`) &&
+          document
+            .querySelector(`#${currentPopover}`)
+            .classList.contains("hovered") == false
+        ) {
+          popoverTriggerEl.classList.remove("hovered");
+          document
+            .querySelector(`#${currentPopover}`)
+            .classList.remove("hovered");
+          popover.hide();
+        }
+      }, 500);
+    });
   });
   let panzoomClass = document.querySelector(".panzoom");
   function hideAllPopovers() {

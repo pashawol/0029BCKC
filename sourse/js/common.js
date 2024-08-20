@@ -619,7 +619,7 @@ function eventHandler() {
     FilePondPluginImageTransform,
     FilePondPluginImageEdit,
     // FilePondPluginImageExifOrientation,
-    // FilePondPluginFileValidateSize,
+    FilePondPluginFileValidateSize
     // FilePondPluginImageEdit
   );
 
@@ -955,6 +955,7 @@ function eventHandler() {
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     let popoverContent = {
       title: popoverTriggerEl.dataset.title,
+      linktitle: popoverTriggerEl.dataset.linktitle,
       name: popoverTriggerEl.dataset.name,
       number: popoverTriggerEl.dataset.number,
       linknumber: popoverTriggerEl.dataset.linknumber,
@@ -962,9 +963,9 @@ function eventHandler() {
     };
     let popoverInner = `
 			<div class="sMap__popover">
-				<div class="sMap__title">${popoverContent.title}</div>
+				<a href="/contacts/${popoverContent.linktitle}/"><div class="sMap__title">${popoverContent.title}</div></a>
 				<div class="sMap__name">${popoverContent.name}</div>
-				<a href="tel:${popoverContent.linknumber}" class="sMap__number">${popoverContent.number}</a>
+				<a href="tel:${popoverContent.linknumber}" class="sMap__email">${popoverContent.number}</a>
 				<a href="mailto:${popoverContent.email}" class="sMap__email">${popoverContent.email}</a>
 			</div>
 		`;

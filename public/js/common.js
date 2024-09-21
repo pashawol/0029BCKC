@@ -535,82 +535,87 @@ function eventHandler() {
   }
 
   const sliderDivRegion = document.querySelector('.sEvents--region .sEvents-slider--js');
-  let sEventsSliderRegion = new Swiper(sliderDivRegion, {
-    slidesPerView: 'auto',
-    // loop: true,
-    watchOverflow: true,
+  if (sliderDivRegion) {
+    let sEventsSliderRegion = new Swiper(sliderDivRegion, {
+      slidesPerView: 'auto',
+      // loop: true,
+      watchOverflow: true,
 
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    breakpoints: {
-      0: {
-        spaceBetween: 20,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
-      1200: {
-        spaceBetween: 40,
+      breakpoints: {
+        0: {
+          spaceBetween: 20,
+        },
+        1200: {
+          spaceBetween: 40,
+        },
       },
-    },
-  });
+    });
 
-  sEventsSliderRegion.autoplay.stop();
+    sEventsSliderRegion.autoplay.stop();
 
-  // Create IntersectionObserver to track visibility
-  let observerRegion = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          sEventsSliderRegion.autoplay.start();
-        } else {
-          sEventsSliderRegion.autoplay.stop();
-        }
-      });
-    },
-    { threshold: 0.1 },
-  ); // Adjust threshold as needed
+    // Create IntersectionObserver to track visibility
+    let observerRegion = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sEventsSliderRegion.autoplay.start();
+          } else {
+            sEventsSliderRegion.autoplay.stop();
+          }
+        });
+      },
+      { threshold: 0.1 },
+    ); // Adjust threshold as needed
 
-  observerRegion.observe(sliderDivRegion);
+    observerRegion.observe(sliderDivRegion);
+  }
 
   const sliderDivHero = document.querySelector('.sHero-slider-js');
-  let sNewsSlider = new Swiper('.sNews-slider-js', {
-    slidesPerView: 'auto',
-    // loop: true,
-    watchOverflow: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    breakpoints: {
-      0: {
-        spaceBetween: 20,
+
+  if (sliderDivHero) {
+    let sNewsSlider = new Swiper('.sNews-slider-js', {
+      slidesPerView: 'auto',
+      // loop: true,
+      watchOverflow: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
-      1200: {
-        spaceBetween: 40,
+      breakpoints: {
+        0: {
+          spaceBetween: 20,
+        },
+        1200: {
+          spaceBetween: 40,
+        },
       },
-    },
-  });
+    });
 
-  sNewsSlider.autoplay.stop();
+    sNewsSlider.autoplay.stop();
 
-  // Create IntersectionObserver to track visibility
+    // Create IntersectionObserver to track visibility
 
-  let observerHero = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          sNewsSlider.autoplay.start();
-        } else {
-          sNewsSlider.autoplay.stop();
-        }
-      });
-    },
-    { threshold: 0.1 },
-  ); // Adjust threshold as needed
+    let observerHero = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sNewsSlider.autoplay.start();
+          } else {
+            sNewsSlider.autoplay.stop();
+          }
+        });
+      },
+      { threshold: 0.1 },
+    ); // Adjust threshold as needed
 
-  observerHero.observe(sliderDivHero);
+    observerHero.observe(sliderDivHero);
+  }
 
   let pageHeadSlider = new Swiper('.page-head__slider--js', {
     slidesPerView: 'auto',
@@ -635,55 +640,58 @@ function eventHandler() {
   });
 
   const sliderDiv = document.querySelector('.sNews__cards-row--js');
-  const sNewsSliderM = new Swiper(sliderDiv, {
-    spaceBetween: 20,
-    navigation: {
-      nextEl: '.sNews__card-row-next',
-      prevEl: '.sNews__card-row-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    breakpoints: {
-      500: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-    },
-  });
 
-  sNewsSliderM.autoplay.stop();
+  if (sliderDiv) {
+    const sNewsSliderM = new Swiper(sliderDiv, {
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.sNews__card-row-next',
+        prevEl: '.sNews__card-row-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      breakpoints: {
+        500: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
 
-  // Create IntersectionObserver to track visibility
-  let observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          sNewsSliderM.autoplay.start();
-          console.log(1);
-        } else {
-          sNewsSliderM.autoplay.stop();
-          console.log(2);
-        }
-      });
-    },
-    { threshold: 0.1 },
-  ); // Adjust threshold as needed
+    sNewsSliderM.autoplay.stop();
 
-  observer.observe(sliderDiv);
+    // Create IntersectionObserver to track visibility
+    let observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sNewsSliderM.autoplay.start();
+            console.log(1);
+          } else {
+            sNewsSliderM.autoplay.stop();
+            console.log(2);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    ); // Adjust threshold as needed
+
+    observer.observe(sliderDiv);
+  }
 
   // $('.load-photo').filepond({
   // 	labelIdle: `Добавить фото&nbsp;профиля`,
@@ -699,6 +707,7 @@ function eventHandler() {
   // });
   function cardSlider(section = '.sHero') {
     const sliderDiv = document.querySelector(`${section}-slider-js`);
+    if (!sliderDiv) return;
     const slider = new Swiper(sliderDiv, {
       slidesPerView: 'auto',
       loop: true,
@@ -762,51 +771,54 @@ function eventHandler() {
   }
 
   const sliderDivPartner = document.querySelector('.sPartners-slider-js');
-  const partnerSlider = new Swiper(sliderDivPartner, {
-    slidesPerView: 'auto',
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    navigation: {
-      nextEl: `.sPartners--js .swiper-next`,
-      prevEl: `.sPartners--js .swiper-prev`,
-    },
-    breakpoints: {
-      400: {
-        slidesPerView: 1,
-      },
-      550: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-    },
-  });
 
-  partnerSlider.autoplay.stop();
-  // Create IntersectionObserver to track visibility
-  let observer2 = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          partnerSlider.autoplay.start();
-        } else {
-          partnerSlider.autoplay.stop();
-        }
-      });
-    },
-    { threshold: 0.1 },
-  ); // Adjust threshold as needed
+  if (sliderDivPartner) {
+    const partnerSlider = new Swiper(sliderDivPartner, {
+      slidesPerView: 'auto',
+      loop: true,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      navigation: {
+        nextEl: `.sPartners--js .swiper-next`,
+        prevEl: `.sPartners--js .swiper-prev`,
+      },
+      breakpoints: {
+        400: {
+          slidesPerView: 1,
+        },
+        550: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    });
 
-  observer2.observe(sliderDivPartner);
+    partnerSlider.autoplay.stop();
+    // Create IntersectionObserver to track visibility
+    let observer2 = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            partnerSlider.autoplay.start();
+          } else {
+            partnerSlider.autoplay.stop();
+          }
+        });
+      },
+      { threshold: 0.1 },
+    ); // Adjust threshold as needed
+
+    observer2.observe(sliderDivPartner);
+  }
 
   cardSlider();
 

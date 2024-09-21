@@ -476,6 +476,7 @@ function eventHandler() {
   //
 
   if ($('.sEvents-slider-js .swiper-slide').length > 0) {
+    const sliderDiv = document.querySelector('.sEvents-slider-js');
     let sEventsSlider = new Swiper('.sEvents-slider-js', {
       slidesPerView: 'auto',
       loop: false,
@@ -514,9 +515,27 @@ function eventHandler() {
         },
       },
     });
+
+    sEventsSlider.autoplay.stop();
+    // Create IntersectionObserver to track visibility
+    let observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sEventsSlider.autoplay.start();
+          } else {
+            sEventsSlider.autoplay.stop();
+          }
+        });
+      },
+      { threshold: 0.1 },
+    ); // Adjust threshold as needed
+
+    observer.observe(sliderDiv);
   }
 
-  let sEventsSliderRegion = new Swiper('.sEvents--region .sEvents-slider--js', {
+  const sliderDivRegion = document.querySelector('.sEvents--region .sEvents-slider--js');
+  let sEventsSliderRegion = new Swiper(sliderDivRegion, {
     slidesPerView: 'auto',
     // loop: true,
     watchOverflow: true,
@@ -536,6 +555,25 @@ function eventHandler() {
     },
   });
 
+  sEventsSliderRegion.autoplay.stop();
+
+  // Create IntersectionObserver to track visibility
+  let observerRegion = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          sEventsSliderRegion.autoplay.start();
+        } else {
+          sEventsSliderRegion.autoplay.stop();
+        }
+      });
+    },
+    { threshold: 0.1 },
+  ); // Adjust threshold as needed
+
+  observerRegion.observe(sliderDivRegion);
+
+  const sliderDivHero = document.querySelector('.sHero-slider-js');
   let sNewsSlider = new Swiper('.sNews-slider-js', {
     slidesPerView: 'auto',
     // loop: true,
@@ -554,6 +592,25 @@ function eventHandler() {
       },
     },
   });
+
+  sNewsSlider.autoplay.stop();
+
+  // Create IntersectionObserver to track visibility
+
+  let observerHero = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          sNewsSlider.autoplay.start();
+        } else {
+          sNewsSlider.autoplay.stop();
+        }
+      });
+    },
+    { threshold: 0.1 },
+  ); // Adjust threshold as needed
+
+  observerHero.observe(sliderDivHero);
 
   let pageHeadSlider = new Swiper('.page-head__slider--js', {
     slidesPerView: 'auto',
@@ -576,7 +633,9 @@ function eventHandler() {
       },
     },
   });
-  window.sNewsSliderr = new Swiper('.sNews__cards-row--js', {
+
+  const sliderDiv = document.querySelector('.sNews__cards-row--js');
+  const sNewsSliderM = new Swiper(sliderDiv, {
     spaceBetween: 20,
     navigation: {
       nextEl: '.sNews__card-row-next',
@@ -605,79 +664,26 @@ function eventHandler() {
       },
     },
   });
-  //
-  // import * as FilePond from 'filepond';
-  // const pond = FilePond.create({
-  // 	multiple: true,
-  // 	name: 'filepond'
-  // });
-  // document.body.appendChild(pond.element);
-  FilePond.registerPlugin(
-    FilePondPluginImagePreview,
-    FilePondPluginImageCrop,
-    FilePondPluginImageResize,
-    FilePondPluginImageTransform,
-    FilePondPluginImageEdit,
-    // FilePondPluginImageExifOrientation,
-    FilePondPluginFileValidateSize
-    // FilePondPluginImageEdit
-  );
 
-  FilePond.create(document.querySelector('.load-photo input'), {
-    labelIdle: `Добавить фото&nbsp;профиля`,
-    imagePreviewHeight: 300,
-    imageCropAspectRatio: '1:1',
-    imageResizeTargetWidth: 280,
-    imageResizeTargetHeight: 297,
-    styleLoadIndicatorPosition: 'center bottom',
-    styleProgressIndicatorPosition: 'left bottom',
-    styleButtonRemoveItemPosition: 'left bottom',
-    styleButtonProcessItemPosition: 'left bottom',
-  });
-  FilePond.create(document.querySelector('.load-photo--edit input'), {
-    labelIdle: `Изменить фото&nbsp;профиля`,
-    imagePreviewHeight: 300,
-    imageCropAspectRatio: '1:1',
-    imageResizeTargetWidth: 280,
-    imageResizeTargetHeight: 297,
-    styleLoadIndicatorPosition: 'center bottom',
-    styleProgressIndicatorPosition: 'left bottom',
-    styleButtonRemoveItemPosition: 'left bottom',
-    styleButtonProcessItemPosition: 'left bottom',
-  });
-  FilePond.create(document.querySelector('.load-photo-ticket--js input'), {
-    labelIdle: `Добавить фото&nbsp;для&nbsp;билета`,
-    imagePreviewHeight: 300,
-    imageCropAspectRatio: '1:1',
-    imageResizeTargetWidth: 280,
-    imageResizeTargetHeight: 297,
-    styleLoadIndicatorPosition: 'center bottom',
-    styleProgressIndicatorPosition: 'left bottom',
-    styleButtonRemoveItemPosition: 'left bottom',
-    styleButtonProcessItemPosition: 'left bottom',
-  });
-  FilePond.create(document.querySelector('.load-photo-ticket--js-2 input'), {
-    labelIdle: `Добавить картинку анонса`,
-    imagePreviewHeight: 300,
-    imageCropAspectRatio: '1:1',
-    imageResizeTargetWidth: 280,
-    imageResizeTargetHeight: 297,
-    styleLoadIndicatorPosition: 'center bottom',
-    styleProgressIndicatorPosition: 'left bottom',
-    styleButtonRemoveItemPosition: 'left bottom',
-    styleButtonProcessItemPosition: 'left bottom',
-  });
-  FilePond.create(document.querySelector('.load-photo-ticket--js-3 input'), {
-    labelIdle: `Добавить подробную картинка новости`,
-    imagePreviewHeight: 300,
-    imageCropAspectRatio: '1:1',
-    imageResizeTargetWidth: 280,
-    imageResizeTargetHeight: 297,
-    styleLoadIndicatorPosition: 'center bottom',
-    styleProgressIndicatorPosition: 'left bottom',
-    styleButtonRemoveItemPosition: 'left bottom',
-    styleButtonProcessItemPosition: 'left bottom',
-  });
+  sNewsSliderM.autoplay.stop();
+
+  // Create IntersectionObserver to track visibility
+  let observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          sNewsSliderM.autoplay.start();
+          console.log(1);
+        } else {
+          sNewsSliderM.autoplay.stop();
+          console.log(2);
+        }
+      });
+    },
+    { threshold: 0.1 },
+  ); // Adjust threshold as needed
+
+  observer.observe(sliderDiv);
 
   // $('.load-photo').filepond({
   // 	labelIdle: `Добавить фото&nbsp;профиля`,
@@ -692,7 +698,8 @@ function eventHandler() {
   // 	// styleButtonProcessItemPosition: 'right bottom',
   // });
   function cardSlider(section = '.sHero') {
-    new Swiper(`${section}-slider-js`, {
+    const sliderDiv = document.querySelector(`${section}-slider-js`);
+    const slider = new Swiper(sliderDiv, {
       slidesPerView: 'auto',
       loop: true,
       spaceBetween: 20,
@@ -735,8 +742,27 @@ function eventHandler() {
         },
       },
     });
+
+    slider.autoplay.stop();
+    // Create IntersectionObserver to track visibility
+    let observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            slider.autoplay.start();
+          } else {
+            slider.autoplay.stop();
+          }
+        });
+      },
+      { threshold: 0.1 },
+    ); // Adjust threshold as needed
+
+    observer.observe(sliderDiv);
   }
-  new Swiper(`.sPartners-slider-js`, {
+
+  const sliderDivPartner = document.querySelector('.sPartners-slider-js');
+  const partnerSlider = new Swiper(sliderDivPartner, {
     slidesPerView: 'auto',
     loop: true,
     spaceBetween: 20,
@@ -764,6 +790,23 @@ function eventHandler() {
       },
     },
   });
+
+  partnerSlider.autoplay.stop();
+  // Create IntersectionObserver to track visibility
+  let observer2 = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          partnerSlider.autoplay.start();
+        } else {
+          partnerSlider.autoplay.stop();
+        }
+      });
+    },
+    { threshold: 0.1 },
+  ); // Adjust threshold as needed
+
+  observer2.observe(sliderDivPartner);
 
   cardSlider();
 
@@ -1057,6 +1100,80 @@ function eventHandler() {
       zoomInCentered: false,
     });
   }
+
+  //
+  // import * as FilePond from 'filepond';
+  // const pond = FilePond.create({
+  // 	multiple: true,
+  // 	name: 'filepond'
+  // });
+  // document.body.appendChild(pond.element);
+  FilePond.registerPlugin(
+    FilePondPluginImagePreview,
+    FilePondPluginImageCrop,
+    FilePondPluginImageResize,
+    FilePondPluginImageTransform,
+    FilePondPluginImageEdit,
+    // FilePondPluginImageExifOrientation,
+    FilePondPluginFileValidateSize,
+    // FilePondPluginImageEdit
+  );
+
+  FilePond.create(document.querySelector('.load-photo input'), {
+    labelIdle: `Добавить фото&nbsp;профиля`,
+    imagePreviewHeight: 300,
+    imageCropAspectRatio: '1:1',
+    imageResizeTargetWidth: 280,
+    imageResizeTargetHeight: 297,
+    styleLoadIndicatorPosition: 'center bottom',
+    styleProgressIndicatorPosition: 'left bottom',
+    styleButtonRemoveItemPosition: 'left bottom',
+    styleButtonProcessItemPosition: 'left bottom',
+  });
+  FilePond.create(document.querySelector('.load-photo--edit input'), {
+    labelIdle: `Изменить фото&nbsp;профиля`,
+    imagePreviewHeight: 300,
+    imageCropAspectRatio: '1:1',
+    imageResizeTargetWidth: 280,
+    imageResizeTargetHeight: 297,
+    styleLoadIndicatorPosition: 'center bottom',
+    styleProgressIndicatorPosition: 'left bottom',
+    styleButtonRemoveItemPosition: 'left bottom',
+    styleButtonProcessItemPosition: 'left bottom',
+  });
+  FilePond.create(document.querySelector('.load-photo-ticket--js input'), {
+    labelIdle: `Добавить фото&nbsp;для&nbsp;билета`,
+    imagePreviewHeight: 300,
+    imageCropAspectRatio: '1:1',
+    imageResizeTargetWidth: 280,
+    imageResizeTargetHeight: 297,
+    styleLoadIndicatorPosition: 'center bottom',
+    styleProgressIndicatorPosition: 'left bottom',
+    styleButtonRemoveItemPosition: 'left bottom',
+    styleButtonProcessItemPosition: 'left bottom',
+  });
+  FilePond.create(document.querySelector('.load-photo-ticket--js-2 input'), {
+    labelIdle: `Добавить картинку анонса`,
+    imagePreviewHeight: 300,
+    imageCropAspectRatio: '1:1',
+    imageResizeTargetWidth: 280,
+    imageResizeTargetHeight: 297,
+    styleLoadIndicatorPosition: 'center bottom',
+    styleProgressIndicatorPosition: 'left bottom',
+    styleButtonRemoveItemPosition: 'left bottom',
+    styleButtonProcessItemPosition: 'left bottom',
+  });
+  FilePond.create(document.querySelector('.load-photo-ticket--js-3 input'), {
+    labelIdle: `Добавить подробную картинка новости`,
+    imagePreviewHeight: 300,
+    imageCropAspectRatio: '1:1',
+    imageResizeTargetWidth: 280,
+    imageResizeTargetHeight: 297,
+    styleLoadIndicatorPosition: 'center bottom',
+    styleProgressIndicatorPosition: 'left bottom',
+    styleButtonRemoveItemPosition: 'left bottom',
+    styleButtonProcessItemPosition: 'left bottom',
+  });
 }
 if (document.readyState !== 'loading') {
   eventHandler();

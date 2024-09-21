@@ -1127,7 +1127,7 @@ function eventHandler() {
     FilePondPluginImageTransform,
     FilePondPluginImageEdit,
     // FilePondPluginImageExifOrientation,
-    FilePondPluginFileValidateSize,
+    // FilePondPluginFileValidateSize,
     // FilePondPluginImageEdit
   );
 
